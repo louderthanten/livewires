@@ -1,0 +1,14 @@
+#header {
+	background:$dark-grey;
+	color:$white;
+	padding:12px;
+
+	a:link,
+	a:visited {
+		color:$white;
+	}
+	a:hover,
+	a:active {
+		color:$light-grey;
+	}	
+}

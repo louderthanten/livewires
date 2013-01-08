@@ -1,0 +1,38 @@
+//Gutters
+@mixin wrap {
+	padding: 0 12px;
+  padding: 0 0.75rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		 -o-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+
+@mixin font-size($px_value: $base, $baseline: $line-n) {
+	$baseline_rem: ($root-n / 1rem);
+	font-size: ($px_value * 1px);
+	font-size: $px_value / $baseline_rem;
+	line-height: ($baseline / $px_value);
+}
+
+@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid   $triangleSize;
+  @if ($triangleDirection == top) {
+    border-color: $triangleColor transparent transparent transparent;
+  }
+  @if ($triangleDirection == bottom) {
+    border-color: transparent transparent $triangleColor transparent;
+  }
+  @if ($triangleDirection == left) {
+    border-color: transparent transparent transparent $triangleColor;
+  }
+  @if ($triangleDirection == right) {
+    border-color: transparent $triangleColor transparent transparent;
+  }
+  // .example { @include css-triangle(5px, #fff, bottom); }
+}

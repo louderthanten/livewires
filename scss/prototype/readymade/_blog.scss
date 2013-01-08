@@ -1,0 +1,36 @@
+article {
+	margin-bottom: $line*2;
+}
+.articles {
+	.content {
+		height:$line*10;
+	}
+}
+.archive-year {
+	margin-bottom: $line*2;
+	.content {
+		height:$line*3;
+	}
+}
+.news-detail-pg {
+	.content {
+		height:$line*100;
+	}
+}
+
+@media only screen and (min-width: $screenSmall) {
+	.articles article,
+	.news-detail-pg article {
+		margin-left:$c8*2;
+		width:$c8*4;
+		@include wrap;
+	}
+	.archive-year {
+		@include clearfix;
+		article {
+			width:$c8*2;
+			float:left;
+			@include wrap;
+		}
+	}
+}
