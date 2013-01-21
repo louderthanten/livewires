@@ -41,7 +41,7 @@
     </footer>
 
     <script src="/js/vendor/jquery-1.8.3.min.js"></script>
-    <script src="/js/prototype.js"></script>
+    <script src="/js/livewires.js"></script>
 
 </body>
 </html>
