@@ -25,7 +25,7 @@ Live Wires is simple HTML & CSS. It doesn't try to be fancy. It doesn't look lik
 * List items (**li**) will also load the text image unless you add the class, **.link-list**, to the containing **ol** or **ul**.
 * Images are loaded from [http://placehold.it]. Go there to see how it works
 * There are a couple example patterns that I often use in **/scss/livewires/readymade/**. They can be a great starting point.
-* Don't hate me if you don't like my code. Just fork it and make it your own. Just keep in mind the main philosophy: Throw away as little work as possible. Your site should be an evolution, not a series of assets.
+* If ya don't like the code, don't hate on it. Just fork it and make it your own. Just keep in mind the main philosophy: Throw away as little work as possible. Your site should be an evolution, not a series of assets.
 
 
 ### IMPORTANT
