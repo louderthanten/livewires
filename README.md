@@ -15,14 +15,14 @@ Live Wires is simple HTML & CSS. It doesn't try to be fancy. It doesn't look lik
 4. Customize layout in the **/scss/custom** folder
 5. If you've organized your custom scss in a smart way, you can use much of your layout styles in design/production. Reuse as much as possible.
 
-(Sorry for the weak documentation)
+(Sorry for the weak documentation. We've still got a lot of work ahead of us.)
 
 
 ### Notes
 
 * Elements with a **.content** class will load text-like background filler
 * Adjust the height of **.content** elements using the **$line** variable (e.g. height:$line*5; will render 5 lines of "text")
-* List items (**<li>**) will also load the text image unless you add the class, **.link-list**, to the containing **ol** or **ul**.
+* List items (**li**) will also load the text image unless you add the class, **.link-list**, to the containing **ol** or **ul**.
 * Images are loaded from [http://placehold.it]. Go there to see how it works
 * There are a couple example patterns that I often use in **/scss/livewires/readymade/**. They can be a great starting point.
 * Don't hate me if you don't like my code. Just fork it and make it your own. Just keep in mind the main philosophy: Throw away as little work as possible. Your site should be an evolution, not a series of assets.
