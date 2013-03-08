@@ -1,19 +1,16 @@
-//Gutters
-@mixin wrap {
-	padding: 0 12px;
-  padding: 0 0.75rem;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-		 -o-box-sizing: border-box;
-			box-sizing: border-box;
-}
+//Setup Variables for Mixins
+$root-n: 16;
+$root: $root-n * 1px;
+$em: $base * 1;
+
+
 
 
 @mixin font-size($px_value: $base, $baseline: $line-n) {
-	$baseline_rem: ($root-n / 1rem);
-	font-size: ($px_value * 1px);
-	font-size: $px_value / $baseline_rem;
-	line-height: ($baseline / $px_value);
+  $baseline_rem: ($root-n / 1rem);
+  font-size: ($px_value * 1px);
+  font-size: $px_value / $baseline_rem;
+  line-height: ($baseline / $px_value);
 }
 
 @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
@@ -35,4 +32,48 @@
     border-color: transparent $triangleColor transparent transparent;
   }
   // .example { @include css-triangle(5px, #fff, bottom); }
+}
+
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+@mixin rem($property, $px-values) {
+  // Convert the baseline into rems
+  $baseline-rem: $root / 1rem;
+  // Print the first line in pixel values
+  #{$property}: $px-values;
+  // If there is only one (numeric) value, return the property/value line for it.
+  @if type-of($px-values) == "number" {
+    #{$property}: $px-values / $baseline-rem; }
+  @else {
+    // Create an empty list that we can dump values into
+    $rem-values: unquote("");
+    @each $value in $px-values {
+      // If the value is zero, return 0
+      @if $value == 0 {
+        $rem-values: append($rem-values, $value); }
+      @else {
+        $rem-values: append($rem-values, $value / $baseline-rem); } }
+    // Return the property and its list of converted values
+    #{$property}: $rem-values; }
+}
+
+//Gutters
+@mixin wrap {
+  @include rem(padding-left, $line/2);
+  @include rem(padding-right, $line/2);
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     -o-box-sizing: border-box;
+      box-sizing: border-box;
 }

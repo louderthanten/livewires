@@ -23,7 +23,7 @@
 	right:$line;
 }
 .offcanvas {
-	padding: $line/2 $column;
+	padding: $line/2 $margin;
 }
 @media only screen and (min-width: $screenSmall) {
 	.offcanvas {
