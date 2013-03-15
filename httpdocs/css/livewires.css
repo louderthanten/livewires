@@ -213,6 +213,8 @@ input[type="color"] {
   width: 100%;
   color: #3a3a3c;
   margin-bottom: 12px;
+  padding: 12px;
+  font-size: 16px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -220,13 +222,13 @@ input[type="color"] {
   border-radius: 5px;
 }
 
-/* line 41, ../../scss/livewires/_forms.scss */
+/* line 43, ../../scss/livewires/_forms.scss */
 textarea {
   height: auto;
   min-height: 192px;
 }
 
-/* line 47, ../../scss/livewires/_forms.scss */
+/* line 49, ../../scss/livewires/_forms.scss */
 select {
   margin-bottom: 12px;
 }
@@ -357,6 +359,23 @@ article {
     box-sizing: border-box;
   }
 }
+/* line 1, ../../scss/livewires/readymade/_callouts.scss */
+.callout {
+  background: #3a3a3c;
+  color: white;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+/* line 6, ../../scss/livewires/readymade/_callouts.scss */
+.callout .content {
+  height: 72px;
+}
+
+/* line 4, ../../scss/livewires/custom/_content.scss */
+.content.body {
+  height: 576px;
+}
+
 /* line 1, ../../scss/livewires/custom/_header.scss */
 .request {
   position: absolute;
@@ -438,15 +457,39 @@ article {
   height: 480px;
 }
 
-/* line 50, ../../scss/livewires/custom/_layout.scss */
-.appointments-pg .map {
-  height: 240px;
-  margin-bottom: 24px;
-}
-
 @media only screen and (min-width: 45em) {
-  /* line 59, ../../scss/livewires/custom/_layout.scss */
+  /* line 54, ../../scss/livewires/custom/_layout.scss */
   .intro {
     width: 50%;
+  }
+
+  /* line 58, ../../scss/livewires/custom/_layout.scss */
+  .page-content,
+  .primary {
+    float: left;
+    width: 50%;
+    padding-left: 12px;
+    padding-left: 0.75rem;
+    padding-right: 12px;
+    padding-right: 0.75rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /* line 63, ../../scss/livewires/custom/_layout.scss */
+  .secondary {
+    float: right;
+    width: 37.5%;
+    margin-top: 48px;
+    padding-left: 12px;
+    padding-left: 0.75rem;
+    padding-right: 12px;
+    padding-right: 0.75rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
   }
 }

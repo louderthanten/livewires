@@ -5,7 +5,7 @@ A simple in-browser wireframing toolkit.
 
 This is my answer to all the crappy wireframing tools and over-complicated prototype libraries out there.
 
-Live Wires is simple HTML & CSS. It doesn't try to be fancy. It doesn't look like a final design, but it also doesn't look like dog doo (*cough* Balsamiq *cough*). Most text is represented by background images. It is designed to be a starting point for production code, not something you throw out. It's also very fast to work with once you get the hang of it. It is more of a philosophy than a product.
+Live Wires is simple HTML & CSS. It doesn't try to be fancy. It doesn't look like a final design, but it also doesn't look like dog doo (*cough* myBalsamiq *cough*). Most text is represented by background images. It is designed to be a starting point for production code, not something you throw out. It's also very fast to work with once you get the hang of it. It is more of a philosophy than a product.
 
 ## How to use
 
@@ -30,6 +30,6 @@ Live Wires is simple HTML & CSS. It doesn't try to be fancy. It doesn't look lik
 
 ### IMPORTANT
 
-Always work through this with your content strategist/copywriter. Even though it's not showing actual text, you should have a very close idea of the final content types and average passage lengths when possible. This is meant to be an approximation, but should still be based on actual content.
+I highly recommend that you work through this with your content strategist/copywriter. Even though it's not showing actual text, you should have a very close idea of the final content types and average passage lengths when possible. This is meant to be an approximation, but should still be based on actual content.
 
 Have fun!

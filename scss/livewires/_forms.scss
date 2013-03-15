@@ -34,6 +34,8 @@ input[type="color"] {
   width:100%;
   color:$dark-grey;
   margin-bottom: 12px;
+  padding:$line/2;
+  font-size: 16px;
 	@include border-radius;
 
 }

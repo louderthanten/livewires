@@ -1,0 +1,7 @@
+// Define filler boxes. Not for production use.
+
+.content {
+    &.body {
+        height:$line*24;
+    }
+}

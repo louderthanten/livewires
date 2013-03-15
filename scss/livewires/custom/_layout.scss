@@ -46,17 +46,24 @@
 	}
 }
 
-.appointments-pg {
-	.map {
-		height:$line*10;
-		margin-bottom: $line;
-	}
-}
+
 
 
 
 @media only screen and (min-width: $screenSmall) {
 	.intro {
 		width:$c8*4;
+	}
+	.page-content,
+	.primary {
+		float:left;
+		width:$c8*4;
+		@include wrap;
+	}
+	.secondary {
+		float:right;
+		width:$c8*3;
+		margin-top: $line*2;
+		@include wrap;
 	}
 }
