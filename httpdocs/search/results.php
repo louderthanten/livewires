@@ -131,4 +131,14 @@
              
         </div>
 
-<?php include($_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'); ?>
+    <footer id="footer">
+        <div class="container">
+            <small>$copy; Infinity</small>
+        </div>
+    </footer>
+
+    <script src="/js/vendor/jquery-1.8.3.min.js"></script>
+    <script src="/js/livewires.js"></script>
+
+</body>
+</html>

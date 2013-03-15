@@ -44,8 +44,8 @@
 
     <footer id="footer">
         <div class="container">
-            <small>This project is <a href="http://louderthan10.com">Louder Than Ten</a>.</small>
-        </div> 
+            <small>$copy; Infinity</small>
+        </div>
     </footer>
 
     <script src="/js/vendor/jquery-1.8.3.min.js"></script>
