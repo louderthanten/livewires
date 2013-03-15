@@ -133,7 +133,7 @@
 
     <footer id="footer">
         <div class="container">
-            <small>$copy; Infinity</small>
+            <small>&copy; Infinity</small>
         </div>
     </footer>
 

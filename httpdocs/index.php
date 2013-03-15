@@ -59,7 +59,7 @@
 
     <footer id="footer">
         <div class="container">
-            <small>This project is <a href="http://louderthan10.com">Louder Than Ten</a>.</small>
+            <small>&copy; Infinity</small>
         </div>
     </footer>
 
