@@ -63,7 +63,11 @@
 	.secondary {
 		float:right;
 		width:$c8*3;
-		margin-top: $line*2;
 		@include wrap;
+	}
+	.secondary {
+		.callout {
+			margin-top: $line*2;
+		}
 	}
 }

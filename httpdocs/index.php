@@ -32,9 +32,10 @@
                 <img src="http://placehold.it/2000x800&text=Hero">
         </figure>
         <h1>Simple in-browser wireframing</h1>
+        <hr />
         <section class="primary">
             
-            
+            <h2>Cool stuff</h2>
             <ul>
                 <li></li>
                 <li></li>
@@ -46,6 +47,7 @@
             </ul>
         </section>
         <section class="secondary">
+            <h2>Other cool stuff</h2>
             <ul>
                 <li></li>
                 <li></li>

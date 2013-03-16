@@ -89,6 +89,11 @@ td {
   overflow: hidden;
 }
 
+/* line 7, ../../scss/livewires/_layout.scss */
+figure {
+  margin-bottom: 24px;
+}
+
 /* line 1, ../../scss/livewires/_typography.scss */
 body {
   font-family: "Helvetica Neue", sans-serif;
@@ -162,18 +167,23 @@ a {
   text-decoration: none;
 }
 
-/* line 48, ../../scss/livewires/_typography.scss */
+/* line 47, ../../scss/livewires/_typography.scss */
+hr {
+  margin: 24px 0;
+}
+
+/* line 52, ../../scss/livewires/_typography.scss */
 .content,
 li {
   background: url("/img/prototype/text.png");
 }
 
-/* line 51, ../../scss/livewires/_typography.scss */
+/* line 55, ../../scss/livewires/_typography.scss */
 .map {
   background: url("/img/prototype/map.jpg") center center;
 }
 
-/* line 54, ../../scss/livewires/_typography.scss */
+/* line 58, ../../scss/livewires/_typography.scss */
 .hero {
   background: #babaae url("/img/prototype/img.jpg") no-repeat center center;
 }
@@ -482,7 +492,6 @@ article {
   .secondary {
     float: right;
     width: 37.5%;
-    margin-top: 48px;
     padding-left: 12px;
     padding-left: 0.75rem;
     padding-right: 12px;
@@ -491,5 +500,10 @@ article {
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
+  }
+
+  /* line 69, ../../scss/livewires/custom/_layout.scss */
+  .secondary .callout {
+    margin-top: 48px;
   }
 }

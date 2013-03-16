@@ -44,6 +44,10 @@ a {
 	text-decoration: none;
 }
 
+hr {
+	margin:$line 0;
+}
+
 .content,
 li {
 	background: url('/img/prototype/text.png');

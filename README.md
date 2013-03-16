@@ -18,6 +18,9 @@ Live Wires is simple HTML & CSS. It doesn't try to be fancy. It doesn't look lik
 (Sorry for the weak documentation. We've still got a lot of work ahead of us.)
 
 
+See the live example at http://example.livewires.io
+
+
 ### Notes
 
 * Elements with a **.content** class will load text-like background filler
