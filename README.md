@@ -5,7 +5,7 @@ A simple in-browser wireframing toolkit.
 
 This is my answer to all the crappy wireframing tools and over-complicated prototype libraries out there.
 
-Live Wires is simple HTML & CSS. It doesn't try to be fancy. It doesn't look like a final design, but it also doesn't look like dog doo (*cough* myBalsamiq *cough*). Most text is represented by background images. It is designed to be a starting point for production code, not something you throw out. It's also very fast to work with once you get the hang of it. It is more of a philosophy than a product.
+Live Wires is simple HTML & CSS. It doesn't try to be fancy. It doesn't look like a final design, but it also doesn't look like dog doo like other wireframing tools. Most text is represented by background images. It is designed to be a starting point for production code, not something you throw out. It's also very fast to work with once you get the hang of it. It is more of a philosophy than a product.
 
 ## How to use
 
@@ -14,9 +14,6 @@ Live Wires is simple HTML & CSS. It doesn't try to be fancy. It doesn't look lik
 3. Markup the structure of your pages in the httpdocs folder (hint: stick to structural elements as much as possible. There's an example in there)
 4. Customize layout in the **/scss/custom** folder
 5. If you've organized your custom scss in a smart way, you can use much of your layout styles in design/production. Reuse as much as possible.
-
-(Sorry for the weak documentation. We've still got a lot of work ahead of us.)
-
 
 See the live example at http://example.livewires.io
 
