@@ -3,5 +3,5 @@
 	color:$white;
 	display: none;
 	padding:$line/2;
-	@include clearfix;
+	@extend .group;
 }
