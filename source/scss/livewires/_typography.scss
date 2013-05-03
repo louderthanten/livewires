@@ -1,0 +1,61 @@
+body {
+	font-family: $sans;
+	color: $dark-grey;
+	@include font-size(16, 24);
+}
+
+h1 {
+	@include font-size(36, 48);
+}
+h2 {
+	@include font-size(30, 36);
+}
+h3 {
+	@include font-size(24, 36);
+}
+h4 {
+	@include font-size(21, 24);
+}
+h5 {
+	@include font-size(18, 24);
+}
+
+p,
+ul,
+ol {
+	margin-bottom: $line;
+}
+
+ul,
+ol {
+	padding-left: 1em;
+}
+
+nav ul {
+	list-style: none;
+	padding:0;
+	
+	li {
+		background:transparent;
+	}
+}
+
+a {
+	font-weight: $bold;
+	text-decoration: none;
+}
+
+hr {
+	margin:$line 0;
+}
+
+.content,
+li {
+	background: url('/img/prototype/text.png');
+}
+.map {
+	background: url('/img/prototype/map.jpg') center center;
+}
+.hero {
+	background: $grey url('/img/prototype/img.jpg') no-repeat center center;
+}

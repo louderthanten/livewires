@@ -1,0 +1,14 @@
+.primary-nav,
+.footer-nav {
+	@include clearfix;
+	li {
+		float:left;
+	}
+	a {
+		display:block;
+		padding-right:12px;
+	}
+}
+.search {
+	max-width: 240px;
+}
