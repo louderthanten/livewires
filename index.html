@@ -14,9 +14,83 @@
         </div>
     </header><!-- /header -->
 
-    <div class="main container" id="main">
+    <div class="main" id="main">
+        <section class="intro">
+            <div class="container">
+                <section class="primary">
+                    <h1>Light-weight prototyping with HTML &amp; CSS</h1>
+                    <p>Live Wires is simple HTML &amp; CSS. It doesn&rsquo;t try to be fancy. It doesn&rsquo;t look like a final design, but it also doesn&rsquo;t look like dog doo. Most text is represented by background images. It is designed to be a starting point for production code, not something you throw out. It's also very fast to work with once you get the hang of it. It is more of a philosophy than a product.</p>                    
+                </section>
+                <aside class="callout">
+                    <a href="http://github.com/louderthanten/livewires/" class="button"><h3>Fork it on Github</h3></a>
+                </aside>
+            </div>
+        </section>
+        <section class="benefits">
+            <div class="container">
+                <h2>Try Livewires if you&hellip;</h2>
+                <ul class="link-list">
+                    <li>Love working in HTML &amp; CSS</li>
+                    <li>Find most frameworks &amp; libraries over-designed &amp; bloated</li>
+                    <li>Hate buggy, ugly, expensive wireframing applications</li>
+                    <li>Are sick of wasting time on work that gets thrown away later</li>
+                    <li>Want something easy to distribute &amp; test on multiple devices</li>
+                    <li>Need to quickly design &amp; protoype responsive layouts</li>
+                </ul>
+            </div>
+        </section>
+        <section class="instructions">
+            <div class="container">
+                <section>
+                    <h2>How to use</h2>
+                    <ol>
+                        <li>Drop the folder in your future website project</li>
+                        <li>Point your preffered SCSS/CoffeeScript compiler to it</li>
+                        <li>Markup the structure of your pages in the httpdocs folder (hint: stick to structural elements as much as possible. There's an example in there)</li>
+                        <li>Customize layout in the /scss/custom folder</li>
+                        <li>If you've organized your custom scss in a smart way, you can use much of your layout styles in design/production. Reuse as much as possible.</li>
+                    </ol>                    
+                </section>
 
-      
+                <aside class="reverse">
+                    <h3>Tips</h3>
+                    <ul>
+                        <li>Elements with a .content class will load text-like background filler</li>
+                        <li>Adjust the height of .content elements using the $line variable (e.g. height:$line*5; will render 5 lines of "text")</li>
+                        <li>List items will also load the text image unless you add the class, .link-list, to the containing ol or ul.</li>
+                        <li>Images are loaded from http://placehold.it. Go there to see how it works</li>
+                        <li>There are a couple example patterns that I often use in /scss/livewires/readymade/. They can be a great starting point.</li>
+                        <li>If ya don't like the code, don't hate on it. Just fork it and make it your own. Just keep in mind the main philosophy: Throw away as little work as possible. Your site should be an evolution, not a series of assets.</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+        <section class="examples">
+            <div class="container">
+                <section class="primary">
+                    <h2>Examples</h2>
+                    <ul class="link-list">
+                        <li><a href="http://example.livewires.io">Generic Example</a></li>
+                        <li><a href="http://livewires.jellyfishmodel.com">Jellyfish Model</a></li>
+                        <li><a href="http://livewires.letterpressleague.ca">Vancouver Letterpress League</a></li>
+                        <li><a href="http://livewires.travisgertz.com">Travis Gertz</a></li>
+                        <li><a href="http://clients.ngenworks.com/RCA">RCA Diagnostics</a></li>
+                    </ul>
+                </section>
+
+                <aside class="callout">
+                    <h3>Have a Livewires prototype?</h3>
+                    <p>Send it to <a href="mailto:hello@livewires.io">hello@livewires.io</a> and we&rsquo;ll showcase it here.</p>
+                </aside>
+                
+            </div>
+        </section>
+        <section class="support">
+            <div class="container">
+                <h2>Support</h2>
+                <p>We do not offer any official support for Livewires, but you can submit bug reports, pull requests, and questions on <a href="https://github.com/louderthanten/livewires/issues">Github</a>.</p>
+            </div>
+        </section>
     </div>
 
     <footer id="footer">

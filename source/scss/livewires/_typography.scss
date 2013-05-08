@@ -43,6 +43,15 @@ nav ul {
 a {
 	font-weight: $bold;
 	text-decoration: none;
+
+	&:link,
+	&:visited {
+		color:$blue;
+	}
+	&:hover,
+	&:active {
+		color:$red;
+	}
 }
 
 hr {

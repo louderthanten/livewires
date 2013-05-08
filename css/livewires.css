@@ -489,24 +489,32 @@ a {
   font-weight: 700;
   text-decoration: none;
 }
-
 /* line 48, ../source/scss/livewires/_typography.scss */
+a:link, a:visited {
+  color: #44b3e1;
+}
+/* line 52, ../source/scss/livewires/_typography.scss */
+a:hover, a:active {
+  color: #d13731;
+}
+
+/* line 57, ../source/scss/livewires/_typography.scss */
 hr {
   margin: 24px 0;
 }
 
-/* line 53, ../source/scss/livewires/_typography.scss */
+/* line 62, ../source/scss/livewires/_typography.scss */
 .content,
 li {
   background: url("/img/prototype/text.png");
 }
 
-/* line 56, ../source/scss/livewires/_typography.scss */
+/* line 65, ../source/scss/livewires/_typography.scss */
 .map {
   background: url("/img/prototype/map.jpg") center center;
 }
 
-/* line 59, ../source/scss/livewires/_typography.scss */
+/* line 68, ../source/scss/livewires/_typography.scss */
 .hero {
   background: #babaae url("/img/prototype/img.jpg") no-repeat center center;
 }
@@ -690,15 +698,17 @@ article {
     box-sizing: border-box;
   }
 }
-/* line 1, ../source/scss/livewires/readymade/_callouts.scss */
-.callout {
+/* line 2, ../source/scss/livewires/readymade/_callouts.scss */
+.callout,
+.reverse {
   background: #3a3a3c;
   color: white;
   padding: 24px;
   margin-bottom: 24px;
 }
-/* line 6, ../source/scss/livewires/readymade/_callouts.scss */
-.callout .content {
+/* line 7, ../source/scss/livewires/readymade/_callouts.scss */
+.callout .content,
+.reverse .content {
   height: 72px;
 }
 
@@ -754,51 +764,30 @@ article {
     box-sizing: border-box;
   }
 }
-/* line 12, ../source/scss/livewires/custom/_layout.scss */
-.intro {
-  margin-bottom: 96px;
-}
-/* line 14, ../source/scss/livewires/custom/_layout.scss */
-.intro .content {
-  height: 96px;
-}
-
-/* line 21, ../source/scss/livewires/custom/_layout.scss */
-.location .content {
-  height: 96px;
-}
-
-/* line 26, ../source/scss/livewires/custom/_layout.scss */
-.page-content .content {
-  height: 288px;
-}
-
-/* line 31, ../source/scss/livewires/custom/_layout.scss */
-.results li {
-  background: transparent;
-  margin-bottom: 24px;
-}
-/* line 35, ../source/scss/livewires/custom/_layout.scss */
-.results .content {
-  height: 72px;
-}
-
-/* line 44, ../source/scss/livewires/custom/_layout.scss */
-.home-pg .hero {
-  height: 480px;
+/* line 13, ../source/scss/livewires/custom/_layout.scss */
+.benefits,
+.examples {
+  background: #3a3a3c;
+  color: white;
 }
 
 @media only screen and (min-width: 45em) {
-  /* line 54, ../source/scss/livewires/custom/_layout.scss */
-  .intro {
-    width: 50%;
-  }
-
-  /* line 58, ../source/scss/livewires/custom/_layout.scss */
-  .page-content,
+  /* line 22, ../source/scss/livewires/custom/_layout.scss */
   .primary {
+    padding-left: 12px;
+    padding-left: 0.75rem;
+    padding-right: 12px;
+    padding-right: 0.75rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
     float: left;
     width: 50%;
+  }
+
+  /* line 27, ../source/scss/livewires/custom/_layout.scss */
+  .callout {
     padding-left: 12px;
     padding-left: 0.75rem;
     padding-right: 12px;
@@ -807,24 +796,7 @@ article {
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
-  }
-
-  /* line 63, ../source/scss/livewires/custom/_layout.scss */
-  .secondary {
     float: right;
     width: 37.5%;
-    padding-left: 12px;
-    padding-left: 0.75rem;
-    padding-right: 12px;
-    padding-right: 0.75rem;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  /* line 69, ../source/scss/livewires/custom/_layout.scss */
-  .secondary .callout {
-    margin-top: 48px;
   }
 }

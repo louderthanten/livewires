@@ -7,67 +7,26 @@
 // By default you can use a 4, 8, or 16 columns grid. Add your own in prototype/_variables.scss
 
 
-// General Styles
+// General Style
 
-.intro {
-	margin-bottom: $line*4;
-	.content {
-		height:$line*4;
-	}
+.benefits,
+.examples {
+	background:$dark-grey;
+	color:$white;
 }
-
-
-.location {
-	.content {
-		height:$line*4;
-	}
-}
-.page-content {
-	.content {
-		height:$line*12;
-	}
-}
-.results {
-	li {
-		background:transparent;
-		margin-bottom: $line;
-	}
-	.content {
-		height:$line*3;
-	}
-}
-
-
-
-// Page-specific
-.home-pg {
-	.hero {
-		height:$line*20;
-	}
-}
-
 
 
 
 
 @media only screen and (min-width: $screenSmall) {
-	.intro {
-		width:$c8*4;
-	}
-	.page-content,
 	.primary {
+		@include wrap;
 		float:left;
 		width:$c8*4;
-		@include wrap;
 	}
-	.secondary {
+	.callout {
+		@include wrap;
 		float:right;
 		width:$c8*3;
-		@include wrap;
-	}
-	.secondary {
-		.callout {
-			margin-top: $line*2;
-		}
 	}
 }
