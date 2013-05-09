@@ -414,7 +414,11 @@ table {
 
 /* line 7, ../source/scss/livewires/_layout.scss */
 figure {
-  margin-bottom: 24px;
+  max-width: 630px;
+}
+/* line 11, ../source/scss/livewires/_layout.scss */
+figure img {
+  max-width: 100%;
 }
 
 /* line 1, ../source/scss/livewires/_typography.scss */
@@ -574,11 +578,31 @@ select {
   margin-bottom: 12px;
 }
 
+/* line 53, ../source/scss/livewires/_forms.scss */
+a.button,
+button {
+  display: inline-block;
+  background: #44b3e1;
+  color: white;
+  padding: 6px 24px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 61, ../source/scss/livewires/_forms.scss */
+a.button:hover, a.button:active,
+button:hover,
+button:active {
+  background: #d13731;
+}
+
 /* line 1, ../source/scss/livewires/readymade/_header.scss */
 #header {
   background: #3a3a3c;
   color: white;
-  padding: 12px;
+  padding: 24px;
 }
 /* line 7, ../source/scss/livewires/readymade/_header.scss */
 #header a:link,
@@ -589,6 +613,10 @@ select {
 #header a:hover,
 #header a:active {
   color: #dbdbd2;
+}
+/* line 14, ../source/scss/livewires/readymade/_header.scss */
+#header figure {
+  margin: 0 auto;
 }
 
 /* line 1, ../source/scss/livewires/readymade/_footer.scss */
@@ -771,8 +799,20 @@ article {
   color: white;
 }
 
+/* line 17, ../source/scss/livewires/custom/_layout.scss */
+.container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
 @media only screen and (min-width: 45em) {
-  /* line 22, ../source/scss/livewires/custom/_layout.scss */
+  /* line 26, ../source/scss/livewires/custom/_layout.scss */
+  .container {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  /* line 30, ../source/scss/livewires/custom/_layout.scss */
   .primary {
     padding-left: 12px;
     padding-left: 0.75rem;
@@ -786,7 +826,13 @@ article {
     width: 50%;
   }
 
-  /* line 27, ../source/scss/livewires/custom/_layout.scss */
+  /* line 35, ../source/scss/livewires/custom/_layout.scss */
+  .github {
+    float: right;
+    margin-top: 24px;
+  }
+
+  /* line 39, ../source/scss/livewires/custom/_layout.scss */
   .callout {
     padding-left: 12px;
     padding-left: 0.75rem;

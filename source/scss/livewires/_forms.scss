@@ -49,3 +49,16 @@ textarea {
 select {
   margin-bottom: 12px;
 }
+a.button,
+button {
+  display:inline-block;
+  background:$blue;
+  color:$white;
+  padding: 6px 24px;
+  @include border-radius;
+
+  &:hover,
+  &:active {
+    background: $red;
+  }
+}

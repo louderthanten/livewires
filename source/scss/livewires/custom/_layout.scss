@@ -14,15 +14,27 @@
 	background:$dark-grey;
 	color:$white;
 }
+.container {
+	padding-top: 48px;
+	padding-bottom: 48px;
+}
 
 
 
 
 @media only screen and (min-width: $screenSmall) {
+	.container {
+		padding-top: 96px;
+		padding-bottom: 96px;
+	}
 	.primary {
 		@include wrap;
 		float:left;
 		width:$c8*4;
+	}
+	.github {
+		float:right;
+		margin-top: 24px;
 	}
 	.callout {
 		@include wrap;

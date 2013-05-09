@@ -1,7 +1,7 @@
 #header {
 	background:$dark-grey;
 	color:$white;
-	padding:12px;
+	padding:24px;
 
 	a:link,
 	a:visited {
@@ -10,5 +10,8 @@
 	a:hover,
 	a:active {
 		color:$light-grey;
-	}	
+	}
+	figure {
+		margin:0 auto;
+	}
 }

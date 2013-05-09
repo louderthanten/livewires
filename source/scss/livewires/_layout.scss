@@ -5,5 +5,10 @@
 	overflow:hidden;
 }
 figure {
-    margin-bottom: $line;
+    //margin-bottom: $line;
+    max-width: 630px;
+
+    img {
+        max-width: 100%;
+    }
 }
