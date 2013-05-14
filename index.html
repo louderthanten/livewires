@@ -20,7 +20,8 @@
                 <h1>Light-weight prototyping with HTML&nbsp;&amp;&nbsp;SCSS</h1>
                 <section class="primary">
                     
-                    <p>Live Wires is simple HTML &amp; SCSS. It&rsquo;s not ugly, fancy. It doesn&rsquo;t look like a final design, but it also doesn&rsquo;t look like dog doo. Most text is represented by background images. It is designed to be a starting point for production code, not something you throw out. It's also very fast to work with. It is more of a philosophy than a product.</p>                    
+                    <p>Live Wires is a simple library for creating visually-neutral, responsive HTML prototypes. Forget about ugly wireframing apps and bloated UI libraries. Start evolving your projects with your own markup and a little help from Live Wires&rsquo; generic styles.</p>
+                    <p>Read about how we use Live Wires on the <a href="http://www.ngenworks.com/blog/live-wires-better-prototyping/">nGen Works blog</a>.</p>                
                 </section>
                 <a href="http://github.com/louderthanten/livewires/" class="button github"><h3>Fork it on Github</h3></a>
             </div>
@@ -67,7 +68,7 @@
                         <li>Drop a copy of Live Wires into the location of your new website project</li>
                         <li>Point your preferred SCSS compiler to Live Wires (I recommend <a href="http://incident57.com/codekit/">Codekit</a>)</li>
                         <li>Create HTML files for each of your templates in <code>httpdocs</code></li>
-                        <li>Write your structural HTML using the recommended classes</li>
+                        <li>Write your structural HTML using the recommended classes instead of content or lorem ipsum</li>
                         <li>Layout your templates with SCSS in <code>/scss/custom</code></li>
                     </ol>
 
@@ -110,10 +111,11 @@
                         <li>Adjust the height of <code>.content</code> elements using the <code>$line</code> variable (e.g. <code>height:$line*5;</code> will render 5 lines of "text").</li>
                         <li>See how placeholder images are configured at <a href="http://placehold.it">Placehold.It</a>.</li>
                         <li><code>/scss/livewires/readymade/</code> has starting points for commonly used UI patterns.</li>
-                        <li>Keep your usable structural SCSS separate from the default Live Wires styles and <code>.content</code> height adjustments.</li>
+                        
                         <li>Reference actual content to approximate content blocks. Even though we&rsquo;re hiding text, it should be based in reality.</li>
-                        <li>Throw away as little of your work as possible. A Live Wires prototype should be an evolution, not another discarded deliverable.</li>
-                        <li>Live Wires is not a design library. Please don&rsquo;t use the default styles for your app&rsquo;s design.</li>
+                        
+                        <li>Live Wires is not a design library. You don&rsquo;t want to use the default styles for your app&rsquo;s actual UI.</li>
+                        <li>Keep your usable structural SCSS separate from the default Live Wires styles and <code>.content</code> height adjustments. A Live Wires prototype should be an evolution, not another discarded deliverable.</li>
                     </ul>
                 </aside>
             </div>
@@ -151,6 +153,8 @@
 
     <footer id="footer">
         <div class="container">
+
+            <p>Created by <a href="http://travisgertz.com">Travis Gertz</a>. Follow at <a href="http://twitter.com/louderthan10">@louderthan10</a>.</p>
             <small>&copy; 2013. <a href="http://louderthan10.com">Louder Than Ten</a> &amp; <a href="http://ngenworks.com">nGen Works</a>. Released under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a>.</small>
         </div>
     </footer>

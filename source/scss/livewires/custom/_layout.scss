@@ -93,6 +93,9 @@
 		float:right;
 		width:$c8*4;
 		padding: $line;
+		li {
+			margin-bottom: 12px;
+		}
 	}
 	.primary {
 		@include wrap;
