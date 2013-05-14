@@ -18,14 +18,81 @@
 	padding-top: 48px;
 	padding-bottom: 48px;
 }
+.header {
+	figure {
+		width:$c4*4;
 
+		img {
+			max-width: 100%;
+			width:100%;
+		}
+	}
+}
+.benefits {
+	h2 {
+		margin-bottom: 48px;
+	}
+	ul {
+		@extend .group;
+		list-style: none;
+		padding:0;
+	}
+	li {
+		text-align: center;
+		margin-bottom: 48px;
+		h4 {
+			margin-top:0;
+		}
+	}
+	li:before {
+		float:left;
+		margin-left: -0.75em;
+	}
+	figure {
+		width:66.667%;
+		margin:0 auto 24px auto;
 
+		img {
+			width:100%;
+		}
+	}
+}
+.lists {
+	@include clearfix;
 
+	ul {
+		@include wrap;
+		float:left;
+		width:36%;
+		margin-left:10%;
+	}
+}
 
 @media only screen and (min-width: $screenSmall) {
+	.header {
+		figure {
+			@include wrap;
+		}
+	}
 	.container {
-		padding-top: 96px;
-		padding-bottom: 96px;
+		padding: 96px 0;
+	}
+	.intro h1,
+	.benefits h2,
+	.instructions h2 {
+		@include wrap;
+		width:$c8*6;
+	}
+	.how {
+		@include wrap;
+		float:left;
+		width:$c8*4;
+	}
+	.tips {
+		@include wrap;
+		float:right;
+		width:$c8*4;
+		padding: $line;
 	}
 	.primary {
 		@include wrap;
@@ -33,12 +100,43 @@
 		width:$c8*4;
 	}
 	.github {
+		@include wrap;
 		float:right;
 		margin-top: 24px;
+		margin-right:12px;
+		margin-left: 12px;
 	}
 	.callout {
 		@include wrap;
 		float:right;
+		width:$c8*3;
+	}
+	.benefits {
+		li {
+			float:left;
+			@include wrap;
+			width:$c8*4;
+			display:block;
+		}
+	}
+	.help {
+		@include wrap;
+	}
+}
+@media only screen and (min-width: $screenMedium) {
+	.benefits li {
+		width:33.3333%;
+	}
+	.feature-list {
+		li:nth-child(3n+4) {
+			clear:both;
+		}
+	}
+	.how {
+		width:$c8*4;
+		margin-right: $c8;
+	}
+	.tips {
 		width:$c8*3;
 	}
 }
