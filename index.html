@@ -69,7 +69,8 @@
                         <li>Point your preferred SCSS compiler to Live Wires (I recommend <a href="http://incident57.com/codekit/">Codekit</a>).</li>
                         <li>Create HTML files for each of your templates in <code>httpdocs</code>.</li>
                         <li>Write your structural HTML using the recommended classes instead of content or lorem ipsum.</li>
-                        <li>Layout your templates with SCSS in <code>/scss/custom</code>.</li>
+                        <li>Make a copy of <code>/source/scss/example</code> and update the includes in <code>livewires.scss</code></li>
+                        <li>Go to town laying out your templates in your new project folder.</li>
                     </ol>
 
                     <h3>Recommended classes</h3>
@@ -108,14 +109,19 @@
                 <aside class="reverse tips">
                     <h3>Tips</h3>
                     <ul class="link-list">
-                        <li>Adjust the height of <code>.content</code> elements using the <code>$line</code> variable (e.g. <code>height:$line*5;</code> will render 5 lines of "text").</li>
-                        <li>See how placeholder images are configured at <a href="http://placehold.it">Placehold.It</a>.</li>
-                        <li><code>/scss/livewires/readymade/</code> has starting points for commonly used UI patterns.</li>
                         
-                        <li>Reference actual content to approximate content blocks. Even though we&rsquo;re hiding text, it should be based in reality.</li>
+                        <li>See how placeholder images are configured at <a href="http://placehold.it">Placehold.It</a>.</li>
+                        
+                        <li><code>/sources/scss/livewires/components/</code> has starting points for common UI patterns.</li>
+                        
+                        <li>Work with a Content Strategist and reference actual content to approximate content blocks. Even though we&rsquo;re hiding text, it should be based in reality.</li>
                         
                         <li>Live Wires is not a design library. You don&rsquo;t want to use the default styles for your app&rsquo;s actual UI.</li>
-                        <li>Keep your usable structural SCSS separate from the default Live Wires styles and <code>.content</code> height adjustments. A Live Wires prototype should be an evolution, not another discarded deliverable.</li>
+
+                        <li>Adjust your content placeholders and other prototype-specific styles in <code>_content.scss</code>.</li>
+
+                        <li>Keep your structural SCSS separate from the <code>_content.scss</code> &amp; default Live Wires styles. A Live Wires prototype should be the starting point of a project, not a discarded deliverable.</li>
+
                     </ul>
                 </aside>
             </div>
