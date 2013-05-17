@@ -4,48 +4,21 @@
 //
 // EG) width: $c8*3; is equal to 3 columns in an 8 column grid.
 //
-// By default you can use a 4, 8, or 16 columns grid. Add your own in prototype/_variables.scss
+// By default you can use a 4, 8, or 16 columns grid. Add your own in livewires/_variables.scss
 
 
 // General Styles
 
 .intro {
 	margin-bottom: $line*4;
-	.content {
-		height:$line*4;
-	}
 }
 
-
-.location {
-	.content {
-		height:$line*4;
-	}
-}
-.page-content {
-	.content {
-		height:$line*12;
-	}
-}
 .results {
 	li {
 		background:transparent;
 		margin-bottom: $line;
 	}
-	.content {
-		height:$line*3;
-	}
 }
-
-
-
-// Page-specific
-.home-pg {
-	.hero {
-		height:$line*20;
-	}
-}
-
 
 
 

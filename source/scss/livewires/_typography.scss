@@ -1,9 +1,11 @@
+// Base
 body {
 	font-family: $sans;
 	color: $dark-grey;
 	@include font-size(16, 24);
 }
 
+// Headings
 h1 {
 	@include font-size(36, 48);
 }
@@ -20,6 +22,7 @@ h5 {
 	@include font-size(18, 24);
 }
 
+// Paragraphs & Lists
 p,
 ul,
 ol {
@@ -31,6 +34,11 @@ ol {
 	padding-left: 1em;
 }
 
+.content,
+li {
+	background: url('../img/livewires/text.png');
+}
+
 nav ul {
 	list-style: none;
 	padding:0;
@@ -40,22 +48,24 @@ nav ul {
 	}
 }
 
+// Links
 a {
 	font-weight: $bold;
 	text-decoration: none;
+
+	&:link,
+	&:visited {
+		color:$blue;
+	}
+
+	&:hover,
+	&:active {
+		color: $red;
+	}
 }
 
+
+// Other
 hr {
 	margin:$line 0;
-}
-
-.content,
-li {
-	background: url('/img/prototype/text.png');
-}
-.map {
-	background: url('/img/prototype/map.jpg') center center;
-}
-.hero {
-	background: $grey url('/img/prototype/img.jpg') no-repeat center center;
 }

@@ -1,0 +1,25 @@
+// Define filler boxes. Not for production use.
+.content {
+    &.body {
+        height:$line*24;
+    }
+}
+.intro,
+.location {
+    .content {
+        height:$line*4;
+    }
+}
+
+.page-content {
+    .content {
+        height:$line*12;
+    }
+}
+
+.results,
+.callout {
+    .content {
+        height:$line*3;
+    }
+}

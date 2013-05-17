@@ -3,49 +3,38 @@ $root-n: 16;
 $root: $root-n * 1px;
 $em: $base * 1;
 
-
-
-
+// Mixing for rem-ifying type sizes
 @mixin font-size($px_value: $base, $baseline: $line-n) {
-  $baseline_rem: ($root-n / 1rem);
-  font-size: ($px_value * 1px);
-  font-size: $px_value / $baseline_rem;
-  line-height: ($baseline / $px_value);
+	$baseline_rem: ($root-n / 1rem);
+	font-size: ($px_value * 1px);
+	font-size: $px_value / $baseline_rem;
+	line-height: ($baseline / $px_value);
 }
 
+// Mixin for hanging speech triangles off of block elements
 @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid   $triangleSize;
-  @if ($triangleDirection == top) {
-    border-color: $triangleColor transparent transparent transparent;
-  }
-  @if ($triangleDirection == bottom) {
-    border-color: transparent transparent $triangleColor transparent;
-  }
-  @if ($triangleDirection == left) {
-    border-color: transparent transparent transparent $triangleColor;
-  }
-  @if ($triangleDirection == right) {
-    border-color: transparent $triangleColor transparent transparent;
-  }
-  // .example { @include css-triangle(5px, #fff, bottom); }
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border: solid   $triangleSize;
+	
+	@if ($triangleDirection == top) {
+		border-color: $triangleColor transparent transparent transparent;
+	}
+	@if ($triangleDirection == bottom) {
+		border-color: transparent transparent $triangleColor transparent;
+	}
+	@if ($triangleDirection == left) {
+		border-color: transparent transparent transparent $triangleColor;
+ 	}
+	@if ($triangleDirection == right) {
+		border-color: transparent $triangleColor transparent transparent;
+	}
+	// .example { @include css-triangle(5px, #fff, bottom); }
 }
 
-@mixin image-2x($image, $width, $height) {
-  @media (min--moz-device-pixel-ratio: 1.3),
-         (-o-min-device-pixel-ratio: 2.6/2),
-         (-webkit-min-device-pixel-ratio: 1.3),
-         (min-device-pixel-ratio: 1.3),
-         (min-resolution: 1.3dppx) {
-    /* on retina, use image that's scaled by 2 */
-    background-image: url($image);
-    background-size: $width $height;
-  }
-}
-
+// Mixin for converting any px dimension into rems.
 @mixin rem($property, $px-values) {
   // Convert the baseline into rems
   $baseline-rem: $root / 1rem;
@@ -69,11 +58,11 @@ $em: $base * 1;
 
 //Gutters
 @mixin wrap {
-  @include rem(padding-left, $line/2);
-  @include rem(padding-right, $line/2);
+	@include rem(padding-left, $line/2);
+	@include rem(padding-right, $line/2);
 
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-     -o-box-sizing: border-box;
-      box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
 }

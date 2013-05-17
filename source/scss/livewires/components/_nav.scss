@@ -1,14 +1,16 @@
 .primary-nav,
 .footer-nav {
-	@include clearfix;
+	@extend .group;
+
 	li {
 		float:left;
 	}
+    
 	a {
 		display:block;
-		padding-right:12px;
+		padding-right:$line/2;
 	}
 }
 .search {
-	max-width: 240px;
+	max-width: $line*10;
 }

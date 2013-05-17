@@ -1,7 +1,7 @@
 #footer {
 	background:$dark-grey;
 	color:$white;
-	padding:12px;
+	padding:$line/2;
 
 	a:link,
 	a:visited {
@@ -9,6 +9,6 @@
 	}
 	a:hover,
 	a:active {
-		color:$light-grey;
+		color:$red;
 	}
 }

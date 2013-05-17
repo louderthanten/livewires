@@ -19,14 +19,17 @@ article {
 }
 
 @media only screen and (min-width: $screenSmall) {
+
 	.articles article,
 	.news-detail-pg article {
 		margin-left:$c8*2;
 		width:$c8*4;
 		@include wrap;
 	}
+
 	.archive-year {
-		@include clearfix;
+		@extend .group;
+
 		article {
 			width:$c8*2;
 			float:left;
