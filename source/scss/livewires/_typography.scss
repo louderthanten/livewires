@@ -37,6 +37,11 @@ ol {
 .content,
 li {
 	background: url('../img/livewires/text.png');
+
+	// Hide text. Hide this if you want to show paragraph text
+	p {
+		visibility: hidden;
+	}
 }
 
 //Setup line classes
