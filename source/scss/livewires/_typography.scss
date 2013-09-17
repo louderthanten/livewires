@@ -36,7 +36,7 @@ ol {
 
 .content,
 li {
-	background: image_url('livewires/text.png');
+	background: url('../img/livewires/text.png');
 }
 
 //Setup line classes
@@ -71,6 +71,7 @@ a {
 	}
 }
 
+// white text on grey
 .reverse {
 	padding:$line;
 	background:$dark-grey;

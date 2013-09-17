@@ -593,7 +593,7 @@ ol {
 /* line 38, ../../source/scss/livewires/_typography.scss */
 .content,
 li {
-  background: url('httpdocs/httpdocs/img/livewires/text.png?1375424518');
+  background: url("../img/livewires/text.png");
 }
 
 /* line 44, ../../source/scss/livewires/_typography.scss */
@@ -1120,14 +1120,14 @@ a:hover, a:active {
   color: #d13731;
 }
 
-/* line 74, ../../source/scss/livewires/_typography.scss */
+/* line 75, ../../source/scss/livewires/_typography.scss */
 .reverse, .header, .footer, .callout {
   padding: 24px;
   background: #3a3a3c;
   color: white;
 }
 
-/* line 81, ../../source/scss/livewires/_typography.scss */
+/* line 82, ../../source/scss/livewires/_typography.scss */
 hr {
   margin: 24px 0;
 }
@@ -1342,7 +1342,7 @@ section {
   margin: 0 5.55556%;
 }
 
-@media only screen and (min-width: 45em) {
+@media only screen and (min-width: 80em) {
   /* line 18, ../../source/scss/global/_layout.scss */
   html {
     font-size: 107.5%;
@@ -1419,4 +1419,56 @@ figure > img {
 .results .content,
 .callout .content {
   height: 72px;
+}
+
+/* line 39, ../../source/scss/example/_content.scss */
+.intro {
+  margin-bottom: 96px;
+}
+
+/* line 44, ../../source/scss/example/_content.scss */
+.results li {
+  background: transparent;
+  margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 45em) {
+  /* line 54, ../../source/scss/example/_content.scss */
+  .intro {
+    width: 50%;
+  }
+
+  /* line 58, ../../source/scss/example/_content.scss */
+  .page-content,
+  .primary {
+    float: left;
+    width: 50%;
+    padding-left: 12px;
+    padding-left: 0.75rem;
+    padding-right: 12px;
+    padding-right: 0.75rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /* line 63, ../../source/scss/example/_content.scss */
+  .secondary {
+    float: right;
+    width: 37.5%;
+    padding-left: 12px;
+    padding-left: 0.75rem;
+    padding-right: 12px;
+    padding-right: 0.75rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /* line 69, ../../source/scss/example/_content.scss */
+  .secondary .callout {
+    margin-top: 48px;
+  }
 }

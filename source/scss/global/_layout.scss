@@ -14,7 +14,7 @@ section {
     margin: 0 $margin;
 }
 
-@media only screen and (min-width: $screenSmall) {
+@media only screen and (min-width: $screenMedium) {
     html {
         font-size: 107.5%;
     }

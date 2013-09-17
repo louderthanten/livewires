@@ -1,11 +1,11 @@
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
-http_path = "httpdocs/"
+http_path = ""
 css_dir = "httpdocs/css"
 sass_dir = "source/scss"
-images_dir = "httpdocs/img"
-javascripts_dir = "httpdocs/js"
+images_dir = "img"
+javascripts_dir = "js"
 
 output_style = :expanded
 environment = :development

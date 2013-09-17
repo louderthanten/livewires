@@ -23,3 +23,51 @@
         height:$line*3;
     }
 }
+
+
+////////// GRID INSTRUCTIONS //////////
+//
+// $c[total colums]*[width of element]
+//
+// EG) width: $c8*3; is equal to 3 columns in an 8 column grid.
+//
+// By default you can use a 4, 8, or 16 columns grid. Add your own in livewires/_variables.scss
+
+
+// General Styles
+
+.intro {
+    margin-bottom: $line*4;
+}
+
+.results {
+    li {
+        background:transparent;
+        margin-bottom: $line;
+    }
+}
+
+
+
+
+@media only screen and (min-width: $screenSmall) {
+    .intro {
+        width:$c8*4;
+    }
+    .page-content,
+    .primary {
+        float:left;
+        width:$c8*4;
+        @include wrap;
+    }
+    .secondary {
+        float:right;
+        width:$c8*3;
+        @include wrap;
+    }
+    .secondary {
+        .callout {
+            margin-top: $line*2;
+        }
+    }
+}
