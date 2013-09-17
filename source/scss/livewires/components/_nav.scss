@@ -1,15 +1,17 @@
-.primary-nav,
-.footer-nav {
-	@extend .group;
+nav {
+	ul {
+		@include horizontal-list-container;
 
-	li {
-		float:left;
+		> li {
+			@include horizontal-list-item;
+
+			a {
+				display:block;
+				padding-right:$line/2;
+			}
+		}
 	}
-    
-	a {
-		display:block;
-		padding-right:$line/2;
-	}
+
 }
 .search {
 	max-width: $line*10;

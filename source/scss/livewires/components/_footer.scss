@@ -1,7 +1,5 @@
-#footer {
-	background:$dark-grey;
-	color:$white;
-	padding:$line/2;
+.footer {
+	@extend .reverse;
 
 	a:link,
 	a:visited {

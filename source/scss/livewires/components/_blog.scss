@@ -7,7 +7,9 @@ article {
 	}
 }
 .archive-year {
+	@extend .group;
 	margin-bottom: $line*2;
+
 	.content {
 		height:$line*3;
 	}
@@ -22,18 +24,16 @@ article {
 
 	.articles article,
 	.news-detail-pg article {
+		@include wrap;
 		margin-left:$c8*2;
 		width:$c8*4;
-		@include wrap;
 	}
 
 	.archive-year {
-		@extend .group;
-
 		article {
+			@include wrap;
 			width:$c8*2;
 			float:left;
-			@include wrap;
 		}
 	}
 }

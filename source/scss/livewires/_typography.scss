@@ -36,13 +36,20 @@ ol {
 
 .content,
 li {
-	background: url('../img/livewires/text.png');
+	background: image_url('livewires/text.png');
 }
+
+//Setup line classes
+@for $i from 1 through 100 {
+	.l#{$i} { height:$line* $i; }
+}
+
+
 
 nav ul {
 	list-style: none;
 	padding:0;
-	
+
 	li {
 		background:transparent;
 	}
@@ -64,6 +71,11 @@ a {
 	}
 }
 
+.reverse {
+	padding:$line;
+	background:$dark-grey;
+	color:$white;
+}
 
 // Other
 hr {

@@ -1,7 +1,5 @@
-#header {
-	background:$dark-grey;
-	color:$white;
-	padding:$line/2;
+.header {
+	@extend .reverse;
 
 	a:link,
 	a:visited {
@@ -10,5 +8,12 @@
 	a:hover,
 	a:active {
 		color:$red;
-	}	
+	}
+
+	.logo{
+		float:left;
+	}
+	.primary-nav {
+		float:right;
+	}
 }

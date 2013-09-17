@@ -3,18 +3,21 @@
 //   ========================================================================== */
 
 $white: #ffffff;
-$dark-grey:#3A3A3C;
-$grey: #BABAAE;
-$light-grey: #DBDBD2;
-$highlightColor: yellow;
-$blue: #44b3e1;
-$red: #d13731;
+$dark-grey:#333333;
+$grey: #CCC;
+$red: red;
+$blue: blue;
+
 
 ///* =============================================================================
 //   Borders
 //   ========================================================================== */
 
-$solid: 1px solid $grey;
+$rule: 1px solid $dark-grey;
+$red-rule: 1px solid $red;
+$white-rule: 1px solid $white;
+
+$default-border-radius: 5px;
 
 ///* =============================================================================
 //   Font Stacks
@@ -23,8 +26,10 @@ $solid: 1px solid $grey;
 
 $serif: Georgia, serif;
 $sans: "Helvetica Neue", sans-serif;
+$mono: monospace;
 
-// FONT WEIGHTS
+
+// FONT WEIGHTS 
 
 $thin: 100;
 $light: 300;
@@ -40,37 +45,45 @@ $black: 900;
 //   Base Sizes
 //   ========================================================================== */
 
-$line-n: 24;
-$base: 16;
 
-$line: $line-n * 1px;
-$margin: 100% / 18;
+$line-n: 24; // Set the line height (in px) Also determines gutter width.
+$line: $line-n * 1px; //Convert to pixels for common use
+$base: 16; // Set the base font size (in px)
+
+// Set the page margins (14 is nice for 12 col grid…
+// It results in an even column unit for either margin. EG, I'd use 18 for a 16 column grid).
+$margin: 100% / 14;
 
 
 ///* =============================================================================
 //   Grid
 //   ========================================================================== */
 
-//Loosely based on the principles outined at http://goldengridsystem.com
+// USAGE
+// width: $c6*3; // This is 3 units of a 6 unit grid wide
+// margin-left: $c4*2; // This pushes the element 2 units (of a 4 element grid) to the left
 
-//Three Columns
-$c3: 100%/3;
+// You should add @include wrap; to each column adjustment
+// It's recomended to change box sizing to border-box for easier styling and positining.
+// Read more here: http://goldengridsystem.com
 
-//Six Columns
-$c6: 100%/6;
+// Have fun. Make as many as you like. Simple.
 
-//Twelve Columns
-$c12: 100%/12;
+//Three Column Grid
+$c3: 100% / 3;
+//Four Column Grid
+$c4: 100% / 4;
 
+//Six Column Grid
+$c6: 100% / 6;
+//Eight Column Grid
+$c8: 100% / 8;
 
-//Four Columns
-$c4: 100%/4;
+//Twelve Column Grid
+$c12: 100% / 12;
+//Sixteen Column Grid
+$c16: 100% / 16;
 
-//Eight Columns
-$c8: 100%/8;
-
-//Sixteen Columns
-$c16: 100%/16;
 
 
 
@@ -78,7 +91,9 @@ $c16: 100%/16;
 //   Breakpoints
 //   ========================================================================== */
 
-$screenSmall: 45em !default;
+// Adjust according to content not device.
+
+$screenSmall: 49em !default;
 $screenMedium: 80em !default;
 $screenLarge: 112em !default;
 $screenXlarge: 150em !default;

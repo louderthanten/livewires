@@ -62,16 +62,16 @@
 
 .clear { clear:both; }
 
-/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */ 
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
 .group {
     zoom:1;
-    
+
     &:before,
     &:after{
         content:" ";
         display:table;
     }
-    
+
     &:after{
         clear:both;
     }
@@ -82,7 +82,7 @@ object,
 embed,
 #map_canvas embed,
 #map_canvas img,
-#map_canvas object { 
+#map_canvas object {
     max-width: none;
 }
 
@@ -101,5 +101,5 @@ embed,
     display: none;
 }
 .highlight   {
-    background: $highlightColor;
+    background: yellow;
 }
