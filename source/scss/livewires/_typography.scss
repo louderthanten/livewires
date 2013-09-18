@@ -43,7 +43,9 @@ li {
 		visibility: hidden;
 	}
 }
-
+.link-list li {
+	background: none;
+}
 //Setup line classes
 @for $i from 1 through 100 {
 	.l#{$i} { height:$line* $i; }
