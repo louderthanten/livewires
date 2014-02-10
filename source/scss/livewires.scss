@@ -1,35 +1,36 @@
-// Compass Imports
-@import "compass";
+// Base theme colors
+@import "settings/colors";
 
-@import "settings/normalize";
-@import "settings/helpers";
-
-// Live Wires variables
-@import "livewires/variables";
-
-// Share production mixins
-@import "settings/mixins";
+// Includes
+@import "settings/includes";
 
 // Live Wires visual styles
-@import "livewires/typography";
-@import "livewires/forms";
+.content{
+  p,
+  li,
+  dd {
+    line-height: 1.25;
+    letter-spacing:-0.1em;
+    word-spacing: -0.9em;
+    font-family: "BLOKKNeue-Regular";
+    color: #BABAAE;
+
+    > * {
+      word-spacing: 0;
+      letter-spacing: 0;
+    }
+
+  }
+}
+
+// If you don't have content, shame on you.
+// Here's a little handy set of classes to help you anyway.
+// Just add a line class to your container and we'll fill it with the text placeholder image.
+//
+// eg) class="l5" would render 5 lines of text placeholder images
+@for $i from 1 through 100 {
+  .l#{$i} { height:$line* $i; background: url('../img/livewires/text.png'); }
+  .l#{$i} > p { visibility: hidden; }
+}
 
 
-// Optional readymade templates to get going. Don't need it? Remove it.
-@import "livewires/components/header";
-@import "livewires/components/footer";
-@import "livewires/components/nav";
-@import "livewires/components/blog";
-@import "livewires/components/callouts";
-
-
-//  Use production css for layout when possible
-@import "global/layout";
-@import "modules/media";
-
-
-// Design your protoype in a separate project file.
-// Styles that only apply to the protoype should be separate.
-// Grouping styles you can use in production makes much of your work reusable.
-@import "example/header";
-@import "example/content";

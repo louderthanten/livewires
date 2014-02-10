@@ -1,0 +1,32 @@
+// Navigation lists
+.vertical-nav {
+  @extend %group;
+  margin-left: 0;
+  margin-right: 0;
+
+  li {
+    position: relative;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    font-family: $sans;
+    padding:rem($line/4) 0;
+
+    &:link,
+    &:visited {
+
+    }
+    &:hover,
+    &:active,
+    &:focus {
+
+    }
+  }
+  .current {
+    a {
+      cursor: default;
+    }
+  }
+}

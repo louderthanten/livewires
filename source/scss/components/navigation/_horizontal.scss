@@ -1,0 +1,37 @@
+.horizontal-nav {
+  ul {
+    @extend %group;
+    padding:0;
+    margin-bottom: 0;
+  }
+  li {
+    display: block;
+  }
+  a {
+    display: block;
+    width:100%;
+    padding:rem($line/4) $margin;
+    font-family: $serif;
+    text-decoration: none;
+    font-family: $sans;
+  }
+}
+
+@media only screen and (min-width: $screenSmall) {
+  .horizontal-nav {
+    ul {
+    }
+    li {
+      display: inline-block;
+    }
+    a {
+      padding:rem($line/2);
+    }
+  }
+  .horizontal-nav--center {
+    ul {
+      display: table;
+      margin: 0 auto;
+    }
+  }
+}

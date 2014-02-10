@@ -1,0 +1,45 @@
+// DRAWERS
+
+// Hidden content that gets opened by clicking on a link with a class of .js-reveal.
+// Uses a small javascript snippet to pull the target from the href parameter.
+//
+// Example:
+//
+//<p><a href="#drawer" class="button js-reveal">Open drawer</a></p>
+//
+// <section class="drawer" id="drawer"> <!-- Anything inside .drawer is hidden -->
+//     <div class="container">
+//         <section class="content">
+//             … Stuff …
+//         </section>
+//     </div>
+// </section>
+
+.drawer {
+  @extend %group;
+  overflow: hidden;
+  padding:0;
+  max-height:0; // We use max-height to control the opening because it can be animated with a transition.
+  transition: all 0.5s ease;
+
+  .container {
+    padding: rem($line*2) 0;
+
+    // Removes margins from first and last elements inside the drawer for more consistent padding.
+    > *:first-child,
+    > *:first-child > *:first-child,
+    > *:first-child > *:first-child > *:first-child {
+      margin-top: 0;
+    }
+    > *:last-child,
+    > *:last-child > *:last-child,
+    > *:last-child > *:last-child > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Open the drawer after the js adds an .opened class. You can make this as tall as you want as long as it exceeds the height of the drawer.
+  &.opened {
+    max-height:1000px;
+  }
+}

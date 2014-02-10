@@ -1,0 +1,24 @@
+ul,
+ol,
+dl {
+  margin:rem(0 0 $line 0);
+  padding:0;
+
+  ul,
+  ol {
+    margin-bottom: 0;
+    padding-left: rem($line);
+  }
+}
+
+dt {
+
+}
+dd {
+
+}
+nav {
+  ul {
+  list-style: none;
+  }
+}

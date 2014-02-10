@@ -1,0 +1,67 @@
+// QUOTES
+
+//Inline Quotes
+
+q{
+  quotes:"‘" "’" "“" "”";
+
+  &:before{
+    content:"‘";
+    content:open-quote;
+  }
+  &:after{
+    content:"’";
+    content:close-quote;
+  }
+
+  q:before{
+    content:"“";
+    content:open-quote;
+  }
+  q:after{
+    content:"”";
+    content:close-quote;
+  }
+}
+
+//Blockquotes
+blockquote {
+  quotes:"“" "”";
+  text-indent: -0.5em;
+
+  p {
+
+  }
+
+  p:before{
+    content:"“";
+    content:open-quote;
+  }
+  p:after{
+    content:"";
+    content:no-close-quote;
+  }
+  p:last-of-type:after{
+    content:"”";
+    content:close-quote;
+  }
+
+  q:before{
+    content:"‘";
+    content:open-quote;
+  }
+  q:after{
+    content:"’";
+    content:close-quote;
+  }
+
+}
+cite {
+
+}
+.source {
+
+  span {
+
+  }
+}

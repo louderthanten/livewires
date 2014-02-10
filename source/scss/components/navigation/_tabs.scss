@@ -1,0 +1,52 @@
+// Tabs
+
+// Our tabs implementation is pretty flexible. If you follow this general pattern, you can place anything in the tab elements:
+//
+// Simplest implementation:;
+// <ul class="tabs">
+//  <li><a href="#tab1">Tab 1</a></li>
+//  <li><a href="#tab2">Tab 2</a></li>
+//  <li><a href="#tab3">Tab 3</a></li>
+// </ul>
+// <div id="tab1">
+//   <!-- TAB 1 STUFF -->
+// </div>
+// <div id="tab2">
+//   <!-- TAB 2 STUFF -->
+// </div>
+// <div id="tab3">
+//   <!-- TAB 3 STUFF -->
+// </div>
+//
+
+.tabs {
+  padding:0;
+  margin-bottom: 0;
+
+  li {
+    display: inline-block;
+    width:auto;
+  }
+  a {
+    @extend .button;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    display:block;
+    text-decoration: none;
+  }
+}
+.tab-content {
+  padding: rem($line/2);
+
+  // Remove margins from the first and last elements in the callout to help maintain consistent padding around the inside the box
+  > *:last-child,
+  > *:last-child > *:last-child,
+  > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0 !important;
+  }
+  > *:first-child,
+  > *:first-child > *:first-child,
+  > *:first-child > *:first-child > *:first-child {
+    margin-top: 0 !important;
+  }
+}

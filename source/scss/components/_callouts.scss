@@ -1,0 +1,40 @@
+// CALLOUTS
+//
+// Good for visually sepearating related content. Let's make 'em flexible.
+// Example:
+//
+// <aside class="callout">
+//  <div class="content">
+//    <h2>Content Callout</h2>
+//    <p>Callout content</p>
+//  </div>
+// </aside>
+
+// .callout acts as a fluid container with padding so side by side callouts can still have a gutter separating them
+.callout {
+  @extend %group;
+  margin-bottom:rem($line);
+
+  //Remove margins from figure if it's outside of the .content area. Locks image and content together.
+  > figure {
+    margin:0;
+  }
+
+  // .content is where visual styles, like backgrounds and rounded corners should be applied
+  .content {
+    @extend %group;
+    padding:rem($line);
+
+    // Remove margins from the first and last elements in the callout to help maintain consistent padding around the inside the box
+    > *:last-child,
+    > *:last-child > *:last-child,
+    > *:last-child > *:last-child > *:last-child {
+      margin-bottom: 0 !important;
+    }
+    > *:first-child,
+    > *:first-child > *:first-child,
+    > *:first-child > *:first-child > *:first-child {
+      margin-top: 0 !important;
+    }
+  }
+}

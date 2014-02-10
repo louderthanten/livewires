@@ -1,44 +1,26 @@
-//* =============================================================================
-//   Default Colours
-//   ========================================================================== */
-
-$white: #ffffff;
-$dark-grey:#333333;
-$grey: #CCC;
-$red: red;
-$blue: blue;
 
 
 ///* =============================================================================
 //   Borders
 //   ========================================================================== */
 
-$rule: 1px solid $dark-grey;
-$red-rule: 1px solid $red;
-$white-rule: 1px solid $white;
+$rule: 1px solid $light-text;
+$hairline: 1px solid $dark-background;
+$accentline: 1px solid $accent;
+$whiteline: 1px solid $background;
 
-$default-border-radius: 5px;
+
+// Default border radius
+$radius: 3px;
 
 ///* =============================================================================
 //   Font Stacks
 //   ========================================================================== */
 
-
-$serif: Georgia, serif;
-$sans: "Helvetica Neue", sans-serif;
+$serif: serif;
+$sans: sans-serif;
 $mono: monospace;
 
-
-// FONT WEIGHTS 
-
-$thin: 100;
-$light: 300;
-$regular: 400;
-$medium: 500;
-$semibold: 600;
-$bold: 700;
-$extrabold: 800;
-$black: 900;
 
 
 ///* =============================================================================
@@ -52,37 +34,8 @@ $base: 16; // Set the base font size (in px)
 
 // Set the page margins (14 is nice for 12 col grid…
 // It results in an even column unit for either margin. EG, I'd use 18 for a 16 column grid).
-$margin: 100% / 14;
+$margin: 100% / 20;
 
-
-///* =============================================================================
-//   Grid
-//   ========================================================================== */
-
-// USAGE
-// width: $c6*3; // This is 3 units of a 6 unit grid wide
-// margin-left: $c4*2; // This pushes the element 2 units (of a 4 element grid) to the left
-
-// You should add @include wrap; to each column adjustment
-// It's recomended to change box sizing to border-box for easier styling and positining.
-// Read more here: http://goldengridsystem.com
-
-// Have fun. Make as many as you like. Simple.
-
-//Three Column Grid
-$c3: 100% / 3;
-//Four Column Grid
-$c4: 100% / 4;
-
-//Six Column Grid
-$c6: 100% / 6;
-//Eight Column Grid
-$c8: 100% / 8;
-
-//Twelve Column Grid
-$c12: 100% / 12;
-//Sixteen Column Grid
-$c16: 100% / 16;
 
 
 
@@ -93,7 +46,91 @@ $c16: 100% / 16;
 
 // Adjust according to content not device.
 
-$screenSmall: 49em !default;
-$screenMedium: 80em !default;
-$screenLarge: 112em !default;
-$screenXlarge: 150em !default;
+$screenSmall: 48em !default;
+$screenSmallMedium:54em !default;
+$screenMedium: 64em !default;
+$screenLarge: 98em !default;
+$screenXlarge: 110em !default;
+
+
+// FONT WEIGHTS
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+$heavy: 900;
+
+//   GRID
+//
+// USAGE
+// width: $c6*3; // This is 3 units of a 6 unit grid wide
+// margin-left: $c4*2; // This pushes the element 2 units (of a 4 element grid) to the left
+//
+// Make box-sizing: border-box; for easier styling and positining using the wrap mixin.
+// Read more on the basic concept here: http://goldengridsystem.com
+
+// Have fun. Make as many as you like. Simple.
+
+// Primary Grid
+//=============\\
+//Three Column Grid
+$c3: 100% / 3;
+//Four Column Grid
+$c4: 100% / 4;
+// Five Columns
+$c5: 100% / 5;
+//Six Column Grid
+$c6: 100% / 6;
+//Seven Column Grid
+$c7: 100% / 7;
+//Eight Column Grid
+$c8: 100% / 8;
+//Nine Column Grid
+$c9: 100% / 9;
+//Ten Column Grid
+$c10: 100% / 10;
+//Twelve Column Grid
+$c12: 100% / 12;
+//Sixteen Column Grid
+$c16: 100% / 16;
+
+
+//Brand Colours
+$adn: #4A484C;
+$android: #80BD01;
+$apple: #777777;
+$bitbucket: #205081;
+$bitcoin: #F7931A;
+$css3: #1572B7;
+$dribbble: #EA4C89;
+$dropbox: #1081DE;
+$facebook: #3B579D;
+$flickr: #FF1981;
+$foursquare: #38AAE1;
+$github: #333333;
+$gittip: #663300;
+$googleplus: #DD4B39;
+$html5: #E54D26;
+$instagram: #427096;
+$linkedin: #1B86BC;
+$linux: #000000;
+$maxcdn: #FE8424;
+$pagelines: #2CA6FE;
+$pinterest: #CB2027;
+$renren: #005CAC;
+$skype: #00AFF0;
+$stackexchange: #195398;
+$stackoverflow: #FE7A15;
+$trello: #2A79A6;
+$tumblr: #304E6A;
+$twitter: #00ACED;
+$vimeo: #20B9EB;
+$vk: #54769A;
+$weibo: #EB182C;
+$windows: #6DC2E9;
+$xing: #006464;
+$youtube: #CC181E;

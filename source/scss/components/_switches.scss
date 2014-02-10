@@ -1,0 +1,92 @@
+// SWITCHES
+
+// A fancy way to show a simple two-option radio field.  Requires box-shadows and transitions out of the box.
+//
+// Example:
+//<div class="field switch">
+//   <input id="x" name="switch-x" type="radio" checked>
+//   <label for="x" onclick="">Off</label>
+//   <input id="y" name="switch-x" type="radio">
+//   <label for="y" onclick="">On</label>
+//   <span></span>
+//</div>
+
+.switch {
+  @extend %group;
+  transition: all 0.2s linear;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  height:rem($line*1.5);
+  padding: 0;
+  margin-bottom: rem($line/4);
+  line-height: 2.5;
+  font-family: $sans;
+  border-radius: $radius;
+
+  label {
+    transition: opacity 0.3s linear;
+    position: relative;
+    left: 0;
+    height: 100%;
+    margin:0;
+    float: left;
+    z-index: 2;
+    text-align: left;
+
+    &:first-of-type {
+      padding:rem(0 $line/1.5 0 $line/1.5);
+    }
+    &:last-of-type {
+      padding:rem(0 $line/1.5 0 0);
+    }
+  }
+
+  input {
+    position: absolute;
+    z-index: 3;
+    opacity: 0;
+    width: 100%;
+    height:100%;
+    cursor: pointer;
+    -moz-appearance: none;
+
+    &:first-of-type:checked ~ span:last-child {
+      left: 100%;
+      margin-left: rem($line*-1.5 + 1px);
+    }
+  }
+
+  span:last-child {
+    transition: all 0.2s linear;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: rem($line*1.5);
+    height: rem($line*1.5);
+    padding: 0;
+    z-index: 1;
+    border-width: rem(1px);
+    border-style: solid;
+    border-radius: $radius;
+    cursor: pointer;
+  }
+
+  input:not(:checked) + label { opacity: 0; }
+
+  input:checked { display: none !important; }
+  input { left: 0; display: block !important; }
+
+  // Left Label alignment and position changes, including fixes for while inside a custom form
+  input:first-of-type + label,
+  input:first-of-type + span + label { left: -50%; }
+  input:first-of-type:checked + label,
+  input:first-of-type:checked + span + label { left: 0%; }
+
+  // Right Label alignment and position changes, including fixes for while inside a custom form
+  input:last-of-type + label,
+  input:last-of-type + span + label {right: -50%; left: auto; text-align: right; }
+  input:last-of-type:checked + label,
+  input:last-of-type:checked + span + label { right: 0%; left: auto; }
+}

@@ -1,0 +1,10 @@
+// ANIMATIONS
+
+// I like to group animations in one spot for global cohesiveness.
+
+// Adds a nice default transition for link and button hovers.
+a,
+button,
+input[type="submit"] {
+  transition: all 0.2s linear;
+}

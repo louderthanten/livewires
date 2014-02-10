@@ -1,0 +1,8 @@
+.tabs {
+  a {
+    @extend .button--grey;
+  }
+  .active {
+    background-color: $text;
+  }
+}

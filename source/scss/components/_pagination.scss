@@ -1,0 +1,55 @@
+// PAGINATION
+
+// Here are some starter pagination styles for navigating between dynamic content.
+//
+// Full pagination example:
+//<nav class="pagination">
+//    <ul>
+//        <li><a href="#">&laquo;</a></li>
+//        <li class="current"><a href="#">1</a></li>
+//        <li><a href="#">2</a></li>
+//        <li><a href="#">3</a></li>
+//        <li>&hellip;</li>
+//        <li><a href="#">5</a></li>
+//        <li><a href="#">&raquo;</a></li>
+//    </ul>
+//</nav>
+//
+// Mini pagination example:
+//<nav class="pagination pagination--mini">
+//    <p><a href="" class="prev">&laquo;&nbsp;Prev</a><a href="" class="next">Next&nbsp;&raquo;</a></p>
+//</nav>
+
+.pagination {
+  @extend %group;
+  margin-top: rem($line);
+
+  li {
+    display:block;
+    float:left;
+  }
+  a {
+    display:block;
+
+    &:link,
+    &:visited {
+
+    }
+
+    &:hover,
+    &:active {
+
+    }
+  }
+
+  .current a{
+    cursor: default;
+  }
+}
+
+.pagination--mini {
+  a {
+    display: block;
+    float:left;
+  }
+}

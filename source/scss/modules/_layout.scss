@@ -1,0 +1,116 @@
+// LAYOUT
+
+// This page is for setting up our general layout structure.
+//
+// If you've been a good little developer and stuck to using rem units, we can resize our entire layout proportionally by manipulating the font-size on the html element.
+html {
+  font-size: 100%;
+  min-height: 100%;
+  overflow-y:scroll;
+}
+
+html,
+body {
+  height:100%;
+  position: relative;
+}
+
+// I use .row classes for edge-to-edge page sections width full-bleed images or background colors.
+// A .container gives the content some margins and sets up the edges of the grid.
+//
+// Markup example:
+// <section class="row">
+//      <div class="container">
+//          <section class="primary-content">
+//              … Main page stuff …
+//          </section>
+//          <aside class="secondary-content">
+//              … Secondary content (sidebar perhaps?) …
+//           </aside>
+//      </div>
+//  </section>
+.row {
+  padding: rem($line 0);
+}
+
+//Creates margins with a half-gutter on either side.
+.container {
+  @extend %group; // Call in a clearfix style
+  position:relative;
+  padding: 0 $margin;
+
+  // Let's just apply border-box sizing and clearfixing to the container's immediate children while we're here.
+  > * {
+    @extend %group;
+  }
+}
+
+// Edge to edge container on mobile
+.container--mobile-full {
+  margin: 0;
+}
+
+.primary-content{
+
+}
+.secondary-content {
+
+}
+.split-content {
+
+}
+
+@media only screen and (min-width: $screenSmall) {
+  // Bring margins back to our mobile edge-to-edge styles
+  .container--mobile-full {
+    margin:0 $margin;
+  }
+  .container {
+
+    // Add gutters to container's immediate children unless they have a .collapse class.
+    > *:not(.collapse) {
+      @include gutter;
+    }
+  }
+  .primary-content {
+    // Example
+    float:left;
+    width:$c5*3;
+  }
+  .secondary-content {
+    //Example
+    float:right;
+    width:$c5*2;
+  }
+}
+@media only screen and (min-width: $screenMedium) {
+  html {
+    font-size: 107.5%; // You can proportionally resize your entire layout with this line if you stick to rem units everywhere.
+  }
+  .container {
+    margin: 0 $margin *2;  // If your layout feels like it's getting too wide, multiply the margins instead of adding a stuffy max-width.
+  }
+  .primary-content {
+    // Change grid as you move up
+    margin-left:$c7; // move content to the left by one 7-column unit
+    width:$c7*3; // Three units of a 7-column grid
+  }
+  .secondary-content {
+    width: $c4; // Feel free to use combine unit widths to make a compound grid
+  }
+}
+
+@media only screen and (min-width: $screenLarge) {
+  .container {
+
+  }
+  .primary-content {
+
+  }
+  .secondary-content {
+
+  }
+}
+@media only screen and (min-width: $screenXlarge) {
+
+}

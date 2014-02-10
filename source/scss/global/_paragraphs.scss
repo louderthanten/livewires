@@ -1,0 +1,75 @@
+// PARAGRAPH STYLES
+
+// Modular scales are your friend, my friend: http://modularscale.com  |  https://vimeo.com/17079380
+body {
+  @include font-size;
+  font-family: $serif;
+}
+
+p {
+  margin:rem(0 0 $line/2 0);
+  hyphens: auto;
+}
+
+.lead {
+  @include font-size(18, $line-n); // using the $line-n variable makes it easy to stick to a baseline grid.
+}
+
+.tagline {
+
+}
+
+b,
+strong {
+  font-weight: $bold;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+abbr {
+  cursor: help;
+
+  &.acr {
+
+  }
+}
+
+sup {
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  position: relative;
+  bottom: .5ex;
+}
+
+sub {
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  position: relative;
+  bottom: -.5ex;
+}
+
+// Fancy ampersands
+//
+// EG) <p>You <abbr class="amp">&amp;</abbr> I.</p>
+
+.amp {
+  font-style: italic;
+}
+
+.price {
+  &:first-letter {
+    height: 0;
+    line-height: 2;
+    vertical-align: top;
+    position: relative;
+    font-size: 0.6667em;
+  }
+}
+
+
+
