@@ -24,7 +24,18 @@ a.button--red {
 
     &:active,
     &:focus {
-        background-color: $blue;
+        background-color: $text;
+    }
+}
+
+.button--blue,
+a.button--blue {
+    background:$blue;
+    color: $background;
+
+    &:active,
+    &:focus {
+        background-color: $text;
     }
 }
 

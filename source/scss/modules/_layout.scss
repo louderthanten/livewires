@@ -66,7 +66,6 @@ body {
     margin:0 $margin;
   }
   .container {
-
     // Add gutters to container's immediate children unless they have a .collapse class.
     > *:not(.collapse) {
       @include gutter;
@@ -81,6 +80,10 @@ body {
     //Example
     float:right;
     width:$c5*2;
+  }
+  .split-content {
+    width:$c4*2;
+    float:left;
   }
 }
 @media only screen and (min-width: $screenMedium) {

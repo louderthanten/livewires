@@ -1,46 +1,45 @@
 @import "variables";
 @import "functions";
 @import "mixins";
+@import "helpers";
 
 // Vendor styles
 @import "../vendor/normalize";
 
-// Global styles
-@import "../global/helpers";
-@import "../global/paragraphs";
-@import "../global/headings";
-@import "../global/smallprint";
-@import "../global/time-stamps";
-@import "../global/links";
-@import "../global/lists";
-@import "../global/borders";
-@import "../global/icons";
-@import "../global/buttons";
-@import "../global/forms";
-@import "../global/tables";
-@import "../global/animation";
+// Element styles
+@import "../elements/typography/paragraphs";
+@import "../elements/typography/headings";
+@import "../elements/typography/smallprint";
+@import "../elements/typography/time-stamps";
+@import "../elements/typography/links";
+@import "../elements/typography/lists";
+@import "../elements/typography/quotes";
+@import "../elements/typography/vcards";
+@import "../elements/forms/buttons";
+@import "../elements/forms/fields";
+@import "../elements/forms/switches";
+@import "../elements/forms/option-buttons";
+@import "../elements/borders";
+@import "../elements/animation";
 
-// UI components
-@import "../components/quotes";
-@import "../components/code";
-@import "../components/images";
-@import "../components/maps";
-@import "../components/videos";
-@import "../components/callouts";
-@import "../components/drawers";
-@import "../components/breadcrumbs";
-@import "../components/pagination";
-@import "../components/switches";
-@import "../components/option-buttons";
-@import "../components/vcards";
+// Components
 @import "../components/navigation/horizontal";
 @import "../components/navigation/vertical";
 @import "../components/navigation/offcanvas";
 @import "../components/navigation/tabs";
+@import "../components/navigation/pagination";
+@import "../components/navigation/breadcrumbs";
+@import "../components/media/images";
+@import "../components/media/maps";
+@import "../components/media/videos";
+@import "../components/code";
+@import "../components/callouts";
+@import "../components/drawers";
+@import "../components/forms";
+@import "../components/tables";
 
-// UI modules
+// Modules
 @import "../modules/header";
-@import "../modules/cover";
 @import "../modules/layout";
 @import "../modules/footer";
 

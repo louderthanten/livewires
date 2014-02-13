@@ -7,6 +7,13 @@ pre {
     color: $background;
 }
 
+.reverse {
+    code,
+    pre {
+        background:darken($text, 5);
+    }
+}
+
 //Inline code
 :not(pre) > code {
     background: $dark-background;

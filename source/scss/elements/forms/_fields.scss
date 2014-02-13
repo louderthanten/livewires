@@ -1,18 +1,4 @@
-// FORMS
-
-form {
-
-}
-
-// Let's remove some odd decisions from Normalize on fieldsets.
-fieldset {
-  @extend %group;
-  padding:0;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  border:none;
-  display: block;
-}
+//FIELDS
 
 // Let's wrap our fields in a field class for easier manipulation. Here's how I generally do a required text field:
 //
@@ -34,10 +20,6 @@ fieldset {
   }
 }
 
-legend {
-  @extend %group;
-}
-
 label,
 .label {
 
@@ -49,7 +31,6 @@ label,
   left:0;
   bottom:0;
 }
-
 
 //    Text inputs. Another hat tip to Inuit for the text-input class idea. http://inuitcss.com/
 //
@@ -123,56 +104,15 @@ input[type=radio] {
   margin-right: 0.5em;
 }
 
-//  Extra help text displayed after a field when that field is in focus, e.g.:
-//
-//   <label for=email>Email:</label>
-//   <input type=email class=text-input id=email>
-//   <small class=extra-help>.edu emails only</small>
-//
-//  We leave the help text in the document flow and merely set it to
-//  `visibility:hidden;`. This means that it won’t interfere with anything once
-//  it reappears.
 
+// Modified fields
+.text-input--small {
 
-// small
-.extra-help{
-  display:inline-block;
-  visibility:hidden;
 }
-.text-input:active + .extra-help,
-.text-input:focus + .extra-help{
-  visibility:visible;
+.text-input--large {
+
 }
 
-// Modified forms
-.form--mini {
-  .field {
-
-  }
-  .text-input {
-
-  }
-}
-
-// Inline forms are good for embedding fields in text. Another hat tip to Inuit. http://inuitcss.com/
-//
-// <div class="form--inline">
-//  <p>Yo Jeeves, the <label for="name">name</label> is
-//      <input type="text" class="text-input" id="name" />. My
-//      <label for="drink">drink of choice</label> is
-//      <select id="drink">
-//              <option>Bourbon</option>
-//          <option>Vodka</option>
-//          <option>Gin</option>
-//      </select>.</p>
-// </div>
-
-.form--inline {
-  label {
-    display:inline-block;
-    font:inherit;
-  }
-}
 
 // Not all fields need to be full width. Here are some field building blocks
 // I'm kicking these in at a wider screen, but make some for mobile. If you dare. ;)

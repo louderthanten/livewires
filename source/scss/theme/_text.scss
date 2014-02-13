@@ -1,7 +1,4 @@
 // TEXT COLOURS
-body {
-  color: $text;
-}
 * {
   @include selected($background, $accent);
 }

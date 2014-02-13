@@ -6,26 +6,26 @@ h1 {
   font-family: $sans;
 
   // Handy for header sub-elements
-  > span,
-  > small {
-
+  span,
+  small {
+    font-size: 0.5em;
   }
 }
 h2 {
   font-family: $sans;
 
-  > span,
-  > small {
-    color:$mid-text;
+  span,
+  small {
+    font-size: 0.5em;
   }
 
 }
 h3 {
   font-family: $sans;
 
-  > span,
-  > small {
-
+  span,
+  small {
+    font-size: 0.5em;
   }
 }
 h4 {

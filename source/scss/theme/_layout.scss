@@ -1,5 +1,16 @@
+//Default colors
+body {
+  background:$background;
+  color:$text;
+}
+
 // Reverse the colours
 .reverse {
     background:$text;
     color:$background;
+}
+
+// Subtly highlighted section
+.subtle {
+  background:$dark-background;
 }

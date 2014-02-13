@@ -23,7 +23,8 @@
   transition: all 0.5s ease;
 
   .container {
-    padding: rem($line*2) 0;
+    padding-top: rem($line);
+    padding-bottom: rem($line);
 
     // Removes margins from first and last elements inside the drawer for more consistent padding.
     > *:first-child,
