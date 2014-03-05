@@ -1,3 +1,5 @@
+// LISTS
+
 ul,
 ol,
 dl {
@@ -12,10 +14,11 @@ dl {
 }
 
 dt {
-
+  font-weight: $bold;
 }
 dd {
-
+  margin-left:0;
+  margin-bottom: rem($line);
 }
 nav {
   ul {

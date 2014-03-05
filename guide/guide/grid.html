@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+    <!-- Title block allowing child pages to override -->
+    <title>Site name</title>
+
+    <!-- Include meta tags -->
+    <meta name="description" content="Light-weight prototyping with HTML & SCSS.">
+
+<!-- global Open Graph tags -->
+<meta property="og:title" content="Site name" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="Light-weight prototyping with HTML & SCSS." />
+<meta property="og:url" content="http://http://livewires.io" />
+<meta property="og:site_name" content="Site name" />
+
+<!-- Twitter social tags -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="http://http://livewires.io" />
+<meta name="twitter:site" content="louderthanten">
+    
+
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/img/apple-touch-icon-precomposed.png" />
+
+    <link href="../assets/css/livewires.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <!-- Style block allowing child pages to inject their own styles -->
+    
+  <link href="../assets/css/guide.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+
+    <!-- Fontawesome icons. Remove if not using -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    
+
+  </head>
+  <body class="offcanvas--push pg-grid">
+    <!--[if lt IE 9]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+
+    <!-- Header section -->
+    
+  <header class="row row--header reverse" id="header">
+    <h1 class="logo"><a href="usage.html"><img src="../assets/img/livewires/logo.svg" alt="Site name" /></a></h1>
+    <nav class="horizontal-nav horizontal-nav--guide collapse">
+      <p class="trigger"><a href="#primary" class="js-reveal">Menu</a></p>
+      <ul id="primary">
+        <li class="primary__usage"><a href="usage.html">Usage</a></li>
+        <li class="primary__brand"><a href="brand.html">Brand</a></li>
+        <li class="primary__grid"><a href="grid.html">Grid</a></li>
+        <li class="primary__elements"><a href="elements.html">Elements</a></li>
+        <li class="primary__components"><a href="components.html">Components</a></li>
+        <li class="primary__modules"><a href="modules.html">Modules</a></li>
+        <li class="primary__templates"><a href="templates.html">Templates</a></li>
+      </ul>
+    </nav>
+</header>
+  <nav class="horizontal-nav horizontal-nav--guide row">
+    <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
+    <ul class="collapse" id="sections">
+      <li><a href="#howto">How to use</a></li>
+      <li><a href="#resizing">Units &amp; resizing</a></li>
+      <li><a href="#grids">Grid examples</a></li>
+      <li><a href="#modular-scale">Modular Scale</a></li>
+    </ul>
+  </nav>
+
+
+    <!-- Content block, child page inject content -->
+    <main class="main" id="main" role="main">
+    
+<header class="row">
+  <h1>Grid</h1>
+  <p class="lead">Live Wires uses a folding compound grid for maximum flexibility in responsive layouts. This is a fluid grid with flexible columns and fixed-width gutters to maintain proportional spacing and alignment for all screen dimensions.</p>
+</header>
+
+<section class="row" id="howto">
+  <h2>Avoiding a grid framework</h2>
+  <p>The concept is loosely based on <a href="http://www.jonikorpi.com/">Joni Korpi&rsquo;s</a> fabulous <a href="http://goldengridsystem.com/">Golden Grid System</a>.</p>
+  <p>Unlike other heavy grid frameworks, the grid system is not attached to CSS classes. Instead, they are set in SCSS using a simple grid variables. This keeps the markup clean and the layout much easier to modify at various breakpoints. You can even combine them to make interesting compound grids.</p>
+
+  <p>In fact, this system isn't a framework at all. The only thing we've setup for you are the following grid variables and a couple classes for dividing page sections.</p>
+
+  <h3>Default grid variables</h3>
+  <pre class="language-scss"><code>   //Three Column Grid
+    $c3: 100% / 3;
+    //Four Column Grid
+    $c4: 100% / 4;
+    // Five Columns
+    $c5: 100% / 5;
+    //Six Column Grid
+    $c6: 100% / 6;
+    //Seven Column Grid
+    $c7: 100% / 7;
+    //Eight Column Grid
+    $c8: 100% / 8;
+    //Nine Column Grid
+    $c9: 100% / 9;
+    //Ten Column Grid
+    $c10: 100% / 10;
+    //Twelve Column Grid
+    $c12: 100% / 12;
+    //Sixteen Column Grid
+    $c16: 100% / 16;</code></pre>
+
+  <p><em>To specify a width of four columns of a six column grid ($c6 == 1 column of a 6-column grid), use the following:</em></p>
+
+    <pre class="language-scss line-numbers"><code>    /* Create a 4-column object centered in a 6-column grid */
+    .object{
+      @include gutters; /* Applies gutter spacing to sides of object. */
+      width:$c6*4; /* $c6 = 1 column of a 6-column grid. Mulitply by 4 to specify 4 columns wide. */
+      margin-left:$c6*1; /* Moves object 1 column to the right. */
+    }</code></pre>
+
+  <p>By default, this grid would be from one edge of the browser to the other. Probably not ideal for most people. To give your page some margins, we have two classes to give you some structure and extra theming power:</p>
+
+  <pre class="language-markup line-numbers"><code>    &lt;!-- If you don't need a unique background for your section,
+    you can combine row and container classes --&gt;
+    &lt;div class="row container"&gt;
+      &lt;section class="object"&gt;
+        &lt;!-- Content that aligns to the grid --&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+    <!-- If you do need a unique background for your section, separate your row and container classes -->
+    &lt;div class="row"&gt; &lt;!-- Apply background here --&gt;
+      &lt;div class="container"&gt; &lt;!-- Contains grid --&gt;
+        &lt;section class="object"&gt;
+          &lt;!-- Content that aligns to the grid --&gt;
+        &lt;/section&gt;
+        &lt;section class="object2"&gt;
+          &lt;!-- Content that aligns to the grid --&gt;
+        &lt;/section&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+
+  <h2><code>.row</code></h2>
+  <p>Our row classes are designed to stretch from one edge of your browser to the other so you can add background colors and full-bleed images. We also like to add some vertical padding for consistent white space between sections.</p>
+
+  <p>We&rsquo;ve included a few background classes in <code>/source/scss/theme/_layout.scss</code> to give you some easy background variations for rows and other elements:</p>
+</section>
+
+<section class="row subtle">
+  <h3>.subtle</h3>
+  <p>This content has a subtle background variation.</p>
+
+  <pre class="language-markup line-numbers"><code>    &lt;section class="row subtle"&gt;
+    &lt;div class="container"&gt;
+      &lt;h3&gt;.subtle&lt;/h3&gt;
+      &lt;p&gt;This content has a subtle background variation.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;</code></pre>
+</section>
+
+<section class="row reverse">
+  <h3>.reverse</h3>
+  <p>This content has light on dark text.</p>
+
+  <pre class="language-markup line-numbers"><code>    &lt;section class="row reverse"&gt;
+    &lt;div class="container"&gt;
+      &lt;h3&gt;.reverse&lt;/h3&gt;
+      &lt;p&gt;This content has light on dark text.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;</code></pre>
+</section>
+
+<section class="row">
+  <h2><code>.container</code></h2>
+  <p>Container classes contain our grid and add vertical margins to our sections. You can add a max-width value to give your design a static width after a certain size, but we recommend sticking with a fully fluid system based on percentages:</p>
+
+  <p>Define your page width by using the <code>$margin</code> variable. We usually set this with a percentage based on one of our smaller grid units. For example, the base margin of Live Wires is <code>$margin: 100% / 18</code> (which adds an extra column to either side of our 16 column grid).</p>
+
+  <p>This is fine at small window sizes, but what about at wider sizes? Instead of adding a max-width, we just increase the <code>$margin</code> variable on our <code>.container</code> classes:</p>
+
+    <pre class="language-scss line-numbers"><code>    /* Increase margins after a certain width */
+    @media only screen and (min-width: $screenMedium) {
+      .container {
+        margin: 0 $margin * 2; /* Double the margin size to squeeze the main content. */
+      }
+    }</code></pre>
+
+  <p class="more"><a href="#header">To top</a></p>
+</section>
+
+<section class="row" id="resizing">
+  <h2>Units &amp; resizing</h2>
+  <hr>
+  <p>Every single dimension in our project is defined using relative units. Aside from our grid units and margins, which use percentages, we use <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">Rems</a>. When everything is set using rems, we can proportionally zoom the entire project simply by changing the font-size of our <code>&lt;html&gt;</code> element.</p>
+
+  <h3>Example</h3>
+  <pre class="language-scss line-numbers"><code>   // Our default font-size is 100%
+    html {
+      font-size: 100%;
+    }
+
+    // We can proportionally increase the size of the enire site
+    // by simply increasing or decreasing the root font-size.
+    @media only screen and (min-width: $screenSmall) {
+      html {
+        font-size: 105%; // Increases everything defined by rems by 5%.
+      }
+    }</code></pre>
+
+    <p>To make it easy to work with rems, we've included a handy <code>rem()</code> function inspired by <a href="http://foundation.zurb.com">Foundation&rsquo;s</a> <code>rem-calc()</code>.</p>
+
+    <h3>Examples</h3>
+    <pre class="language-scss line-numbers"><code>    .object {
+       // Here's a few ways you can use the rem() function
+       padding: rem(24px); // Converts a px value to rems
+       padding: rem(24); // You can even leave out the px suffix
+       padding: rem(24 12); // And use with multiple shorthand values
+       padding: rem($line $line/2); // Use the $line variable for consistent spacing & flexibility
+    }</code></pre>
+
+</section>
+
+<section class="grids row" id="grids">
+    <h2>Grid examples</h2>
+    <h3>Two/Four/Eight responsive folding grid</h3>
+    <div class="grid grid--2-4-8">
+      <div class="folding eight four two"><span></span></div>
+      <div class="folding eight"><span></span></div>
+      <div class="folding eight four"><span></span></div>
+      <div class="folding eight"><span></span></div>
+      <div class="folding eight four"><span></span></div>
+      <div class="folding eight"><span></span></div>
+      <div class="folding eight four two"><span></span></div>
+      <div class="folding eight"><span></span></div>
+    </div>
+
+    <h3>Three/Five/Seven responsive folding grid</h3>
+    <div class="grid grid--3-5-7">
+      <div class="folding seven five three"><span></span></div>
+      <div class="folding seven five"><span></span></div>
+      <div class="folding seven"><span></span></div>
+      <div class="folding seven five three"><span></span></div>
+      <div class="folding seven"><span></span></div>
+      <div class="folding seven five"><span></span></div>
+      <div class="folding seven five three"><span></span></div>
+    </div>
+
+    <h3>Three/Six/Twelve responsive folding grid</h3>
+    <div class="grid grid--3-6-12">
+      <div class="folding twelve six three"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six three"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six three"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+    </div>
+
+    <h3>Four/Eight Sixteen responsive folding grid</h3>
+    <div class="grid grid--4-8-16">
+      <div class="folding sixteen eight four"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight four"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight four"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight four"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+    </div>
+
+    <h3>Compound grid example</h3>
+    <div class="combined-grid">
+      <div class="grid grid--2-4-8">
+        <div class="folding eight four two"><span></span></div>
+        <div class="folding eight"><span></span></div>
+        <div class="folding eight four"><span></span></div>
+        <div class="folding eight"><span></span></div>
+        <div class="folding eight four"><span></span></div>
+        <div class="folding eight"><span></span></div>
+        <div class="folding eight four two"><span></span></div>
+        <div class="folding eight"><span></span></div>
+      </div>
+
+      <div class="grid grid--3-5-7">
+        <div class="folding seven five three"><span></span></div>
+        <div class="folding seven five"><span></span></div>
+        <div class="folding seven"><span></span></div>
+        <div class="folding seven five three"><span></span></div>
+        <div class="folding seven"><span></span></div>
+        <div class="folding seven five"><span></span></div>
+        <div class="folding seven five three"><span></span></div>
+      </div>
+    </div>
+
+  <p class="more"><a href="#header">To top</a></p>
+</section>
+
+<section class="row" id="modular-scale">
+  <h2>Modular scale</h2>
+  <hr>
+  <p>We use a custom modular scale to help keep typographic and structural dimensions consistent and in proportion. You can refer to this scale when determining font sizes, grid units, media proportions, and spacing.</p>
+  <p>Learn more about <a href="https://vimeo.com/17079380">modular scales</a>.</p>
+  <p><small>Calculated by <a href="http://modularscale.com/scale/?px1=16&amp;px2=12&amp;ra1=1.5&amp;ra2=0">Modular Scale</a>.</small></p>
+
+  <table id="scale" class="scale">
+    <thead>
+      <tr>
+        <th>Pixels</th>
+        <th>Ems</th>
+        <th>Ems @ 16</th>
+        <th>% of 13</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>1,037.974</td>
+        <td>64.873</td>
+        <td>64.873</td>
+        <td>7,984.415</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>922.641</td>
+        <td>57.665</td>
+        <td>57.665</td>
+        <td>7,097.238</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>691.983</td>
+        <td>43.249</td>
+        <td>43.249</td>
+        <td>5,322.946</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>615.094</td>
+        <td>38.443</td>
+        <td>38.443</td>
+        <td>4,731.492</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>461.322</td>
+        <td>28.833</td>
+        <td>28.833</td>
+        <td>3,548.631</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>410.063</td>
+        <td>25.629</td>
+        <td>25.629</td>
+        <td>3,154.331</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>307.548</td>
+        <td>19.222</td>
+        <td>19.222</td>
+        <td>2,365.754</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>273.375</td>
+        <td>17.086</td>
+        <td>17.086</td>
+        <td>2,102.885</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>205.032</td>
+        <td>12.815</td>
+        <td>12.815</td>
+        <td>1,577.169</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>182.250</td>
+        <td>11.391</td>
+        <td>11.391</td>
+        <td>1,401.923</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>136.688</td>
+        <td>8.543</td>
+        <td>8.543</td>
+        <td>1,051.446</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>121.500</td>
+        <td>7.594</td>
+        <td>7.594</td>
+        <td>934.615</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>91.125</td>
+        <td>5.695</td>
+        <td>5.695</td>
+        <td>700.962</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>81.000</td>
+        <td>5.063</td>
+        <td>5.063</td>
+        <td>623.077</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>60.750</td>
+        <td>3.797</td>
+        <td>3.797</td>
+        <td>467.308</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>54.000</td>
+        <td>3.375</td>
+        <td>3.375</td>
+        <td>415.385</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>40.500</td>
+        <td>2.531</td>
+        <td>2.531</td>
+        <td>311.538</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>36.000</td>
+        <td>2.25</td>
+        <td>2.25</td>
+        <td>276.923</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>27.000</td>
+        <td>1.688</td>
+        <td>1.688</td>
+        <td>207.692</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>24.000</td>
+        <td>1.5</td>
+        <td>1.5</td>
+        <td>184.615</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>18.000</td>
+        <td>1.125</td>
+        <td>1.125</td>
+        <td>138.462</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td class="key">16.000</td>
+        <td>1</td>
+        <td>1</td>
+        <td>123.077</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td class="key">12.000</td>
+        <td>0.75</td>
+        <td>0.75</td>
+        <td>92.308</td>
+      </tr>
+    </tbody>
+    <tbody><tr>
+        <td>10.667</td>
+        <td>0.667</td>
+        <td>0.667</td>
+        <td>82.054</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>8.000</td>
+        <td>0.5</td>
+        <td>0.5</td>
+        <td>61.538</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>7.111</td>
+        <td>0.444</td>
+        <td>0.444</td>
+        <td>54.700</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>5.333</td>
+        <td>0.333</td>
+        <td>0.333</td>
+        <td>41.023</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>4.741</td>
+        <td>0.296</td>
+        <td>0.296</td>
+        <td>36.469</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>3.555</td>
+        <td>0.222</td>
+        <td>0.222</td>
+        <td>27.346</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>3.161</td>
+        <td>0.198</td>
+        <td>0.198</td>
+        <td>24.315</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>2.370</td>
+        <td>0.148</td>
+        <td>0.148</td>
+        <td>18.231</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>2.107</td>
+        <td>0.132</td>
+        <td>0.132</td>
+        <td>16.208</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>1.580</td>
+        <td>0.099</td>
+        <td>0.099</td>
+        <td>12.154</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>1.405</td>
+        <td>0.088</td>
+        <td>0.088</td>
+        <td>10.808</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>1.053</td>
+        <td>0.066</td>
+        <td>0.066</td>
+        <td>8.100</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="more"><a href="#header">To top</a></p>
+</section>
+
+
+    </main>
+
+    <!-- Footer section -->
+    <footer class="footer row subtle">
+  <p><small><a href="../index.html">Home</a> | <a href="usage.html">Guide</a> | <a href="../example/index.html">Example</a></small></p>
+  <p><small>&copy; Site name. Rapidly built with <a href="http://www.livewires.io">Live Wires</a>.</small></p>
+</footer>
+
+
+    <!-- Script block allowing child pages to inject their own scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/jquery-2.0.3.min.js"><\/script>')</script>
+
+    <script src="../assets/js/vendor.min.js"></script>
+    <script src="../assets/js/app.min.js"></script>
+    
+
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '', 'http://livewires.io');
+      ga('send', 'pageview');
+
+    </script>
+    
+  </body>
+</html>

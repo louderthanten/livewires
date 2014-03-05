@@ -2,35 +2,35 @@
 
 code,
 pre {
-    @include selected($background, $light-text);
-    background:$text;
-    color: $background;
+	@include selected($background, $light-text);
+	background:$text;
+	color: $background;
 }
 
 .reverse {
-    code,
-    pre {
-        background:darken($text, 5);
-    }
+	code,
+	pre {
+		background:darken($text, 5);
+	}
 }
 
 //Inline code
 :not(pre) > code {
-    background: $dark-background;
-    color:$text;
+	background: $dark-background;
+	color:$text;
 }
 
 .token.comment {
-    color:$mid-text;
+	color:$mid-text;
 }
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: $light-text;
+	color: $light-text;
 }
 
 .token.punctuation {
-    color: $light-text;
+	color: $light-text;
 }
 
 .token.property,
@@ -43,7 +43,7 @@ pre {
 .token.attr-name,
 .token.string,
 .token.builtin {
-    color: $light-text;
+	color: $light-text;
 }
 
 .token.operator,
@@ -52,20 +52,20 @@ pre {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-    color: $background;
-    //background: hsla(0,0%,100%,.5);
+	color: $background;
+	//background: hsla(0,0%,100%,.5);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-    color: $background;
+	color: $background;
 }
 
 .token.regex,
 .token.important {
-    color: $background;
+	color: $background;
 }
 .line-numbers-rows > span:before {
-    color: $light-text;
+	color: $light-text;
 }

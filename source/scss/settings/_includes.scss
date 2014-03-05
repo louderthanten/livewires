@@ -1,9 +1,13 @@
+// INCLUDES
+// Include the components you need. Hide the ones you don't.
+
+// Base settings and sass-specific styles
 @import "variables";
 @import "functions";
 @import "mixins";
 @import "helpers";
 
-// Vendor styles
+// Vendor styles. Include your third-party styles here.
 @import "../vendor/normalize";
 
 // Element styles
@@ -46,12 +50,9 @@
 // Theme styles
 @import "../theme/layout";
 @import "../theme/text";
-@import "../theme/icons";
 @import "../theme/navigation";
 @import "../theme/code";
 @import "../theme/forms";
 @import "../theme/tables";
 @import "../theme/buttons";
 @import "../theme/special-fields";
-@import "../theme/offcanvas";
-@import "../theme/callouts";

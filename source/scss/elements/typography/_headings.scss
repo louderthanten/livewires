@@ -1,8 +1,11 @@
 // HEADINGS
+//
+// Modular scales are your friend, my friend. Use them to set your heading sizes:
+// http://modularscale.com  |  https://vimeo.com/17079380
 
-// Modular scales are your friend, my friend: http://modularscale.com  |  https://vimeo.com/17079380
-
-h1 {
+h1,
+.h1 {
+  text-rendering: optimizeLegibility;
   font-family: $sans;
 
   // Handy for header sub-elements
@@ -11,7 +14,9 @@ h1 {
     font-size: 0.5em;
   }
 }
-h2 {
+h2,
+.h2 {
+  text-rendering: optimizeLegibility;
   font-family: $sans;
 
   span,
@@ -20,7 +25,9 @@ h2 {
   }
 
 }
-h3 {
+h3,
+.h3 {
+  text-rendering: optimizeLegibility;
   font-family: $sans;
 
   span,
@@ -28,13 +35,19 @@ h3 {
     font-size: 0.5em;
   }
 }
-h4 {
+h4,
+.h4 {
+  text-rendering: optimizeLegibility;
   font-family: $sans;
 }
-h5 {
+h5,
+.h5 {
+  text-rendering: optimizeLegibility;
   font-family: $sans;
 }
-h6 {
+h6,
+.h6 {
+  text-rendering: optimizeLegibility;
   font-family: $sans;
 }
 

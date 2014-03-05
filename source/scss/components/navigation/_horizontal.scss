@@ -1,3 +1,16 @@
+// HORIZONTAL NAVIGATION
+//
+// Example:
+// <nav class="horizontal-nav">
+//   <ul>
+//    <li><a href="/page">Nav Item 1</a></li>
+//    <li><a href="/page">Nav Item 2</a></li>
+//    <li><a href="/page">Nav Item 3</a></li>
+//   </ul>
+// </nav>
+//
+// Add a 'horizontal-nav--center' class to the <nav> element to center it horizontally.
+
 .horizontal-nav {
   ul {
     @extend %group;
@@ -10,7 +23,7 @@
   a {
     display: block;
     width:100%;
-    padding:rem($line/4) $margin;
+    padding:rem($line/2) $margin;
     font-family: $serif;
     text-decoration: none;
     font-family: $sans;

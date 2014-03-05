@@ -1,0 +1,116 @@
+[
+  {
+    "directory": false,
+    "key": "index",
+    "name": "Index",
+    "url": "/index"
+  },
+  {
+    "directory": false,
+    "key": "404",
+    "name": "404",
+    "url": "/404"
+  },
+  {
+    "children": [
+      {
+        "directory": false,
+        "key": "about",
+        "name": "About",
+        "url": "/example/about"
+      },
+      {
+        "directory": false,
+        "key": "contact",
+        "name": "Contact",
+        "url": "/example/contact"
+      },
+      {
+        "directory": false,
+        "key": "index",
+        "name": "Index",
+        "url": "/example/index"
+      },
+      {
+        "children": [
+          {
+            "directory": false,
+            "key": "archive",
+            "name": "Archive",
+            "url": "/example/news/archive"
+          },
+          {
+            "directory": false,
+            "key": "detail",
+            "name": "Detail",
+            "url": "/example/news/detail"
+          },
+          {
+            "directory": false,
+            "key": "index",
+            "name": "Index",
+            "url": "/example/news/index"
+          }
+        ],
+        "directory": true,
+        "key": "news",
+        "name": "News",
+        "url": "/example/news"
+      }
+    ],
+    "directory": true,
+    "key": "example",
+    "name": "Example",
+    "url": "/example"
+  },
+  {
+    "children": [
+      {
+        "directory": false,
+        "key": "brand",
+        "name": "Brand",
+        "url": "/guide/brand"
+      },
+      {
+        "directory": false,
+        "key": "components",
+        "name": "Components",
+        "url": "/guide/components"
+      },
+      {
+        "directory": false,
+        "key": "elements",
+        "name": "Elements",
+        "url": "/guide/elements"
+      },
+      {
+        "directory": false,
+        "key": "grid",
+        "name": "Grid",
+        "url": "/guide/grid"
+      },
+      {
+        "directory": false,
+        "key": "modules",
+        "name": "Modules",
+        "url": "/guide/modules"
+      },
+      {
+        "directory": false,
+        "key": "templates",
+        "name": "Templates",
+        "url": "/guide/templates"
+      },
+      {
+        "directory": false,
+        "key": "usage",
+        "name": "Usage",
+        "url": "/guide/usage"
+      }
+    ],
+    "directory": true,
+    "key": "guide",
+    "name": "Guide",
+    "url": "/guide"
+  }
+]

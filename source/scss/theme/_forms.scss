@@ -1,18 +1,18 @@
 // FORM COLORS
 
 .error {
-    color:$accent;
+  color:$accent;
 }
 
 .text-input {
-    @include placeholder-color($light-text);
-    color:$text;
+  @include placeholder-color($light-text);
+  color:$text;
 
-    &:active,
-    &:focus {
-    }
+  &:active,
+  &:focus {
+  }
 
-    &.error {
+  &.error {
 
-    }
+  }
 }

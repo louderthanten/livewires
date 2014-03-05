@@ -36,8 +36,12 @@ $base: 16; // Set the base font size (in px)
 // It results in an even column unit for either margin. EG, I'd use 18 for a 16 column grid).
 $margin: 100% / 18;
 
+///* =============================================================================
+//   Paragraph defaults
+//   ========================================================================== */
 
-
+// Set to true to indicate parahgraph breaks with indents instead of line-breaks
+$indented-paragraphs: false;
 
 
 ///* =============================================================================

@@ -1,6 +1,8 @@
+// TABLE COLORS
+
 // Striped tables
 .table--striped{
-    tbody tr:nth-of-type(odd){
-        background-color: lighten($text, 70);
-    }
+  tbody tr:nth-of-type(odd){
+    background-color: lighten($text, 70);
+  }
 }

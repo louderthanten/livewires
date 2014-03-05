@@ -1,3 +1,24 @@
+// OFFCANVAS NAVIGATION/CONTENT
+//
+// Example:
+//
+// <!-- Add 'offcanvas--push' <body> to push the page content when open
+//      Add 'offcanvas--squish' to squish the page content -->
+// <body class="offcanvas--push">
+//
+//   <!-- Left example. Other options are offcanvas--top, offcanvas--right, offcanvas--bottom -->
+//   <nav class="offcanvas--left" id="offcanvas">
+//   <!-- Offcanvas content. Put anything you want in here -->
+//   </nav>
+//
+//   <!-- Other site content below -->
+//   <main role="main">
+//     <!-- Point the href to the id of the offcanvas area -->
+//     <div class="js-open-canvas"><a href="#offcanvas">Offcanvas toggle</a></div>
+//   </main>
+// </body>
+
+
 // Set the width of vertical offcanvas areas
 $offcanvas-width: rem($line*8);
 
@@ -102,10 +123,16 @@ $offcanvas-height: rem($line*4);
 }
 
 // Squish the canvas instead of pushing it.
-.offcanvas--squish-right {
-  margin-right:$offcanvas-width;
+.offcanvas--squish {
+  overflow-x: hidden;
+  left: 0;
+  transition: all 0.2s linear;
+
+  &.offcanvas--squish-right {
+    margin-right: $offcanvas-width;
+  }
+  &.offcanvas--squish-left {
+    margin-left: $offcanvas-width;
+  }
 }
 
-.offcanvas--squish-left {
-  margin-left: $offcanvas-width;
-}

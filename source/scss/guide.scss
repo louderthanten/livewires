@@ -46,6 +46,7 @@
 .logo {
   margin-bottom: 0;
   img {
+    width:100%;
     max-width: 240px;
   }
   span {
@@ -55,7 +56,8 @@
 // Layout sections
 //==============================================================================
 
-.horizontal-nav {
+.horizontal-nav--guide {
+  padding-top: 0;
   ul {
     overflow: hidden;
     max-height: 0;
@@ -64,6 +66,9 @@
     &.opened {
       max-height: 2000px;
     }
+  }
+  a {
+    @include font-size(14, 14);
   }
 }
 
@@ -81,7 +86,7 @@
   }
 }
 
-.main .horizontal-nav {
+.main .horizontal-nav--guide {
   margin:rem($line) 0;
 }
 
