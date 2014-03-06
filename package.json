@@ -1,0 +1,42 @@
+{
+  "name": "livewires",
+  "description": "A design framework",
+  "version": "1.0.0",
+  "homepage": "http://www.livewires.io",
+  "author": {
+    "name": "Travis Gertz",
+    "email": "trav@louderthanten.com",
+    "url": "http://louderthanten.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/louderthanten/livewires.git"
+  },
+  "bugs": {
+    "url": "https://github.com/louderthanten/livewires/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.livewires.io/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}

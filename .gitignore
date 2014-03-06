@@ -1,4 +1,5 @@
+node_modules
+npm-debug.log
+tmp
+
 /.sass-cache/
-.DS_Store
-/compass_app_log.txt
-/scss/.sass-cache/
