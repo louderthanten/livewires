@@ -12,6 +12,67 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    availabletasks: {
+      tasks: {}
+    },
+    sass: {
+      dist: {
+        files: [{
+          expand: true,
+          src: ['source/*.scss'],
+          dest: 'httpdocs/css',
+          ext: '.css'
+        }]
+      }
+    },
+    coffee: {
+      compile: {
+        files: {
+          'httpdocs/js/app.js': ['source/coffee/{,*/}*.coffee'],
+        }
+      },
+      tasks: ['uglify']
+    },
+    uglyfy: {
+      js: {
+        files: {
+          'httpdocs/js/vendor.min.js': 'source/vendor/**/*.js',
+          'httpdocs/js/app.min.js': 'httpdocs/js/app.js'
+        },
+        options: {
+          preserveComments: false
+        }
+      }
+    },
+    autoprefixer: {
+      options: {
+        browsers: [ 'last 2 versions','> 5%']
+      },
+      multiple_files: {
+        expand: true,
+        flatten: true,
+        src: 'httpdocs/css/*.css',
+        dest: 'httpdocs/css/'
+      }
+    },
+    watch: {
+      sass: {
+        files: [ '**/*.scss'],
+        tasks: ['sass','autoprefixer']
+      },
+      coffee: {
+        files: [ '**/*.coffee' ],
+        tasks: ['coffee']
+      },
+      gruntfile: {
+        files: ['Gruntfile.js']
+      },
+      livereload: {
+        options: { livereload: true },
+        files: ['httpdocs/**/*']
+      }
+    },
+
     jshint: {
       all: [
         'Gruntfile.js',
@@ -21,6 +82,35 @@ module.exports = function(grunt) {
       options: {
         jshintrc: '.jshintrc',
       },
+    },
+
+    // The actual grunt server settings
+    connect: {
+      options: {
+        port: 9000,
+        livereload: 35729,
+        // Change this to '0.0.0.0' to access the server from outside
+        hostname: 'localhost'
+      },
+      livereload: {
+        options: {
+          open: true,
+          base: [
+            'source',
+            'httpdocs'
+          ]
+        }
+      },
+      test: {
+        options: {
+          port: 9001,
+          base: [
+            '.tmp',
+            'test',
+            'source'
+          ]
+        }
+      }
     },
 
     // Before generating any new files, remove any previously-created files.
@@ -62,12 +152,20 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-available-tasks');
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
   grunt.registerTask('test', ['clean', 'livewires', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('default', ['jshint', 'test', 'autoprefixer']);
+
+  // Watch tasks
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
 };

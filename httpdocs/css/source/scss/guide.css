@@ -15,7 +15,6 @@
   visibility: hidden !important; }
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .ir {
@@ -80,7 +79,6 @@
 .swatch p {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%); }
 
 .text--left {
@@ -133,7 +131,6 @@
   .horizontal-nav--guide ul {
     overflow: hidden;
     max-height: 0;
-    -webkit-transition: max-height 0.2s linear;
     transition: max-height 0.2s linear; }
     .horizontal-nav--guide ul.opened {
       max-height: 2000px; }

@@ -16,7 +16,6 @@
   visibility: hidden !important; }
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .ir {
@@ -373,7 +372,6 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -388,6 +386,7 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -435,9 +434,6 @@ body {
 
 p {
   margin: 0 0 0.75rem 0;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
   hyphens: auto; }
 
 .lead {
@@ -446,9 +442,6 @@ p {
   line-height: 1.33333; }
 
 .content p {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
   hyphens: auto; }
 
 b,
@@ -752,7 +745,6 @@ textarea {
 .search-input,
 input[type=search] {
   overflow: hidden;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .check-label,
@@ -785,7 +777,6 @@ input[type=radio] {
   .field--two-third {
     width: 66.66667%; } }
 .switch {
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   position: relative;
   overflow: hidden;
@@ -797,7 +788,6 @@ input[type=radio] {
   font-family: sans-serif;
   border-radius: 3px; }
   .switch label {
-    -webkit-transition: opacity 0.3s linear;
     transition: opacity 0.3s linear;
     position: relative;
     left: 0;
@@ -822,7 +812,6 @@ input[type=radio] {
       left: 100%;
       margin-left: -2.1875rem; }
   .switch span:last-child {
-    -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
     position: absolute;
     top: 0px;
@@ -861,7 +850,6 @@ input[type=radio] {
 
 .option-buttons label,
 .pill-buttons label {
-  -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
   position: relative;
   display: block;
@@ -920,7 +908,6 @@ hr {
 a,
 button,
 input[type="submit"] {
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear; }
 
 .horizontal-nav ul {
@@ -978,7 +965,6 @@ input[type="submit"] {
 .offcanvas--bottom,
 .offcanvas--right,
 .offcanvas--push {
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 .offcanvas--right,
@@ -1031,7 +1017,6 @@ input[type="submit"] {
 .offcanvas--squish {
   overflow-x: hidden;
   left: 0;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear; }
   .offcanvas--squish.offcanvas--squish-right {
     margin-right: 12rem; }
@@ -1152,11 +1137,7 @@ kbd {
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  -moz-tab-size: 4;
   tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
   hyphens: none; }
 
 pre {
@@ -1195,9 +1176,6 @@ pre.line-numbers > code {
   width: 3rem;
   /* works for line-numbers below 1000 lines */
   border-right: 1px solid #dddddd;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none; }
 
 .line-numbers-rows > span {
@@ -1230,7 +1208,6 @@ pre.line-numbers > code {
   overflow: hidden;
   padding: 0;
   max-height: 0;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
   .drawer .container {
     padding-top: 1.5rem;
