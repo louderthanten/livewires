@@ -28,13 +28,13 @@
     
 
     <link rel="shortcut icon" href="../img/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="../assets/img/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="../httpdocs/img/apple-touch-icon-precomposed.png" />
 
-    <link href="../assets/css/livewires.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../httpdocs/css/livewires.min.css" rel="stylesheet" type="text/css" media="all"/>
 
     <!-- Style block allowing child pages to inject their own styles -->
     
-  <link href="../assets/css/guide.min.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="../httpdocs/css/guide.min.css" rel="stylesheet" type="text/css" media="all"/>
 
 
     <!-- Fontawesome icons. Remove if not using -->
@@ -53,7 +53,7 @@
     <!-- Header section -->
     
   <header class="row row--header reverse" id="header">
-  <h1 class="logo"><a href="usage.html"><img src="../assets/img/livewires/logo.svg" alt="Site name" /></a></h1>
+  <h1 class="logo"><a href="usage.html"><img src="../httpdocs/img/livewires/logo.svg" alt="Site name" /></a></h1>
   <nav class="horizontal-nav horizontal-nav--guide collapse">
     <p class="trigger"><a href="#primary" class="js-reveal">Menu</a></p>
     <ul id="primary">
@@ -69,12 +69,14 @@
 </header>
   <nav class="horizontal-nav horizontal-nav--guide row">
     <ul class="collapse">
+      <li><a href="#howto">Hot to use</a></li>
       <li><a href="#structure">Project structure</a></li>
       <li><a href="#markup">Markup</a></li>
-      <li><a href="#js">Javascript</a></li>
       <li><a href="#css">CSS</a></li>
       <li><a href="#helpers">Helpers</a></li>
+      <li><a href="#js">Javascript</a></li>
       <li><a href="#compatibility">Compatibility</a></li>
+      <li><a href="#support">Support</a></li>
     </ul>
   </nav>
 
@@ -84,65 +86,63 @@
     
 <header class="row">
   <h1>Usage</h1>
-  	<h2>Live Wires User Interface Guide</h2>
-    <p class="lead">Welcome to Live Wires. Live Wires is a framework made with Sass and <a href= "http://mixture.io">Mixture</a> that allows you to create responsive wireframes in HTML &amp SCSS. Customize your wireframes, style them, and share them as living low-fidelity prototypes instead of static files you sweat over and later toss away.
-       <p>Today we stop making trash and start building a living, breathing idea that will look and act the way it was imagined.</p>
 
-    <h2>How do I use this guide?</h2>
-    <p>The guide breaks down the setup, configuration, and application of Live Wires. Use it as a reference for building and scaling upon your site or app's design blueprint.</p>
+  <p class="lead">Welcome to Live Wires. Live Wires is a framework made with Sass and <a href= "http://mixture.io">Mixture</a> that allows you to create responsive wireframes in HTML &amp; SCSS. Customize your wireframes, style them, and share them as living low-fidelity prototypes instead of static files you sweat over and later toss away.
 
-   [button] <p>See a Live Wires template example</p>
-
-   <h3>Support</h3>
-   <p>Submit your bug reports, pull requests, and questions to <a href="https://github.com/louderthanten/livewires/issues">GitHub</a>.</p>
-   <p>Other questions? Visit <a href="http://livewires.io">Live Wires</a> for more info.</p>
+  <p>Today we stop making trash and start building a living, breathing idea that will look and act the way it was imagined.</p>
 </header>
 
-<section class="row">
-  <h2 id="structure">Project structure</h2>
+<section class="row" id="howto">
+  <h2>How do I use this guide?</h2>
+  <hr>
+  <p>The guide breaks down the setup, configuration, and application of Live Wires. Use it as a reference for building and scaling upon your site or app's design blueprint.</p>
+
+  <p><a href="../example/index.html" class="button">See a Live Wires template example</a></p>
+  <p class="more"><a href="#header">To top</a></p>
+</section>
+<section class="row" id="structure">
+  <h2>Project structure</h2>
+  <hr>
+
+  <p>One of the core philosphies behind Live Wires is to stay out of the way as much as possible. We don't want to impose any code standards or force you into a box. Saying that we do have some guidelines that we like that will make it easier to get started with Live Wires.</p>
+
   <p>Here's how a Live Wires project is organized:</p>
 
   <dl>
-    <dt><code>/assets/</code></dt>
+    <dt><code>/httpdocs/</code></dt>
     <dd>This is where all compiled static assets live. Drop your images and font files here. This is also where all Sass, CoffeeScript, and Javascript is combined, compiled, and minified for production use. Don&rsquo;t edit these CSS and JS files as that will overwrite them.</dd>
+
     <dt><code>/source/</code></dt>
-    <dd>This contains all of the pre-compiled Sass, Coffeescript, and JavaScript files. This is where you would write your CSS and JavaScript. See below for more details on how these are organized.</dd>
-    <dt>Mixture specific</dt>
-    <dt><code>/templates/</code></dt>
-    <dd>This is where your site templates reside. Templates for this guide can be found in the <code>guide</code> folders.</dd>
-    <dt><code>/models/</code></dt>
-    <dd>Contains Mixture's handy<a href="http://docs.mixture.io/models">model files</a>. We've added one with some global variables to get you started.</dd>
-    <dt><code>mixture.json</code></dt>
-    <dd>Your <a href="http://docs.mixture.io/mixture">Mixture settings</a>.</dd>
+    <dd>This contains all of the pre-compiled Sass, Coffeescript, and javaScript plugin files. This is where you would write your CSS and javaScript.</dd>
+  </dl>
+
+  <aside class="callout callout--clear">
+    <div class="content subtle">
+      <h3>Mixture specific</h3>
+      <dl>
+        <dt><code>/templates/</code></dt>
+        <dd>This is where your <a href="http://docs.mixture.io/templates">site templates</a> reside. Templates for this guide can be found in the <code>guide</code> sub-folder.</dd>
+
+        <dt><code>/models/</code></dt>
+        <dd>Contains Mixture&rsquo;s handy <a href="http://docs.mixture.io/models">model files</a>. We've added one with some global variables to get you started.</dd>
+
+        <dt><code>mixture.json</code></dt>
+        <dd>Your <a href="http://docs.mixture.io/mixture">Mixture settings</a>.</dd>
+      </dl>
+    </div>
+  </aside>
 
 
-    <p class="lead">One of the core philosphies behind Live Wires is to stay out of the way as much as possible. We don't want to impose any code standards or force you into a box. Saying that we do have some guidelines that we like that will make it easier to get started with Live Wires.</p>
+    <p class="more"><a href="#header">To top</a></p>
 </section>
 
 
 
-<section class="row" id="structure">
-    <h2 id="structure">Project structure</h2>
-    <p>Here&rsquo;s how a Live Wires project is organized:</p>
-
-    <dl>
-      <dt><code>/assets/</code></dt>
-      <dd>All compiled static assets reside here. Drop your images and font files in here. This is also where all sass, coffeescript, and javascript is combined, compiled, and minified for production use. Don&rsquo;t edit these css and js files. They will get overwritten.</dd>
-      <dt><code>/models/</code></dt>
-      <dd>Contains Mixture's <a href="http://docs.mixture.io/models">model files</a>. We've added one with some global variables to get you started.</dd>
-      <dt><code>/source/</code></dt>
-      <dd>This contains all of the pre-compiled Sass, Coffeescript, and javascript files. This is where you would write your CSS and Javascript. See below for more details on how these are organized.</dd>
-      <dt><code>/templates/</code></dt>
-      <dd>This is where your site templates reside. Templates for this guide can be found in the <code>guide</code> folders.</dd>
-      <dt><code>mixture.json</code></dt>
-      <dd>Your <a href="http://docs.mixture.io/mixture">Mixture settings</a>.</dd>
-    </dl>
-
-    <p class="more"><a href="#header">To top</a></p>
-
+<section class="row" id="markup">
     <h2 id="markup">Markup</h2>
     <hr>
-    <p>We use standard HTML5 for markup, but recommend the <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This gives us an easy standard for others to quickly adopt and keeps the library tight, modular, and free of specificity issues. Here&rsquo;s the basic syntax:</p>
+    <p>We use standard HTML5 for markup, but recommend the <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This gives us an easy standard for others to quickly adopt and keeps the library tight, modular, and free of specificity issues.</p>
+    <p>Here&rsquo;s the basic syntax:</p>
 
     <pre class="language-scss"><code>.block {} /* A component or module */
 .block__element {} /* A descendent of that module */
@@ -150,25 +150,22 @@
 
     <p>Read more about <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">BEM syntax</a>.</p>
 
-    <p>The Mixture version of Live Wires takes advantage of the <a href="http://docs.mixture.io/templates">Liquid templating</a> language for better template construction.</p>
+    <aside class="callout callout--clear">
+      <div class="subtle content">
+        <h3>Mixture specific</h3>
+        <p>The Mixture version of Live Wires takes advantage of the <a href="http://docs.mixture.io/templates">Liquid templating</a> language for better template construction.</p>
+      </div>
+    </aside>
+
 
     <p class="more"><a href="#header">To top</a></p>
+</section>
+<section class="row" id="css">
 
-    <h2 id="js">Javascript</h2>
-    <hr>
-    <p>We use Coffescript to write our javascript. Its a powerful and easy-to-learn javascript pre-processor to help make scripting more efficient and less error-prone.</p>
-
-    <p>Like our CSS and HTML, we try to keeo our javascript modular so you can use only what you need. All the coffeescript components are in <code>/source/coffee/components</code>. You can include and exclude the scripts you want in your project by editing <code>/source/coffee/app.mix.js</code>, following the existing syntax.</p>
-
-    <h3>Third-party scripts</h3>
-    <p>We place all third-party scripts like jQuery plugins in the <code>/source/vendor/</code> folder. You can include or exclude the plugins you want to use by editing the <code>vendor.mix.js</code> file in that folder.</p>
-
-    <p class="more"><a href="#header">To top</a></p>
-
-    <h2 id="css">CSS</h2>
+    <h2>CSS</h2>
     <hr>
 
-    <p>All of the styles are written using <a href="http://sass-lang.com/">Sass</a>. All files can be found in <code>/source/scss/</code>. We&rsquo;ve setup a few basic starter styles to get you going, but encourage you to go through each file and customize to your liking. It's a fine way to design a UI system once you get the hang of it.</p>
+    <p>All of the styles are written using <a href="http://sass-lang.com/">Sass</a>. All source files can be found in <code>/source/scss/</code>. We&rsquo;ve setup a few basic starter styles to get you going, but encourage you to go through each file and customize to your liking. It's a fine way to design a UI system once you get the hang of it.</p>
 
     <h3>SCSS file structure</h3>
       <h4>/source/scss/settings/</h4>
@@ -177,7 +174,7 @@
       <dt><code>_variables.scss</code></dt>
       <dd>Set most global variables in here. You can set things like base typographic settings, default corner radius, breakpoint widths, and grid units in here.</dd>
 
-      <dt><code>_color.scss</code></dt>
+      <dt><code>_colors.scss</code></dt>
       <dd>We keep our color variables separate so we can easily experiement with multiple color schemes.</dd>
 
       <dt><code>_includes.scss</code></dt>
@@ -185,6 +182,9 @@
 
       <dt><code>_font-faces.scss</code></dt>
       <dd>Add any font or icon @font-face includes to this file.</dd>
+
+      <dt><code>_helpers.scss</code></dt>
+      <dd>Some non-semantic classes and %placeholders to help debug and position your elements. See what's included <a href="#helpers">below</a>.</dd>
 
       <dt><code>_mixins.scss</code> &amp; <code>_functions.scss</code></dt>
       <dd>These include powerful enhacements to help save time. Have a browse to see what's available and how they work.</dd>
@@ -200,7 +200,7 @@
     <p>Major chunks that make up the main sections of a template. They often contain components and global elements, and are often used once per page. <em>e.g. headers, footers, layout modules</em></p>
 
     <h4>/sources/scss/pages/</h4>
-    <p>Page-specific styles. We recommend keeping these out of the main stylesheet and only calling them on their respective pages.</p>
+    <p>Page-specific styles. We recommend keeping larger files in this section out of the main stylesheet and only calling them on their respective pages.</p>
 
     <h4>/sources/scss/theme/</h4>
     <p>This contains all color-related styles. We&rsquo;ve kept all the color assignments separate from structural styles to make theming easier, faster, and less error prone.</p>
@@ -209,10 +209,11 @@
     <p>Drop any third-party styles in here. We try to keep these untouched so they can be updated in the future.</p>
 
     <p class="more"><a href="#header">To top</a></p>
-
-    <h2 id="helpers">Helpers</h2>
+</section>
+<section class="row" id="helpers">
+    <h2>Helpers</h2>
     <hr>
-    <p>We have some handy little helpers to make your life a little easer. Check out <code>/source/scss/global/_helpers.scss</code> for more.</p>
+    <p>We have some handy little helpers to make your life a little easer. Check out <code>/source/scss/settings/_helpers.scss</code> for more.</p>
 
     <h3><code>.hidden</code></h3>
 
@@ -250,17 +251,39 @@
 
     <h3><code>@extend %group;</code></h3>
 
-    <p>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element. (adding a class of <code>clearfix</code> or <code>group</code> also works but isn&rsquo;t as cool).</p>
+    <p>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element. (adding a class of <code>clearfix</code> or <code>group</code> to your HTML element also works but isn&rsquo;t as cool).</p>
 
     <h3><code>@extend %vertical-align;</code></h3>
 
     <p>Magically <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">verically align</a> objects inside of other objects.</p>
 
     <p class="more"><a href="#header">To top</a></p>
-
-    <h2 id="compatibility">Compatibility</h2>
+</section>
+<section class="row" id="js">
+    <h2>Javascript</h2>
     <hr>
-    <p>We support all modern browsers including Internet Explorer 9 and up. If you do need to support IE8 or lower, most incompatilibilites can be solved by using jQuery 1.x with the following polyfills:</p>
+    <p>We use <a href="http://coffeescript.org/">Coffescript</a> to write our scripts. Its a powerful and easy-to-learn javascript pre-processor to help make scripting more efficient and less error-prone (in our opinion).</p>
+
+    <p>If you prefer vanilla javascript, you can remove the <code>/source/coffee</code> folder and simply edit the compiled .js files in <code>/httpdocs/js/</code>.</p>
+
+    <p>Like our CSS and HTML, we try to keep our javascript modular so you can use only what you need. All the coffeescript components are in <code>/source/coffee/components</code> and will compile automatically.</p>
+
+    <h3>Third-party scripts</h3>
+    <p>We organize all third-party scripts like jQuery plugins in the <code>/source/vendor/</code> folder.</p>
+
+    <aside class="callout callout--clear">
+      <div class="content subtle">
+        <h3>Mixture specific</h3>
+        <p>You can include and exclude the scripts you want in your project by editing <code>/source/coffee/app.mix.js</code> and <code>/source/vendor/vendor.mix.js</code> following the syntax in those files.</p>
+      </div>
+    </aside>
+
+    <p class="more"><a href="#header">To top</a></p>
+</section>
+<section class="row" id="compatibility">
+    <h2>Compatibility</h2>
+    <hr>
+    <p>We support all modern browsers including Internet Explorer 9 and up. If you do need to support IE8 or lower, most incompatilibilites can be solved by switching to jQuery 1.x and including the following polyfills:</p>
 
     <ul>
       <li><a href="https://code.google.com/p/html5shiv/">html5shiv</a></li>
@@ -269,10 +292,17 @@
       <li><a href="http://selectivizr.com/">Selectivizr</a></li>
     </ul>
 
-    <p>We also use Auto-prefixer to write any necessary vendor prefixes for us. You'll want to adjust the settings in mixture.json for other browsers.</p>
+    <p>We also use Auto-prefixer to write any necessary vendor prefixes for us. You'll want to adjust the settings in mixture.json or Gruntfile.js for other browsers.</p>
 
     <p class="more"><a href="#header">To top</a></p>
 
+</section>
+<section class="row" id="support">
+   <h2>Support</h2>
+   <hr>
+   <p>Submit your bug reports, pull requests, and questions to <a href="https://github.com/louderthanten/livewires/issues">GitHub</a>.</p>
+   <p>Other questions? Visit <a href="http://livewires.io">Live Wires</a> for more info.</p>
+   <p class="more"><a href="#header">To top</a></p>
 </section>
 
     </main>
@@ -288,8 +318,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../js/jquery-2.0.3.min.js"><\/script>')</script>
 
-    <script src="../assets/js/vendor.min.js"></script>
-    <script src="../assets/js/app.min.js"></script>
+    <script src="../httpdocs/js/vendor.min.js"></script>
+    <script src="../httpdocs/js/app.min.js"></script>
     
 
 

@@ -28,13 +28,13 @@
     
 
     <link rel="shortcut icon" href="../img/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="../assets/img/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="../httpdocs/img/apple-touch-icon-precomposed.png" />
 
-    <link href="../assets/css/livewires.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../httpdocs/css/livewires.min.css" rel="stylesheet" type="text/css" media="all"/>
 
     <!-- Style block allowing child pages to inject their own styles -->
     
-  <link href="../assets/css/guide.min.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="../httpdocs/css/guide.min.css" rel="stylesheet" type="text/css" media="all"/>
 
 
     <!-- Fontawesome icons. Remove if not using -->
@@ -53,7 +53,7 @@
     <!-- Header section -->
     
   <header class="row row--header reverse" id="header">
-  <h1 class="logo"><a href="usage.html"><img src="../assets/img/livewires/logo.svg" alt="Site name" /></a></h1>
+  <h1 class="logo"><a href="usage.html"><img src="../httpdocs/img/livewires/logo.svg" alt="Site name" /></a></h1>
   <nav class="horizontal-nav horizontal-nav--guide collapse">
     <p class="trigger"><a href="#primary" class="js-reveal">Menu</a></p>
     <ul id="primary">
@@ -88,6 +88,7 @@
 
 <section class="row" id="howto">
   <h2>How to use</h2>
+  <hr>
   <p>Our grid system is inspired by <a href="http://www.jonikorpi.com/">Joni Korpi&rsquo;s</a> fabulous <a href="http://goldengridsystem.com/">Golden Grid System</a>.</p>
   <p>Unlike heavy grid frameworks, this system is not attached to CSS classes. Instead, they are set in SCSS using a simple grid variables. This allows you to define your own semantic layout classes, keeps the markup clean, and makes the layout easier to modify at various breakpoints. You can even combine different grid variables to make interesting compound grids.</p>
 
@@ -126,8 +127,10 @@
       width:$c6*4; /* $c6 = 1 column of a 6-column grid. Mulitply by 4 to specify 4 columns wide. */
       margin-left:$c6*1; /* Moves object 1 column to the right. */
     }</code></pre>
-
+</section>
+<section class="row">
   <h2>Rows</h2>
+  <hr>
   <p>By default, our grid stretches across the entire width of the browser. Probably not ideal for most people. To give your page some margins, we have a special <code>.row</code> class to add structure and extra theming hooks.</p>
 
   <p>The <code>.row</code> class wraps around your content and stretches across your browser so you can add background colors and full-bleed images. It also sets up your grid by adding horizontal page margins and consistent vertical padding for even spacing between sections (though you can add the <code>.row--tight</code> class to remove the vertical spacing).</p>
@@ -142,17 +145,21 @@
         &lt;!-- Content that aligns to the grid and has gutters applied --&gt;
       &lt;/section&gt;
     &lt;/div&gt;</code></pre>
-
+</section>
+<section class="row">
   <h2>Gutters</h2>
-
+  <hr>
   <p>We use fixed-width gutters with fluid units. This ensures that spacing stays consistent at all sizes. By default, our gutter size is equal to the <code>$line</code> variable set in <code>/source/scss/settings/_variables.scss</code>, which also happens to be the baseline grid.</p>
 
   <p>There is a handy <code>gutter</code> mixin which applies half a gutter width to each side of the element it is applied to. </p>
 
   <p>By default, the immediate children of a <code>.row</code> wrapper already have gutters applied using this <code>gutter</code> mixin. To prevent gutters from being applied to one of these immediate children, add the <code>.collapse</code> class to it.</p>
 
-  <h2>Page Margins</h2>
+</section>
+<section class="row">
 
+  <h2>Page Margins</h2>
+  <hr>
   <p>The <code>$margin</code> variable determines the horizontal space on either side of the grid. It is set in <code>/source/scss/settings/_variables.scss</code> with a percentage based on one of our smaller grid units. For example, the default margin of Live Wires is <code>$margin: 100% / 18</code> (which adds an extra column to either side of our 16 column grid).</p>
 
   <p>You can add a max-width value to the <code>.row</code> class to give your design a static width after a certain size, but we recommend sticking with a fully fluid system based on percentages using the <code>$margin</code> variable.</p>
@@ -169,9 +176,10 @@
       }
     }</code></pre>
 
-
+</section>
+<section class="row">
   <h2>Background colors</h2>
-
+  <hr>
   <p>We&rsquo;ve included a few background classes in <code>/source/scss/theme/_layout.scss</code> to give you some easy background variations for rows and other elements:</p>
 
 </section>
@@ -233,6 +241,7 @@
 
 <section class="grids row" id="grids">
     <h2>Grid examples</h2>
+    <hr>
     <h3>Two/Four/Eight responsive folding grid</h3>
     <div class="grid grid--2-4-8">
       <div class="folding eight four two"><span></span></div>
@@ -633,8 +642,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../js/jquery-2.0.3.min.js"><\/script>')</script>
 
-    <script src="../assets/js/vendor.min.js"></script>
-    <script src="../assets/js/app.min.js"></script>
+    <script src="../httpdocs/js/vendor.min.js"></script>
+    <script src="../httpdocs/js/app.min.js"></script>
     
 
 

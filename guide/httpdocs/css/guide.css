@@ -136,6 +136,18 @@
 .header {
   padding-top: 1.5rem; }
 
+p {
+  max-width: 48em; }
+
+figure p {
+  max-width: none; }
+
+.callout--clear .content p, .callout--clear .content li, .callout--clear .content dd {
+  line-height: 1.5;
+  letter-spacing: 0;
+  word-spacing: 0;
+  font-family: inherit;
+  color: inherit; }
 
 .more {
   clear: both; }

@@ -93,9 +93,30 @@
 .header {
   padding-top: rem($line);
 }
-.sub-nav {
-  //background:$mid-text;
+// limit paragraph widths in the guide
+p {
+  max-width: 48em;
 }
+figure p {
+  max-width: none; //Except for captions
+}
+
+
+.callout--clear {
+  .content {
+    p,
+    li,
+    dd {
+      line-height: 1.5;
+      letter-spacing:0;
+      word-spacing: 0;
+      font-family: inherit;
+      color: inherit;
+    }
+  }
+}
+
+
 .more {
   clear:both;
 }
