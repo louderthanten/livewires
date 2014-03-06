@@ -53,19 +53,19 @@
     <!-- Header section -->
     
   <header class="row row--header reverse" id="header">
-    <h1 class="logo"><a href="usage.html"><img src="../assets/img/livewires/logo.svg" alt="Site name" /></a></h1>
-    <nav class="horizontal-nav horizontal-nav--guide collapse">
-      <p class="trigger"><a href="#primary" class="js-reveal">Menu</a></p>
-      <ul id="primary">
-        <li class="primary__usage"><a href="usage.html">Usage</a></li>
-        <li class="primary__brand"><a href="brand.html">Brand</a></li>
-        <li class="primary__grid"><a href="grid.html">Grid</a></li>
-        <li class="primary__elements"><a href="elements.html">Elements</a></li>
-        <li class="primary__components"><a href="components.html">Components</a></li>
-        <li class="primary__modules"><a href="modules.html">Modules</a></li>
-        <li class="primary__templates"><a href="templates.html">Templates</a></li>
-      </ul>
-    </nav>
+  <h1 class="logo"><a href="usage.html"><img src="../assets/img/livewires/logo.svg" alt="Site name" /></a></h1>
+  <nav class="horizontal-nav horizontal-nav--guide collapse">
+    <p class="trigger"><a href="#primary" class="js-reveal">Menu</a></p>
+    <ul id="primary">
+      <li class="primary__usage"><a href="usage.html">Usage</a></li>
+      <li class="primary__brand"><a href="brand.html">Brand</a></li>
+      <li class="primary__grid"><a href="grid.html">Grid</a></li>
+      <li class="primary__elements"><a href="elements.html">Elements</a></li>
+      <li class="primary__components"><a href="components.html">Components</a></li>
+      <li class="primary__modules"><a href="modules.html">Modules</a></li>
+      <li class="primary__templates"><a href="templates.html">Templates</a></li>
+    </ul>
+  </nav>
 </header>
   <nav class="horizontal-nav horizontal-nav--guide row">
     <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
@@ -83,18 +83,21 @@
     
 <header class="row">
   <h1>Grid</h1>
-  <p class="lead">Live Wires uses a folding compound grid for maximum flexibility in responsive layouts. This is a fluid grid with flexible columns and fixed-width gutters to maintain proportional spacing and alignment for all screen dimensions.</p>
+  <p class="lead">We use a folding compound grid for maximum flexibility in responsive layouts. This is a fluid grid with flexible columns and fixed-width gutters to maintain proportional spacing and alignment for all screen dimensions.</p>
 </header>
 
 <section class="row" id="howto">
-  <h2>Avoiding a grid framework</h2>
-  <p>The concept is loosely based on <a href="http://www.jonikorpi.com/">Joni Korpi&rsquo;s</a> fabulous <a href="http://goldengridsystem.com/">Golden Grid System</a>.</p>
-  <p>Unlike other heavy grid frameworks, the grid system is not attached to CSS classes. Instead, they are set in SCSS using a simple grid variables. This keeps the markup clean and the layout much easier to modify at various breakpoints. You can even combine them to make interesting compound grids.</p>
+  <h2>How to use</h2>
+  <p>Our grid system is inspired by <a href="http://www.jonikorpi.com/">Joni Korpi&rsquo;s</a> fabulous <a href="http://goldengridsystem.com/">Golden Grid System</a>.</p>
+  <p>Unlike heavy grid frameworks, this system is not attached to CSS classes. Instead, they are set in SCSS using a simple grid variables. This allows you to define your own semantic layout classes, keeps the markup clean, and makes the layout easier to modify at various breakpoints. You can even combine different grid variables to make interesting compound grids.</p>
 
-  <p>In fact, this system isn't a framework at all. The only thing we've setup for you are the following grid variables and a couple classes for dividing page sections.</p>
+  <p>The only thing we've setup for you are the following grid variables and a couple simple classes for dividing page sections.</p>
+
+  <p>Most global layout styles can be found in <code>/source/scss/modules/_layout.scss</code>, with our grid settings configured in <code>/source/scss/settings/_variables.scss</code>.</p>
 
   <h3>Default grid variables</h3>
-  <pre class="language-scss"><code>   //Three Column Grid
+  <p>These are the default grid variables avialable in the project. You can adjust these in <code>/source/scss/settings/_variables.scss</code>.</p>
+  <pre class="language-scss"><code>    //Three Column Grid
     $c3: 100% / 3;
     //Four Column Grid
     $c4: 100% / 4;
@@ -115,40 +118,62 @@
     //Sixteen Column Grid
     $c16: 100% / 16;</code></pre>
 
-  <p><em>To specify a width of four columns of a six column grid ($c6 == 1 column of a 6-column grid), use the following:</em></p>
+  <h3>SCSS example</h3>
+  <p>To specify a width of four columns of a six column grid ($c6 == 1 column of a 6-column grid), use the following:</p>
 
     <pre class="language-scss line-numbers"><code>    /* Create a 4-column object centered in a 6-column grid */
     .object{
-      @include gutters; /* Applies gutter spacing to sides of object. */
       width:$c6*4; /* $c6 = 1 column of a 6-column grid. Mulitply by 4 to specify 4 columns wide. */
       margin-left:$c6*1; /* Moves object 1 column to the right. */
     }</code></pre>
 
-  <p>By default, this grid would be from one edge of the browser to the other. Probably not ideal for most people. To give your page some margins, we have two classes to give you some structure and extra theming power:</p>
+  <h2>Rows</h2>
+  <p>By default, our grid stretches across the entire width of the browser. Probably not ideal for most people. To give your page some margins, we have a special <code>.row</code> class to add structure and extra theming hooks.</p>
 
-  <pre class="language-markup line-numbers"><code>    &lt;!-- If you don't need a unique background for your section,
-    you can combine row and container classes --&gt;
-    &lt;div class="row container"&gt;
+  <p>The <code>.row</code> class wraps around your content and stretches across your browser so you can add background colors and full-bleed images. It also sets up your grid by adding horizontal page margins and consistent vertical padding for even spacing between sections (though you can add the <code>.row--tight</code> class to remove the vertical spacing).</p>
+
+
+
+  <pre class="language-markup line-numbers"><code>    &lt;div class="row"&gt; &lt;!-- Adds margins and optional backgrounds to your section --&gt;
       &lt;section class="object"&gt;
-        &lt;!-- Content that aligns to the grid --&gt;
+        &lt;!-- Content that aligns to the grid and has gutters applied --&gt;
       &lt;/section&gt;
-    &lt;/div&gt;
-    <!-- If you do need a unique background for your section, separate your row and container classes -->
-    &lt;div class="row"&gt; &lt;!-- Apply background here --&gt;
-      &lt;div class="container"&gt; &lt;!-- Contains grid --&gt;
-        &lt;section class="object"&gt;
-          &lt;!-- Content that aligns to the grid --&gt;
-        &lt;/section&gt;
-        &lt;section class="object2"&gt;
-          &lt;!-- Content that aligns to the grid --&gt;
-        &lt;/section&gt;
-      &lt;/div&gt;
+      &lt;section class="object2"&gt;
+        &lt;!-- Content that aligns to the grid and has gutters applied --&gt;
+      &lt;/section&gt;
     &lt;/div&gt;</code></pre>
 
-  <h2><code>.row</code></h2>
-  <p>Our row classes are designed to stretch from one edge of your browser to the other so you can add background colors and full-bleed images. We also like to add some vertical padding for consistent white space between sections.</p>
+  <h2>Gutters</h2>
+
+  <p>We use fixed-width gutters with fluid units. This ensures that spacing stays consistent at all sizes. By default, our gutter size is equal to the <code>$line</code> variable set in <code>/source/scss/settings/_variables.scss</code>, which also happens to be the baseline grid.</p>
+
+  <p>There is a handy <code>gutter</code> mixin which applies half a gutter width to each side of the element it is applied to. </p>
+
+  <p>By default, the immediate children of a <code>.row</code> wrapper already have gutters applied using this <code>gutter</code> mixin. To prevent gutters from being applied to one of these immediate children, add the <code>.collapse</code> class to it.</p>
+
+  <h2>Page Margins</h2>
+
+  <p>The <code>$margin</code> variable determines the horizontal space on either side of the grid. It is set in <code>/source/scss/settings/_variables.scss</code> with a percentage based on one of our smaller grid units. For example, the default margin of Live Wires is <code>$margin: 100% / 18</code> (which adds an extra column to either side of our 16 column grid).</p>
+
+  <p>You can add a max-width value to the <code>.row</code> class to give your design a static width after a certain size, but we recommend sticking with a fully fluid system based on percentages using the <code>$margin</code> variable.</p>
+
+
+
+  <p>This is fine at small window sizes, but what if that's too loose at wider sizes? Instead of adding a max-width, we just increase the <code>$margin</code> variable on our <code>.row</code> classes:</p>
+
+    <pre class="language-scss line-numbers"><code>    /* Increase margins after a certain width */
+    @media only screen and (min-width: $screenMedium) {
+      .row {
+        padding-left: $margin * 2; /* Double the $margin size to squeeze the main content. */
+        padding-right: $margin * 2;
+      }
+    }</code></pre>
+
+
+  <h2>Background colors</h2>
 
   <p>We&rsquo;ve included a few background classes in <code>/source/scss/theme/_layout.scss</code> to give you some easy background variations for rows and other elements:</p>
+
 </section>
 
 <section class="row subtle">
@@ -156,11 +181,9 @@
   <p>This content has a subtle background variation.</p>
 
   <pre class="language-markup line-numbers"><code>    &lt;section class="row subtle"&gt;
-    &lt;div class="container"&gt;
       &lt;h3&gt;.subtle&lt;/h3&gt;
       &lt;p&gt;This content has a subtle background variation.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;</code></pre>
+    &lt;/section&gt;</code></pre>
 </section>
 
 <section class="row reverse">
@@ -168,27 +191,9 @@
   <p>This content has light on dark text.</p>
 
   <pre class="language-markup line-numbers"><code>    &lt;section class="row reverse"&gt;
-    &lt;div class="container"&gt;
       &lt;h3&gt;.reverse&lt;/h3&gt;
       &lt;p&gt;This content has light on dark text.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;</code></pre>
-</section>
-
-<section class="row">
-  <h2><code>.container</code></h2>
-  <p>Container classes contain our grid and add vertical margins to our sections. You can add a max-width value to give your design a static width after a certain size, but we recommend sticking with a fully fluid system based on percentages:</p>
-
-  <p>Define your page width by using the <code>$margin</code> variable. We usually set this with a percentage based on one of our smaller grid units. For example, the base margin of Live Wires is <code>$margin: 100% / 18</code> (which adds an extra column to either side of our 16 column grid).</p>
-
-  <p>This is fine at small window sizes, but what about at wider sizes? Instead of adding a max-width, we just increase the <code>$margin</code> variable on our <code>.container</code> classes:</p>
-
-    <pre class="language-scss line-numbers"><code>    /* Increase margins after a certain width */
-    @media only screen and (min-width: $screenMedium) {
-      .container {
-        margin: 0 $margin * 2; /* Double the margin size to squeeze the main content. */
-      }
-    }</code></pre>
+    &lt;/section&gt;</code></pre>
 
   <p class="more"><a href="#header">To top</a></p>
 </section>
@@ -221,6 +226,7 @@
        padding: rem(24); // You can even leave out the px suffix
        padding: rem(24 12); // And use with multiple shorthand values
        padding: rem($line $line/2); // Use the $line variable for consistent spacing & flexibility
+       padding: rem($line) $margin; // Use the rem() function for only part of your CSS declaration
     }</code></pre>
 
 </section>
@@ -316,7 +322,7 @@
 <section class="row" id="modular-scale">
   <h2>Modular scale</h2>
   <hr>
-  <p>We use a custom modular scale to help keep typographic and structural dimensions consistent and in proportion. You can refer to this scale when determining font sizes, grid units, media proportions, and spacing.</p>
+  <p>We use a custom modular scale to provide a rational list of related numbers to use throughout the project. This keeps typographic and structural dimensions consistent and in proportion. You can refer to this scale when determining font sizes, gutter units, media proportions, and spacing.</p>
   <p>Learn more about <a href="https://vimeo.com/17079380">modular scales</a>.</p>
   <p><small>Calculated by <a href="http://modularscale.com/scale/?px1=16&amp;px2=12&amp;ra1=1.5&amp;ra2=0">Modular Scale</a>.</small></p>
 

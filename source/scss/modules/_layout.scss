@@ -97,9 +97,7 @@ body {
     padding-right:$margin*2;
   }
   .primary-content {
-    // Change grid as you move up
-    margin-left:$c7; // move content to the left by one 7-column unit
-    width:$c7*3; // Three units of a 7-column grid
+    width:$c7*4; // Change grid as you move up: Four units of a 7-column grid
   }
   .secondary-content {
     width: $c4; // Uses a 1/4 unit-grid for a more complex compound grid https://gridsetapp.com/specs/gerstner/

@@ -53,19 +53,19 @@
     <!-- Header section -->
     
   <header class="row row--header reverse" id="header">
-    <h1 class="logo"><a href="usage.html"><img src="../assets/img/livewires/logo.svg" alt="Site name" /></a></h1>
-    <nav class="horizontal-nav horizontal-nav--guide collapse">
-      <p class="trigger"><a href="#primary" class="js-reveal">Menu</a></p>
-      <ul id="primary">
-        <li class="primary__usage"><a href="usage.html">Usage</a></li>
-        <li class="primary__brand"><a href="brand.html">Brand</a></li>
-        <li class="primary__grid"><a href="grid.html">Grid</a></li>
-        <li class="primary__elements"><a href="elements.html">Elements</a></li>
-        <li class="primary__components"><a href="components.html">Components</a></li>
-        <li class="primary__modules"><a href="modules.html">Modules</a></li>
-        <li class="primary__templates"><a href="templates.html">Templates</a></li>
-      </ul>
-    </nav>
+  <h1 class="logo"><a href="usage.html"><img src="../assets/img/livewires/logo.svg" alt="Site name" /></a></h1>
+  <nav class="horizontal-nav horizontal-nav--guide collapse">
+    <p class="trigger"><a href="#primary" class="js-reveal">Menu</a></p>
+    <ul id="primary">
+      <li class="primary__usage"><a href="usage.html">Usage</a></li>
+      <li class="primary__brand"><a href="brand.html">Brand</a></li>
+      <li class="primary__grid"><a href="grid.html">Grid</a></li>
+      <li class="primary__elements"><a href="elements.html">Elements</a></li>
+      <li class="primary__components"><a href="components.html">Components</a></li>
+      <li class="primary__modules"><a href="modules.html">Modules</a></li>
+      <li class="primary__templates"><a href="templates.html">Templates</a></li>
+    </ul>
+  </nav>
 </header>
   <nav class="horizontal-nav horizontal-nav--guide row">
     <ul class="collapse">
@@ -105,17 +105,18 @@
   <dl>
     <dt><code>/assets/</code></dt>
     <dd>This is where all compiled static assets live. Drop your images and font files here. This is also where all Sass, CoffeeScript, and Javascript is combined, compiled, and minified for production use. Don&rsquo;t edit these CSS and JS files as that will overwrite them.</dd>
-    <dt><code>/models/</code></dt>
-    <dd>Contains Mixture's <a href="http://docs.mixture.io/models">model files</a>. We've added one with some global variables to get you started.</dd>
     <dt><code>/source/</code></dt>
     <dd>This contains all of the pre-compiled Sass, Coffeescript, and JavaScript files. This is where you would write your CSS and JavaScript. See below for more details on how these are organized.</dd>
+    <dt>Mixture specific</dt>
     <dt><code>/templates/</code></dt>
     <dd>This is where your site templates reside. Templates for this guide can be found in the <code>guide</code> folders.</dd>
+    <dt><code>/models/</code></dt>
+    <dd>Contains Mixture's handy<a href="http://docs.mixture.io/models">model files</a>. We've added one with some global variables to get you started.</dd>
     <dt><code>mixture.json</code></dt>
     <dd>Your <a href="http://docs.mixture.io/mixture">Mixture settings</a>.</dd>
 
 
-    <p class="lead">One of the core philosphies behind Live Wires is to stay out of the way as much as possible. We don't want to impose any code standards or force you into a box. Saying that we do have some guidelines that we like that will make it easier to navigate Live Wires.</p>
+    <p class="lead">One of the core philosphies behind Live Wires is to stay out of the way as much as possible. We don't want to impose any code standards or force you into a box. Saying that we do have some guidelines that we like that will make it easier to get started with Live Wires.</p>
 </section>
 
 
@@ -141,7 +142,7 @@
 
     <h2 id="markup">Markup</h2>
     <hr>
-    <p>Live Wires uses standard HTML5 for markup with a simplified version of <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name our classes. This gives us an easy standard for others to quickly adopt and keeps the library tight, modular, and free of specificity issues. Here&rsquo;s the basic syntax:</p>
+    <p>We use standard HTML5 for markup, but recommend the <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This gives us an easy standard for others to quickly adopt and keeps the library tight, modular, and free of specificity issues. Here&rsquo;s the basic syntax:</p>
 
     <pre class="language-scss"><code>.block {} /* A component or module */
 .block__element {} /* A descendent of that module */
@@ -155,7 +156,7 @@
 
     <h2 id="js">Javascript</h2>
     <hr>
-    <p>We are using Coffescript to write our javascript. Its a powerful and easy-to-learn javascript pre-processor to help make scripting more efficient and less error-prone.</p>
+    <p>We use Coffescript to write our javascript. Its a powerful and easy-to-learn javascript pre-processor to help make scripting more efficient and less error-prone.</p>
 
     <p>Like our CSS and HTML, we try to keeo our javascript modular so you can use only what you need. All the coffeescript components are in <code>/source/coffee/components</code>. You can include and exclude the scripts you want in your project by editing <code>/source/coffee/app.mix.js</code>, following the existing syntax.</p>
 
@@ -167,17 +168,17 @@
     <h2 id="css">CSS</h2>
     <hr>
 
-    <p>All of the styles are written using <a href="http://sass-lang.com/">Sass</a>. All files can be found in <code>/source/scss/</code>. We&rsquo;ve written a lot of starter styles to get you going, but encourage you to go through each file and customize to your liking. It's a fine way to design a UI system once you get the hang of it.</p>
+    <p>All of the styles are written using <a href="http://sass-lang.com/">Sass</a>. All files can be found in <code>/source/scss/</code>. We&rsquo;ve setup a few basic starter styles to get you going, but encourage you to go through each file and customize to your liking. It's a fine way to design a UI system once you get the hang of it.</p>
 
     <h3>SCSS file structure</h3>
-      <h4><code>~/settings/</code></h4>
+      <h4>/source/scss/settings/</h4>
       <p>Contains the project variables, mixins, and other things that make Sass so powerful. Here&rsquo;s a taste of what you can do:</p>
       <dl>
       <dt><code>_variables.scss</code></dt>
       <dd>Set most global variables in here. You can set things like base typographic settings, default corner radius, breakpoint widths, and grid units in here.</dd>
 
       <dt><code>_color.scss</code></dt>
-      <dd>We keep our color variables separate so we can easily use multiple color schemes.</dd>
+      <dd>We keep our color variables separate so we can easily experiement with multiple color schemes.</dd>
 
       <dt><code>_includes.scss</code></dt>
       <dd>Use this to include or exclude the sections you want in your project. We made everything modular, so you should be able to use as much or as little as you like.</dd>
@@ -189,23 +190,23 @@
       <dd>These include powerful enhacements to help save time. Have a browse to see what's available and how they work.</dd>
     </dl>
 
-    <h4><code>~/global/</code></h4>
+    <h4>/sources/scss/elements/</h4>
     <p>Stand-alone elements and small peices that make up components. <em>e.g. paragraphs, headings, form fields</em></p>
 
-    <h4><code>~/components/</code></h4>
-    <p>The re-usable pieces that consist of groups of HTML elements. <em>e.g. callouts, pagination, code blocks</em></p>
+    <h4>/sources/scss/components/</h4>
+    <p>The re-usable pieces that consist of groups of elements. <em>e.g. callouts, pagination, code blocks</em></p>
 
-    <h4><code>~/modules/</code></h4>
-    <p>Major chunks that make up the main sections of a template. They often contain components and global elements. <em>e.g. headers, footers, layout modules</em></p>
+    <h4>/sources/scss/modules/</h4>
+    <p>Major chunks that make up the main sections of a template. They often contain components and global elements, and are often used once per page. <em>e.g. headers, footers, layout modules</em></p>
 
-    <h4><code>~/pages/</code></h4>
-    <p>Page-specific styles. We recommend keeping these standalone and only calling them on their respective pages.</p>
+    <h4>/sources/scss/pages/</h4>
+    <p>Page-specific styles. We recommend keeping these out of the main stylesheet and only calling them on their respective pages.</p>
 
-    <h4><code>~/theme/</code></h4>
+    <h4>/sources/scss/theme/</h4>
     <p>This contains all color-related styles. We&rsquo;ve kept all the color assignments separate from structural styles to make theming easier, faster, and less error prone.</p>
 
-    <h4><code>~/vendor/</code></h4>
-    <p>Drop any third-party styles in here. We keep these untouched so they can be updated in the future.</p>
+    <h4>/sources/scss/vendor/</h4>
+    <p>Drop any third-party styles in here. We try to keep these untouched so they can be updated in the future.</p>
 
     <p class="more"><a href="#header">To top</a></p>
 
@@ -259,7 +260,7 @@
 
     <h2 id="compatibility">Compatibility</h2>
     <hr>
-    <p>We support all modern browsers including Internet Explorer 9 and up. Although we advise against it, if you do need to support IE8 or lower, most incompatilibilites can be solved by using jQuery 1.x with the following polyfills:</p>
+    <p>We support all modern browsers including Internet Explorer 9 and up. If you do need to support IE8 or lower, most incompatilibilites can be solved by using jQuery 1.x with the following polyfills:</p>
 
     <ul>
       <li><a href="https://code.google.com/p/html5shiv/">html5shiv</a></li>
