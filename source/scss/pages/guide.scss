@@ -2,13 +2,13 @@
 
 // The is the style of the UI Kit/Style Guide/Brand guide/etc itself.
 // Base theme colors
-@import "settings/colors";
+@import "../settings/colors";
 
 // Call in Sass tools for easier styling.
-@import "settings/variables";
-@import "settings/functions";
-@import "settings/mixins";
-@import "settings/helpers";
+@import "../settings/variables";
+@import "../settings/functions";
+@import "../settings/mixins";
+@import "../settings/helpers";
 
 //==============================================================================
 // UI Guide Settings - Customize this area for sure
@@ -97,7 +97,8 @@
 p {
   max-width: 48em;
 }
-figure p {
+figure p,
+.colors p {
   max-width: none; //Except for captions
 }
 
@@ -284,6 +285,11 @@ figure p {
   .paragraphs {
     width:$c4*3;
   }
+  .type-sample {
+    p {
+      @include font-size(16, 24);
+    }
+  }
   .iconset {
     @include gutter;
     width:$c8*4;
@@ -357,11 +363,6 @@ figure p {
   }
   .primary-content {
     margin-left: 0;
-  }
-  .type-sample {
-    p {
-      @include font-size(16, 24);
-    }
   }
 }
 @media only screen and (min-width: $screenLarge) {

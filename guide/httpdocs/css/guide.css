@@ -139,7 +139,7 @@
 p {
   max-width: 48em; }
 
-figure p {
+figure p, .colors p {
   max-width: none; }
 
 .callout--clear .content p, .callout--clear .content li, .callout--clear .content dd {
@@ -249,6 +249,10 @@ figure p {
       max-height: none; }
   .paragraphs {
     width: 75%; }
+  .type-sample p {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5; }
   .iconset {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -296,11 +300,7 @@ figure p {
     width: 50%;
     float: left; }
   .primary-content {
-    margin-left: 0; }
-  .type-sample p {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5; } }
+    margin-left: 0; } }
 
 @media only screen and (min-width: 98em) {
   .type-sample p {
@@ -331,4 +331,3 @@ figure p {
       clear: none; } }
 
 /*# sourceMappingURL=guide.css.map */
-

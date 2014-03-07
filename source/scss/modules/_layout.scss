@@ -1,66 +1,9 @@
 // LAYOUT
-
-// This page is for setting up our general layout structure.
-//
-// If you can stuck to using rem units, you can resize the entire layout
-// proportionally by manipulating the font-size on the html element.
-html {
-  font-size: 100%;
-  min-height: 100%;
-}
-
-html,
-body {
-  position: relative;
-}
-
-// I use .row classes to separate page sections and establish the grid within
-// those sections. Add color classes from theme/_layout.scss to modify the background
-//
-// Markup example:
-// <section class="row">
-//    <section class="primary-content">
-//        … Main page stuff …
-//    </section>
-//    <aside class="secondary-content">
-//        … Secondary content (sidebar perhaps?) …
-//     </aside>
-// </section>
-.row {
-  @extend %group; // Call in a clearfix style
-  position:relative;
-  padding: rem($line) $margin; //Creates margins with a half-gutter on either side.
-  > * {
-    @extend %group;
-  }
-}
-
-// remove vertical padding on rows
-.row--tight {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-// Edge to edge container on mobile
-.row--mobile-full {
-  padding-left: 0;
-  padding-right: 0;
-}
+// Setup your layout blocks here. We've included a few examples, but encourage
+// you to create your own.
 
 @media only screen and (min-width: $screenSmall) {
-  .row,
-  .row--mobile-full {
-    padding: rem($line*2) $margin; // Increase row padding for more space at wider sizes
-    // Add gutters to container's immediate children unless they have a .collapse class.
-    > *:not(.collapse) {
-      @include gutter;
-    }
-  }
-  // remove vertical padding on rows
-  .row--tight {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+
 // Add some layout modules here. Here are some examples:
 //
 // Markup example:
@@ -74,28 +17,25 @@ body {
 // </section>
 
   .primary-content {
-    width:$c5*3; // Creates an object that's 3/5 the width of its container
+    width:$c5*3; // Creates an object that's 3/5 the width of its parent
     float:left;  // Float this block to the left
 
   }
   .secondary-content {
-    width:$c5*2; // Creats an object that's 2/5 the width of the container
-    float:right; // Floats this block to the right
+    width:$c5*2; // Creats an object that's 2/5 the width of its parent
+    float:left;
   }
   .split-content {
-    width:$c4*2; // Creates objects that are 1/2 the width of the container
+    width:$c4*2; // Creates objects that are 1/2 the width of its parent
+    float:left;
+  }
+  .three-up {
+    width:$c3; // Creates objects that are 1/3 the width of its parent
     float:left;
   }
 }
 
 @media only screen and (min-width: $screenMedium) {
-  html {
-    font-size: 107.5%; // You can proportionally resize your entire layout with this line if you stick to rem units everywhere.
-  }
-  .row {
-    padding-left:$margin*2;
-    padding-right:$margin*2;
-  }
   .primary-content {
     width:$c7*4; // Change grid as you move up: Four units of a 7-column grid
   }

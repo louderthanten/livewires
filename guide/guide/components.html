@@ -27,10 +27,10 @@
 <meta name="twitter:site" content="louderthanten">
     
 
-    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <link rel="shortcut icon" href="../httpdocs/img/favicon.ico" />
     <link rel="apple-touch-icon-precomposed" href="../httpdocs/img/apple-touch-icon-precomposed.png" />
 
-    <link href="../httpdocs/css/livewires.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../httpdocs/css/app.min.css" rel="stylesheet" type="text/css" media="all"/>
 
     <!-- Style block allowing child pages to inject their own styles -->
     
@@ -52,6 +52,7 @@
 
     <!-- Header section -->
     
+
   <nav class="reverse offcanvas--top" id="oc-top">
   <ul>
   <li class="primary__brand"><a href="brand.html">Brand</a></li>
@@ -110,6 +111,7 @@
     </ul>
   </nav>
 </header>
+
   <nav class="horizontal-nav horizontal-nav--guide row">
     <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
     <ul class="collapse" id="sections">
@@ -125,9 +127,11 @@
   </nav>
 
 
+
     <!-- Content block, child page inject content -->
     <main class="main" id="main" role="main">
     
+
 <header class="row">
   <h1>Components</h1>
   <p class="lead">Components combine basic HTML elements into small reusable pieces that act as the building blocks to our modules and layouts.</p>
@@ -136,24 +140,29 @@
 <section class="row" id="media">
   <h2>Media</h2>
   <hr>
+
   <p>We can make our images responsive by wrapping them in<code>&lt;figure&gt;</code> elements. Add a <code>video</code> class for responsive videos, or <code>map</code> for maps.</p>
   <p>To make life easier, we&rsquo;ve included a script to automatically add appropriate figure tags to images, videos, and maps inside of elements with a <code>content</code> class. Nice for those pesky CMS-powered content blocks.</p>
 
   <h3>Responsive image</h3>
   <figure>
-    <img src="http://placehold.it/2000x1200" alt="">
+    <img src="http://placehold.it/2000x800" alt="">
     <figcaption><p>Explanatory caption to compliment image. <small class="source">Photographer: First Last</small></p></figcaption>
   </figure>
 
-  <h3>Responsive embedded video</h3>
-  <figure class="video">
-    <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  </figure>
+  <div class="split-content">
+    <h3>Responsive embedded video</h3>
+    <figure class="video">
+      <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </figure>
+  </div>
 
-  <h3>Responsive map</h3>
-  <figure class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20821.939822233115!2d-123.12433310318293!3d49.28127672734369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2sVancouver%2C+BC!5e0!3m2!1sen!2s!4v1392173356350" width="800" height="600" frameborder="0" style="border:0"></iframe>
-  </figure>
+  <div class="split-content">
+    <h3>Responsive map</h3>
+    <figure class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20821.939822233115!2d-123.12433310318293!3d49.28127672734369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2sVancouver%2C+BC!5e0!3m2!1sen!2s!4v1392173356350" width="800" height="600" frameborder="0" style="border:0"></iframe>
+    </figure>
+  </div>
 
   <p class="more"><a href="#header">To top</a></p>
 </section>
@@ -161,187 +170,195 @@
 <section class="row" id="tables">
   <h2>Tables</h2>
   <hr>
+
   <p>Sometimes we need to show tabular data. Here are some different ways to show it and make them responsive.</p>
 
   <h3>Invisible</h3>
   <p>The default table style.</p>
-  <table id="demo1">
-    <thead>
-        <tr>
-          <th>Lorem</th>
-          <th>Ipsum</th>
-          <th class="numerical">Dolor</th>
-          <th>Sit</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">03.788</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">32.210</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">47.797</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">09.640</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">12.117</td>
-        <td>Lorem</td>
-      </tr>
-    </tbody>
-  </table>
 
-  <h3>Bordered</h3>
-  <p>Add <code>class="table--bordered"</code> to <code>&lt;table&gt;</code> element.</p>
-  <table class="table--bordered" id="demo2">
-    <thead>
+  <section class="tables">
+    <table id="demo1">
+      <thead>
         <tr>
           <th>Lorem</th>
           <th>Ipsum</th>
           <th class="numerical">Dolor</th>
           <th>Sit</th>
         </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">03.788</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">32.210</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">47.797</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">09.640</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">12.117</td>
-        <td>Lorem</td>
-      </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
 
-  <h3>Striped</h3>
-  <p>Add <code>class="table--striped"</code> to <code>&lt;table&gt;</code> element.</p>
-  <table class="table--striped" id="demo3">
-    <thead>
-        <tr>
-          <th>Lorem</th>
-          <th>Ipsum</th>
-          <th class="numerical">Dolor</th>
-          <th>Sit</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">03.788</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">32.210</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">47.797</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">09.640</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">12.117</td>
-        <td>Lorem</td>
-      </tr>
-    </tbody>
-  </table>
+    <h3>Bordered</h3>
+    <p>Add <code>class="table--bordered"</code> to <code>&lt;table&gt;</code> element.</p>
 
-  <h3>Lined</h3>
-  <p>Add <code>class="table--lined"</code> to <code>&lt;table&gt;</code> element.</p>
-  <table class="table--lined" id="demo4">
-    <thead>
+    <table class="table--bordered" id="demo2">
+      <thead>
         <tr>
           <th>Lorem</th>
           <th>Ipsum</th>
           <th class="numerical">Dolor</th>
           <th>Sit</th>
         </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">03.788</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">32.210</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">47.797</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">09.640</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td class="numerical">12.117</td>
-        <td>Lorem</td>
-      </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Striped</h3>
+    <p>Add <code>class="table--striped"</code> to <code>&lt;table&gt;</code> element.</p>
+
+    <table class="table--striped" id="demo3">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th class="numerical">Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Lined</h3>
+    <p>Add <code>class="table--lined"</code> to <code>&lt;table&gt;</code> element.</p>
+
+    <table class="table--lined" id="demo4">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th class="numerical">Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
 
   <p class="more"><a href="#header">To top</a></p>
 </section>
@@ -349,23 +366,26 @@
 <section class="row" id="code">
   <h2>Code</h2>
   <hr>
+
   <p>We use Prism.js to add syntax highlighting and line numbers. Visit <a href="http://prismjs.com/">Prism.js</a> to configure the languages and plugins you require. You can adjust the code colors in <code>/source/scss/theme/_code.scss</code>.</p>
 
-  <pre class="line-numbers language-css"><code>    /* Code comment */
-    .nav {
-      list-style:none;
-      margin-left:0;
+  <div class="code">
+   <pre class="language-css"><code>/* Code comment */
+.nav {
+  list-style:none;
+  margin-left:0;
 
-      > li,
-      > li > a {
-        display:inline-block;
-         *display:inline-block;
-        zoom:1;
-      }
-    }</code></pre>
+  > li,
+  > li > a {
+    display:inline-block;
+     *display:inline-block;
+    zoom:1;
+  }
+}</code></pre>
 
-  <h3>Markup example:</h3>
-  <pre class="line-numbers language-markup"><code>    &lt;pre class="language-css line-numbers"&gt;&lt;code&gt;/* Code comment */
+    <h3>Markup example:</h3>
+
+    <pre class="line-numbers language-markup"><code>    &lt;pre class="language-css line-numbers"&gt;&lt;code&gt;/* Code comment */
     .nav {
       list-style:none;
       margin-left:0;
@@ -377,12 +397,15 @@
         zoom:1;
       }
     }&lt;/code&gt;&lt;/pre&gt;</code></pre>
+    </div>
 
     <p class="more"><a href="#header">To top</a></p>
 </section>
+
 <section class="row" id="nav">
   <h2>Navigation</h2>
   <hr>
+
   <div class="split-content">
     <h3>Breadcrumbs</h3>
     <nav class="breadcrumbs">
@@ -411,6 +434,7 @@
       <p><a href="" class="prev">&laquo;&nbsp;Prev</a>&nbsp;<a href="" class="next">Next&nbsp;&raquo;</a></p>
     </nav>
   </div>
+
   <div class="split-content">
     <h3>Vertical navigation</h3>
     <nav class="vertical-nav">
@@ -430,6 +454,7 @@
       &lt;/ul&gt;
     &lt;/nav&gt;</code></pre>
   </div>
+
   <div class="split-content">
     <h3>Horizontal navigation</h3>
     <nav class="horizontal-nav">
@@ -454,10 +479,12 @@
 </section>
 
 <section class="row" id="callouts">
-    <h2>Callouts</h2>
-    <hr>
-    <p>These patterns are great for making wells and callouts inside of sidebars and primary content areas. Add images, videos, and forms to make them even more powerful.</p>
+  <h2>Callouts</h2>
+  <hr>
 
+  <p>These patterns are great for making wells and callouts inside of sidebars and primary content areas. Add images, videos, and forms to make them even more powerful.</p>
+
+  <div class="code">
     <h3>Markup example</h3>
     <pre class="line-numbers language-markup"><code>    &lt;!-- Basic callout structure --&gt;
     &lt;aside class="callout"&gt;
@@ -468,6 +495,7 @@
         &lt;!-- Inner content with background and padding --&gt;
       &lt;/div&gt;
     &lt;/aside&gt;</code></pre>
+  </div>
 </section>
 
 <section class="row callouts">
@@ -550,8 +578,9 @@
   <p>E.g. <code>&lt;a href="components.html#tab2"&gt;</code>
   <p>If you follow the general pattern, you can place anything in the tab elements.</p>
 
-  <h3>Markup example</h3>
-  <pre class="line-numbers language-markup"><code>    &lt;!-- Tab navigation --&gt;
+  <div class="code">
+    <h3>Markup example</h3>
+    <pre class="line-numbers language-markup"><code>    &lt;!-- Tab navigation --&gt;
     &lt;ul class="tabs"&gt;
       &lt;li&gt;&lt;a href="#tab1"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href="#tab2"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
@@ -568,7 +597,7 @@
     &lt;div id="tab3"&gt;
       &lt;!-- Tab 3 stuff --&gt;
     &lt;/div&gt;</code></pre>
-
+  </div>
   <ul class="tabs">
     <li><a href="#tab1">Tab 1</a></li>
     <li><a href="#tab2">Tab 2</a></li>
@@ -618,16 +647,17 @@
   <p>Use drawers to easily show and hide content. These work great both page-wide and within elements like callouts as shown below.</p>
   <p><a href="#drawer" class="button js-reveal">Open drawer</a></p>
 
-  <h3>Markup example</h3>
-  <pre class="line-numbers language-markup"><code>    &lt;!-- Point the href to the id of the drawer --&gt;
+  <div class="code">
+    <h3>Markup example</h3>
+    <pre class="line-numbers language-markup"><code>    &lt;!-- Point the href to the id of the drawer --&gt;
     &lt;a href="#drawer" class="button js-reveal"&gt;Open drawer&lt;/a&gt;
 
     &lt;!-- Drawer content. Anything here is hidden --&gt;
     &lt;div class="drawer" id="drawer"&gt;
       &lt;!-- Contents of drawer --&gt;
     &lt;/div&gt;</code></pre>
-
-    <p class="more"><a href="#header">To top</a></p>
+  </div>
+  <p class="more"><a href="#header">To top</a></p>
 </section>
 
 <section class="drawer reverse" id="drawer">
@@ -653,8 +683,9 @@
     </ul>
   </nav>
 
-  <h3>Markup example</h3>
-  <pre class="line-numbers language-markup"><code>    &lt;!-- Add offcanvas--push to the body element to push page content --&gt;
+  <div class="code">
+    <h3>Markup example</h3>
+    <pre class="line-numbers language-markup"><code>    &lt;!-- Add offcanvas--push to the body element to push page content --&gt;
     &lt;body class="offcanvas--push"&gt;
       &lt;!-- Left example. Other options are offcanvas--top, offcanvas--right, offcanvas--bottom --&gt;
       &lt;nav class="offcanvas--left" id="offcanvas"&gt;
@@ -667,7 +698,7 @@
         &lt;div class="js-open-canvas"&gt;&lt;a href="#offcanvas"&gt;Offcanvas toggle&lt;/a&gt;&lt;/div&gt;
       &lt;/main&gt;
     &lt;/body&gt;</code></pre>
-
+    </div>
     <p class="more"><a href="#header">To top</a></p>
 </section>
 
