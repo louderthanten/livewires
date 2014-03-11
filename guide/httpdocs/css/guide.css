@@ -30,8 +30,7 @@
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px;
-  /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */ }
+  width: 1px; }
   .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
@@ -77,7 +76,7 @@
   text-align: center; }
 
 .primary * {
-  font-family: serif; }
+  font-family: Georgia, serif; }
 
 .secondary * {
   font-family: sans-serif; }
@@ -142,13 +141,6 @@ p {
 figure p, .colors p {
   max-width: none; }
 
-.callout--clear .content p, .callout--clear .content li, .callout--clear .content dd {
-  line-height: 1.5;
-  letter-spacing: 0;
-  word-spacing: 0;
-  font-family: inherit;
-  color: inherit; }
-
 .more {
   clear: both; }
 
@@ -159,26 +151,31 @@ figure p, .colors p {
   margin-bottom: 2.25rem;
   letter-spacing: 0.1em; }
 
-.scale {
-  max-width: 30em; }
-  .scale td {
-    padding: 0; }
+.colors {
+  background: #fff; }
 
-.key {
-  font-weight: 700; }
+.swatch {
+  position: relative;
+  display: block;
+  height: 7.5rem;
+  text-align: center;
+  font-family: sans-serif; }
+
+.iconset ul {
+  list-style: none; }
 
 .grids .container hr {
   clear: both; }
 .grids .folding {
-  margin-bottom: 24px;
-  height: 240px;
+  margin-bottom: 24;
+  height: 240;
   float: left;
   padding-left: 0.75rem;
   padding-right: 0.75rem; }
   .grids .folding span {
     display: block;
     width: 100%;
-    height: 240px;
+    height: 240;
     background: #333333; }
 .grids h2 {
   clear: both; }
@@ -219,18 +216,13 @@ figure p, .colors p {
     opacity: 0.3;
     padding: 0 !important; }
 
-.colors {
-  background: #fff; }
+.scale {
+  max-width: 30em; }
+  .scale td {
+    padding: 0; }
 
-.swatch {
-  position: relative;
-  display: block;
-  height: 7.5rem;
-  text-align: center;
-  font-family: sans-serif; }
-
-.iconset ul {
-  list-style: none; }
+.key {
+  font-weight: 700; }
 
 @media only screen and (min-width: 48em) {
   .logo {

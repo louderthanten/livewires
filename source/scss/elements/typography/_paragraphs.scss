@@ -1,6 +1,8 @@
 // PARAGRAPHs
+//
+// Modular scales are your friend, my friend:
+// http://modularscale.com  |  https://vimeo.com/17079380
 
-// Modular scales are your friend, my friend: http://modularscale.com  |  https://vimeo.com/17079380
 body {
   @include font-size;
   font-family: $serif;
@@ -12,7 +14,7 @@ p {
 }
 
 .lead {
-  @include font-size(18, $line-n); // using the $line-n variable makes it easy to stick to a baseline grid.
+  @include font-size(18, $line); // using the $line variable makes it easy to stick to a baseline grid.
 }
 
 .tagline {
@@ -23,7 +25,7 @@ p {
   p {
       hyphens: auto;
   }
-  // Use indented paragraphs if set to true
+  // Use indented paragraphs if variable in ~/settings/_variables.scss is set to true
   @if $indented-paragraphs == true {
     p:not(.lead) {
       margin-bottom: 0;
@@ -70,7 +72,7 @@ sub {
 }
 
 // Fancy ampersands
-//
+// Uncomment the script in /source/coffee/components/_typography.coffee to automate markup.
 // EG) <p>You <abbr class="amp">&amp;</abbr> I.</p>
 
 .amp {

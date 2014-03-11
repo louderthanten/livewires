@@ -1,13 +1,8 @@
 //MIXINS
 
-//Setup Variables for Mixins. Don't touch!
-$root-n: 16;
-$root: $root-n * 1px;
-$em: $base * 1;
-
 // Rem calculator for font sizes and line heights
-@mixin font-size($px_value: $base, $baseline: $line-n) {
-  $baseline_rem: ($root-n / 1rem);
+@mixin font-size($px_value: $base, $baseline: $line) {
+  $baseline_rem: ($base / 1rem);
   font-size: ($px_value * 1px);
   font-size: $px_value / $baseline_rem;
   line-height: ($baseline / $px_value);
@@ -48,10 +43,11 @@ $em: $base * 1;
   }
 }
 
+
 // Generic REM Mixin if you need px fallbacks
 @mixin rem($property, $px-values) {
   // Convert the baseline into rems
-  $baseline-rem: $root / 1rem;
+  $baseline-rem: ($base * 1px) / 1rem;
   // Print the first line in pixel values
   #{$property}: $px-values;
   // If there is only one (numeric) value, return the property/value line for it.

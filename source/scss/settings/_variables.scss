@@ -1,3 +1,13 @@
+// VARIABLES
+//
+// Set most of your project settings here. Color variables can be found in _colors.scss
+
+
+///* =============================================================================
+//   Base sizing
+//   ========================================================================== */
+$base: 16; // Set the html base font size (in px). We recommend keep this at 16.
+$line: 24; // Set the baseline grid (in px) Also determines gutter width.
 
 
 ///* =============================================================================
@@ -9,32 +19,18 @@ $hairline: 1px solid $dark-background;
 $accentline: 1px solid $accent;
 $whiteline: 1px solid $background;
 
-
 // Default border radius
 $radius: 3px;
+
 
 ///* =============================================================================
 //   Font Stacks
 //   ========================================================================== */
 
-$serif: serif;
+$serif: Georgia, serif;
 $sans: sans-serif;
 $mono: monospace;
 
-
-
-///* =============================================================================
-//   Base Sizes
-//   ========================================================================== */
-
-
-$line-n: 24; // Set the line height (in px) Also determines gutter width.
-$line: $line-n * 1px; //Convert to pixels for common use
-$base: 16; // Set the base font size (in px)
-
-// Set the page margins (14 is nice for 12 col grid…
-// It results in an even column unit for either margin. EG, I'd use 18 for a 16 column grid).
-$margin: 100% / 18;
 
 ///* =============================================================================
 //   Paragraph defaults
@@ -42,6 +38,16 @@ $margin: 100% / 18;
 
 // Set to true to indicate parahgraph breaks with indents instead of line-breaks
 $indented-paragraphs: false;
+
+// FONT WEIGHTS
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+$heavy: 900;
 
 
 ///* =============================================================================
@@ -56,28 +62,16 @@ $screenMedium: 64em !default;
 $screenLarge: 98em !default;
 $screenXlarge: 110em !default;
 
+///* =============================================================================
+//   Grid
+//   ========================================================================== */
 
-// FONT WEIGHTS
-
-$thin: 100;
-$light: 300;
-$regular: 400;
-$medium: 500;
-$semibold: 600;
-$bold: 700;
-$extrabold: 800;
-$heavy: 900;
-
-//   GRID
-//
 // USAGE
 // width: $c6*3; // This is 3 units of a 6 unit grid wide
 // margin-left: $c4*2; // This pushes the element 2 units (of a 4 element grid) to the left
 //
-// Make box-sizing: border-box; for easier styling and positining using the wrap mixin.
-// Read more on the basic concept here: http://goldengridsystem.com
-
 // Have fun. Make as many as you like. Simple.
+
 
 // Primary Grid
 //=============\\
@@ -102,8 +96,17 @@ $c12: 100% / 12;
 //Sixteen Column Grid
 $c16: 100% / 16;
 
+// Set the page margins
+// We like to make this equivalent to a column size. In this case, we're making
+// the margins the same width as unit in a 16 column grid (100/18 = 1 + 16 + 1).
+$margin: 100% / 18;
 
-//Brand Colours
+
+///* =============================================================================
+//   Brand colors
+//   ========================================================================== */
+// We've included some branding colors for easy reference.
+
 $adn: #4A484C;
 $android: #80BD01;
 $apple: #777777;

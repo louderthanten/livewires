@@ -25,7 +25,7 @@
   box-sizing: border-box;
 }
 
-//Hide for both screenreaders and browsers: http://css-discuss.incutio.com/wiki/Screenreader_Visibility
+// Hide for both screenreaders and browsers: http://css-discuss.incutio.com/wiki/Screenreader_Visibility
 .ir {
   background-repeat: no-repeat;
   direction: ltr;
@@ -57,7 +57,7 @@
   position: absolute;
   width: 1px;
 
-  /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+  // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638
   &.focusable {
     &:active,
     &:focus {

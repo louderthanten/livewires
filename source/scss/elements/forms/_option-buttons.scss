@@ -1,21 +1,21 @@
 // OPTION BUTTONS
-
+//
 // Add some style to those checkboxes and radios by making them look more like a set of buttons. Just switch the fieldtype to your preferred behavior.
 // Requires a small javascript snippet to add and remove the .checked class to the labels.
 //
 // Checkbox Example:
-//<div class="field option-buttons js-options">
+// <div class="field option-buttons js-options">
 //    <label for="cb1"><input type="checkbox" name="check-button" value="1" id="cb1" />Item 1</label>
 //    <label for="cb2"><input type="checkbox" name="check-button" value="2" id="cb2" />Item 2</label>
 //    <label for="cb3"><input type="checkbox" name="check-button" value="3" id="cb3" />Item 3</label>
-//</div>
+// </div>
 //
 // Radio Example:
-//<div class="field option-buttons js-options">
+// <div class="field option-buttons js-options">
 //    <label for="rb1"><input type="radio" name="radio-button" value="1" id="rb1" />Item 1</label>
 //    <label for="rb2"><input type="radio" name="radio-button" value="2" id="rb2" />Item 2</label>
 //    <label for="rb3"><input type="radio" name="radio-button" value="3" id="rb3" />Item 3</label>
-//</div>
+// </div>
 
 .option-buttons,
 .pill-buttons {
@@ -53,6 +53,8 @@
     margin-right: rem($line/4);
   }
 }
+
+// Stick pill buttons together
 .pill-buttons  {
   @extend .button-group;
 

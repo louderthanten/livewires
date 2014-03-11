@@ -1,8 +1,9 @@
 // Tabs
-
-// Our tabs implementation is pretty flexible. If you follow this general pattern, you can place anything in the tab elements:
 //
-// Simplest implementation:;
+// Our tab implementation is pretty flexible.
+// If you follow this general pattern, you can place anything in the tab elements:
+//
+// Example:
 // <ul class="tabs">
 //  <li><a href="#tab1">Tab 1</a></li>
 //  <li><a href="#tab2">Tab 2</a></li>
@@ -18,7 +19,7 @@
 // <div id="tab3">
 //   <!-- TAB 3 STUFF -->
 // </div>
-//
+
 
 .tabs {
   padding:0;
@@ -39,7 +40,8 @@
 .tab-content {
   padding: rem($line/2);
 
-  // Remove margins from the first and last elements in the callout to help maintain consistent padding around the inside the box
+  // Remove margins from the first and last elements in the callout to help
+  // maintain consistent padding around the inside the box
   > *:last-child,
   > *:last-child > *:last-child,
   > *:last-child > *:last-child > *:last-child {

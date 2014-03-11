@@ -1,16 +1,16 @@
 // MAPS
-
-// Let's use the same syntax as imaegs, but add a .map class.
-// Keep your  map content short on mobile so it doesn't hijack the scroll
-
+//
+// Let's use the same syntax as images, but add a .map class to apply the
+// following responsive styles.
+//
 // Example:
 // <figure class="map">
-//      <iframe Some map's embed code></iframe>
+//      <iframe Map embed code></iframe>
 // </figure>
 
 .map {
   position:relative;
-  max-height:$line*6;
+  max-height:$line*6; // TIP: Keep your map content short on mobile so it doesn't hijack the scroll
   padding-bottom: 56.25%;
   height: 0;
   overflow:hidden;

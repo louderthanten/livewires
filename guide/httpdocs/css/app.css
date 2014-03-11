@@ -30,8 +30,7 @@
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px;
-  /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */ }
+  width: 1px; }
   .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
@@ -383,7 +382,7 @@ body {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: serif; }
+  font-family: Georgia, serif; }
 
 p {
   margin: 0 0 0.75rem 0;
@@ -598,10 +597,10 @@ a.button--disabled, a.button--disabled:hover, a.button--disabled:active, a.butto
   border: 1px solid #AAAAAA;
   border-radius: 3px;
   font-family: sans-serif;
-  padding: 12px; }
+  padding: 12; }
 
 textarea {
-  min-height: 144px; }
+  min-height: 144; }
 
 .search-input, input[type=search] {
   overflow: hidden;
@@ -773,7 +772,7 @@ a, button, input[type="submit"] {
   display: block;
   width: 100%;
   padding: 0.75rem 5.55556%;
-  font-family: serif;
+  font-family: Georgia, serif;
   text-decoration: none;
   font-family: sans-serif; }
 
@@ -936,7 +935,7 @@ figcaption .source {
 
 .map {
   position: relative;
-  max-height: 144px;
+  max-height: 144;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden; }
@@ -1040,15 +1039,12 @@ pre.line-numbers > code {
   max-height: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
-  .drawer .container {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem; }
-    .drawer .container > *:first-child, .drawer .container > *:first-child > *:first-child, .drawer .container > *:first-child > *:first-child > *:first-child {
-      margin-top: 0; }
-    .drawer .container > *:last-child, .drawer .container > *:last-child > *:last-child, .drawer .container > *:last-child > *:last-child > *:last-child {
-      margin-bottom: 0; }
+  .drawer .content > *:first-child, .drawer .content > *:first-child > *:first-child, .drawer .content > *:first-child > *:first-child > *:first-child {
+    margin-top: 0; }
+  .drawer .content > *:last-child, .drawer .content > *:last-child > *:last-child, .drawer .content > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0; }
   .drawer.opened {
-    max-height: 1000px; }
+    max-height: 10000px; }
 
 
 fieldset {
@@ -1248,7 +1244,7 @@ html, body {
     float: left; }
   .secondary-content {
     width: 40%;
-    float: left; }
+    float: right; }
   .split-content {
     width: 50%;
     float: left; }
@@ -1260,7 +1256,7 @@ html, body {
   .primary-content {
     width: 57.14286%; }
   .secondary-content {
-    width: 25%; } }
+    width: 33.33333%; } }
 
 @media only screen and (min-width: 98em) { }
 
@@ -1418,6 +1414,13 @@ a.button--disabled, a.button--disabled:hover, a.button--disabled:active, a.butto
   .content p > *, .content li > *, .content dd > * {
     word-spacing: 0;
     letter-spacing: 0; }
+
+.callout--clear .content p, .callout--clear .content li, .callout--clear .content dd, .content--clear p, .content--clear li, .content--clear dd {
+  line-height: 1.5;
+  letter-spacing: 0;
+  word-spacing: 0;
+  font-family: inherit;
+  color: inherit; }
 
 .l1 {
   height: 24px;

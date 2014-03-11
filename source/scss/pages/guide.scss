@@ -1,6 +1,7 @@
 // UI KIT STYLES
-
+//
 // The is the style of the UI Kit/Style Guide/Brand guide/etc itself.
+
 // Base theme colors
 @import "../settings/colors";
 
@@ -11,11 +12,11 @@
 @import "../settings/helpers";
 
 //==============================================================================
-// UI Guide Settings - Customize this area for sure
+// UI Guide Settings - Customize this area.
 //==============================================================================
 
 // Fonts
-// Add more here and in the Typography liquid template if you need.
+// Add more here and in the Brand template if you need.
 .primary * {
   font-family: $serif;
 }
@@ -34,8 +35,10 @@
 .color7 { background: $blue; }
 
 //==============================================================================
-// End UI Guide settings
+// End UI Guide settings. Remember to update the Brand page in the Guide.
 //==============================================================================
+
+
 
 
 //==============================================================================
@@ -53,9 +56,9 @@
     display: block;
   }
 }
+
 // Layout sections
 //==============================================================================
-
 .horizontal-nav--guide {
   padding-top: 0;
   ul {
@@ -72,7 +75,7 @@
   }
 }
 
-// current states in primary nav
+// current states in primary nav.
 .pg-brand .primary__brand,
 .pg-usage .primary__usage,
 .pg-grid .primary__grid,
@@ -93,35 +96,20 @@
 .header {
   padding-top: rem($line);
 }
-// limit paragraph widths in the guide
+
+// limit paragraph widths in the guide.
 p {
   max-width: 48em;
 }
 figure p,
 .colors p {
-  max-width: none; //Except for captions
+  max-width: none; //Except for captions and color blocks.
 }
-
-
-.callout--clear {
-  .content {
-    p,
-    li,
-    dd {
-      line-height: 1.5;
-      letter-spacing:0;
-      word-spacing: 0;
-      font-family: inherit;
-      color: inherit;
-    }
-  }
-}
-
-
 .more {
   clear:both;
 }
-// Type Section
+
+// Brand Section
 //==============================================================================
 .type-sample {
   p {
@@ -131,17 +119,29 @@ figure p,
   }
 }
 
-// Modular scale
-.scale {
-  max-width: 30em;
+//Colour swatches
+.colors {
+  background:#fff;
+}
+.swatch {
+    position: relative;
+    display: block;
+    height:rem($line*5);
+    text-align: center;
+    font-family: $sans;
 
-  td {
-    padding:0;
+  p {
+    @extend %vertical-align;
   }
 }
-.key {
-  font-weight: $bold;
+
+// Icon listing
+.iconset {
+  ul {
+    list-style: none;
+  }
 }
+
 
 // Grid section
 //==============================================================================
@@ -232,33 +232,17 @@ figure p,
   }
 }
 
+// Modular scale
+.scale {
+  max-width: 30em;
 
-//Colour swatches
-//==============================================================================
-.colors {
-  background:#fff;
-}
-.swatch {
-    position: relative;
-    display: block;
-    height:rem($line*5);
-    text-align: center;
-    font-family: $sans;
-
-  p {
-    @extend %vertical-align;
+  td {
+    padding:0;
   }
 }
-
-
-// Icon listing
-//==============================================================================
-.iconset {
-  ul {
-    list-style: none;
-  }
+.key {
+  font-weight: $bold;
 }
-
 
 @media only screen and (min-width: $screenSmall) {
   .logo {

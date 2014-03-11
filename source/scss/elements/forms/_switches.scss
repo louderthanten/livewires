@@ -1,15 +1,16 @@
 // SWITCHES
-
-// A fancy way to show a simple two-option radio field.  Requires box-shadows and transitions out of the box.
+//
+// A fancy way to show a simple two-option radio field.
+// No JavaScript, but does require box-shadows and transitions out of the box.
 //
 // Example:
-//<div class="field switch">
+// <div class="field switch">
 //   <input id="x" name="switch-x" type="radio" checked>
 //   <label for="x" onclick="">Off</label>
 //   <input id="y" name="switch-x" type="radio">
 //   <label for="y" onclick="">On</label>
 //   <span></span>
-//</div>
+// </div>
 
 .switch {
   @extend %group;

@@ -1,4 +1,9 @@
-// Live Wires visual styles
+// LIVE WIRES
+//
+// By default, these styles simply block out any text inside of a content l* element.
+// Add any of your own wireframe-specific styles here.
+
+// Block out all p,li,dd text inside of .content elements
 .content{
   p,
   li,
@@ -17,13 +22,28 @@
   }
 }
 
+// Force clear text
+.callout--clear .content,
+.content--clear {
+    p,
+    li,
+    dd {
+      line-height: 1.5;
+      letter-spacing:0;
+      word-spacing: 0;
+      font-family: inherit;
+      color: inherit;
+  }
+}
+
+
 // If you don't have content, shame on you.
 // Here's a little handy set of classes to help you anyway.
 // Just add a line class to your container and we'll fill it with the text placeholder image.
 //
 // eg) class="l5" would render 5 lines of text placeholder images
 @for $i from 1 through 100 {
-  .l#{$i} { height:$line* $i; background: url('../img/livewires/text.png'); }
+  .l#{$i} { height:$line* $i * 1px; background: url('../img/livewires/text.png'); }
   .l#{$i} > p { visibility: hidden; }
 }
 

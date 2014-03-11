@@ -8,18 +8,18 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 
     <!-- Title block allowing child pages to override -->
-    <title>Site name</title>
+    <title>Live Wires</title>
 
     <!-- Include meta tags -->
     <meta name="description" content="Light-weight prototyping with HTML & SCSS.">
 
 <!-- global Open Graph tags -->
-<meta property="og:title" content="Site name" />
+<meta property="og:title" content="Live Wires" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="" />
 <meta property="og:description" content="Light-weight prototyping with HTML & SCSS." />
 <meta property="og:url" content="http://http://livewires.io" />
-<meta property="og:site_name" content="Site name" />
+<meta property="og:site_name" content="Live Wires" />
 
 <!-- Twitter social tags -->
 <meta name="twitter:card" content="summary" />
@@ -53,7 +53,7 @@
     <!-- Header section -->
     
   <header class="row row--header reverse" id="header">
-  <h1 class="logo"><a href="usage.html"><img src="../httpdocs/img/livewires/logo.svg" alt="Site name" /></a></h1>
+  <h1 class="logo"><a href="usage.html"><img src="../httpdocs/img/livewires/logo.svg" alt="Live Wires" /></a></h1>
   <nav class="horizontal-nav horizontal-nav--guide collapse">
     <p class="trigger"><a href="#primary" class="js-reveal">Menu</a></p>
     <ul id="primary">
@@ -90,14 +90,14 @@
   <h2>How to use</h2>
   <hr>
   <p>Our grid system is inspired by <a href="http://www.jonikorpi.com/">Joni Korpi&rsquo;s</a> fabulous <a href="http://goldengridsystem.com/">Golden Grid System</a>.</p>
-  <p>Unlike heavy grid frameworks, this system is not attached to CSS classes. Instead, they are set in SCSS using a simple grid variables. This allows you to define your own semantic layout classes, keeps the markup clean, and makes the layout easier to modify at various breakpoints. You can even combine different grid variables to make interesting compound grids.</p>
+  <p>Unlike heavy grid frameworks, this system is not attached to CSS classes. Instead, it's set in SCSS using simple grid variables. This allows you to define your own semantic layout classes, keeps the markup clean, and makes the layout easier to modify at various breakpoints. You can even combine different grid variables to make interesting compound grids.</p>
 
-  <p>The only thing we've setup for you are the following grid variables and a couple simple classes for dividing page sections.</p>
+  <p>We've set up the following grid variables and a couple simple classes for dividing page sections to help you get started.</p>
 
   <p>Most global layout styles can be found in <code>/source/scss/modules/_layout.scss</code>, with our grid settings configured in <code>/source/scss/settings/_variables.scss</code>.</p>
 
   <h3>Default grid variables</h3>
-  <p>These are the default grid variables avialable in the project. You can adjust these in <code>/source/scss/settings/_variables.scss</code>.</p>
+  <p>These are the default grid variables avialable. You can adjust these in <code>/source/scss/settings/_variables.scss</code>.</p>
 
   <div class="code">
     <pre class="language-scss"><code>//Three Column Grid
@@ -133,7 +133,7 @@ $c16: 100% / 16;</code></pre>
 }</code></pre>
   </div>
 
-  <p>We've setup some starter layout classes in <code>/source/scss/modules/_layout.scss</code> to get you started with some basic layouts:</p>
+  <p>Here are a few starter layout classes in <code>/source/scss/modules/_layout.scss</code> to get you started with some basic layouts:</p>
 
   <div class="code">
     <pre class="language-scss"><code>@media only screen and (min-width: $screenSmall) {
@@ -146,11 +146,11 @@ $c16: 100% / 16;</code></pre>
     float:left;
   }
   .split-content {
-    width:$c4*2; // Creates objects that are 1/2 the width of its parent
+    width:$c4*2; // Creates an object that is 1/2 the width of its parent
     float:left;
   }
   .three-up {
-    width:$c3; // Creates objects that are 1/3 the width of its parent
+    width:$c3; // Creates an object that is 1/3 the width of its parent
     float:left;
   }
 }</code></pre>
@@ -160,9 +160,9 @@ $c16: 100% / 16;</code></pre>
 <section class="row">
   <h2>Rows</h2>
   <hr>
-  <p>By default, our grid stretches across the entire width of the browser. Probably not ideal for most people. To give your page some margins, we have a special <code>.row</code> class to add structure and extra theming hooks.</p>
+  <p>By default, our grid stretches across the entire width of the browser. Probably not ideal for most people. To give your page some margins, we have created a special <code>.row</code> class to add structure and extra theming hooks.</p>
 
-  <p>The <code>.row</code> class wraps around your content and stretches across your browser so you can add background colors and full-bleed images. It also sets up your grid by adding horizontal page margins and consistent vertical padding for even spacing between sections (though you can add the <code>.row--tight</code> class to remove the vertical spacing).</p>
+  <p>The <code>.row</code> class wraps around your content and stretches across your browser so you can add background colours and full-bleed images. It also sets up your grid by adding horizontal page margins and consistent vertical padding for even spacing between sections (though you can add the <code>.row--tight</code> class to remove the vertical spacing).</p>
 
 
   <div class="code">
@@ -179,9 +179,9 @@ $c16: 100% / 16;</code></pre>
 <section class="row">
   <h2>Gutters</h2>
   <hr>
-  <p>We use fixed-width gutters with fluid units. This ensures that spacing stays consistent at all sizes. By default, our gutter size is equal to the <code>$line</code> variable set in <code>/source/scss/settings/_variables.scss</code>, which also happens to be the baseline grid.</p>
+  <p>These are fixed-width gutters with fluid units. This ensures that spacing stays consistent at all sizes. By default, our gutter size is equal to the <code>$line</code> variable set in <code>/source/scss/settings/_variables.scss</code>, which also happens to be the baseline grid.</p>
 
-  <p>There is a handy <code>gutter</code> mixin which applies half a gutter width to each side of the element it is applied to. </p>
+  <p>There is a handy <code>gutter</code> mixin which applies half a gutter width to each side of the element to which it is applied. </p>
 
   <p>By default, the immediate children of a <code>.row</code> wrapper already have gutters applied using this <code>gutter</code> mixin. To prevent gutters from being applied to one of these immediate children, add the <code>.collapse</code> class to it.</p>
 
@@ -196,7 +196,7 @@ $c16: 100% / 16;</code></pre>
 
 
 
-  <p>This is fine at small window sizes, but what if that's too loose at wider sizes? Instead of adding a max-width, we just increase the <code>$margin</code> variable on our <code>.row</code> classes:</p>
+  <p>This is fine at small window sizes, but what if it's too loose at wider sizes? Instead of adding a max-width, we just increase the <code>$margin</code> variable on our <code>.row</code> classes:</p>
 
   <div class="code">
     <pre class="language-scss"><code>/* Increase margins after a certain width */
@@ -218,24 +218,24 @@ $c16: 100% / 16;</code></pre>
 
 <section class="row subtle">
   <h3>.subtle</h3>
-  <p>This content has a subtle background variation.</p>
+  <p>This class uses a subtle background variation.</p>
 
   <div class="code">
     <pre class="language-markup line-numbers"><code>    &lt;section class="row subtle"&gt;
       &lt;h3&gt;.subtle&lt;/h3&gt;
-      &lt;p&gt;This content has a subtle background variation.&lt;/p&gt;
+      &lt;p&gt;This class uses a subtle background variation.&lt;/p&gt;
     &lt;/section&gt;</code></pre>
   </div>
 </section>
 
 <section class="row reverse">
   <h3>.reverse</h3>
-  <p>This content has light on dark text.</p>
+  <p>This class uses light text on a dark background.</p>
 
   <div class="code">
     <pre class="language-markup line-numbers"><code>    &lt;section class="row reverse"&gt;
       &lt;h3&gt;.reverse&lt;/h3&gt;
-      &lt;p&gt;This content has light on dark text.&lt;/p&gt;
+      &lt;p&gt;This content light text on a dark background.&lt;/p&gt;
     &lt;/section&gt;</code></pre>
   </div>
   <p class="more"><a href="#header">To top</a></p>
@@ -244,7 +244,7 @@ $c16: 100% / 16;</code></pre>
 <section class="row" id="resizing">
   <h2>Units &amp; resizing</h2>
   <hr>
-  <p>Every single dimension in our project is defined using relative units. Aside from our grid units and margins, which use percentages, we use <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">Rems</a>. When everything is set using rems, we can proportionally zoom the entire project simply by changing the font-size of our <code>&lt;html&gt;</code> element.</p>
+  <p>Every single dimension in our project is defined using relative units. Aside from our grid units and margins which use percentages, stick with <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">Rems</a>. When everything is set using Rems, we can proportionally zoom the entire project simply by changing the font-size of our <code>&lt;html&gt;</code> element.</p>
 
   <div class="code">
     <h3>Example</h3>
@@ -261,12 +261,12 @@ html {
   }
 }</code></pre>
 
-    <p>To make it easy to work with rems, we've included a handy <code>rem()</code> function inspired by <a href="http://foundation.zurb.com">Foundation&rsquo;s</a> <code>rem-calc()</code>.</p>
+    <p>To make it easy to work with Rems, we've included a handy <code>rem()</code> function inspired by <a href="http://foundation.zurb.com">Foundation&rsquo;s</a> <code>rem-calc()</code>.</p>
 
     <div class="code">
       <h3>Examples</h3>
       <pre class="language-scss"><code>.object {
-  // Here's a few ways you can use the rem() function
+  // Here are a few ways you can use the rem() function
   padding: rem(24px); // Converts a px value to rems
   padding: rem(24); // You can even leave out the px suffix
   padding: rem(24 12); // And use with multiple shorthand values
@@ -369,7 +369,7 @@ html {
 <section class="row" id="modular-scale">
   <h2>Modular scale</h2>
   <hr>
-  <p>We use a custom modular scale to provide a rational list of related numbers to use throughout the project. This keeps typographic and structural dimensions consistent and in proportion. You can refer to this scale when determining font sizes, gutter units, media proportions, and spacing.</p>
+  <p>Here's a custom modular scale to provide a rational list of related numbers to use throughout the project. This keeps typographic and structural dimensions consistent and in proportion. You can refer to this scale when determining font sizes, gutter units, media proportions, and spacing.</p>
   <p>Learn more about <a href="https://vimeo.com/17079380">modular scales</a>.</p>
   <p><small>Calculated by <a href="http://modularscale.com/scale/?px1=16&amp;px2=12&amp;ra1=1.5&amp;ra2=0">Modular Scale</a>.</small></p>
 
@@ -673,7 +673,7 @@ html {
     <!-- Footer section -->
     <footer class="footer row subtle">
   <p><small><a href="../index.html">Home</a> | <a href="usage.html">Guide</a> | <a href="../example/index.html">Example</a></small></p>
-  <p><small>&copy; Site name. Rapidly built with <a href="http://www.livewires.io">Live Wires</a>.</small></p>
+  <p><small>&copy; Live Wires. Rapidly built with <a href="http://www.livewires.io">Live Wires</a>.</small></p>
 </footer>
 
 
@@ -685,7 +685,7 @@ html {
     <script src="../httpdocs/js/app.min.js"></script>
     
 
-
+    <!-- Use Google Analytics if code is provided in _models.json -->
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

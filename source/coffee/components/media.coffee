@@ -1,7 +1,8 @@
-# Wrap inline videos and maps in flexible figures so they are responsive
-$('.content > p > img, .content > p > iframe, .content > p > input').each ->
-  $(@).unwrap('p')
+# Uncomment to remove CMS-generated <p> elements around media
+#$('.content > p > img, .content > p > iframe, .content > p > input').each ->
+#  $(@).unwrap('p')
 
+# Wrap inline videos and maps in flexible figures so they are responsive
 $('.content > iframe').each ->
   source = $(@).attr 'src'
   map = /maps.google/
@@ -10,9 +11,6 @@ $('.content > iframe').each ->
     $(@).wrap '<figure class="map"></figure>'
   else
     $(@).wrap '<figure class="video"></figure>'
-
-# Wrap inline images in figure tags so they are responsive
-$('.content > img, .content > p > img').wrap '<figure></figure>'
 
 #Enable responsive video with Fitvids http://fitvidsjs.com/
 $('.video').fitVids()

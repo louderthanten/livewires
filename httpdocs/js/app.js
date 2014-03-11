@@ -9,19 +9,6 @@
 }).call(this);
 
 (function() {
-  $('.js-show-pw').click(function(e) {
-    var type;
-    type = $(this).parents('.field').find('input');
-    if ($(type).attr('type') === 'text') {
-      $(type).get(0).type = 'password';
-      $(this).text('Show password');
-    } else {
-      $(type).get(0).type = 'text';
-      $(this).text('Hide password');
-    }
-    return e.preventDefault();
-  });
-
   $('.js-options input').change(function() {
     var check, type;
     type = $(this).attr('type');
@@ -37,10 +24,6 @@
 }).call(this);
 
 (function() {
-  $('.content > p > img, .content > p > iframe, .content > p > input').each(function() {
-    return $(this).unwrap('p');
-  });
-
   $('.content > iframe').each(function() {
     var isMap, map, source;
     source = $(this).attr('src');
@@ -52,8 +35,6 @@
       return $(this).wrap('<figure class="video"></figure>');
     }
   });
-
-  $('.content > img, .content > p > img').wrap('<figure></figure>');
 
   $('.video').fitVids();
 
@@ -74,27 +55,6 @@
       $('.offcanvas--squish').toggleClass('offcanvas--squish-right');
     }
     return e.preventDefault();
-  });
-
-}).call(this);
-
-(function() {
-  $('[placeholder]').each(function() {
-    var hint;
-    if ($(this).val() === '') {
-      hint = $(this).attr('placeholder');
-      return $(this).val(hint).addClass('hint');
-    }
-  });
-
-  $('[placeholder]').focus(function() {
-    if ($(this).val() === $(this).attr('placeholder')) {
-      return $(this).val('').removeClass('hint');
-    }
-  }).blur(function() {
-    if ($(this).val() === '') {
-      return $(this).val($(this).attr('placeholder')).addClass('hint');
-    }
   });
 
 }).call(this);
@@ -135,8 +95,6 @@
 }).call(this);
 
 (function() {
-  $('h1:contains("&"),h2:contains("&"),h3:contains("&"),h4:contains("&"),h5:contains("&"),h6:contains("&"),.lead:contains("&"),.content > p:first-child:contains("&")').each(function() {
-    return $(this).html($(this).html().replace(/&amp;/, "<abbr class='amp'>&amp;</abbr>"));
-  });
+
 
 }).call(this);

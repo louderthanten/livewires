@@ -1,6 +1,6 @@
 // TABLES
 //
-// Pulled from the ever awesome Inuit.css  http://inuitcss.com/
+// Pulled from the awesome Inuit.css  http://inuitcss.com/
 //* We have a lot at our disposal for making very complex table constructs, e.g.:
 //
 //  <table class="table--bordered  table--striped  table--data">
@@ -147,6 +147,7 @@ td {
 
 
 // Responsive tables. Let's kick these in at smaller screens.
+// See a few other approaches here: http://css-tricks.com/responsive-data-tables/
 @media only screen and (max-width: $screenSmall) {
 
   table,

@@ -4,7 +4,8 @@
 //
 // Start with a .button class and add modifiers classes to er, modify them.
 //
-// EG) <a href="#" class="button button--large">Large Button text</a>
+// Example:
+// <a href="#" class="button button--large">Large Button text</a>
 
 
 // Default button styles
@@ -67,7 +68,7 @@ a.button--small,
 .button-group {
   @extend %group;
 
-  // Organize button groups for mobile screens first (I like to stack 'em)
+  // Organize button groups for mobile screens first (we like to stack 'em).
   .button,
   a.button,
   button {
@@ -90,9 +91,8 @@ a.button--small,
     border-bottom-left-radius: $radius;
   }
 
-  // Reorganize for wider canvases (like a fancy pill-style nav)
+  // Reorganize for wider canvases (like a fancy pill-style nav).
   @media only screen and (min-width: $screenSmall) {
-
     .button,
     a.button,
     button {
@@ -115,7 +115,6 @@ a.button--small,
       border-top-right-radius: $radius;
     }
   }
-
 }
 
 

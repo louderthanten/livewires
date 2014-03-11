@@ -8,18 +8,18 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 
     <!-- Title block allowing child pages to override -->
-    <title>Site name</title>
+    <title>Live Wires</title>
 
     <!-- Include meta tags -->
     <meta name="description" content="Light-weight prototyping with HTML & SCSS.">
 
 <!-- global Open Graph tags -->
-<meta property="og:title" content="Site name" />
+<meta property="og:title" content="Live Wires" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="" />
 <meta property="og:description" content="Light-weight prototyping with HTML & SCSS." />
 <meta property="og:url" content="http://http://livewires.io" />
-<meta property="og:site_name" content="Site name" />
+<meta property="og:site_name" content="Live Wires" />
 
 <!-- Twitter social tags -->
 <meta name="twitter:card" content="summary" />
@@ -53,7 +53,7 @@
     <!-- Header section -->
     
   <header class="row row--header reverse" id="header">
-  <h1 class="logo"><a href="usage.html"><img src="../httpdocs/img/livewires/logo.svg" alt="Site name" /></a></h1>
+  <h1 class="logo"><a href="usage.html"><img src="../httpdocs/img/livewires/logo.svg" alt="Live Wires" /></a></h1>
   <nav class="horizontal-nav horizontal-nav--guide collapse">
     <p class="trigger"><a href="#primary" class="js-reveal">Menu</a></p>
     <ul id="primary">
@@ -89,7 +89,7 @@
 <header class="row">
   <h1>Usage</h1>
 
-  <p class="lead">Welcome to Live Wires. Live Wires is a framework made with Sass and <a href= "http://mixture.io">Mixture</a> that allows you to create responsive wireframes in HTML &amp; SCSS. Customize your wireframes, style them, and share them as living low-fidelity prototypes instead of static files you sweat over and later toss away.
+  <p class="lead">Hey! Welcome to our living style guide, created by Live Wires. Live Wires is a simple design framework made with Sass that allows you to create grey-box wireframes and responsive prototypes in HTML &amp; SCSS. Make this guide your own and rewrite the content here so it fits your project.</p>
 
   <p>Today we stop making trash and start building a living, breathing idea that will look and act the way it was imagined.</p>
 </header>
@@ -97,10 +97,7 @@
 <section class="row" id="howto">
   <h2>How do I use this guide?</h2>
   <hr>
-  <p>The guide breaks down the setup, configuration, and application of Live Wires. Use it as a reference for building and scaling upon your site or app's design blueprint.</p>
-
-  <p><a href="../example/index.html" class="button">See a Live Wires template example</a></p>
-  <p class="more"><a href="#header">To top</a></p>
+  <p>The guide breaks down the setup, configuration, and application of Live Wire. Use it as a reference for building your wireframes, creating a prototype, and then building upon your site or app's design.</p>
 </section>
 
 <section class="row" id="setup">
@@ -110,9 +107,9 @@
     <dt>Step 1</dt>
     <dd>Create a folder for your project.</dd>
     <dt>Step 2</dt>
-    <dd>Download or clone Live Wires from the <a href="https://github.com/louderthanten/livewires">git repository</a> (or use the boilerplate included in <a href="http://mixture.io">Mixture</a>).</dd>
+    <dd>Download or clone Live Wires from the <a href="https://github.com/louderthanten/livewires">GitHub repository</a> (or use the boilerplate included in <a href="http://mixture.io">Mixture</a>).</dd>
     <dt>Step 3</dt>
-    <dd>Point your preferred SASS &amp; Coffeescript preprocessors the to the project (follow the directions below if you're a <a href="http://gruntjs.com/">Grunt</a> or <a href="http://mixture.io">Mixture user</a>).</dd>
+    <dd>Point your preferred SASS &amp; Coffeescript preprocessors to the project. If you're a <a href="http://gruntjs.com/">Grunt</a> or <a href="http://mixture.io">Mixture user</a>, follow the directions below.</dd>
     <dt>Step 4</dt>
     <dd>Refer to the included guide and examples to start building your templates.</dd>
   </dl>
@@ -123,11 +120,11 @@
       <p>If you are using the standard version of Live Wires, we've included a Gruntfile configured with the following tasks:</p>
 
       <ul>
-        <li><a href="http://sass-lang.com/">SASS</a> compilation</li>
+        <li><a href="http://sass-lang.com/">Sass</a> compilation</li>
         <li><a href="http://coffeescript.org">Coffeescript</a> compilation</li>
-        <li><a href="https://github.com/mishoo/UglifyJS">Uglify</a> (compresses javascsript)</li>
+        <li><a href="https://github.com/mishoo/UglifyJS">Uglify</a> (compresses JavaScript)</li>
         <li><a href="https://github.com/ai/autoprefixer">Autoprefixer</a> (automatically adds vendor prefixes to your CSS)</li>
-        <li><a href="http://livereload.com/">Live Reload</a> (Auto reloads your browser on each save. You'll also need an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">browser extension</a>.</li>
+        <li><a href="http://livereload.com/">Live Reload</a> (auto-reloads your browser on each save. You'll also need an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">browser extension</a>)</li>
       </ul>
 
       <p>To get started, you'll need to:</p>
@@ -149,9 +146,13 @@
   <div class="split-content callout callout--clear">
     <div class="content subtle">
       <h4>Mixture setup</h4>
-      <p><a href="http://mixture.io">Mixture</a> is our preferred front-end development tool, and we recommend using it for your own projects. It's a no brainer to setup and includes a full set of tools that rivals anything Grunt can do for our design-oriented purposes. It allows us to dive in and start designing without having to setup servers, dance around the command line, and configure a bunch of complicated scripts. Read more about it on the <a href="http://mixture.io">Mixture site</a>.</p>
-
-      <p>There's nothing you <em>need</em> to do to get setup beyond choosing the Live Wires boilerplate in Mixture and pointing it at your project folder, but there are a few settings you may want to customize in in the <code>mixture.json</code> and <code>/models/_global.json</code> files.</p>
+      <p><a href="http://mixture.io">Mixture</a> is our preferred front-end development tool, and we recommend using it for your own projects.</p>
+      <ul>
+      	<li>It's simple to set up and includes a full set of tools that rival anything Grunt can do for our design-oriented purposes.</li>
+      	<li>It allows us to dive in and start designing without having to set up servers, dance around the command line, and configure complicated scripts.</li>
+      	</ul> 
+      <p>There's nothing you <em>need</em> to do to get set up beyond choosing the Live Wires boilerplate in Mixture and pointing it at your project folder, but there are a few settings you may want to customize in in the <code>mixture.json</code> and <code>/models/_global.json</code> files. Read more about that on the <a href="http://mixture.io">Mixture site</a>.
+</p>
     </div>
 
   </div>
@@ -162,16 +163,16 @@
   <h2>Project structure</h2>
   <hr>
 
-  <p>One of the core philosphies behind Live Wires is to stay out of the way as much as possible. We don't want to impose any code standards or force you into a box. Saying that we do have some guidelines that we like that will make it easier to get started with Live Wires.</p>
+  <p>One of the core philosphies behind Live Wires is stay out of the way as much as we can. We don't want to impose any code standards or force you into a little box. Saying that, here are some guidelines that that will help you get started with Live Wires more easily.</p>
 
   <p>Here's how a Live Wires project is organized:</p>
 
   <dl>
     <dt><code>/httpdocs/</code></dt>
-    <dd>This is where all compiled static assets live. Drop your images and font files here. This is also where all Sass, CoffeeScript, and Javascript is combined, compiled, and minified for production use. Don&rsquo;t edit these CSS and JS files as that will overwrite them.</dd>
+    <dd>This is where all compiled static assets live. Drop your images and font files here. This is also where all Sass, CoffeeScript, and JavaScript is combined, compiled, and minified for production use. <strong>Don&rsquo;t edit these CSS and JS files as doing that will overwrite them</strong>.</dd>
 
     <dt><code>/source/</code></dt>
-    <dd>This contains all of the pre-compiled Sass, Coffeescript, and javaScript plugin files. This is where you would write your CSS and javaScript.</dd>
+    <dd>This contains all of the pre-compiled Sass, Coffeescript, and JavaScript plugin files. This is where you will write your CSS and JavaScript.</dd>
 
   </dl>
 
@@ -199,7 +200,7 @@
 <section class="row" id="markup">
   <h2 id="markup">Markup</h2>
   <hr>
-  <p>We use standard HTML5 for markup. We try not to impose any markup styles or conventions, but do recommend <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This gives us an easy standard for others to quickly adopt and keeps the library tight, modular, and free of specificity issues.</p>
+  <p>We use standard HTML5 for markup. We try not to impose any markup styles or conventions, but do recommend <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This sets an easy standard for others to adopt and keeps the library tight, modular, and free of specificity issues.</p>
 
   <p>Here&rsquo;s the basic syntax:</p>
 
@@ -211,8 +212,8 @@
 
   <p>Read more about <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">BEM syntax</a>.</p>
 
-  <h3>Blanking out text</h3>
-  <p>One of our favourite Live Wires features is the ability to blank out text so we can design with real content, but hide it when we want to present the layout and flow of a project to clients and teammates. To blank out paragraphs and list items, simply add a <code>.content</code> class to its parent element.</p>
+  <h3>'Blanking out' text</h3>
+  <p>One of our favourite Live Wires features involves a script that blanks out text. This lets us design around actual content. However, if we want our team or client to focus on the layout or hierarchy of our wireframes and prototypes, we can hide the text so they won't get distracted. To blank out paragraphs and list items, simply add a <code>.content</code> class to its parent element.</p>
 
   <p>Note: <code>/source/scss/settings/_livewires.scss</code> must be included in the <code>/source/scss/app.scss</code> file for this to work.</p>
 
@@ -221,8 +222,6 @@
     <pre class="language-markup line-numbers"><code>    &lt;div class="content"&gt;
       &lt;p&gt;This text would be blanked out.&lt;/p&gt;
     &lt;/div&gt;</code></pre>
-
-    <p>We also include a few <a href="#helpers">helper classes</a> to assist with positioning and debugging.</p>
   </div>
 
   <aside class="callout callout--clear">
@@ -232,7 +231,6 @@
     </div>
   </aside>
 
-
   <p class="more"><a href="#header">To top</a></p>
 </section>
 
@@ -241,25 +239,25 @@
   <h2>CSS</h2>
   <hr>
 
-  <p>All of the styles are written using <a href="http://sass-lang.com/">Sass</a>. All source files can be found in <code>/source/scss/</code>. We&rsquo;ve setup a few basic starter styles to get you going, but encourage you to go through each file and customize to your liking. It's a fine way to design a UI system once you get the hang of it.</p>
+  <p>All of the styles are written using <a href="http://sass-lang.com/">Sass</a>. All source files can be found in <code>/source/scss/</code>. We&rsquo;ve set up a few basic starter styles to get you going, but encourage you to go through each file and customize it. Using this style guide as your own is a fine way to flesh out a UI system for every project.</p>
 
   <h3>SCSS file structure</h3>
 
   <h4>/source/scss/</h4>
-  <p>Contains all of the styles in the project. This guide, the examples, and your own templates all share the same css. This means, whenever you make changes to your styles, they will be reflected across your project. This very guide becomes your own style guide as you shape your templates. We like to use the guide to style each element, component, and module.</p>
+  <p>This file contains all of the styles in the project. The guide, the examples, and your own templates all share the same CSS. What this means is that whenever you make changes to your styles, they will be reflected on your style guide and on your wireframe. This, here, guide becomes your own as you shape your templates. We normally use the guide to style each element, component, and module in our projects.</p>
 
   <dl>
     <dt><code>app.scss</code></dt>
-    <dd>This generates your projects main css file into <code>/httpdocs/css/app.css</code>. It has three includes:</dd>
+    <dd>This generates your projects main CSS file into <code>/httpdocs/css/app.css</code>. It has three includes:</dd>
 
     <dt><code>@import "settings/_color";</code></dt>
-    <dd>Pulls in your color variables for easy experimentation between color schemes.</dd>
+    <dd>Pulls in your colour variables for easy experimentation between colour schemes.</dd>
 
     <dt><code>@import "settings/_includes";</code></dt>
     <dd>Pulls in all the elements, components, and modules you want to include in your project.</dd>
 
     <dt><code>@import "settings/_livewires";</code></dt>
-    <dd>Pulls in Live Wires styles which blank out all text inside of any element with a <code>.content</code> class in your HTML. Remove it to get rid of the blank text feature.</dd>
+    <dd>Pulls in Live Wires styles which blank out the text inside of any element with a <code>.content</code> class in your HTML. Remove it to get rid of the blank text feature.</dd>
   </dl>
 
   <h4>/source/scss/settings/</h4>
@@ -267,22 +265,22 @@
 
   <dl>
     <dt><code>_variables.scss</code></dt>
-    <dd>Set most global variables in here. You can set things like base typographic settings, default corner radius, breakpoint widths, and grid units in here.</dd>
+    <dd>Set most global variables in here. You can set things like base typographic settings, default corner radius, breakpoint widths, and grid units.</dd>
 
     <dt><code>_colors.scss</code></dt>
-    <dd>We keep our color variables separate so we can easily experiement with multiple color schemes.</dd>
+    <dd>We keep our colour variables separate so we can easily experiement with multiple colour schemes.</dd>
 
     <dt><code>_includes.scss</code></dt>
-    <dd>Use this to include or exclude the sections you want in your project. We made everything modular, so you should be able to use as much or as little as you like.</dd>
+    <dd>Use this to include or exclude the sections you want in your project. We made everything modular, so you can use as much or as little as you like.</dd>
 
     <dt><code>_livewires.scss</code></dt>
-    <dd>Blanks out text inside of any element with a <code>.content</code> class in your HTML. Include this when presenting wire frames to clients or your team to focus their attention on layout and flow, rather than textual content.</dd>
+    <dd>Blanks out text inside of any element with a <code>.content</code> class in your HTML. Include this when presenting wireframes to clients or your team to focus their attention on layout and flow, rather than textual content. But hark the broken record: get your content in before you get into design.</dd>
 
     <dt><code>_font-faces.scss</code></dt>
     <dd>Add any font or icon @font-face includes to this file.</dd>
 
     <dt><code>_helpers.scss</code></dt>
-    <dd>Some non-semantic classes and %placeholders to help debug and position your elements. See what's included <a href="#helpers">below</a>.</dd>
+    <dd>Some non-semantic classes and %placeholders to help debug and position your elements. <a href="#helpers">See what's included below</a>.</dd>
 
     <dt><code>_mixins.scss</code> &amp; <code>_functions.scss</code></dt>
     <dd>These include powerful enhacements to help save time. Have a browse to see what's available and how they work.</dd>
@@ -292,7 +290,7 @@
   <p>Stand-alone elements and small peices that make up components. <em>e.g. paragraphs, headings, form fields</em></p>
 
   <h4>/sources/scss/components/</h4>
-  <p>The re-usable pieces that consist of groups of elements. <em>e.g. callouts, pagination, code blocks</em></p>
+  <p>The reusable pieces that consist of groups of elements. <em>e.g. callouts, pagination, code blocks</em></p>
 
   <h4>/sources/scss/modules/</h4>
   <p>Major chunks that make up the main sections of a template. They often contain components and global elements, and are often used once per page. <em>e.g. headers, footers, layout modules</em></p>
@@ -301,10 +299,10 @@
   <p>Page-specific styles. We recommend keeping larger files in this section out of the main stylesheet and only calling them on their respective pages.</p>
 
   <h4>/sources/scss/theme/</h4>
-  <p>This contains all color-related styles. We&rsquo;ve kept all the color assignments separate from structural styles to make theming easier, faster, and less error prone.</p>
+  <p>This contains all colour-related styles. We&rsquo;ve kept all the color assignments separate from structural styles to make theming easier, faster, and less prone to errors.</p>
 
   <h4>/sources/scss/vendor/</h4>
-  <p>Drop any third-party styles in here. We try to keep these untouched so they can be updated in the future.</p>
+  <p>Drop any third-party styles in here. We don't touch them, so they can be updated in the future.</p>
 
   <p class="more"><a href="#header">To top</a></p>
 </section>
@@ -312,7 +310,7 @@
 <section class="row" id="helpers">
   <h2>Helpers</h2>
   <hr>
-  <p>We have some handy little helpers to make your life a little easer. Check out <code>/source/scss/settings/_helpers.scss</code> for more.</p>
+  <p>We have some handy little helpers to make your life a little easer. Check out <code>/source/scss/settings/_helpers.scss</code> for more examples.</p>
 
   <dl>
     <dt><code>.hidden</code></dt>
@@ -322,7 +320,7 @@
     <dd>Hide stuff from browsers only.</dd>
 
     <dt><code>.invisible</code></dt>
-    <dd>Hide but maintain layout</dd>
+    <dd>Hide but maintain layout.</dd>
 
     <dt><code>.pull-right</code></dt>
     <dd>Float object to the right.</dd>
@@ -337,14 +335,14 @@
     <dd>Left-aligned text.</dd>
 
     <dt><code>.text--center</code></dt>
-    <dd>Centered text.</dd>
+    <dd>Centred text.</dd>
   </dl>
 
   <p>Use the SCSS <code>@extend</code> method on these, like:</p>
 
   <dl>
     <dt><code>@extend %group;</code></dt>
-    <dd>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element. <small>(adding a class of <code>clearfix</code> or <code>group</code> to your HTML element also works but isn&rsquo;t as cool).</small></dd>
+    <dd>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element (adding a class of <code>clearfix</code> or <code>group</code> to your HTML element also works but isn&rsquo;t as cool).</dd>
 
     <dt><code>@extend %vertical-align;</code></dt>
     <dd>Magically <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">verically align</a> objects inside of other objects.</dd>
@@ -356,11 +354,11 @@
 <section class="row" id="js">
   <h2>Javascript</h2>
   <hr>
-  <p>We use <a href="http://coffeescript.org/">Coffescript</a> to write our scripts. Its a powerful and easy-to-learn javascript pre-processor to help make scripting more efficient and less error-prone (in our opinion).</p>
+  <p>We use <a href="http://coffeescript.org/">CoffeScript</a> to write our scripts. Its a powerful and easy-to-learn JavaScript pre-processor to help make scripting more efficient and less error-prone.</p>
 
-  <p>If you prefer vanilla javascript, you can remove the <code>/source/coffee</code> folder and simply edit the compiled .js files in <code>/httpdocs/js/</code>.</p>
+  <p>If you prefer vanilla JavaScript, you can remove the <code>/source/coffee</code> folder and simply edit the compiled .js files in <code>/httpdocs/js/</code>.</p>
 
-  <p>Like our CSS and HTML, we try to keep our javascript modular so you can use only what you need. All the coffeescript components are in <code>/source/coffee/components</code> and will compile automatically.</p>
+  <p>Like our CSS and HTML, we try to keep our JavaScript modular so you can use only what you need. All the CoffeeScript components are in <code>/source/coffee/components</code> and will compile automatically.</p>
 
   <h3>Third-party scripts</h3>
   <p>We organize all third-party scripts like jQuery plugins in the <code>/source/vendor/</code> folder.</p>
@@ -379,7 +377,7 @@
 
   <h2>Compatibility</h2>
   <hr>
-  <p>We support all modern browsers including Internet Explorer 9 and up. If you do need to support IE8 or lower, most incompatilibilites can be solved by switching to jQuery 1.x and including the following polyfills:</p>
+  <p>We support all modern browsers including Internet Explorer 9 and up. If you need to support IE8 or anything earlier, you can solve most incompatilibilites by switching to jQuery 1.x and including the following polyfills:</p>
 
   <ul>
     <li><a href="https://code.google.com/p/html5shiv/">html5shiv</a></li>
@@ -410,7 +408,7 @@
     <!-- Footer section -->
     <footer class="footer row subtle">
   <p><small><a href="../index.html">Home</a> | <a href="usage.html">Guide</a> | <a href="../example/index.html">Example</a></small></p>
-  <p><small>&copy; Site name. Rapidly built with <a href="http://www.livewires.io">Live Wires</a>.</small></p>
+  <p><small>&copy; Live Wires. Rapidly built with <a href="http://www.livewires.io">Live Wires</a>.</small></p>
 </footer>
 
 
@@ -422,7 +420,7 @@
     <script src="../httpdocs/js/app.min.js"></script>
     
 
-
+    <!-- Use Google Analytics if code is provided in _models.json -->
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

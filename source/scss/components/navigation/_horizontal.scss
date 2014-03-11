@@ -8,8 +8,6 @@
 //    <li><a href="/page">Nav Item 3</a></li>
 //   </ul>
 // </nav>
-//
-// Add a 'horizontal-nav--center' class to the <nav> element to center it horizontally.
 
 .horizontal-nav {
   ul {
@@ -39,6 +37,8 @@
       padding:rem($line/2);
     }
   }
+
+  // Add a 'horizontal-nav--center' class to the <nav> element to center it horizontally.
   .horizontal-nav--center {
     ul {
       display: table;

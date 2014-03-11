@@ -1,7 +1,8 @@
-//FIELDS
-
-// Let's wrap our fields in a field class for easier manipulation. Here's how I generally do a required text field:
+// FIELDS
 //
+// Let's wrap our fields in a field class for easier manipulation.
+//
+// Example:
 // <div class="field">
 //  <label for="field-name">Field name <sup>*<sup></label>
 //  <input type="text" name="field-name" id="field-name" class="text-input" required />
@@ -13,7 +14,7 @@
   padding-bottom: rem($line);
 }
 
-// Treat checkbox fields (and any other unique field group types) slightly different
+// Treat checkbox fields slightly different
 .field--check {
   label {
     @extend %group;
@@ -25,20 +26,21 @@ label,
 
 }
 
-// Add some error styling. Keeping the labels absolutely positioned prevents them from altering the layout when visible.
+// Add some error styling.
+// Keeping the labels absolutely positioned prevents them from altering the layout when visible.
 .label--error {
   position:absolute;
   left:0;
   bottom:0;
 }
 
-//    Text inputs. Another hat tip to Inuit for the text-input class idea. http://inuitcss.com/
+// Text inputs. Hat tip to Inuit for the text-input class idea. http://inuitcss.com/
 //
-//    Instead of a `[type]` selector for each kind of form input, we just use a
-//    class to target any/every one, e.g.:
-//   <input type="text" class="text-input" />
-//   <input type="email" class="text-input" />
-//   <input type="password" class="text-input" />
+// Instead of a `[type]` selector for each kind of form input, we just use a
+// class to target any/every one, e.g.:
+// <input type="text" class="text-input" />
+// <input type="email" class="text-input" />
+// <input type="password" class="text-input" />
 
 .text-input {
   -webkit-appearance: none;
@@ -65,6 +67,7 @@ textarea {
   min-height: $line*6;
 }
 
+// Special styling for the search input
 .search-input,
 input[type=search] {
   @extend .text-input;
@@ -115,7 +118,8 @@ input[type=radio] {
 
 
 // Not all fields need to be full width. Here are some field building blocks
-// I'm kicking these in at a wider screen, but make some for mobile. If you dare. ;)
+// We're kicking these in at a wider screen, but you can make some for mobile.
+// If you dare.
 @media only screen and (min-width: $screenSmall) {
   .field--half,
   .field--third,
