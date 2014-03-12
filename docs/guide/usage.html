@@ -58,8 +58,8 @@
     <p class="trigger"><a href="#primary" class="js-reveal">Menu</a></p>
     <ul id="primary">
       <li class="primary__usage"><a href="usage.html">Usage</a></li>
-      <li class="primary__brand"><a href="brand.html">Brand</a></li>
       <li class="primary__grid"><a href="grid.html">Grid</a></li>
+      <li class="primary__brand"><a href="brand.html">Brand</a></li>
       <li class="primary__elements"><a href="elements.html">Elements</a></li>
       <li class="primary__components"><a href="components.html">Components</a></li>
       <li class="primary__modules"><a href="modules.html">Modules</a></li>
@@ -89,7 +89,7 @@
 <header class="row">
   <h1>Usage</h1>
 
-  <p class="lead">Hey! Welcome to our living style guide, created by Live Wires. Live Wires is a simple design framework made with Sass that allows you to create grey-box wireframes and responsive prototypes in HTML &amp; SCSS. Make this guide your own and rewrite the content here so it fits your project.</p>
+  <p class="lead">Hey! Welcome to our living style guide, created by Live Wires. Live Wires is a simple design framework made with Sass that allows you to create grey-box wireframes and responsive prototypes in <abbr>HTML</abbr> &amp; <abbr>SCSS</abbr>. Make this guide your own and rewrite the content here so it fits your project.</p>
 
   <p>Today we stop making trash and start building a living, breathing idea that will look and act the way it was imagined.</p>
 </header>
@@ -123,7 +123,7 @@
         <li><a href="http://sass-lang.com/">Sass</a> compilation</li>
         <li><a href="http://coffeescript.org">Coffeescript</a> compilation</li>
         <li><a href="https://github.com/mishoo/UglifyJS">Uglify</a> (compresses JavaScript)</li>
-        <li><a href="https://github.com/ai/autoprefixer">Autoprefixer</a> (automatically adds vendor prefixes to your CSS)</li>
+        <li><a href="https://github.com/ai/autoprefixer">Autoprefixer</a> (automatically adds vendor prefixes to your <abbr>CSS</abbr>)</li>
         <li><a href="http://livereload.com/">Live Reload</a> (auto-reloads your browser on each save. You'll also need an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">browser extension</a>)</li>
       </ul>
 
@@ -150,7 +150,7 @@
       <ul>
       	<li>It's simple to set up and includes a full set of tools that rival anything Grunt can do for our design-oriented purposes.</li>
       	<li>It allows us to dive in and start designing without having to set up servers, dance around the command line, and configure complicated scripts.</li>
-      	</ul> 
+      	</ul>
       <p>There's nothing you <em>need</em> to do to get set up beyond choosing the Live Wires boilerplate in Mixture and pointing it at your project folder, but there are a few settings you may want to customize in in the <code>mixture.json</code> and <code>/models/_global.json</code> files. Read more about that on the <a href="http://mixture.io">Mixture site</a>.
 </p>
     </div>
@@ -169,10 +169,16 @@
 
   <dl>
     <dt><code>/httpdocs/</code></dt>
-    <dd>This is where all compiled static assets live. Drop your images and font files here. This is also where all Sass, CoffeeScript, and JavaScript is combined, compiled, and minified for production use. <strong>Don&rsquo;t edit these CSS and JS files as doing that will overwrite them</strong>.</dd>
+    <dd>This is where all compiled static assets live. Drop your images and font files here. This is also where all Sass, CoffeeScript, and JavaScript is combined, compiled, and minified for production use. <strong>Don&rsquo;t edit these <abbr>CSS</abbr> and JS files as doing that will overwrite them</strong>.</dd>
 
     <dt><code>/source/</code></dt>
-    <dd>This contains all of the pre-compiled Sass, Coffeescript, and JavaScript plugin files. This is where you will write your CSS and JavaScript.</dd>
+    <dd>This contains all of the pre-compiled Sass, Coffeescript, and JavaScript plugin files. This is where you will write your <abbr>CSS</abbr> and JavaScript.</dd>
+
+    <dt><code>/docs/</code></dt>
+    <dd>An isolated and untouched version of the guide and examples.</dd>
+
+    <dt><code>/guide/</code> <small>(<code>/templates/guide/</code> in Mixture)</small></dt>
+    <dd>The project style guide. This begins as a Live Wires reference, but becomes your project&rsquo;s style guide as you begin writing <abbr>CSS</abbr>. Hint: Use the guide as a tool to design your elements and components.</dd>
 
   </dl>
 
@@ -200,7 +206,7 @@
 <section class="row" id="markup">
   <h2 id="markup">Markup</h2>
   <hr>
-  <p>We use standard HTML5 for markup. We try not to impose any markup styles or conventions, but do recommend <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This sets an easy standard for others to adopt and keeps the library tight, modular, and free of specificity issues.</p>
+  <p>We use standard <abbr>HTML5</abbr> for markup. We try not to impose any markup styles or conventions, but do recommend <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This sets an easy standard for others to adopt and keeps the library tight, modular, and free of specificity issues.</p>
 
   <p>Here&rsquo;s the basic syntax:</p>
 
@@ -241,14 +247,14 @@
 
   <p>All of the styles are written using <a href="http://sass-lang.com/">Sass</a>. All source files can be found in <code>/source/scss/</code>. We&rsquo;ve set up a few basic starter styles to get you going, but encourage you to go through each file and customize it. Using this style guide as your own is a fine way to flesh out a UI system for every project.</p>
 
-  <h3>SCSS file structure</h3>
+  <h3><abbr>SCSS</abbr> file structure</h3>
 
   <h4>/source/scss/</h4>
-  <p>This file contains all of the styles in the project. The guide, the examples, and your own templates all share the same CSS. What this means is that whenever you make changes to your styles, they will be reflected on your style guide and on your wireframe. This, here, guide becomes your own as you shape your templates. We normally use the guide to style each element, component, and module in our projects.</p>
+  <p>This file contains all of the styles in the project. The guide, the examples, and your own templates all share the same <abbr>CSS</abbr>. What this means is that whenever you make changes to your styles, they will be reflected on your style guide and on your wireframe. This, here, guide becomes your own as you shape your templates. We normally use the guide to style each element, component, and module in our projects.</p>
 
   <dl>
     <dt><code>app.scss</code></dt>
-    <dd>This generates your projects main CSS file into <code>/httpdocs/css/app.css</code>. It has three includes:</dd>
+    <dd>This generates your projects main <abbr>CSS</abbr> file into <code>/httpdocs/css/app.css</code>. It has three includes:</dd>
 
     <dt><code>@import "settings/_color";</code></dt>
     <dd>Pulls in your colour variables for easy experimentation between colour schemes.</dd>
@@ -257,7 +263,7 @@
     <dd>Pulls in all the elements, components, and modules you want to include in your project.</dd>
 
     <dt><code>@import "settings/_livewires";</code></dt>
-    <dd>Pulls in Live Wires styles which blank out the text inside of any element with a <code>.content</code> class in your HTML. Remove it to get rid of the blank text feature.</dd>
+    <dd>Pulls in Live Wires styles which blank out the text inside of any element with a <code>.content</code> class in your <abbr>HTML</abbr>. Remove it to get rid of the blank text feature.</dd>
   </dl>
 
   <h4>/source/scss/settings/</h4>
@@ -274,7 +280,7 @@
     <dd>Use this to include or exclude the sections you want in your project. We made everything modular, so you can use as much or as little as you like.</dd>
 
     <dt><code>_livewires.scss</code></dt>
-    <dd>Blanks out text inside of any element with a <code>.content</code> class in your HTML. Include this when presenting wireframes to clients or your team to focus their attention on layout and flow, rather than textual content. But hark the broken record: get your content in before you get into design.</dd>
+    <dd>Blanks out text inside of any element with a <code>.content</code> class in your <abbr>HTML</abbr>. Include this when presenting wireframes to clients or your team to focus their attention on layout and flow, rather than textual content. But hark the broken record: get your content in before you get into design.</dd>
 
     <dt><code>_font-faces.scss</code></dt>
     <dd>Add any font or icon @font-face includes to this file.</dd>
@@ -338,11 +344,11 @@
     <dd>Centred text.</dd>
   </dl>
 
-  <p>Use the SCSS <code>@extend</code> method on these, like:</p>
+  <p>Use the <abbr>SCSS</abbr> <code>@extend</code> method on these, like:</p>
 
   <dl>
     <dt><code>@extend %group;</code></dt>
-    <dd>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element (adding a class of <code>clearfix</code> or <code>group</code> to your HTML element also works but isn&rsquo;t as cool).</dd>
+    <dd>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element (adding a class of <code>clearfix</code> or <code>group</code> to your <abbr>HTML</abbr> element also works but isn&rsquo;t as cool).</dd>
 
     <dt><code>@extend %vertical-align;</code></dt>
     <dd>Magically <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">verically align</a> objects inside of other objects.</dd>
@@ -358,7 +364,7 @@
 
   <p>If you prefer vanilla JavaScript, you can remove the <code>/source/coffee</code> folder and simply edit the compiled .js files in <code>/httpdocs/js/</code>.</p>
 
-  <p>Like our CSS and HTML, we try to keep our JavaScript modular so you can use only what you need. All the CoffeeScript components are in <code>/source/coffee/components</code> and will compile automatically.</p>
+  <p>Like our <abbr>CSS</abbr> and <abbr>HTML</abbr>, we try to keep our JavaScript modular so you can use only what you need. All the CoffeeScript components are in <code>/source/coffee/components</code> and will compile automatically.</p>
 
   <h3>Third-party scripts</h3>
   <p>We organize all third-party scripts like jQuery plugins in the <code>/source/vendor/</code> folder.</p>
