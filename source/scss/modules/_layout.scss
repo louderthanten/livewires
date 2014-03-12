@@ -35,16 +35,16 @@
 }
 
 @media only screen and (min-width: $screenMedium) {
+
+}
+
+@media only screen and (min-width: $screenLarge) {
   .primary-content {
     width:$c7*4; // Change grid as you move up: Four units of a 7-column grid
   }
   .secondary-content {
     width: $c3*1; // Uses a 1/3 unit-grid for a more complex compound grid https://gridsetapp.com/specs/gerstner/
   }
-}
-
-@media only screen and (min-width: $screenLarge) {
-
 }
 @media only screen and (min-width: $screenXlarge) {
 

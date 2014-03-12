@@ -18,12 +18,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:image" content="" />
 <meta property="og:description" content="Light-weight prototyping with HTML & SCSS." />
-<meta property="og:url" content="http://http://livewires.io" />
+<meta property="og:url" content="http://www.livewires.io" />
 <meta property="og:site_name" content="Live Wires" />
 
 <!-- Twitter social tags -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:url" content="http://http://livewires.io" />
+<meta name="twitter:url" content="http://www.livewires.io" />
 <meta name="twitter:site" content="louderthanten">
     
 
@@ -34,6 +34,8 @@
 
     <!-- Style block allowing child pages to inject their own styles -->
     
+  <link href="../httpdocs/css/guide.min.css" rel="stylesheet" type="text/css" media="all"/>
+
 
     <!-- Fontawesome icons. Remove if not using -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -41,7 +43,7 @@
     
 
   </head>
-  <body class="offcanvas--push ">
+  <body class="offcanvas--push pg-modules">
     <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -50,14 +52,18 @@
 
     <!-- Header section -->
     
-  <header class="row row--tight reverse">
-  <h1><a href="index.html" class="logo">Live Wires</a></h1>
-  <nav class="horizontal-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="news/index.html">News</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+  <header class="row row--header reverse" id="header">
+  <h1 class="logo"><a href="usage.html"><img src="../httpdocs/img/livewires/logo.svg" alt="Live Wires" /></a></h1>
+  <nav class="horizontal-nav horizontal-nav--guide collapse">
+    <p class="trigger"><a href="#primary" class="js-reveal">Menu</a></p>
+    <ul id="primary">
+      <li class="primary__usage"><a href="usage.html">Usage</a></li>
+      <li class="primary__brand"><a href="brand.html">Brand</a></li>
+      <li class="primary__grid"><a href="grid.html">Grid</a></li>
+      <li class="primary__elements"><a href="elements.html">Elements</a></li>
+      <li class="primary__components"><a href="components.html">Components</a></li>
+      <li class="primary__modules"><a href="modules.html">Modules</a></li>
+      <li class="primary__templates"><a href="templates.html">Templates</a></li>
     </ul>
   </nav>
 </header>
@@ -66,64 +72,42 @@
     <!-- Content block, child page inject content -->
     <main class="main" id="main" role="main">
     
+<header class="row">
+  <h1>Layout modules</h1>
+  <p class="lead">The building blocks of our templates. Here you'll find our major layout modules like site header, site footer, and major layout sections.</p>
+</header>
+
 <section class="row">
-  <h1>Contact</h1>
-
-  <div class="content primary-content">
-    <p>Submit you feedback here. We get back to you as soon as possible.</p>
-  </div>
-
-  <hr />
-
-  <form action="../index.html" class="primary-content">
-    <fieldset>
-      <h2>Get in touch</h2>
-      <div class="field">
-        <label for="contact-name">Name</label>
-        <input type="text" name="contact-name" value="" placeholder="eg) Joanna Smith" class="text-input" />
-      </div>
-      <div class="field">
-        <label for="contact-email">Email address</label>
-        <input type="email" name="contact-email" value="" placeholder="eg) joanna@example.com" class="text-input" />
-      </div>
-      <div class="field">
-        <label for="contact-message">Message</label>
-        <textarea name="contact-message" class="text-input"></textarea>
-      </div>
-      <div class="field">
-        <button type="submit">Send</button>
-      </div>
-    </fieldset>
-  </form>
-
-  <aside class="secondary-content">
-    <div class="callout">
-      <h3>Contact info</h3>
-      <div class="vcard">
-        <p class="adr">
-          <strong class="org">Company name</strong>
-          <span class="street-address">123 Chester street</span>
-          <span class="locality">Vancouver</span>, <span class="region">BC</span> <span class="postal-code">V7B 0B4</span>
-          <span class="country-name">Canada</span>
-        </p>
-        <p class="tel">
-          <span class="type">Phone</span>
-          <a href="tel:+18885555555" class="value" title="+18885555555">1 (888) 555-5555</a>
-        </p>
-        <p class="email">
-          <span class="type">Email</span>
-          <a href="mailto:name@example.com" class="value" title="name@example.com">name@example.com</a>
-        </p>
-      </div>
-    </div>
-  </aside>
+  <h2>Template header</h2>
+  <hr>
 </section>
+<header class="row row--tight subtle">
+	<h1><a href="index" class="logo">Live Wires</a></h1>
+	<nav class="horizontal-nav">
+		<ul>
+      <li><a href="example/index">Live Wires example</a></li>
+      <li><a href="guide/usage">Live Wires guide</a></li>
+		</ul>
+	</nav>
+</header>
+
+<section class="row">
+  <h2>Template footer</h2>
+  <hr>
+</section>
+<footer class="footer row subtle">
+  <p><small><a href="../index.html">Home</a> | <a href="usage.html">Guide</a> | <a href="../example/index.html">Example</a></small></p>
+  <p><small>&copy; Live Wires. Rapidly built with <a href="http://www.livewires.io">Live Wires</a>.</small></p>
+</footer>
+
+<br>
+
 
     </main>
 
     <!-- Footer section -->
     <footer class="footer row subtle">
-  <p><small><a href="../index.html">Home</a> | <a href="../guide/usage.html">Guide</a> | <a href="index.html">Example</a></small></p>
+  <p><small><a href="../index.html">Home</a> | <a href="usage.html">Guide</a> | <a href="../example/index.html">Example</a></small></p>
   <p><small>&copy; Live Wires. Rapidly built with <a href="http://www.livewires.io">Live Wires</a>.</small></p>
 </footer>
 
@@ -144,7 +128,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', '', 'http://livewires.io');
+      ga('create', '', 'www.livewires.io');
       ga('send', 'pageview');
 
     </script>

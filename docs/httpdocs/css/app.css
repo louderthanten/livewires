@@ -1252,13 +1252,13 @@ html, body {
     width: 33.33333%;
     float: left; } }
 
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 64em) { }
+
+@media only screen and (min-width: 98em) {
   .primary-content {
     width: 57.14286%; }
   .secondary-content {
     width: 33.33333%; } }
-
-@media only screen and (min-width: 98em) { }
 
 @media only screen and (min-width: 110em) { }
 
@@ -2123,3 +2123,4 @@ a.button--disabled, a.button--disabled:hover, a.button--disabled:active, a.butto
   visibility: hidden; }
 
 /*# sourceMappingURL=app.css.map */
+
