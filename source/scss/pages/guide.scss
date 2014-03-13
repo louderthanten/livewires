@@ -98,7 +98,8 @@
 }
 
 // limit paragraph widths in the guide.
-p {
+p,
+dd {
   max-width: 48em;
 }
 figure p,
@@ -153,14 +154,14 @@ figure p,
   }
   .folding {
     margin-bottom: $line;
-    height: $line*10;
+    height: rem($line*10);
     float:left;
     @include gutter;
 
     span {
       display: block;
       width:100%;
-      height: $line*10;
+      height: rem($line*10);
       background:$text;
     }
   }
