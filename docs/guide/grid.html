@@ -84,7 +84,7 @@
 <header class="row">
   <h1>Grid</h1>
   <p class="lead">A grid should be unique to each project based on content and typographic decisions. Unlike most grid frameworks, this system does not impose a pre-determined number of columns or breakpoints and is not bound to a collection of CSS classes.</p>
-  <p> Instead, it uses a collection of Sass grid variables. This approach encourages you to define your own semantic layout classes, keeps the markup clean, and makes the layout easier to modify at various breakpoints. You can even combine column variables to experiment with compound or asymetrical grids.</p>
+  <p> Instead, it uses a collection of Sass grid variables. This approach encourages you to define your own semantic layout classes, keeps the markup clean, and makes the layout easier to modify across breakpoints. You can even combine column variables to experiment with compound or asymetrical grids.</p>
 </header>
 
 <section class="row" id="howto">
@@ -93,9 +93,9 @@
   <p>Our grid concept inspired by <a href="http://www.jonikorpi.com/">Joni Korpi&rsquo;s</a> <a href="http://goldengridsystem.com/">Golden Grid System</a>. The margins and columns are fluid while the gutters maintain a fixed width. This ensures consistent proportional spacing and alignment at all screen widths.</p>
 
   <p>Grid settings are configured in <code>/source/scss/settings/_variables.scss</code>.</p>
-  <p>The basic layout foundation is defined in <code>/source/scss/modules/_base.scss</code>. We set up a few simple layout classes in <code>/source/scss/modules/_layout.scss</code> to get you started.</p>
+  <p>The basic layout foundation is setup in <code>/source/scss/modules/_base.scss</code> and you can define your global layout classes in <code>/source/scss/modules/_layout.scss</code>.</p>
 
-  <p>We&rsquo;ve set up the following grid variables with a few classes for dividing page sections to help you get started.</p>
+  <p>We&rsquo;ve set up the following grid variables with a few classes for dividing page sections to help you get designing as quickly as possible without being bound to a specific set of grid units.</p>
 
   <h3>Default grid variables</h3>
   <p>These are the default grid variables. We are just dividing 100% by various values to give us a series of different column widths and quantities. Adjust these in <code>/source/scss/settings/_variables.scss</code>.</p>
@@ -180,7 +180,7 @@ $c16: 100% / 16;</code></pre>
 <section class="row">
   <h2>Gutters</h2>
   <hr>
-  <p>These are fixed-width gutters defined with a rem unit. This ensures that spacing stays consistent at all sizes. By default, our gutter size is equal to the <code>$line</code> variable set in <code>/source/scss/settings/_variables.scss</code>, which also happens to be the baseline grid.</p>
+  <p>We use fixed-width gutters defined with a rem unit. This ensures that spacing stays consistent at all sizes. By default, our gutter size is equal to the <code>$line</code> variable set in <code>/source/scss/settings/_variables.scss</code>, which also happens to be the baseline grid.</p>
 
   <p>There is a handy <code>gutter</code> mixin avialable which applies half a gutter width to each side of the element to which it is applied.</p>
 
@@ -276,11 +276,19 @@ html {
 }</code></pre>
     </div>
   </div>
+
+  <aside class="callout callout--clear">
+    <div class="content subtle">
+        <h3>Tip: Keeping it relative</h3>
+        <p>Use the <code>$line</code> variable to declare your Sass arguments whenever possible. Not only does it allow you to proportionally adjust the spacing across your project with a single variable, it ensures that every mesaurement is based on your paragraph&rsquo;s line-height. It takes out guess work and the typography gods will smile upon your beautiful, rationally spaced creation.</p>
+    </div>
+  </aside>
 </section>
 
 <section class="grids row" id="grids">
     <h2>Grid examples</h2>
     <hr>
+    <p>Here&rsquo;s just a taste of what you can do using this anti-framework grid system.</p>
     <h3>Two/Four/Eight responsive folding grid</h3>
     <div class="grid grid--2-4-8">
       <div class="folding eight four two"><span></span></div>

@@ -89,7 +89,7 @@
 <header class="row">
   <h1>Usage</h1>
 
-  <p class="lead">Hey! Welcome to our living style guide, created by Live Wires. Live Wires is a simple design framework made with Sass that allows you to create grey-box wireframes and responsive prototypes in <abbr>HTML</abbr> &amp; <abbr>SCSS</abbr>. Make this guide your own and rewrite the content here so it fits your project.</p>
+  <p class="lead">Hey! Welcome to our living style guide, created by Live Wires. Live Wires is a simple design framework that allows you to create grey-box wireframes and responsive prototypes in <abbr>HTML</abbr>, Sass, &amp; CoffeeScript. Make this guide your own and rewrite the content here so it fits your project.</p>
 
   <p>Today we stop making trash and start building a living, breathing idea that will look and act the way it was imagined.</p>
 </header>
@@ -97,7 +97,7 @@
 <section class="row" id="howto">
   <h2>How do I use this guide?</h2>
   <hr>
-  <p>The guide breaks down the setup, configuration, and application of Live Wire. Use it as a reference for building your wireframes, creating a prototype, and then building upon your site or app's design.</p>
+  <p>The guide breaks down the setup, configuration, and application of Live Wire. Use it as a reference for building your wireframes, creating a prototype, and then building upon your site or app&rsquo;s design.</p>
 </section>
 
 <section class="row" id="setup">
@@ -107,9 +107,9 @@
     <dt>Step 1</dt>
     <dd>Create a folder for your project.</dd>
     <dt>Step 2</dt>
-    <dd>Download or clone Live Wires from the <a href="https://github.com/louderthanten/livewires">GitHub repository</a> (or use the boilerplate included in <a href="http://mixture.io">Mixture</a>).</dd>
+    <dd><a href="https://github.com/louderthanten/livewires/archive/master.zip">Download</a> or clone Live Wires from the <a href="https://github.com/louderthanten/livewires">GitHub repository</a> (or use the boilerplate included in <a href="http://mixture.io">Mixture</a>).</dd>
     <dt>Step 3</dt>
-    <dd>Point your preferred SASS &amp; Coffeescript preprocessors to the project. If you're a <a href="http://gruntjs.com/">Grunt</a> or <a href="http://mixture.io">Mixture user</a>, follow the directions below.</dd>
+    <dd>Point your preferred Sass &amp; Coffeescript preprocessors to the project. If you&rsquo;re a <a href="http://gruntjs.com/">Grunt</a> or <a href="http://mixture.io">Mixture user</a>, follow the directions below.</dd>
     <dt>Step 4</dt>
     <dd>Refer to the included guide and examples to start building your templates.</dd>
   </dl>
@@ -117,17 +117,17 @@
   <div class="split-content callout callout--clear">
     <div class="content subtle">
       <h4>Grunt setup</h4>
-      <p>If you are using the standard version of Live Wires, we've included a Gruntfile configured with the following tasks:</p>
+      <p>If you are using the standard version of Live Wires, we&rsquo;ve included a Gruntfile configured with the following tasks:</p>
 
       <ul>
         <li><a href="http://sass-lang.com/">Sass</a> compilation</li>
         <li><a href="http://coffeescript.org">Coffeescript</a> compilation</li>
         <li><a href="https://github.com/mishoo/UglifyJS">Uglify</a> (compresses JavaScript)</li>
         <li><a href="https://github.com/ai/autoprefixer">Autoprefixer</a> (automatically adds vendor prefixes to your <abbr>CSS</abbr>)</li>
-        <li><a href="http://livereload.com/">Live Reload</a> (auto-reloads your browser on each save. You'll also need an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">browser extension</a>)</li>
+        <li><a href="http://livereload.com/">Live Reload</a> (auto-reloads your browser on each save. You&rsquo;ll also need an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">browser extension</a>)</li>
       </ul>
 
-      <p>To get started, you'll need to:</p>
+      <p>To get started, you&rsquo;ll need to:</p>
       <dl>
         <dt>Step 1</dt>
         <dd>Install <a href="http://nodejs.org/">Node</a>.</dd>
@@ -138,7 +138,7 @@
         <dt>Step 4</dt>
         <dd>Start the project by running <code>grunt watch</code> in the Terminal.</dd>
       </dl>
-      <p>You'll need to run <code>grunt watch</code> each time you work on the project.</p>
+      <p>You&rsquo;ll need to run <code>grunt watch</code> each time you work on the project.</p>
       <p>You can learn more about Grunt and find more plugins and documentation on the <a href="http://gruntjs.com">Grunt site</a>.</p>
     </div>
   </div>
@@ -148,10 +148,10 @@
       <h4>Mixture setup</h4>
       <p><a href="http://mixture.io">Mixture</a> is our preferred front-end development tool, and we recommend using it for your own projects.</p>
       <ul>
-      	<li>It's simple to set up and includes a full set of tools that rival anything Grunt can do for our design-oriented purposes.</li>
+      	<li>It&rsquo;s simple to set up and includes a full set of tools that rival anything Grunt can do for our design-oriented purposes.</li>
       	<li>It allows us to dive in and start designing without having to set up servers, dance around the command line, and configure complicated scripts.</li>
       	</ul>
-      <p>There's nothing you <em>need</em> to do to get set up beyond choosing the Live Wires boilerplate in Mixture and pointing it at your project folder, but there are a few settings you may want to customize in in the <code>mixture.json</code> and <code>/models/_global.json</code> files. Read more about that on the <a href="http://mixture.io">Mixture site</a>.
+      <p>There&rsquo;s nothing you <em>need</em> to do to get set up beyond choosing the Live Wires boilerplate in Mixture and pointing it at your project folder, but there are a few settings you may want to customize in in the <code>mixture.json</code> and <code>/models/_global.json</code> files. Read more about that on the <a href="http://mixture.io">Mixture site</a>.
 </p>
     </div>
 
@@ -163,19 +163,19 @@
   <h2>Project structure</h2>
   <hr>
 
-  <p>One of the core philosphies behind Live Wires is stay out of the way as much as we can. We don't want to impose any code standards or force you into a little box. Saying that, here are some guidelines that that will help you get started with Live Wires more easily.</p>
+  <p>One of the core philosphies behind Live Wires is stay out of the way as much as we can. We don&rsquo;t want to impose any code standards or force you into a little box. Saying that, here are some guidelines that that will help you get started with Live Wires more easily.</p>
 
-  <p>Here's how a Live Wires project is organized:</p>
+  <p>Here&rsquo;s how a Live Wires project is organized:</p>
 
   <dl>
     <dt><code>/httpdocs/</code></dt>
-    <dd>This is where all compiled static assets live. Drop your images and font files here. This is also where all Sass, CoffeeScript, and JavaScript is combined, compiled, and minified for production use. <strong>Don&rsquo;t edit these <abbr>CSS</abbr> and JS files as doing that will overwrite them</strong>.</dd>
+    <dd>This is where all compiled static assets live. Drop your images and font files here. This is also where all Sass, CoffeeScript, and JavaScript is combined, compiled, and minified for production use. <strong>Don&rsquo;t edit these <abbr>CSS</abbr> and <abbr>JS</abbr> files if you&rsquo;re using Sass and CoffeeScript. Your changes will be overwritten by the preprocessor</strong>.</dd>
 
     <dt><code>/source/</code></dt>
     <dd>This contains all of the pre-compiled Sass, Coffeescript, and JavaScript plugin files. This is where you will write your <abbr>CSS</abbr> and JavaScript.</dd>
 
     <dt><code>/docs/</code></dt>
-    <dd>An isolated and untouched version of the guide and examples.</dd>
+    <dd>An isolated and untouched version of this guide and examples.</dd>
 
     <dt><code>/guide/</code> <small>(<code>/templates/guide/</code> in Mixture)</small></dt>
     <dd>The project style guide. This begins as a Live Wires reference, but becomes your project&rsquo;s style guide as you begin writing <abbr>CSS</abbr>. Hint: Use the guide as a tool to design your elements and components.</dd>
@@ -190,7 +190,7 @@
         <dd>This is where your <a href="http://docs.mixture.io/templates">site templates</a> reside. Templates for this guide can be found in the <code>guide</code> sub-folder.</dd>
 
         <dt><code>/models/</code></dt>
-        <dd>Contains Mixture&rsquo;s handy <a href="http://docs.mixture.io/models">model files</a>. We've added one with some global variables to get you started.</dd>
+        <dd>Contains Mixture&rsquo;s handy <a href="http://docs.mixture.io/models">model files</a>. We&rsquo;ve added one with some global variables to get you started.</dd>
 
         <dt><code>mixture.json</code></dt>
         <dd>Your <a href="http://docs.mixture.io/mixture">Mixture settings</a>.</dd>
@@ -218,8 +218,8 @@
 
   <p>Read more about <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">BEM syntax</a>.</p>
 
-  <h3>'Blanking out' text</h3>
-  <p>One of our favourite Live Wires features involves a script that blanks out text. This lets us design around actual content. However, if we want our team or client to focus on the layout or hierarchy of our wireframes and prototypes, we can hide the text so they won't get distracted. To blank out paragraphs and list items, simply add a <code>.content</code> class to its parent element.</p>
+  <h3>&lsquo;Blanking out&rsquo; text</h3>
+  <p>One of our favourite Live Wires features involves the ability to blank out text. This lets us design around actual content. However, if we want our team or client to focus on the layout or hierarchy of our wireframes and prototypes, we can hide the text so they won&rsquo;t get distracted. To blank out paragraphs and list items, simply add a <code>.content</code> class to its parent element.</p>
 
   <p>Note: <code>/source/scss/settings/_livewires.scss</code> must be included in the <code>/source/scss/app.scss</code> file for this to work.</p>
 
@@ -250,7 +250,7 @@
   <h3><abbr>SCSS</abbr> file structure</h3>
 
   <h4>/source/scss/</h4>
-  <p>This file contains all of the styles in the project. The guide, the examples, and your own templates all share the same <abbr>CSS</abbr>. What this means is that whenever you make changes to your styles, they will be reflected on your style guide and on your wireframe. This, here, guide becomes your own as you shape your templates. We normally use the guide to style each element, component, and module in our projects.</p>
+  <p>This file contains all of the styles in the project. The guide and your own templates both share the same <abbr>CSS</abbr>. What this means is that whenever you make changes to your styles, they will be reflected on your style guide and on your wireframe. This, here, guide becomes your own as you shape your templates. We normally use the guide to style each element, component, and module in our projects.</p>
 
   <dl>
     <dt><code>app.scss</code></dt>
@@ -286,10 +286,10 @@
     <dd>Add any font or icon @font-face includes to this file.</dd>
 
     <dt><code>_helpers.scss</code></dt>
-    <dd>Some non-semantic classes and %placeholders to help debug and position your elements. <a href="#helpers">See what's included below</a>.</dd>
+    <dd>Some non-semantic classes and %placeholders to help debug and position your elements. <a href="#helpers">See what&rsquo;s included below</a>.</dd>
 
     <dt><code>_mixins.scss</code> &amp; <code>_functions.scss</code></dt>
-    <dd>These include powerful enhacements to help save time. Have a browse to see what's available and how they work.</dd>
+    <dd>These include powerful enhacements to help save time. Have a browse to see what&rsquo;s available and how they work.</dd>
   </dl>
 
   <h4>/sources/scss/elements/</h4>
@@ -308,7 +308,7 @@
   <p>This contains all colour-related styles. We&rsquo;ve kept all the color assignments separate from structural styles to make theming easier, faster, and less prone to errors.</p>
 
   <h4>/sources/scss/vendor/</h4>
-  <p>Drop any third-party styles in here. We don't touch them, so they can be updated in the future.</p>
+  <p>Drop any third-party styles in here. We don&rsquo;t touch them, so they can be updated in the future.</p>
 
   <p class="more"><a href="#header">To top</a></p>
 </section>
@@ -334,13 +334,13 @@
     <dt><code>.pull-left</code></dt>
     <dd>Float object to the left.</dd>
 
-    <dt><code>.text--right</code></dt>
+    <dt><code>.text-right</code></dt>
     <dd>Right-aligned text.</dd>
 
-    <dt><code>.text--left</code></dt>
+    <dt><code>.text-left</code></dt>
     <dd>Left-aligned text.</dd>
 
-    <dt><code>.text--center</code></dt>
+    <dt><code>.text-center</code></dt>
     <dd>Centred text.</dd>
   </dl>
 
@@ -392,7 +392,7 @@
     <li><a href="http://selectivizr.com/">Selectivizr</a></li>
   </ul>
 
-  <p>We also use Auto-prefixer to write any necessary vendor prefixes for us. You'll want to adjust the settings in mixture.json or Gruntfile.js for other browsers.</p>
+  <p>We also use Auto-prefixer to write any necessary vendor prefixes for us. You&rsquo;ll want to adjust the settings in mixture.json or Gruntfile.js for other browsers.</p>
 
   <p class="more"><a href="#header">To top</a></p>
 
