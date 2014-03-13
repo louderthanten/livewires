@@ -12,17 +12,25 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    availabletasks: {
-      tasks: {}
-    },
     sass: {
       dist: {
-        files: [{
-          expand: true,
-          src: ['source/*.scss'],
-          dest: 'httpdocs/css',
-          ext: '.css'
-        }]
+        options: {
+          style: 'expanded',
+          sourcemap: true,
+        },
+        files: {
+          'httpdocs/css/app.css': 'source/scss/app.scss',
+          'httpdocs/css/guide.css': 'source/scss/pages/guide.scss'
+        }
+      }
+    },
+    cssmin: {
+      minify: {
+        expand: true,
+        cwd: 'httpdocs/css/',
+        src: ['*.css', '!*.min.css'],
+        dest: 'httpdocs/css/',
+        ext: '.min.css'
       }
     },
     coffee: {
@@ -58,7 +66,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: [ '**/*.scss'],
-        tasks: ['sass','autoprefixer']
+        tasks: ['sass','autoprefixer','cssmin']
       },
       coffee: {
         files: [ '**/*.coffee' ],
@@ -153,10 +161,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-available-tasks');
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.

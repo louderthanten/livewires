@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'BLOKKNeue';
+  src: url('../fonts/BLOKKNeue-Regular.eot');
+  src: url('../fonts/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/BLOKKNeue-Regular.woff') format('woff'), url('../fonts/BLOKKNeue-Regular.svg#BLOKKNeue-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
 .wf-loading .logo, .wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5, .wf-loading h6, .wf-loading li, .wf-loading dt, .wf-loading dd, .wf-loading td, .wf-loading th, .wf-loading small {
   visibility: hidden !important; }
 

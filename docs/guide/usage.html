@@ -109,7 +109,7 @@
     <dt>Step 2</dt>
     <dd><a href="https://github.com/louderthanten/livewires/archive/master.zip">Download</a> or clone Live Wires from the <a href="https://github.com/louderthanten/livewires">GitHub repository</a> (or use the boilerplate included in <a href="http://mixture.io">Mixture</a>).</dd>
     <dt>Step 3</dt>
-    <dd>Point your preferred Sass &amp; Coffeescript preprocessors to the project. If you&rsquo;re a <a href="http://gruntjs.com/">Grunt</a> or <a href="http://mixture.io">Mixture user</a>, follow the directions below.</dd>
+    <dd>Point your preferred Sass &amp; CoffeeScript preprocessors to the project. If you&rsquo;re a <a href="http://gruntjs.com/">Grunt</a> or <a href="http://mixture.io">Mixture user</a>, follow the directions below.</dd>
     <dt>Step 4</dt>
     <dd>Refer to the included guide and examples to start building your templates.</dd>
   </dl>
@@ -121,16 +121,16 @@
 
       <ul>
         <li><a href="http://sass-lang.com/">Sass</a> compilation</li>
-        <li><a href="http://coffeescript.org">Coffeescript</a> compilation</li>
+        <li><a href="http://CoffeeScript.org">CoffeeScript</a> compilation</li>
         <li><a href="https://github.com/mishoo/UglifyJS">Uglify</a> (compresses JavaScript)</li>
         <li><a href="https://github.com/ai/autoprefixer">Autoprefixer</a> (automatically adds vendor prefixes to your <abbr>CSS</abbr>)</li>
-        <li><a href="http://livereload.com/">Live Reload</a> (auto-reloads your browser on each save. You&rsquo;ll also need an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">browser extension</a>)</li>
+        <li><a href="http://livereload.com/">LiveReload</a> (auto-reloads your browser on each save. You&rsquo;ll also need an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">browser extension</a>)</li>
       </ul>
 
       <p>To get started, you&rsquo;ll need to:</p>
       <dl>
         <dt>Step 1</dt>
-        <dd>Install <a href="http://nodejs.org/">Node</a>.</dd>
+        <dd>Install <a href="http://nodejs.org/">Node.js</a>.</dd>
         <dt>Step 2</dt>
         <dd>Adjust the settings in <code>package.json</code> &amp; <code>Gruntfile.js</code> for your project.</dd>
         <dt>Step 3</dt>
@@ -172,7 +172,7 @@
     <dd>This is where all compiled static assets live. Drop your images and font files here. This is also where all Sass, CoffeeScript, and JavaScript is combined, compiled, and minified for production use. <strong>Don&rsquo;t edit these <abbr>CSS</abbr> and <abbr>JS</abbr> files if you&rsquo;re using Sass and CoffeeScript. Your changes will be overwritten by the preprocessor</strong>.</dd>
 
     <dt><code>/source/</code></dt>
-    <dd>This contains all of the pre-compiled Sass, Coffeescript, and JavaScript plugin files. This is where you will write your <abbr>CSS</abbr> and JavaScript.</dd>
+    <dd>This contains all of the pre-compiled Sass, CoffeeScript, and JavaScript plugin files. This is where you will write your <abbr>CSS</abbr> and JavaScript.</dd>
 
     <dt><code>/docs/</code></dt>
     <dd>An isolated and untouched version of this guide and examples.</dd>
@@ -360,7 +360,7 @@
 <section class="row" id="js">
   <h2>Javascript</h2>
   <hr>
-  <p>We use <a href="http://coffeescript.org/">CoffeScript</a> to write our scripts. Its a powerful and easy-to-learn JavaScript pre-processor to help make scripting more efficient and less error-prone.</p>
+  <p>We use <a href="http://CoffeeScript.org/">CoffeScript</a> to write our scripts. Its a powerful and easy-to-learn JavaScript pre-processor to help make scripting more efficient and less error-prone.</p>
 
   <p>If you prefer vanilla JavaScript, you can remove the <code>/source/coffee</code> folder and simply edit the compiled .js files in <code>/httpdocs/js/</code>.</p>
 
@@ -387,7 +387,7 @@
 
   <ul>
     <li><a href="https://code.google.com/p/html5shiv/">html5shiv</a></li>
-    <li><a href="http://responsejs.com/">Respond.js</a></li>
+    <li><a href="https://github.com/scottjehl/Respond">Respond.js</a></li>
     <li><a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM-unit-polyfill</a></li>
     <li><a href="http://selectivizr.com/">Selectivizr</a></li>
   </ul>
