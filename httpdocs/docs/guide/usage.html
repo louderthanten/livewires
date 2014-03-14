@@ -103,59 +103,96 @@
 <section class="row" id="setup">
   <h2>Setup</h2>
   <hr>
+  <p>Because Live Wires is built using Sass and CoffeeScript, you&rsquo;re going to need a preprocesser application to render your code into CSS and JavaScript.</p>
+
+  <p><a href="http://mixture.io">Mixture</a> is above and beyond the best tool we&rsquo;ve used for this. It&rsquo;s polished, well documented, and the simplest to set up. The only other software you need is a text editor and browser.</p>
+
+  <p>There are a number of pretty good alternatives like <a href="https://incident57.com/codekit/">CodeKit</a> or <a href="http://alphapixels.com/prepros/">Prepros</a> that will also work just fine.</p>
+
+  <hr>
+
+  <h3>Easy</h3>
+
+  <p>This method requires little more than installing <a href="http://mixture.io">Mixture</a>:</p>
+
+  <dl>
+    <dt>Step 1</dt>
+    <dd>Install <a href="http://mixture.io#download">Mixture</a>.</dd>
+    <dt>Step 2</dt>
+    <dd>Choose Live Wires from the included boilerplates list.</dd>
+    <dt>Step 3</dt>
+    <dd>Save the project and start coding. That&rsquo;s it.</dd>
+    <dd><figure><img src="../httpdocs/img/livewires/mixture.png" alt="Mixture screenshot displaying Live Wires in the boilerplate list." /></figure></dd>
+  </dl>
+
+  <p>Once you&rsquo;re up and running, there are a few settings you may want to customize in in the <code>mixture.json</code> and <code>/models/_global.json</code> files. Read more about that on the <a href="http://docs.mixture.io">Mixture site</a>.</p>
+
+  <hr>
+
+  <h3>Standard</h3>
+
+  <p>If you&rsquo;re using a different preprocessor, you have a few more steps, but they&rsquo;re pretty easy too:</p>
+
   <dl>
     <dt>Step 1</dt>
     <dd>Create a folder for your project.</dd>
     <dt>Step 2</dt>
-    <dd><a href="https://github.com/louderthanten/livewires/archive/master.zip">Download</a> or clone Live Wires from the <a href="https://github.com/louderthanten/livewires">GitHub repository</a> (or use the boilerplate included in <a href="http://mixture.io">Mixture</a>).</dd>
+    <dd><a href="https://github.com/louderthanten/livewires/archive/master.zip">Download</a> or clone Live Wires from the <a href="https://github.com/louderthanten/livewires">GitHub repository</a> and save the contents in your project folder.</dd>
     <dt>Step 3</dt>
-    <dd>Point your preferred Sass &amp; CoffeeScript preprocessors to the project. If you&rsquo;re a <a href="http://gruntjs.com/">Grunt</a> or <a href="http://mixture.io">Mixture user</a>, follow the directions below.</dd>
+    <dd>Point your preferred Sass &amp; CoffeeScript preprocessor app to the project folder.</dd>
     <dt>Step 4</dt>
-    <dd>Refer to the included guide and examples to start building your templates.</dd>
+    <dd>Configure the preprocessor to compile <code>/source/scss/</code> to <code>/httpdocs/css/</code> and <code>/source/coffee/</code> to <code>/httpdocs/js/</code>.</dd>
+    <dt>Step 5</dt>
+    <dd>Run the preprocesser and start coding.</dd>
   </dl>
 
-  <div class="split-content callout callout--clear">
+  <aside class="callout callout--clear">
     <div class="content subtle">
-      <h4>Grunt setup</h4>
-      <p>If you are using the standard version of Live Wires, we&rsquo;ve included a Gruntfile configured with the following tasks:</p>
+      <p><strong>Note:</strong> You may also want to setup a local <a href="">MAMP</a> server for this types of install so you can use PHP or other server-side languages to build your templates. In these cases, you&rsquo;ll want to point your server to the <code>/httpdocs/</code> directory.</p>
+    </div>
+  </aside>
 
-      <ul>
-        <li><a href="http://sass-lang.com/">Sass</a> compilation</li>
-        <li><a href="http://CoffeeScript.org">CoffeeScript</a> compilation</li>
-        <li><a href="https://github.com/mishoo/UglifyJS">Uglify</a> (compresses JavaScript)</li>
-        <li><a href="https://github.com/ai/autoprefixer">Autoprefixer</a> (automatically adds vendor prefixes to your <abbr>CSS</abbr>)</li>
-        <li><a href="http://livereload.com/">LiveReload</a> (auto-reloads your browser on each save. You&rsquo;ll also need an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">browser extension</a>)</li>
-      </ul>
+
+
+  <hr />
+
+  <h3>Advanced</h3>
+
+  <p>For power users that prefer the command line, we&rsquo;ve setup a basic Gruntfile in the root directory to get you up and running. It includes the following tasks:</p>
+
+  <ul>
+    <li><a href="http://sass-lang.com/">Sass</a> compilation</li>
+    <li><a href="http://CoffeeScript.org">CoffeeScript</a> compilation</li>
+    <li><a href="https://github.com/mishoo/UglifyJS">Uglify</a> (compresses JavaScript)</li>
+    <li><a href="https://github.com/ai/autoprefixer">Autoprefixer</a> (automatically adds vendor prefixes to your <abbr>CSS</abbr>)</li>
+    <li><a href="http://livereload.com/">LiveReload</a> (auto-reloads your browser on each save. You&rsquo;ll also need an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">browser extension</a>)</li>
+  </ul>
 
       <p>To get started, you&rsquo;ll need to:</p>
       <dl>
         <dt>Step 1</dt>
         <dd>Install <a href="http://nodejs.org/">Node.js</a>.</dd>
         <dt>Step 2</dt>
-        <dd>Adjust the settings in <code>package.json</code> &amp; <code>Gruntfile.js</code> for your project.</dd>
+        <dd>Install <a href="http://gruntjs.com">Grunt</a> by typing <code>npm install -g grunt-cli</code> in Terminal.</dd>
         <dt>Step 3</dt>
-        <dd>Navigate to your project folder in Terminal and run <code>npm install</code>.</dd>
+        <dd>Create a folder for your project.</dd>
         <dt>Step 4</dt>
-        <dd>Start the project by running <code>grunt watch</code> in the Terminal.</dd>
+        <dd><a href="https://github.com/louderthanten/livewires/archive/master.zip">Download</a> or clone Live Wires from the <a href="https://github.com/louderthanten/livewires">GitHub repository</a> and save the contents in your project folder.</dd>
+        <dt>Step 5</dt>
+        <dd>Navigate to your project folder in Terminal and run <code>npm install</code>.</dd>
+        <dt>Step 6</dt>
+        <dd>Start the prepocessors by running <code>grunt watch</code> in the Terminal.</dd>
       </dl>
-      <p>You&rsquo;ll need to run <code>grunt watch</code> each time you work on the project.</p>
-      <p>You can learn more about Grunt and find more plugins and documentation on the <a href="http://gruntjs.com">Grunt site</a>.</p>
-    </div>
-  </div>
 
-  <div class="split-content callout callout--clear">
+
+
+  <aside class="callout callout--clear">
     <div class="content subtle">
-      <h4>Mixture setup</h4>
-      <p><a href="http://mixture.io">Mixture</a> is our preferred front-end development tool, and we recommend using it for your own projects.</p>
-      <ul>
-      	<li>It&rsquo;s simple to set up and includes a full set of tools that rival anything Grunt can do for our design-oriented purposes.</li>
-      	<li>It allows us to dive in and start designing without having to set up servers, dance around the command line, and configure complicated scripts.</li>
-      	</ul>
-      <p>There&rsquo;s nothing you <em>need</em> to do to get set up beyond choosing the Live Wires boilerplate in Mixture and pointing it at your project folder, but there are a few settings you may want to customize in in the <code>mixture.json</code> and <code>/models/_global.json</code> files. Read more about that on the <a href="http://mixture.io">Mixture site</a>.
-</p>
+      <p><strong>Note:</strong> You&rsquo;ll need to run <code>grunt watch</code> each time you work on the project.</p>
+      <p>You can learn more about configuring Grunt and find more plugins and documentation on the <a href="http://gruntjs.com">Grunt site</a>.</p>
     </div>
+  </aside>
 
-  </div>
   <p class="more"><a href="#header">To top</a></p>
 </section>
 
