@@ -163,6 +163,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
@@ -171,6 +172,8 @@ module.exports = function(grunt) {
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test', 'autoprefixer']);
+
+  grunt.registerTask('serve', ['connect', 'watch']);
 
   // Watch tasks
   grunt.loadNpmTasks('grunt-contrib-watch');
