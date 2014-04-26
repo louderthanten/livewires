@@ -43,6 +43,17 @@
   }
 }
 
+// Adjust antialiasing for better light-text on dark-background rendering
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
 
 // Generic REM Mixin if you need px fallbacks
 @mixin rem($property, $px-values) {

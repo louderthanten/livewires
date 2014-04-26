@@ -8,8 +8,9 @@ body {
 
 // Reverse the colours
 .reverse {
-    background:$text;
-    color:$background;
+  @include font-smoothing(on);
+  background:$text;
+  color:$background;
 }
 
 // Subtly highlighted section
