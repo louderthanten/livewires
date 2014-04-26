@@ -173,7 +173,7 @@ module.exports = function(grunt) {
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test', 'autoprefixer']);
 
-  grunt.registerTask('serve', ['connect', 'watch']);
+  grunt.registerTask('server', ['connect', 'watch']);
 
   // Watch tasks
   grunt.loadNpmTasks('grunt-contrib-watch');
