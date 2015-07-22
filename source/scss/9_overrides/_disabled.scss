@@ -1,0 +1,13 @@
+// Disabled button and link styles
+.disabled,
+a.button--disabled,
+a.button--disabled:hover,
+a.button--disabled:active,
+a.button--disabled:focus,
+.button--disabled,
+.button--disabled:hover,
+.button--disabled:active,
+.button--disabled:focus {
+  cursor: default;
+  pointer-events: none;
+}

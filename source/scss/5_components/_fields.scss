@@ -1,0 +1,66 @@
+// FIELDS
+//
+// Let's wrap our fields in a field class for easier manipulation.
+//
+// Example:
+// <div class="field">
+//  <label for="field-name">Field name <sup>*<sup></label>
+//  <input type="text" name="field-name" id="field-name" class="text-input" required />
+// </div>
+
+.field {
+  @extend %group;
+  position: relative;
+  padding-bottom: rem($line);
+}
+
+// Treat checkbox fields slightly different
+.field--check {
+  label {
+    @extend %group;
+  }
+}
+
+// Labels in check-lists
+.check-label,
+.field--check label,
+.field--check .label{
+  display:inline-block;
+}
+.check-list {
+  list-style: none;
+
+  label {
+    cursor: pointer;
+  }
+}
+
+// Modified fields
+.text-input--small {
+
+}
+.text-input--large {
+
+}
+
+
+// Not all fields need to be full width. Here are some field building blocks
+// We're kicking these in at a wider screen, but you can make some for mobile.
+// If you dare.
+@media only screen and (min-width: $screenSmall) {
+  .field--half,
+  .field--third,
+  .field--two-third {
+    float:left;
+    padding:0;
+  }
+  .field--half {
+    width:$c4*2;
+  }
+  .field--third {
+    width:$c3;
+  }
+  .field--two-third {
+    width:$c3*2;
+  }
+}

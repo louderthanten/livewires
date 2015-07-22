@@ -1,0 +1,15 @@
+// FORMS
+form {
+
+}
+
+// Let's remove some odd decisions from Normalize on fieldsets.
+fieldset {
+  @extend %group;
+  border:none;
+  display: block;
+}
+
+legend {
+  @extend %group;
+}

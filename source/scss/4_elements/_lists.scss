@@ -1,0 +1,19 @@
+// LISTS
+
+ul,
+ol,
+dl {
+  margin-bottom:rem($line/2);
+
+  ul,
+  ol {
+    padding-left: rem($line);
+  }
+}
+
+dt {
+  font-weight: $bold;
+}
+dd {
+  margin-bottom:rem($line/2);
+}

@@ -1,0 +1,45 @@
+.lead {
+  @include font-size(18, $line); // using the $line variable makes it easy to stick to a baseline grid.
+}
+
+// Fancy ampersands
+// Uncomment the script in /source/coffee/components/_typography.coffee to automate markup.
+// EG) <p>You <abbr class="amp">&amp;</abbr> I.</p>
+
+.amp {
+  font-style: italic;
+}
+
+.price {
+  &:first-letter {
+    height: 0;
+    line-height: 2;
+    vertical-align: top;
+    position: relative;
+    font-size: 0.6667em;
+  }
+}
+
+
+.micro {
+  @include font-size(13, $line);
+}
+.milli{
+  @include font-size(12, $line);
+}
+
+.content {
+  p {
+      hyphens: auto;
+  }
+  // Use indented paragraphs if variable in ~/settings/_variables.scss is set to true
+  @if $indented-paragraphs == true {
+    p:not(.lead) {
+      margin-bottom: 0;
+
+      &:not(.lead) + p {
+          text-indent: 1em;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// Default code block styling
+code,
+pre,
+kbd {
+  @extend .small;
+  font-family: $mono;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  tab-size: 4;
+  hyphens: none;
+}
+
+// Code blocks
+pre {
+  padding:rem($line);
+  margin-bottom: rem($line);
+  overflow: auto;
+  > code {
+    margin:0;
+  }
+}
+
+//Inline code
+:not(pre) > code,
+kbd {
+  padding:rem(3px 4px 1px 4px);
+  font-size: 1em;
+}

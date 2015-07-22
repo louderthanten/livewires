@@ -1,0 +1,47 @@
+// Secondary includes
+// Try and load as many styles as possible here.
+// We'll load these immediately after the initial page load.
+//
+// Include the components you need. Hide the ones you don't.
+
+// Base elements. Only native elements.
+@import "../4_elements/forms";
+@import "../4_elements/labels";
+@import "../4_elements/fields";
+@import "../4_elements/buttons";
+@import "../4_elements/tables";
+@import "../4_elements/rules";
+@import "../4_elements/time";
+@import "../4_elements/address";
+@import "../4_elements/code";
+
+// Components. Little pieces
+@import "../5_components/quotes";
+@import "../5_components/rules";
+@import "../5_components/more-links";
+@import "../5_components/fields";
+@import "../5_components/forms-inline";
+@import "../5_components/option-buttons";
+@import "../5_components/switches";
+@import "../5_components/labels";
+@import "../5_components/code";
+@import "../5_components/maps";
+@import "../5_components/pagination";
+@import "../5_components/tables";
+@import "../5_components/address";
+@import "../5_components/vertical-nav";
+@import "../5_components/videos";
+
+
+// Modules. Big chunks of elements and components.
+@import "../6_modules/animation";
+@import "../6_modules/tabs";
+@import "../6_modules/footer";
+
+// Themes. Remove if you don't need separate themeing styles
+@import "../7_theme/code";
+@import "../7_theme/forms";
+@import "../7_theme/special-fields";
+@import "../7_theme/tables";
+
+// Pages. Add page-specific styles here

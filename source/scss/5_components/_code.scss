@@ -1,0 +1,46 @@
+// CODE
+//
+// We use Prism.js to add syntax highlighting and line numbers.
+// Visit http://prismjs.com/ to configure the languages and plugins you require.
+// Change the syntax colors in theme/code.scss
+
+.namespace {
+  opacity: .7;
+}
+.token.important {
+  font-weight: $bold;
+}
+.token.entity {
+  cursor: help;
+}
+
+// Add line numbers to <pre> blocks with a line-numbers class
+.line-numbers {
+  position: relative;
+  counter-reset: linenumber;
+}
+.line-numbers > code {
+  position: relative;
+}
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: rem($line*-1);
+  width: rem($line*2); /* works for line-numbers below 1000 lines */
+  border-right: $hairline;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  display: block;
+  padding-right: rem($line/2);
+  text-align: right;
+}

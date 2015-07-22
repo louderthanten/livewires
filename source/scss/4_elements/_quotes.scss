@@ -1,0 +1,51 @@
+// QUOTES
+
+//Inline Quotes
+q{
+  quotes:"‘" "’" "“" "”";
+
+  &:before{
+    content:"‘";
+  }
+  &:after{
+    content:"’";
+  }
+
+  q:before{
+    content:"“";
+  }
+  q:after{
+    content:"”";
+  }
+}
+
+//Blockquotes
+blockquote {
+  quotes:"“" "”";
+  text-indent: -0.5em;
+
+  p {
+
+  }
+
+  p:before{
+    content:"“";
+  }
+  p:after{
+    content:"";
+  }
+  p:last-of-type:after{
+    content:"”";
+  }
+
+  q:before{
+    content:"‘";
+  }
+  q:after{
+    content:"’";
+  }
+
+}
+cite {
+
+}

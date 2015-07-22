@@ -1,0 +1,52 @@
+.text-input,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=search],
+input[type=number],
+input[type=date],
+input[type=time],
+input[type=file],
+textarea {
+  -webkit-appearance: none;
+  display:block;
+  width:100%;
+  outline:none;
+  border: $rule;
+  border-radius: $radius;
+  font-family:$sans;
+  padding:($line/2);
+
+  &:active,
+  &:focus {
+
+  }
+
+  &.error {
+
+  }
+}
+
+textarea {
+  min-height: ($line*6);
+}
+
+
+input[type=checkbox],
+input[type=radio] {
+  margin-right: 0.5em;
+}
+
+select {
+
+}
+
+
+.search-input, {
+  overflow:hidden;
+
+  &:focus,
+  &:active {
+
+  }
+}

@@ -1,0 +1,49 @@
+// remove dumb margins from normalize
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, code,
+dl, dd, ol, ul,
+form, fieldset, legend,
+figure,
+table, th, td, caption,
+hr {
+  margin:  0;
+  padding: 0;
+}
+
+// Give a help cursor to elements that give extra info on `:hover`.
+
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+// Remove underlines from potentially troublesome elements.
+
+u,
+ins {
+  text-decoration: none;
+}
+
+// All the things box-size: border-box.
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+//some basic typography
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  text-rendering: optimizeLegibility;
+}

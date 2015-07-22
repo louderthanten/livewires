@@ -1,0 +1,19 @@
+// Inline forms are good for embedding fields in text. Hat tip to Inuit. http://inuitcss.com/
+//
+// <div class="form--inline">
+//  <p>Yo Jeeves, the <label for="name">name</label> is
+//      <input type="text" class="text-input" id="name" />. My
+//      <label for="drink">drink of choice</label> is
+//      <select id="drink">
+//              <option>Bourbon</option>
+//          <option>Vodka</option>
+//          <option>Gin</option>
+//      </select>.</p>
+// </div>
+
+.form--inline {
+  label {
+    display:inline-block;
+    font:inherit;
+  }
+}

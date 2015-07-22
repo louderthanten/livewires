@@ -1,0 +1,31 @@
+// IMAGES
+//
+// Let's make our images responsive. We wrap our images, maps, and videos in <figure> tags.
+// It makes semantic sense, and gives us a flexible container.
+//
+// Example:
+// <figure>
+//      <img src="cool-thing.jpg" alt="Cool thing" />
+//      <figcaption>Cool thing caption.
+//          <footer class="source">Photograph by <a href="#">Rad Person</a> at <cite><a href="#">NY Times</a></cite></footer>
+//      </figcaption>
+// </figure>
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+picture,
+figure {
+  position:relative;
+
+  > svg,
+  > img,
+  > iframe {
+    display: block;
+  }
+}
+figcaption {
+
+
+}

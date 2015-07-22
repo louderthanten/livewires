@@ -1,0 +1,70 @@
+// BASE
+//
+// This page is for setting up our layout structure for the project.
+//
+// If you stick to rem units, you can resize the entire layout
+// proportionally by manipulating the font-size on the html element.
+// Hint: use the rem() function to convert px to rem units.
+//
+// .row classes separate page sections and establish the grid within those
+// sections. Add color classes from theme/_layout.scss to modify the background
+
+
+// Example:
+// <section class="row">
+//    <section class="primary-content">
+//        … Main page stuff …
+//    </section>
+//    <aside class="secondary-content">
+//        … Secondary content (sidebar perhaps?) …
+//     </aside>
+// </section>
+
+.row {
+  @extend %group; // Call in a clearfix style
+  position:relative;
+  padding: rem($line) $margin; //Creates margins around row content
+}
+
+// remove vertical padding on rows if row--tight class is present
+.row--tight {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+// Edge to edge containers on mobile
+.row--mobile-full {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media only screen and (min-width: $screenSmall) {
+  .row,
+  .row--mobile-full { // Bring edge-to-edge mobile views inline with the rest of the layout
+    padding: rem($line*2) $margin; // Increase vertical padding for more space
+
+    // Add gutters to a row's immediate children unless they have a .collapse class.
+    > *:not(.collapse) {
+      @include gutter;
+    }
+  }
+  // remove vertical padding on rows again
+  .row--tight {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: $screenMedium) {
+  .row {
+    padding-left:$margin*2;
+    padding-right:$margin*2;
+  }
+}
+
+@media only screen and (min-width: $screenLarge) {
+
+}
+@media only screen and (min-width: $screenXlarge) {
+
+}

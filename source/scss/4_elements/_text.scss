@@ -1,0 +1,44 @@
+// PARAGRAPHs
+//
+// Modular scales are your friend, my friend:
+// http://modularscale.com  |  https://vimeo.com/17079380
+
+p {
+  margin-bottom:rem($line/2);
+}
+
+b,
+strong {
+  font-weight: $bold;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+abbr {
+  cursor: help;
+}
+
+sup {
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  position: relative;
+  bottom: .5ex;
+}
+
+sub {
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  position: relative;
+  bottom: -.5ex;
+}
+
+small,
+.small {
+  @include font-size(14, 24);
+}
+

@@ -1,0 +1,107 @@
+//MIXINS
+
+// Rem calculator for font sizes and line heights
+@mixin font-size($px_value: $base, $baseline: $line) {
+  $baseline_rem: 16;
+  font-size: ($px_value / $baseline_rem) * 1rem;
+  line-height: ($baseline / $px_value);
+}
+
+// Adjust Placeholder colors
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder { /* Safari, Chrome */
+    color: $color;
+  }
+  &:-moz-placeholder { /* Firefox 4–18 */
+    color: $color;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+  }
+}
+
+//Style Placeholders
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+// Adjust selected text colors
+@mixin selected($txt, $bg) {
+  ::-moz-selection { background: $bg; color: $txt;}
+  ::selection { background: $bg; color: $txt;}
+}
+
+// Supply @2x background images to browsers that support background-size
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+  (-o-min-device-pixel-ratio: 2.6/2),
+  (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+// Adjust antialiasing for better light-text on dark-background rendering
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+// CSS Triangles
+@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+  @include rem(border-width,$triangleSize);
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+
+  @if ($triangleDirection == top) {
+    border-color: $triangleColor transparent transparent transparent;
+  }
+  @if ($triangleDirection == bottom) {
+    border-color: transparent transparent $triangleColor transparent;
+  }
+  @if ($triangleDirection == left) {
+    border-color: transparent transparent transparent $triangleColor;
+  }
+  @if ($triangleDirection == right) {
+    border-color: transparent $triangleColor transparent transparent;
+  }
+  // .example { @include css-triangle(5px, #fff, bottom); }
+}
+
+
+// Apply gutters to layout elements
+@mixin gutter {
+  padding-left:rem($line/2);
+  padding-right:rem($line/2);
+}
+
+
+// From Inuit CSS http://inuitcss.com
+// Force overly long spans of text to truncate, e.g.:
+// `@include truncate(100%);`
+//
+// Where `$truncation-boundary` is a united measurement.
+@mixin truncate($truncation-boundary){
+  max-width:$truncation-boundary;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}

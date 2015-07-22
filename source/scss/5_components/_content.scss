@@ -1,0 +1,15 @@
+.content {
+  p {
+      hyphens: auto;
+  }
+  // Use indented paragraphs if variable in ~/settings/_variables.scss is set to true
+  @if $indented-paragraphs == true {
+    p:not(.lead) {
+      margin-bottom: 0;
+
+      &:not(.lead) + p {
+          text-indent: 1em;
+      }
+    }
+  }
+}

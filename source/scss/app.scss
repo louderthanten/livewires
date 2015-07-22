@@ -1,9 +1,5 @@
-// Base theme colors
-@import "settings/colors";
+// Includes foundational settings
+@import "1_settings/includes--base";
 
-// Includes
-@import "settings/includes";
-
-// Livewires styles. Blanks out text in .content elements. Remove to display
-// text normally.
-@import "settings/livewires";
+// Include site styles
+@import "1_settings/includes--critical";

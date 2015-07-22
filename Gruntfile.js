@@ -171,7 +171,7 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['clean', 'livewires', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test', 'autoprefixer']);
+  grunt.registerTask('default', ['jshint', 'test', 'autoprefixer', 'connect', 'watch']);
 
   grunt.registerTask('server', ['connect', 'watch']);
 

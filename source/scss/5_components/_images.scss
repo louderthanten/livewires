@@ -1,0 +1,25 @@
+@media only screen and (min-width: $screenSmall) {
+  // Image position helpers. Let's kick 'em in at larger screen widths
+  .img--right{
+    margin-bottom: rem($line/2);
+    margin-left: rem($line/2);
+    float: right;
+  }
+  .img--left{
+    margin-bottom: rem($line/2);
+    margin-right: rem($line/2);
+    float: left;
+  }
+  .img--center{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: rem($line/2);
+  }
+
+  // Let's move those caption sources to the right at wider sizes
+    .source {
+      float:right;
+      text-align: right;
+    }
+  }

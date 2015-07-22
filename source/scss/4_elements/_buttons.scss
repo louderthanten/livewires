@@ -1,0 +1,40 @@
+//BUTTONS
+
+// A collection of button styles for buttons elements, button inputs, and button links.
+//
+// Start with a .button class and add modifiers classes to er, modify them.
+//
+// Example:
+// <a href="#" class="button button--large">Large Button text</a>
+
+
+// Default button styles
+button,
+input[type="submit"],
+.button,
+a.button {
+  position:relative;
+  display:inline-block;
+  padding:rem($line/4 $line/2);
+  border:none;
+  border-radius: $radius;
+  outline:none;
+  text-align:center;
+  text-decoration: none;
+  cursor:pointer;
+  font-family: $sans;
+
+  &:link,
+  &:visited {
+
+  }
+
+  &:hover {
+
+  }
+
+  &:active,
+  &:focus {
+
+  }
+}

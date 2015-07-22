@@ -1,0 +1,7 @@
+// Add some error styling.
+// Keeping the labels absolutely positioned prevents them from altering the layout when visible.
+.label--error {
+  position:absolute;
+  left:0;
+  bottom:0;
+}
