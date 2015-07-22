@@ -103,62 +103,8 @@
 <section class="row" id="setup">
   <h2>Setup</h2>
   <hr>
-  <p>Because Live Wires is built using Sass and CoffeeScript, you&rsquo;re going to need a preprocesser application to render your code into CSS and JavaScript.</p>
 
-  <p><a href="http://mixture.io">Mixture</a> is above and beyond the best tool we&rsquo;ve used for this. It&rsquo;s polished, well documented, and the simplest to set up. The only other software you need is a text editor and browser.</p>
-
-  <p>There are a number of pretty good alternatives like <a href="https://incident57.com/codekit/">CodeKit</a> or <a href="http://alphapixels.com/prepros/">Prepros</a> that will also work just fine.</p>
-
-  <hr>
-
-  <h3>Easy</h3>
-
-  <p>This method requires little more than installing <a href="http://mixture.io">Mixture</a>:</p>
-
-  <dl>
-    <dt>Step 1</dt>
-    <dd>Install <a href="http://mixture.io#download">Mixture</a>.</dd>
-    <dt>Step 2</dt>
-    <dd>Choose Live Wires from the included boilerplates list.</dd>
-    <dt>Step 3</dt>
-    <dd>Save the project and start coding. That&rsquo;s it.</dd>
-    <dd><figure><img src="../img/livewires/mixture.png" alt="Mixture screenshot displaying Live Wires in the boilerplate list." /></figure></dd>
-  </dl>
-
-  <p>Once you&rsquo;re up and running, there are a few settings you may want to customize in in the <code>mixture.json</code> and <code>/models/_global.json</code> files. Read more about that on the <a href="http://docs.mixture.io">Mixture site</a>.</p>
-
-  <hr>
-
-  <h3>Standard</h3>
-
-  <p>If you&rsquo;re using a different preprocessor, you have a few more steps, but they&rsquo;re pretty easy too:</p>
-
-  <dl>
-    <dt>Step 1</dt>
-    <dd>Create a folder for your project.</dd>
-    <dt>Step 2</dt>
-    <dd><a href="https://github.com/louderthanten/livewires/archive/master.zip">Download</a> or clone Live Wires from the <a href="https://github.com/louderthanten/livewires">GitHub repository</a> and save the contents in your project folder.</dd>
-    <dt>Step 3</dt>
-    <dd>Point your preferred Sass &amp; CoffeeScript preprocessor app to the project folder.</dd>
-    <dt>Step 4</dt>
-    <dd>Configure the preprocessor to compile <code>/source/scss/</code> to <code>/httpdocs/css/</code> and <code>/source/coffee/</code> to <code>/httpdocs/js/</code>.</dd>
-    <dt>Step 5</dt>
-    <dd>Run the preprocesser and start coding.</dd>
-  </dl>
-
-  <aside class="callout callout--clear">
-    <div class="content subtle">
-      <p><strong>Note:</strong> You may also want to setup a local <a href="">MAMP</a> server for this types of install so you can use PHP or other server-side languages to build your templates. In these cases, you&rsquo;ll want to point your server to the <code>/httpdocs/</code> directory.</p>
-    </div>
-  </aside>
-
-
-
-  <hr />
-
-  <h3>Advanced</h3>
-
-  <p>For power users that prefer the command line, we&rsquo;ve setup a basic Gruntfile in the root directory to get you up and running. It includes the following tasks:</p>
+  <p>We&rsquo;ve setup a basic Gruntfile in the root directory to get you up and running. It includes the following tasks:</p>
 
   <ul>
     <li><a href="http://sass-lang.com/">Sass</a> compilation</li>
@@ -200,7 +146,7 @@
   <h2>Project structure</h2>
   <hr>
 
-  <p>One of the core philosphies behind Live Wires is stay out of the way as much as we can. We don&rsquo;t want to impose any code standards or force you into a little box. Saying that, here are some guidelines that that will help you get started with Live Wires more easily.</p>
+  <p>One of the core philosophies behind Live Wires is stay out of the way as much as we can. We don&rsquo;t want to impose any code standards or force you into a little box. Saying that, here are some guidelines that that will help you get started with Live Wires more easily.</p>
 
   <p>Here&rsquo;s how a Live Wires project is organized:</p>
 
@@ -214,26 +160,10 @@
     <dt><code>/httpdocs/docs/</code></dt>
     <dd>An isolated and untouched version of this guide and examples.</dd>
 
-    <dt><code>/httpdocs/guide/</code> <small>(<code>/templates/guide/</code> in Mixture)</small></dt>
+    <dt><code>/httpdocs/guide/</code></dt>
     <dd>The project style guide. This begins as a Live Wires reference, but becomes your project&rsquo;s style guide as you begin writing <abbr>CSS</abbr>. Hint: Use the guide as a tool to design your elements and components.</dd>
 
   </dl>
-
-  <aside class="callout callout--clear">
-    <div class="content subtle">
-      <h3>Mixture specific</h3>
-      <dl>
-        <dt><code>/templates/</code></dt>
-        <dd>This is where your <a href="http://docs.mixture.io/templates">site templates</a> reside. Templates for this guide can be found in the <code>guide</code> sub-folder.</dd>
-
-        <dt><code>/models/</code></dt>
-        <dd>Contains Mixture&rsquo;s handy <a href="http://docs.mixture.io/models">model files</a>. We&rsquo;ve added one with some global variables to get you started.</dd>
-
-        <dt><code>mixture.json</code></dt>
-        <dd>Your <a href="http://docs.mixture.io/mixture">Mixture settings</a>.</dd>
-      </dl>
-    </div>
-  </aside>
 
   <p class="more"><a href="#header">To top</a></p>
 </section>
@@ -267,13 +197,6 @@
     &lt;/div&gt;</code></pre>
   </div>
 
-  <aside class="callout callout--clear">
-    <div class="subtle content">
-      <h3>Mixture specific</h3>
-      <p>The Mixture version of Live Wires takes advantage of the <a href="http://docs.mixture.io/templates">Liquid templating</a> language for better template construction.</p>
-    </div>
-  </aside>
-
   <p class="more"><a href="#header">To top</a></p>
 </section>
 
@@ -289,22 +212,24 @@
   <h4>/source/scss/</h4>
   <p>This file contains all of the styles in the project. The guide and your own templates both share the same <abbr>CSS</abbr>. What this means is that whenever you make changes to your styles, they will be reflected on your style guide and on your wireframe. This, here, guide becomes your own as you shape your templates. We normally use the guide to style each element, component, and module in our projects.</p>
 
+  <p>We&rsquo;ve structured our SCSS folder based on Harry Robert&rsquo;s <a href="http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731">ITCSS methodology</a>.</p>
+
   <dl>
     <dt><code>app.scss</code></dt>
     <dd>This generates your projects main <abbr>CSS</abbr> file into <code>/httpdocs/css/app.css</code>. It has three includes:</dd>
 
-    <dt><code>@import "settings/_color";</code></dt>
-    <dd>Pulls in your colour variables for easy experimentation between colour schemes.</dd>
+    <dt><code>_includes--base.scss</code></dt>
+    <dd>Imports the base scss variables and utilites that every SCSS file requires.</dd>
 
-    <dt><code>@import "settings/_includes";</code></dt>
+    <dt><code>@import "1_settings/_includes";</code></dt>
     <dd>Pulls in all the elements, components, and modules you want to include in your project.</dd>
 
-    <dt><code>@import "settings/_livewires";</code></dt>
+    <dt><code>@import "1_settings/_livewires";</code></dt>
     <dd>Pulls in Live Wires styles which blank out the text inside of any element with a <code>.content</code> class in your <abbr>HTML</abbr>. Remove it to get rid of the blank text feature.</dd>
   </dl>
 
-  <h4>/source/scss/settings/</h4>
-  <p>Contains the project variables, mixins, and other things that make Sass so powerful. Here&rsquo;s a taste of what you can do:</p>
+  <h4>/source/scss/1_settings/</h4>
+  <p>Contains the project variables, font includes and a few other things that set the stage.</p>
 
   <dl>
     <dt><code>_variables.scss</code></dt>
@@ -312,6 +237,9 @@
 
     <dt><code>_colors.scss</code></dt>
     <dd>We keep our colour variables separate so we can easily experiement with multiple colour schemes.</dd>
+
+    <dt><code>_includes--base.scss</code></dt>
+    <dd>Imports the base scss variables and utilites that every SCSS file requires.</dd>
 
     <dt><code>_includes.scss</code></dt>
     <dd>Use this to include or exclude the sections you want in your project. We made everything modular, so you can use as much or as little as you like.</dd>
@@ -322,30 +250,35 @@
     <dt><code>_font-faces.scss</code></dt>
     <dd>Add any font or icon @font-face includes to this file.</dd>
 
-    <dt><code>_helpers.scss</code></dt>
-    <dd>Some non-semantic classes and %placeholders to help debug and position your elements. <a href="#helpers">See what&rsquo;s included below</a>.</dd>
+  </dl>
 
+  <h4>/source/scss/2_tools/</h4>
+  <p>Contains our handy logic-based SCSS tools like Mixins and Functions.</p>
+  <dl>
     <dt><code>_mixins.scss</code> &amp; <code>_functions.scss</code></dt>
     <dd>These include powerful enhacements to help save time. Have a browse to see what&rsquo;s available and how they work.</dd>
   </dl>
 
-  <h4>/sources/scss/elements/</h4>
-  <p>Stand-alone elements and small peices that make up components. <em>e.g. paragraphs, headings, form fields</em></p>
+  <h4>/source/scss/3_generic/</h4>
+  <p>Contains third party styles like normalize as well as any plugin css that needs to be overridden.</p>
 
-  <h4>/sources/scss/components/</h4>
-  <p>The reusable pieces that consist of groups of elements. <em>e.g. callouts, pagination, code blocks</em></p>
+  <h4>/sources/scss/4_elements/</h4>
+  <p>Naked default HTML elements are styled here. Avoid styling with clases. <em>e.g. paragraphs, headings, form fields</em></p>
 
-  <h4>/sources/scss/modules/</h4>
+  <h4>/sources/scss/5_components/</h4>
+  <p>The reusable pieces that consist of groups of elements. Start styling with classes here. <em>e.g. callouts, pagination, code blocks</em></p>
+
+  <h4>/sources/scss/6_modules/</h4>
   <p>Major chunks that make up the main sections of a template. They often contain components and global elements, and are often used once per page. <em>e.g. headers, footers, layout modules</em></p>
 
-  <h4>/sources/scss/pages/</h4>
+  <h4>/sources/scss/7_theme/</h4>
+  <p>This contains all colour-related styles. We&rsquo;ve kept all the color assignments separate from structural styles to make theming easier, faster, and less prone to errors. Optional.</p>
+
+  <h4>/sources/scss/8_pages/</h4>
   <p>Page-specific styles. We recommend keeping larger files in this section out of the main stylesheet and only calling them on their respective pages.</p>
 
-  <h4>/sources/scss/theme/</h4>
-  <p>This contains all colour-related styles. We&rsquo;ve kept all the color assignments separate from structural styles to make theming easier, faster, and less prone to errors.</p>
-
-  <h4>/sources/scss/vendor/</h4>
-  <p>Drop any third-party styles in here. We don&rsquo;t touch them, so they can be updated in the future.</p>
+  <h4>/sources/scss/9_overrides/</h4>
+  <p>Anything that needs to sit at the bottom of the CSS. Put your important overrides in here.</p>
 
   <p class="more"><a href="#header">To top</a></p>
 </section>
@@ -386,9 +319,6 @@
   <dl>
     <dt><code>@extend %group;</code></dt>
     <dd>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element (adding a class of <code>clearfix</code> or <code>group</code> to your <abbr>HTML</abbr> element also works but isn&rsquo;t as cool).</dd>
-
-    <dt><code>@extend %vertical-align;</code></dt>
-    <dd>Magically <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">verically align</a> objects inside of other objects.</dd>
   </dl>
 
   <p class="more"><a href="#header">To top</a></p>
@@ -462,19 +392,6 @@
     <script src="../js/vendor.min.js"></script>
     <script src="../js/app.min.js"></script>
 
-
-    <!-- Use Google Analytics if code is provided in _models.json -->
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', '', 'www.livewires.io');
-      ga('send', 'pageview');
-
-    </script>
 
   </body>
 </html>
