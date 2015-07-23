@@ -17,12 +17,13 @@
     <link rel="apple-touch-icon-precomposed" href="{{ "apple-touch-icon-precomposed.png" | asset_url }}" />
 
     <link href="css/app.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/guide.min.css" rel="stylesheet" type="text/css" media="all" />
 
     <!-- Fontawesome icons. Remove if not using -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
   </head>
-  <body class="offcanvas--push">
+  <body class="offcanvas--push pg-{{ page.slug }}">
 
     <!-- Header section -->
     {% include header.html %}

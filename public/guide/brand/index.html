@@ -1,12 +1,9 @@
-{% block styles %}
-  {{ "guide.css" | asset_url | stylesheet_tag }}
-{% endblock %}
+---
+layout: guide
+slug: brand
+---
 
-{% block page-class %}pg-brand{% endblock %}
-
-{% block header %}
-
-  {% include "guide/header" %}
+  {% include header-guide %}
 
   <nav class="horizontal-nav horizontal-nav--guide row">
     <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
@@ -18,9 +15,7 @@
     </ul>
   </nav>
 
-{% endblock %}
 
-{% block content %}
 
 <header class="row">
   <h1>Brand</h1>
@@ -2353,4 +2348,3 @@
     <p class="more"><a href="#header">To top</a></p>
   </div>
 </section>
-{% endblock %}
