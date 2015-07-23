@@ -1,0 +1,35 @@
+{% block styles %}
+  {{ "guide.css" | asset_url | stylesheet_tag }}
+{% endblock %}
+{% block page-class %}pg-templates{% endblock %}
+
+{% block header %}
+  {% include "guide/header" %}
+{% endblock %}
+
+{% block content %}
+<header class="row">
+  <h1>Templates</h1>
+  <p class="lead">All the page templates that make up your site or app.</p>
+</header>
+<section class="row">
+  <nav class="vertical-nav">
+    <ul>
+      <li><a href="/">Your project index page</a></li>
+    </ul>
+  </nav>
+  <h2>Example templates</h2>
+  <p></p>
+  <nav class="vertical-nav">
+    <ul>
+      <li><a href="/example/index">Home</a></li>
+      <li><a href="/example/about">About</a></li>
+      <li><a href="/example/news/index">News</a></li>
+      <li><a href="/example/news/detail">Article</a></li>
+      <li><a href="/example/news/archive">News archive</a></li>
+      <li><a href="/example/contact">Contact</a></li>
+    </ul>
+  </nav>
+</section>
+
+{% endblock %}

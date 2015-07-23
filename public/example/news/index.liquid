@@ -1,0 +1,57 @@
+{% block header %}
+  {% include "example/header" %}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <h1>News</h1>
+
+
+    <article>
+      <h2><a href="detail/" title="">Article Headline</a></h2>
+      <time datetime="2011-01-12">January 12th, 2011</time>
+      <figure>
+        <img src="http://placehold.it/2000x400&text=Hero" />
+      </figure>
+      <section class="l10">
+        <!-- article content -->
+      </section>
+    </article>
+    <hr>
+  <section class="articles split-content">
+    <article>
+      <h2><a href="detail/" title="">Article Headline</a></h2>
+      <time datetime="2011-01-12">January 12th, 2011</time>
+      <section class="l10">
+        <!-- article content -->
+      </section>
+    </article>
+    <article>
+      <h2><a href="detail/" title="">Article Headline</a></h2>
+      <time datetime="2011-01-12">January 12th, 2011</time>
+      <section class="l10">
+        <!-- article content -->
+      </section>
+    </article>
+    <article>
+      <h2><a href="detail/" title="">Article Headline</a></h2>
+      <time datetime="2011-01-12">January 12th, 2011</time>
+      <section class="l10">
+        <!-- article content -->
+      </section>
+    </article>
+    <article>
+      <h2><a href="detail/" title="">Article Headline</a></h2>
+      <time datetime="2011-01-12">January 12th, 2011</time>
+      <section class="l10">
+        <!-- article content -->
+      </section>
+    </article>
+
+    <footer class="more">
+      <p><a href="archive/">More articles</a></p>
+    </footer>
+  </section>
+
+</div>
+{% endblock %}

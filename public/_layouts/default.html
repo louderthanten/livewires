@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+    <!-- Title block allowing child pages to override -->
+    <title>{{ global.title }}</title>
+
+    <!-- Include meta tags -->
+    {% include head.html %}
+
+    <link rel="shortcut icon" href="{{ "favicon.ico" | asset_url }}" />
+    <link rel="apple-touch-icon-precomposed" href="{{ "apple-touch-icon-precomposed.png" | asset_url }}" />
+
+    <link href="css/app.min.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- Fontawesome icons. Remove if not using -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  </head>
+  <body class="offcanvas--push {% block page-class %}{% endblock %}">
+    <!--[if lt IE 9]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+
+    <!-- Header section -->
+    {% include header.html %}
+
+    <!-- Content block, child page inject content -->
+    <main class="main" id="main" role="main">
+    {{ content }}
+    </main>
+
+    <!-- Footer section -->
+    {% include footer.html %}
+
+
+    <!-- Script block allowing child pages to inject their own scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')</script>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

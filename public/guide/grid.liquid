@@ -1,0 +1,615 @@
+{% block styles %}
+  {{ "guide.css" | asset_url | stylesheet_tag }}
+{% endblock %}
+{% block page-class %}pg-grid{% endblock %}
+
+{% block header %}
+  {% include "guide/header" %}
+  <nav class="horizontal-nav horizontal-nav--guide row">
+    <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
+    <ul class="collapse" id="sections">
+      <li><a href="#howto">How to use</a></li>
+      <li><a href="#resizing">Units &amp; resizing</a></li>
+      <li><a href="#grids">Grid examples</a></li>
+      <li><a href="#modular-scale">Modular Scale</a></li>
+    </ul>
+  </nav>
+{% endblock %}
+
+{% block content %}
+<header class="row">
+  <h1>Grid</h1>
+  <p class="lead">A grid should be unique to each project based on content and typographic decisions. Unlike most grid frameworks, this system does not impose a pre-determined number of columns or breakpoints and is not bound to a collection of CSS classes.</p>
+  <p> Instead, it uses a collection of Sass grid variables. This approach encourages you to define your own semantic layout classes, keeps the markup clean, and makes the layout easier to modify across breakpoints. You can even combine column variables to experiment with compound or asymetrical grids.</p>
+</header>
+
+<section class="row" id="howto">
+  <h2>How to use</h2>
+  <hr>
+  <p>Our grid concept inspired by <a href="http://www.jonikorpi.com/">Joni Korpi&rsquo;s</a> <a href="http://goldengridsystem.com/">Golden Grid System</a>. The margins and columns are fluid while the gutters maintain a fixed width. This ensures consistent proportional spacing and alignment at all screen widths.</p>
+
+  <p>Grid settings are configured in <code>/source/scss/settings/_variables.scss</code>.</p>
+  <p>The basic layout foundation is setup in <code>/source/scss/modules/_base.scss</code> and you can define your global layout classes in <code>/source/scss/modules/_layout.scss</code>.</p>
+
+  <p>We&rsquo;ve set up the following grid variables with a few classes for dividing page sections to help you get designing as quickly as possible without being bound to a specific set of grid units.</p>
+
+  <h3>Default grid variables</h3>
+  <p>These are the default grid variables. We are just dividing 100% by various values to give us a series of different column widths and quantities. Adjust these in <code>/source/scss/settings/_variables.scss</code>.</p>
+
+  <div class="code">
+    <pre class="language-scss"><code>//Three Column Grid
+$c3: 100% / 3;
+//Four Column Grid
+$c4: 100% / 4;
+// Five Columns
+$c5: 100% / 5;
+//Six Column Grid
+$c6: 100% / 6;
+//Seven Column Grid
+$c7: 100% / 7;
+//Eight Column Grid
+$c8: 100% / 8;
+//Nine Column Grid
+$c9: 100% / 9;
+//Ten Column Grid
+$c10: 100% / 10;
+//Twelve Column Grid
+$c12: 100% / 12;
+//Sixteen Column Grid
+$c16: 100% / 16;</code></pre>
+  </div>
+
+  <h3>SCSS example</h3>
+  <p>To specify a width of four columns of a six column grid ($c6 == 1 column of a 6-column grid), use the following:</p>
+
+  <div class="code">
+    <pre class="language-scss"><code>/* Create a 4-column object centered in a 6-column grid */
+.object{
+  width:$c6*4; /* $c6 = 1 column of a 6-column grid. Mulitply by 4 to specify 4 columns wide. */
+  margin-left:$c6*1; /* Moves object 1 column to the right. */
+}</code></pre>
+  </div>
+
+  <p>There are a few simple layout classes in <code>/source/scss/modules/_layout.scss</code> to get you started with some basic layouts:</p>
+
+  <div class="code">
+    <pre class="language-scss"><code>@media only screen and (min-width: $screenSmall) {
+  .primary-content {
+    width:$c5*3; // Creates an object that is 3/5 the width of its parent
+    float:left;  // Float this block to the left edge of its parent
+  }
+  .secondary-content {
+    width:$c5*2; // Creats an object that is 2/5 the width of its parent
+    float:right; // Floats this block to the right edge of its parent
+  }
+  .split-content {
+    width:$c4*2; // Creates an object that is 1/2 the width of its parent
+    float:left;
+  }
+  .three-up {
+    width:$c3; // Creates an object that is 1/3 the width of its parent
+    float:left;
+  }
+}</code></pre>
+  </div>
+
+</section>
+<section class="row">
+  <h2>Rows</h2>
+  <hr>
+  <p>By default, our grid stretches across the entire width of the browser, which may not be ideal for most situations. To give your page some margins, we have created a special <code>.row</code> class to add structure and extra theming hooks.</p>
+
+  <p>The <code>.row</code> class wraps around your content and stretches across your browser so you can add background colours and full-bleed images. It also sets up your grid by adding horizontal page margins and consistent vertical padding for even spacing between sections (though you can add the <code>.row--tight</code> class to remove the vertical spacing).</p>
+
+
+  <div class="code">
+    <pre class="language-markup line-numbers"><code>    &lt;div class="row"&gt; &lt;!-- Adds margins and optional backgrounds to your section --&gt;
+      &lt;section class="object"&gt;
+        &lt;!-- Content that aligns to the grid and has gutters applied --&gt;
+      &lt;/section&gt;
+      &lt;section class="object2"&gt;
+        &lt;!-- Content that aligns to the grid and has gutters applied --&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;</code></pre>
+  </div>
+</section>
+<section class="row">
+  <h2>Gutters</h2>
+  <hr>
+  <p>We use fixed-width gutters defined with a rem unit. This ensures that spacing stays consistent at all sizes. By default, our gutter size is equal to the <code>$line</code> variable set in <code>/source/scss/settings/_variables.scss</code>, which also happens to be the baseline grid.</p>
+
+  <p>There is a handy <code>gutter</code> mixin avialable which applies half a gutter width to each side of the element to which it is applied.</p>
+
+  <p>By default, the immediate children of a <code>.row</code> wrapper already have gutters applied using this <code>gutter</code> mixin. To prevent gutters from being applied to one of these immediate children, add the <code>.collapse</code> class to it.</p>
+
+</section>
+<section class="row">
+
+  <h2>Page Margins</h2>
+  <hr>
+  <p>The <code>$margin</code> variable determines the horizontal space on either side of the grid. It is set in <code>/source/scss/settings/_variables.scss</code> with a percentage based on one of our smaller grid units. For example, the default margin of Live Wires is <code>$margin: 100% / 18</code> (which adds an extra column to either side of our 16 column grid).</p>
+
+  <p>You can add a max-width value to the <code>.row</code> class to give your design a static width after a certain size, but we recommend sticking with a fully fluid system based on percentages using the <code>$margin</code> variable.</p>
+
+
+
+  <p>This is fine at small window sizes, but what if it&rsquo;s too loose at wider sizes? Instead of adding a max-width, we just increase the <code>$margin</code> variable on our <code>.row</code> classes:</p>
+
+  <div class="code">
+    <pre class="language-scss"><code>/* Increase margins after a certain width */
+@media only screen and (min-width: $screenMedium) {
+  .row {
+    padding-left: $margin * 2; /* Double the $margin size to squeeze the main content. */
+    padding-right: $margin * 2;
+  }
+}</code></pre>
+  </div>
+
+</section>
+<section class="row">
+  <h2>Background colors</h2>
+  <hr>
+  <p>We&rsquo;ve included a few background classes in <code>/source/scss/theme/_layout.scss</code> to give you some easy background variations for rows and other elements:</p>
+
+</section>
+
+<section class="row subtle">
+  <h3>.subtle</h3>
+  <p>This class produces a subtle background variation.</p>
+
+  <div class="code">
+    <pre class="language-markup line-numbers"><code>    &lt;section class="row subtle"&gt;
+      &lt;h3&gt;.subtle&lt;/h3&gt;
+      &lt;p&gt;This class produces a subtle background variation.&lt;/p&gt;
+    &lt;/section&gt;</code></pre>
+  </div>
+</section>
+
+<section class="row reverse">
+  <h3>.reverse</h3>
+  <p>This class produces light text on a dark background.</p>
+
+  <div class="code">
+    <pre class="language-markup line-numbers"><code>    &lt;section class="row reverse"&gt;
+      &lt;h3&gt;.reverse&lt;/h3&gt;
+      &lt;p&gt;This class produces light text on a dark background.&lt;/p&gt;
+    &lt;/section&gt;</code></pre>
+  </div>
+  <p class="more"><a href="#header">To top</a></p>
+</section>
+
+<section class="row" id="resizing">
+  <h2>Units &amp; resizing</h2>
+  <hr>
+  <p>Every dimension in our project is defined using relative units. Aside from grid units and margins which use percentages, we stick with <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">Rems</a>. When everything is set using Rems, we can proportionally zoom the entire project by changing the font-size of our <code>&lt;html&gt;</code> element. Handy for zooming in or out at different break points.</p>
+
+  <div class="code">
+    <h3>Example</h3>
+    <pre class="language-scss"><code>// Our default font-size is 100%
+html {
+  font-size: 100%;
+}
+
+// We can proportionally increase the size of the enire site
+// by simply increasing or decreasing the root font-size.
+@media only screen and (min-width: $screenSmall) {
+  html {
+    font-size: 105%; // Increases everything defined by rems by 5%.
+  }
+}</code></pre>
+
+    <p>To make it easy to work with Rems, we&rsquo;ve included a handy <code>rem()</code> function inspired by <a href="http://foundation.zurb.com">Foundation&rsquo;s</a> <code>rem-calc()</code>.</p>
+
+    <div class="code">
+      <h3>Examples</h3>
+      <pre class="language-scss"><code>.object {
+  // Here are a few ways you can use the rem() function
+  padding: rem(24px); // Converts a px value to rems
+  padding: rem(24); // You can even leave out the px suffix
+  padding: rem(24 12); // And use with multiple shorthand values
+  padding: rem($line $line/2); // Use the $line variable for consistent spacing & flexibility
+  padding: rem($line) $margin; // Use the rem() function for only part of your CSS declaration
+}</code></pre>
+    </div>
+  </div>
+
+  <aside class="callout callout--clear">
+    <div class="content subtle">
+        <h3>Tip: Keeping it relative</h3>
+        <p>Use the <code>$line</code> variable to declare your Sass arguments whenever possible. Not only does it allow you to proportionally adjust the spacing across your project with a single variable, it ensures that every mesaurement is based on your paragraph&rsquo;s line-height. It takes out guess work and the typography gods will smile upon your beautiful, rationally spaced creation.</p>
+    </div>
+  </aside>
+</section>
+
+<section class="grids row" id="grids">
+    <h2>Grid examples</h2>
+    <hr>
+    <p>Here&rsquo;s just a taste of what you can do using this anti-framework grid system.</p>
+    <h3>Two/Four/Eight responsive folding grid</h3>
+    <div class="grid grid--2-4-8">
+      <div class="folding eight four two"><span></span></div>
+      <div class="folding eight"><span></span></div>
+      <div class="folding eight four"><span></span></div>
+      <div class="folding eight"><span></span></div>
+      <div class="folding eight four"><span></span></div>
+      <div class="folding eight"><span></span></div>
+      <div class="folding eight four two"><span></span></div>
+      <div class="folding eight"><span></span></div>
+    </div>
+
+    <h3>Three/Five/Seven responsive folding grid</h3>
+    <div class="grid grid--3-5-7">
+      <div class="folding seven five three"><span></span></div>
+      <div class="folding seven five"><span></span></div>
+      <div class="folding seven"><span></span></div>
+      <div class="folding seven five three"><span></span></div>
+      <div class="folding seven"><span></span></div>
+      <div class="folding seven five"><span></span></div>
+      <div class="folding seven five three"><span></span></div>
+    </div>
+
+    <h3>Three/Six/Twelve responsive folding grid</h3>
+    <div class="grid grid--3-6-12">
+      <div class="folding twelve six three"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six three"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six three"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+    </div>
+
+    <h3>Four/Eight Sixteen responsive folding grid</h3>
+    <div class="grid grid--4-8-16">
+      <div class="folding sixteen eight four"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight four"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight four"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight four"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+    </div>
+
+    <h3>Compound grid example</h3>
+    <div class="combined-grid">
+      <div class="grid grid--2-4-8">
+        <div class="folding eight four two"><span></span></div>
+        <div class="folding eight"><span></span></div>
+        <div class="folding eight four"><span></span></div>
+        <div class="folding eight"><span></span></div>
+        <div class="folding eight four"><span></span></div>
+        <div class="folding eight"><span></span></div>
+        <div class="folding eight four two"><span></span></div>
+        <div class="folding eight"><span></span></div>
+      </div>
+
+      <div class="grid grid--3-5-7">
+        <div class="folding seven five three"><span></span></div>
+        <div class="folding seven five"><span></span></div>
+        <div class="folding seven"><span></span></div>
+        <div class="folding seven five three"><span></span></div>
+        <div class="folding seven"><span></span></div>
+        <div class="folding seven five"><span></span></div>
+        <div class="folding seven five three"><span></span></div>
+      </div>
+    </div>
+
+  <p class="more"><a href="#header">To top</a></p>
+</section>
+
+<section class="row" id="modular-scale">
+  <h2>Modular scale</h2>
+  <hr>
+  <p>Here&rsquo;s a custom modular scale to provide a rational list of related numbers to use throughout the project. This keeps typographic and structural dimensions consistent and in proportion. You can refer to this scale when determining font sizes, gutter units, media proportions, and spacing.</p>
+  <p>Learn more about <a href="https://vimeo.com/17079380">modular scales</a>.</p>
+  <p><small>Calculated by <a href="http://modularscale.com/scale/?px1=16&amp;px2=12&amp;ra1=1.5&amp;ra2=0">Modular Scale</a>.</small></p>
+
+  <div class="scale">
+    <table id="scale">
+      <thead>
+        <tr>
+          <th>Pixels</th>
+          <th>Ems</th>
+          <th>Ems @ 16</th>
+          <th>% of 13</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+          <td>1,037.974</td>
+          <td>64.873</td>
+          <td>64.873</td>
+          <td>7,984.415</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>922.641</td>
+          <td>57.665</td>
+          <td>57.665</td>
+          <td>7,097.238</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>691.983</td>
+          <td>43.249</td>
+          <td>43.249</td>
+          <td>5,322.946</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>615.094</td>
+          <td>38.443</td>
+          <td>38.443</td>
+          <td>4,731.492</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>461.322</td>
+          <td>28.833</td>
+          <td>28.833</td>
+          <td>3,548.631</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>410.063</td>
+          <td>25.629</td>
+          <td>25.629</td>
+          <td>3,154.331</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>307.548</td>
+          <td>19.222</td>
+          <td>19.222</td>
+          <td>2,365.754</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>273.375</td>
+          <td>17.086</td>
+          <td>17.086</td>
+          <td>2,102.885</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>205.032</td>
+          <td>12.815</td>
+          <td>12.815</td>
+          <td>1,577.169</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>182.250</td>
+          <td>11.391</td>
+          <td>11.391</td>
+          <td>1,401.923</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>136.688</td>
+          <td>8.543</td>
+          <td>8.543</td>
+          <td>1,051.446</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>121.500</td>
+          <td>7.594</td>
+          <td>7.594</td>
+          <td>934.615</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>91.125</td>
+          <td>5.695</td>
+          <td>5.695</td>
+          <td>700.962</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>81.000</td>
+          <td>5.063</td>
+          <td>5.063</td>
+          <td>623.077</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>60.750</td>
+          <td>3.797</td>
+          <td>3.797</td>
+          <td>467.308</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>54.000</td>
+          <td>3.375</td>
+          <td>3.375</td>
+          <td>415.385</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>40.500</td>
+          <td>2.531</td>
+          <td>2.531</td>
+          <td>311.538</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>36.000</td>
+          <td>2.25</td>
+          <td>2.25</td>
+          <td>276.923</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>27.000</td>
+          <td>1.688</td>
+          <td>1.688</td>
+          <td>207.692</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>24.000</td>
+          <td>1.5</td>
+          <td>1.5</td>
+          <td>184.615</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>18.000</td>
+          <td>1.125</td>
+          <td>1.125</td>
+          <td>138.462</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class="key">16.000</td>
+          <td>1</td>
+          <td>1</td>
+          <td>123.077</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class="key">12.000</td>
+          <td>0.75</td>
+          <td>0.75</td>
+          <td>92.308</td>
+        </tr>
+      </tbody>
+      <tbody><tr>
+          <td>10.667</td>
+          <td>0.667</td>
+          <td>0.667</td>
+          <td>82.054</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>8.000</td>
+          <td>0.5</td>
+          <td>0.5</td>
+          <td>61.538</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>7.111</td>
+          <td>0.444</td>
+          <td>0.444</td>
+          <td>54.700</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>5.333</td>
+          <td>0.333</td>
+          <td>0.333</td>
+          <td>41.023</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>4.741</td>
+          <td>0.296</td>
+          <td>0.296</td>
+          <td>36.469</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>3.555</td>
+          <td>0.222</td>
+          <td>0.222</td>
+          <td>27.346</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>3.161</td>
+          <td>0.198</td>
+          <td>0.198</td>
+          <td>24.315</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>2.370</td>
+          <td>0.148</td>
+          <td>0.148</td>
+          <td>18.231</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>2.107</td>
+          <td>0.132</td>
+          <td>0.132</td>
+          <td>16.208</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>1.580</td>
+          <td>0.099</td>
+          <td>0.099</td>
+          <td>12.154</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>1.405</td>
+          <td>0.088</td>
+          <td>0.088</td>
+          <td>10.808</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>1.053</td>
+          <td>0.066</td>
+          <td>0.066</td>
+          <td>8.100</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="more"><a href="#header">To top</a></p>
+</section>
+
+{% endblock %}

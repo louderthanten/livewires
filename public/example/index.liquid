@@ -1,0 +1,62 @@
+{% block header %}
+  {% include "example/header" %}
+{% endblock %}
+
+{% block content %}
+<section class="row">
+  <figure>
+      <img src="http://placehold.it/2000x800" alt="">
+  </figure>
+  <h1>Simple in-browser wireframing</h1>
+
+  <div class="primary-content content">
+
+    <h2>A content block</h2>
+
+    <p>Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+
+    <ul>
+      <li>Donec ullamcorper</li>
+      <li>sit amet non magna</li>
+      <li>facilisis in, egestas</li>
+      <li>Donec ullamcorper nulla </li>
+      <li>pharetra augue</li>
+    </ul>
+  </div>
+
+  <aside class="secondary-content">
+    <h2>Using <code>class="l10"</code> to render a text block without content.</h2>
+    <div class="l10">
+
+    </div>
+  </aside>
+
+</section>
+
+<section class="row reverse">
+  <section class="split-content content">
+    <h2>Cool stuff</h2>
+    <ul>
+      <li>Donec ullamcorper</li>
+      <li>sit amet non magna</li>
+      <li>facilisis in, egestas</li>
+      <li>Donec ullamcorper nulla </li>
+      <li>pharetra augue</li>
+    </ul>
+  </section>
+
+  <section class="split-content content">
+    <h2>Other cool stuff</h2>
+    <ul>
+      <li>Donec ullamcorper</li>
+      <li>sit amet non magna</li>
+      <li>facilisis in, egestas</li>
+      <li>Donec ullamcorper nulla </li>
+      <li>pharetra augue</li>
+    </ul>
+  </section>
+
+</section>
+{% endblock %}

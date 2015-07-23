@@ -1,0 +1,75 @@
+{% block header %}
+  {% include "example/header" %}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <figure>
+    <img src="http://placehold.it/2000x500" alt="" />
+  </figure>
+  <section class="primary-content">
+    <h1>About</h1>
+    <div class="content">
+      <p>Here is some body text. It will look like grey blocks when the Live Wires styles are applied. We do this so that you can use real content to get close size approximations of your content blocks without letting your team or clients get distracted by the actaul text.</p>
+
+      <p>This is nice becuase you will be working with real content through the entire design and development process without having to reflow text at each stage.</p>
+    </div>
+  </section>
+  <aside class="secondary-content callout">
+    <nav class="vertical-nav reverse content">
+      <h3>Vertical navigation</h3>
+      <ul>
+        <li><a href="#">Linked text</a></li>
+        <li><a href="#">Linked text</a></li>
+        <li><a href="#">Linked text</a></li>
+        <li><a href="#">Linked text</a></li>
+      </ul>
+    </nav>
+  </aside>
+</div>
+
+<nav class="row row--tight subtle">
+  <h2>Tabbed content</h2>
+
+  <ul class="tabs">
+    <li><a href="#tab1">Tab 1</a></li>
+    <li><a href="#tab2">Tab 2</a></li>
+    <li><a href="#tab3">Tab 3</a></li>
+    <li><a href="#tab4">Tab 4</a></li>
+  </ul>
+</nav>
+
+<section id="tab1" class="content row reverse">
+  <h3>Tab 1</h3>
+  <p>Here is some content under tab 1.</p>
+</section>
+
+<section id="tab2" class="content row reverse">
+  <h3>Tab 2</h3>
+  <p>This tab has an image in it.</p>
+  <figure>
+    <img src="http://placehold.it/2000x1200" alt="">
+  </figure>
+</section>
+
+<section id="tab3" class="content row reverse">
+  <h3>Tab 3</h3>
+  <p>This tab has a video in it.</p>
+  <figure class="video">
+    <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </figure>
+</section>
+
+<section id="tab4" class="content row reverse">
+  <h3>Tab </h3>
+  <p>Here is some long content under tab 4.</p>
+  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Donec sed odio dui.</p>
+
+  <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod.</p>
+
+  <p>Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
+
+  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+</section>
+
+{% endblock %}

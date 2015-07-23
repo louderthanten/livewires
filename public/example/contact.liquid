@@ -1,0 +1,58 @@
+{% block header %}
+  {% include "example/header" %}
+{% endblock %}
+
+{% block content %}
+<section class="row">
+  <h1>Contact</h1>
+
+  <div class="content primary-content">
+    <p>Submit you feedback here. We get back to you as soon as possible.</p>
+  </div>
+
+  <hr />
+
+  <form action="../index.html" class="primary-content">
+    <fieldset>
+      <h2>Get in touch</h2>
+      <div class="field">
+        <label for="contact-name">Name</label>
+        <input type="text" name="contact-name" value="" placeholder="eg) Joanna Smith" class="text-input" />
+      </div>
+      <div class="field">
+        <label for="contact-email">Email address</label>
+        <input type="email" name="contact-email" value="" placeholder="eg) joanna@example.com" class="text-input" />
+      </div>
+      <div class="field">
+        <label for="contact-message">Message</label>
+        <textarea name="contact-message" class="text-input"></textarea>
+      </div>
+      <div class="field">
+        <button type="submit">Send</button>
+      </div>
+    </fieldset>
+  </form>
+
+  <aside class="secondary-content">
+    <div class="callout">
+      <h3>Contact info</h3>
+      <div class="vcard">
+        <p class="adr">
+          <strong class="org">Company name</strong>
+          <span class="street-address">123 Chester street</span>
+          <span class="locality">Vancouver</span>, <span class="region">BC</span> <span class="postal-code">V7B 0B4</span>
+          <span class="country-name">Canada</span>
+        </p>
+        <p class="tel">
+          <span class="type">Phone</span>
+          <a href="tel:+18885555555" class="value" title="+18885555555">1 (888) 555-5555</a>
+        </p>
+        <p class="email">
+          <span class="type">Email</span>
+          <a href="mailto:name@example.com" class="value" title="name@example.com">name@example.com</a>
+        </p>
+      </div>
+    </div>
+  </aside>
+</section>
+{% endblock %}

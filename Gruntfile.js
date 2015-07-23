@@ -18,8 +18,8 @@ module.exports = function(grunt) {
           style: 'expanded',
         },
         files: {
-          'httpdocs/css/app.css': 'source/scss/app.scss',
-          'httpdocs/css/guide.css': 'source/scss/pages/guide.scss'
+          'public/css/app.css': 'source/scss/app.scss',
+          'public/css/guide.css': 'source/scss/pages/guide.scss'
         }
       }
     },
@@ -28,14 +28,14 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'httpdocs/css/',
         src: ['*.css', '!*.min.css'],
-        dest: 'httpdocs/css/',
+        dest: 'public/css/',
         ext: '.min.css'
       }
     },
     coffee: {
       compile: {
         files: {
-          'httpdocs/js/app.js': ['source/coffee/{,*/}*.coffee'],
+          'public/js/app.js': ['source/coffee/{,*/}*.coffee'],
         }
       },
       tasks: ['uglify']
@@ -43,8 +43,8 @@ module.exports = function(grunt) {
     uglyfy: {
       js: {
         files: {
-          'httpdocs/js/vendor.min.js': 'source/vendor/**/*.js',
-          'httpdocs/js/app.min.js': 'httpdocs/js/app.js'
+          'public/js/vendor.min.js': 'source/vendor/**/*.js',
+          'public/js/app.min.js': 'httpdocs/js/app.js'
         },
         options: {
           preserveComments: false
@@ -58,8 +58,8 @@ module.exports = function(grunt) {
       multiple_files: {
         expand: true,
         flatten: true,
-        src: 'httpdocs/css/*.css',
-        dest: 'httpdocs/css/'
+        src: 'public/css/*.css',
+        dest: 'public/css/'
       }
     },
     watch: {
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
       },
       livereload: {
         options: { livereload: true },
-        files: ['httpdocs/**/*']
+        files: ['public/**/*']
       }
     },
 
@@ -104,7 +104,7 @@ module.exports = function(grunt) {
           open: true,
           base: [
             'source',
-            'httpdocs'
+            'public'
           ]
         }
       },
@@ -172,7 +172,7 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['clean', 'livewires', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test', 'autoprefixer', 'server']);
+  grunt.registerTask('default', ['jshint', 'test', 'autoprefixer', 'watch']);
 
   grunt.registerTask('server', ['connect', 'watch']);
 
