@@ -1,0 +1,48 @@
+// Critical includes
+// Put the minimal amount of styles here for the initial load.
+// We want the tops of our pages to load as quickly as possible.
+// Everything else gets loaded asyncronously.
+//
+// Include the components you need. Hide the ones you don't.
+
+// Generic resets and vendor styles
+@import "../3_generic/normalize";
+@import "../3_generic/base";
+@import "../3_generic/normalize-opentype";
+
+// Base elements. Only native elements.
+@import "../4_elements/page";
+@import "../4_elements/text";
+@import "../4_elements/headings";
+@import "../4_elements/quotes";
+@import "../4_elements/lists";
+@import "../4_elements/images";
+@import "../4_elements/links";
+@import "../4_elements/navigation";
+
+// Components. Little pieces
+@import "../5_components/text";
+@import "../5_components/headlines";
+@import "../5_components/callouts";
+@import "../5_components/buttons";
+@import "../5_components/horizontal-nav";
+@import "../5_components/breadcrumbs";
+@import "../5_components/images";
+
+// Modules. Big chunks of elements and components.
+@import "../6_modules/page";
+@import "../6_modules/layout";
+@import "../6_modules/header";
+@import "../6_modules/offcanvas";
+@import "../6_modules/drawers";
+
+// Themes. Remove if you don't need separate theming styles
+@import "../7_theme/layout";
+@import "../7_theme/text";
+@import "../7_theme/buttons";
+@import "../7_theme/navigation";
+
+// Overrides. Trumps everything
+@import "../9_overrides/alignment";
+@import "../9_overrides/hiding";
+@import "../9_overrides/disabled";

@@ -1,13 +1,18 @@
 {
-  "curly": true,
+  "node": true,
+  "browser": true,
+  "esnext": true,
+  "bitwise": false,
+  "curly": false,
   "eqeqeq": true,
+  "eqnull": true,
   "immed": true,
   "latedef": true,
   "newcap": true,
   "noarg": true,
-  "sub": true,
+  "quotmark": "single",
   "undef": true,
-  "boss": true,
-  "eqnull": true,
-  "node": true
+  "strict": false,
+  "trailing": true,
+  "smarttabs": true
 }

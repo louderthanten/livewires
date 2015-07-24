@@ -1,0 +1,13 @@
+// Base settings and sass-specific styles
+// This is separated from the main includes file so addional style sheets can
+// share the same settings and tools
+
+//Settings
+@import "font-faces";
+@import "colors";
+@import "variables";
+
+//Tools
+@import "../2_tools/functions";
+@import "../2_tools/mixins";
+@import "../2_tools/placeholders";

@@ -1,0 +1,27 @@
+// Helpful placeholder selectors give us easy access to some nice helpers without fill our code with classes.
+// Effortlessly vertically align objects
+// Contain floats: nicolasgallagher.com/micro-clearfix-hack/
+.group,
+.clearfix,
+%clearfix,
+%group {
+  zoom:1;
+
+  &:before,
+  &:after{
+    content:" ";
+    display:table;
+  }
+
+  &:after{
+    clear:both;
+  }
+}
+
+
+.vertical-align,
+%vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
