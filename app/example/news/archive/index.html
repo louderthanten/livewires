@@ -1,71 +1,8 @@
-<!DOCTYPE html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+{% block header %}
+  {% include "example/header" %}
+{% endblock %}
 
-    <!-- Title block allowing child pages to override -->
-    <title>Live Wires</title>
-
-    <!-- Include meta tags -->
-    <meta name="description" content="Light-weight prototyping with HTML & SCSS.">
-
-<!-- global Open Graph tags -->
-<meta property="og:title" content="Live Wires" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="" />
-<meta property="og:description" content="Light-weight prototyping with HTML & SCSS." />
-<meta property="og:url" content="http://www.livewires.io" />
-<meta property="og:site_name" content="Live Wires" />
-
-<!-- Twitter social tags -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:url" content="http://www.livewires.io" />
-<meta name="twitter:site" content="louderthanten">
-    
-
-    <link rel="shortcut icon" href="../../httpdocs/img/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="../../httpdocs/img/apple-touch-icon-precomposed.png" />
-
-    <link href="../../httpdocs/css/app.min.css" rel="stylesheet" type="text/css" media="all"/>
-
-    <!-- Style block allowing child pages to inject their own styles -->
-    
-
-    <!-- Fontawesome icons. Remove if not using -->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-    
-
-  </head>
-  <body class="offcanvas--push ">
-    <!--[if lt IE 9]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-
-
-    <!-- Header section -->
-    
-  <header class="row row--tight reverse">
-  <h1><a href="../index.html" class="logo">Live Wires</a></h1>
-  <nav class="horizontal-nav">
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="index.html">News</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-
-    <!-- Content block, child page inject content -->
-    <main class="main" id="main" role="main">
-    
+{% block content %}
 <div class="row">
   <h1>News archive</h1>
   <section class="split-content l6">
@@ -75,28 +12,28 @@
 <section class="archive-year row">
   <h2>2014</h2>
   <article class="split-content">
-    <h3><a href="detail.html" title="">Article Headline</a></h3>
+    <h3><a href="detail/" title="">Article Headline</a></h3>
     <time datetime="2011-01-12">January 12th, 2013</time>
     <section class="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
     </section>
   </article>
   <article class="split-content">
-    <h3><a href="detail.html" title="">Article Headline</a></h3>
+    <h3><a href="detail/" title="">Article Headline</a></h3>
     <time datetime="2011-01-12">January 12th, 2013</time>
     <section class="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
     </section>
   </article>
   <article class="split-content">
-    <h3><a href="detail.html" title="">Article Headline</a></h3>
+    <h3><a href="detail/" title="">Article Headline</a></h3>
     <time datetime="2011-01-12">January 12th, 2013</time>
     <section class="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
     </section>
   </article>
   <article class="split-content">
-    <h3><a href="detail.html" title="">Article Headline</a></h3>
+    <h3><a href="detail/" title="">Article Headline</a></h3>
     <time datetime="2011-01-12">January 12th, 2013</time>
     <section class="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
@@ -106,49 +43,49 @@
 <section class="archive-year row">
   <h2>2013</h2>
   <article class="split-content">
-    <h3><a href="detail.html" title="">Article Headline</a></h3>
+    <h3><a href="detail/" title="">Article Headline</a></h3>
     <time datetime="2011-01-12">January 12th, 2013</time>
     <section class="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
     </section>
   </article>
   <article class="split-content">
-    <h3><a href="detail.html" title="">Article Headline</a></h3>
+    <h3><a href="detail/" title="">Article Headline</a></h3>
     <time datetime="2011-01-12">January 12th, 2013</time>
     <section class="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
     </section>
   </article>
   <article class="split-content">
-    <h3><a href="detail.html" title="">Article Headline</a></h3>
+    <h3><a href="detail/" title="">Article Headline</a></h3>
     <time datetime="2011-01-12">January 12th, 2013</time>
     <section class="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
     </section>
   </article>
   <article class="split-content">
-    <h3><a href="detail.html" title="">Article Headline</a></h3>
+    <h3><a href="detail/" title="">Article Headline</a></h3>
     <time datetime="2011-01-12">January 12th, 2013</time>
     <section class="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
     </section>
   </article>
   <article class="split-content">
-    <h3><a href="detail.html" title="">Article Headline</a></h3>
+    <h3><a href="detail/" title="">Article Headline</a></h3>
     <time datetime="2011-01-12">January 12th, 2013</time>
     <section class="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
     </section>
   </article>
   <article class="split-content">
-    <h3><a href="detail.html" title="">Article Headline</a></h3>
+    <h3><a href="detail/" title="">Article Headline</a></h3>
     <time datetime="2011-01-12">January 12th, 2013</time>
     <section class="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
     </section>
   </article>
   <article class="split-content">
-    <h3><a href="detail.html" title="">Article Headline</a></h3>
+    <h3><a href="detail/" title="">Article Headline</a></h3>
     <time datetime="2011-01-12">January 12th, 2013</time>
     <section class="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
@@ -157,36 +94,4 @@
 
 </section>
 
-
-    </main>
-
-    <!-- Footer section -->
-    <footer class="footer row subtle">
-  <p><small><a href="../../index.html">Home</a> | <a href="../../guide/usage.html">Guide</a> | <a href="../index.html">Example</a></small></p>
-  <p><small>&copy; Live Wires. Rapidly built with <a href="http://www.livewires.io">Live Wires</a>.</small></p>
-</footer>
-
-
-    <!-- Script block allowing child pages to inject their own scripts -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../js/jquery-2.0.3.min.js"><\/script>')</script>
-
-    <script src="../../httpdocs/js/vendor.min.js"></script>
-    <script src="../../httpdocs/js/app.min.js"></script>
-    
-
-    <!-- Use Google Analytics if code is provided in _models.json -->
-    
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', '', 'www.livewires.io');
-      ga('send', 'pageview');
-
-    </script>
-    
-  </body>
-</html>
+{% endblock %}

@@ -1,0 +1,153 @@
+---
+layout: guide
+slug: modules
+---
+
+  {% include offcanvas.html %}
+    <nav class="horizontal-nav horizontal-nav--guide row">
+    <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
+    <ul class="collapse" id="sections">
+      <li><a href="#theader">Header</a></li>
+      <li><a href="#tabs">Tabs</a></li>
+      <li><a href="#drawers">Drawers</a></li>
+      <li><a href="#offcanvas">Offcanvas Content</a></li>
+      <li><a href="#tfooter">Footer</a></li>
+    </ul>
+  </nav>
+
+<header class="row">
+  <h1>Layout modules</h1>
+  <p class="lead">The building blocks of our templates. Here you'll find our major layout modules like site header, site footer, and major layout sections.</p>
+</header>
+
+<section class="row" id="tabs">
+  <h2>Tabs</h2>
+  <hr>
+  <p>Tabs implementation is pretty flexible. You can even link directly to a tab by linking to its id.</p>
+  <p>E.g. <code>&lt;a href="/guide/components#tab2"&gt;</code>
+  <p>If you follow the general pattern, you can place anything in the tab elements.</p>
+
+  <div class="code">
+    <h3>Markup example</h3>
+    <pre class="line-numbers language-markup"><code>    &lt;!-- Tab navigation --&gt;
+    &lt;ul class="tabs"&gt;
+      &lt;li&gt;&lt;a href="#tab1"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#tab2"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#tab3"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;!-- Tabbed content --&gt;
+    &lt;div id="tab1"&gt;
+      &lt;!-- Tab 1 stuff --&gt;
+    &lt;/div&gt;
+    &lt;div id="tab2"&gt;
+      &lt;!-- Tab 2 stuff --&gt;
+    &lt;/div&gt;
+    &lt;div id="tab3"&gt;
+      &lt;!-- Tab 3 stuff --&gt;
+    &lt;/div&gt;</code></pre>
+  </div>
+  <ul class="tabs">
+    <li><a href="#tab1">Tab 1</a></li>
+    <li><a href="#tab2">Tab 2</a></li>
+    <li><a href="#tab3">Tab 3</a></li>
+    <li><a href="#tab4">Tab 4</a></li>
+  </ul>
+
+  <section id="tab1" class="tab-content content reverse">
+    <h3>Tab 1</h3>
+    <p>Here is some content under tab 1.</p>
+  </section>
+
+  <section id="tab2" class="tab-content content reverse">
+    <h3>Tab 2</h3>
+    <p>This tab has an image in it.</p>
+    <figure>
+      <img src="http://placehold.it/2000x1200" alt="">
+    </figure>
+  </section>
+
+  <section id="tab3" class="tab-content content reverse">
+    <h3>Tab 3</h3>
+    <p>This tab has a video in it.</p>
+    <figure class="video">
+      <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </figure>
+  </section>
+
+  <section id="tab4" class="tab-content content reverse">
+    <h3>Tab </h3>
+    <p>Here is some long content under tab 4.</p>
+    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Donec sed odio dui.</p>
+
+    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod.</p>
+
+    <p>Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
+
+    <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+  </section>
+
+  <p class="more"><a href="#header">To top</a></p>
+</section>
+
+<section class="row" id="drawers">
+  <h2>Drawers</h2>
+  <hr>
+  <p>Use drawers to easily show and hide content. These work great both page-wide and within elements like callouts as shown below.</p>
+  <p><a href="#drawer" class="button js-reveal">Open drawer</a></p>
+
+  <div class="code">
+    <h3>Markup example</h3>
+    <pre class="line-numbers language-markup"><code>    &lt;!-- Point the href to the id of the drawer --&gt;
+    &lt;a href="#drawer" class="button js-reveal"&gt;Open drawer&lt;/a&gt;
+
+    &lt;!-- Drawer content. Anything here is hidden --&gt;
+    &lt;div class="drawer" id="drawer"&gt;
+      &lt;!-- Contents of drawer --&gt;
+    &lt;/div&gt;</code></pre>
+  </div>
+  <p class="more"><a href="#header">To top</a></p>
+</section>
+
+<section class="drawer reverse" id="drawer">
+  <div class="content row">
+    <h2>Hidden drawer</h2>
+    <p>A page wide drawer for hidden content. You can put anything you want to hide in here.<p>
+  </div>
+</section>
+
+<section class="row" id="offcanvas">
+  <h2>Off canvas content</h2>
+  <hr>
+  <p>We use a lightweight offcanvas implementation with a few flexible options. These are great for mobile navigation, hidden drawers, and even alerts.</p>
+  <p>You can easily set the width and height of the offcanvas areas by adjusting the <code>$offcanvas-height</code> &amp; <code>$offcanvas-width</code> variables in <code>/source/scss/modules/navigation/offcanvas.scss</code>.</p>
+  <p>Add <code>class="offcanvas--push"</code> to the <code>&lt;body&gt;</code> element to push the page to the side when the left or right menu opens.</p>
+
+  <nav class="horizontal-nav">
+    <ul>
+      <li class="js-open-canvas offcanvas-trigger"><a href="#oc-left" class="button">Left Offcanvas</a></li>
+      <li class="js-open-canvas offcanvas-trigger"><a href="#oc-top" class="button">Top Offcanvas</a></li>
+      <li class="js-open-canvas offcanvas-trigger"><a href="#oc-right" class="button">Right Offcanvas</a></li>
+      <li class="js-open-canvas offcanvas-trigger"><a href="#oc-bottom" class="button">Bottom Offcanvas</a></li>
+    </ul>
+  </nav>
+
+  <div class="code">
+    <h3>Markup example</h3>
+    <pre class="line-numbers language-markup"><code>    &lt;!-- Add offcanvas--push to the body element to push page content --&gt;
+    &lt;body class="offcanvas--push"&gt;
+      &lt;!-- Left example. Other options are offcanvas--top, offcanvas--right, offcanvas--bottom --&gt;
+      &lt;nav class="offcanvas--left" id="offcanvas"&gt;
+      &lt;!-- Offcanvas content. Put anything you want in here --&gt;
+      &lt;/nav&gt;
+
+      &lt;!-- Other site content below --&gt;
+      &lt;main role="main"&gt;
+        &lt;!-- Point the href to the id of the offcanvas area --&gt;
+        &lt;div class="js-open-canvas"&gt;&lt;a href="#offcanvas"&gt;Offcanvas toggle&lt;/a&gt;&lt;/div&gt;
+      &lt;/main&gt;
+    &lt;/body&gt;</code></pre>
+    </div>
+    <p class="more"><a href="#header">To top</a></p>
+</section>
+

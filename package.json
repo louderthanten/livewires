@@ -1,8 +1,8 @@
 {
-  "name": "projects",
+  "name": "Live Wires",
   "private": true,
-  "version": "0.0.0",
-  "description": "Yeoman workflow for projects",
+  "version": "2.2.0",
+  "description": "Live Wires is a light-weight HTML/SCSS framework for creating elegant, responsive wireframes and prototypes.",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.5",
