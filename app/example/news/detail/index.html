@@ -1,10 +1,9 @@
-{% block header %}
-  {% include "example/header" %}
-{% endblock %}
-
-{% block content %}
+---
+layout: example
+slug: detail
+--- 
 <div class="row">
-  <p><a href="index/" title="">Back to News</a></p>
+  <p><a href="../" title="">Back to News</a></p>
   <article class="primary-content">
     <h1>Vestibulum Ultricies Purus Justo</h1>
     <time datetime="2011-01-12">January 12th, 2011</time>
@@ -30,9 +29,8 @@
       <li><a href="#">Headline</a></li>
       <li><a href="#">Headline</a></li>
     </ul>
-    <p class="more"><a href="archive/">See all &gt;</a></p>
+    <p class="more"><a href="../archive/">See all &gt;</a></p>
   </nav>
   <hr>
-  <p><a href="index/" title="">Back to News</a></p>
+  <p><a href="../" title="">Back to News</a></p>
 </div>
-{% endblock %}
