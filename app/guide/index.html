@@ -168,14 +168,17 @@ slug: usage
   <p>We&rsquo;ve structured our SCSS folder based on Harry Robert&rsquo;s <a href="http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731">ITCSS methodology</a>.</p>
 
   <dl>
-    <dt><code>/app/css/app.scss</code></dt>
-    <dd>This generates your projects main <abbr>CSS</abbr> file. It has three includes:</dd>
+    <dt><code>app.scss</code></dt>
+    <dd>This generates your projects main <abbr>CSS</abbr> file. It has four includes:</dd>
 
     <dt><code>_includes--base.scss</code></dt>
     <dd>Imports the base scss variables and utilites that every SCSS file requires.</dd>
 
-    <dt><code>@import "1_settings/_includes";</code></dt>
-    <dd>Pulls in all the elements, components, and modules you want to include in your project.</dd>
+    <dt><code>@import "1_settings/_includes--critical";</code></dt>
+    <dd>Pulls in the critical elements, components, and modules you want to include in your projects. We separate this from the following include so you can choose asyncronously load CSS that appears outside the viewport for quicker loading. More info on the technique at <a href="https://www.filamentgroup.com/lab/performance-rwd.html">Filament Group</a>.</dd>
+
+    <dt><code>@import "1_settings/_includes--secondary";</code></dt>
+    <dd>Pulls in the non-critical elements, components, and modules you want to include in your projects. We separate this from the above include so you can choose asyncronously load CSS that appears outside the viewport for quicker loading. More info on the technique at <a href="https://www.filamentgroup.com/lab/performance-rwd.html">Filament Group</a>.</dd>
 
     <dt><code>@import "1_settings/_livewires";</code></dt>
     <dd>Pulls in Live Wires styles which blank out the text inside of any element with a <code>.content</code> class in your <abbr>HTML</abbr>. Remove it to get rid of the blank text feature.</dd>
