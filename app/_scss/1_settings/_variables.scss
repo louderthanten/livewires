@@ -56,11 +56,24 @@ $heavy: 900;
 
 // Adjust according to content not device.
 
+$screenXSmall: 28em !default;
 $screenSmall: 48em !default;
 $screenSmallMedium:54em !default;
 $screenMedium: 64em !default;
 $screenLarge: 98em !default;
 $screenXlarge: 110em !default;
+
+$tiny: "only screen and (min-width : #{$screenXSmall})";
+$small: "only screen and (min-width : #{$screenSmall})";
+$smallMedium: "only screen and (min-width : #{$screenSmallMedium})";
+$medium: "only screen and (min-width : #{$screenMedium})";
+$large: "only screen and (min-width : #{$screenLarge})";
+$xlarge: "only screen and (min-width : #{$screenXlarge})";
+
+// EG:
+// @media #{$small} {
+//   background: red;
+// }
 
 ///* =============================================================================
 //   Grid
