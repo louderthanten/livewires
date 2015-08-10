@@ -21,13 +21,13 @@
 @import "../4_elements/navigation";
 
 // Components. Little pieces
-@import "../5_components/text";
-@import "../5_components/headlines";
-@import "../5_components/callouts";
-@import "../5_components/buttons";
-@import "../5_components/horizontal-nav";
-@import "../5_components/breadcrumbs";
-@import "../5_components/images";
+@import "../5_components/text--paragraphs";
+@import "../5_components/text--headlines";
+@import "../5_components/layout--callouts";
+@import "../5_components/forms--buttons";
+@import "../5_components/nav--horizontal";
+@import "../5_components/nav--breadcrumbs";
+@import "../5_components/media--images";
 
 // Modules. Big chunks of elements and components.
 @import "../6_modules/page";

@@ -16,25 +16,26 @@
 @import "../4_elements/code";
 
 // Components. Little pieces
-@import "../5_components/quotes";
-@import "../5_components/rules";
-@import "../5_components/more-links";
-@import "../5_components/fields";
-@import "../5_components/forms-inline";
-@import "../5_components/option-buttons";
-@import "../5_components/switches";
-@import "../5_components/labels";
-@import "../5_components/code";
-@import "../5_components/maps";
-@import "../5_components/pagination";
+@import "../5_components/text--quotes";
+@import "../5_components/text--addresses";
+@import "../5_components/text--links";
+@import "../5_components/text--code";
+@import "../5_components/forms--fields";
+@import "../5_components/forms--inline";
+@import "../5_components/forms--options";
+@import "../5_components/forms--switches";
+@import "../5_components/forms--labels";
+@import "../5_components/media--maps";
+@import "../5_components/media--videos";
 @import "../5_components/tables";
-@import "../5_components/address";
-@import "../5_components/vertical-nav";
-@import "../5_components/videos";
+@import "../5_components/nav--vertical";
+@import "../5_components/nav--pagination";
+@import "../5_components/layout--rules";
 
 
 // Modules. Big chunks of elements and components.
 @import "../6_modules/animation";
+@import "../6_modules/content";
 @import "../6_modules/tabs";
 @import "../6_modules/footer";
 
