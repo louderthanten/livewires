@@ -3,7 +3,7 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: Live Wires
+name: project
 description: Live Wires is a light-weight HTML/SCSS framework for creating elegant, responsive wireframes and prototypes.
 author:
   name: Louder Than Ten

@@ -238,6 +238,11 @@ figure p,
 .key {
   font-weight: $bold;
 }
+@for $i from 10 through 100 {
+  .sz-#{$i}{
+    font-size: rem($i);
+  }
+}
 
 @media only screen and (min-width: $screenSmall) {
   .logo {
