@@ -4,14 +4,12 @@ slug: modules
 ---
 
   {% include offcanvas.html %}
-    <nav class="horizontal-nav horizontal-nav--guide row">
+    <nav class="horizontal-nav horizontal-nav--guide row" id="header">
     <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
     <ul class="collapse" id="sections">
-      <li><a href="#theader">Header</a></li>
-      <li><a href="#tabs">Tabs</a></li>
-      <li><a href="#drawers">Drawers</a></li>
-      <li><a href="#offcanvas">Offcanvas Content</a></li>
-      <li><a href="#tfooter">Footer</a></li>
+      <li><a href="#tabs" class="js-scroll">Tabs</a></li>
+      <li><a href="#drawers" class="js-scroll">Drawers</a></li>
+      <li><a href="#offcanvas" class="js-scroll">Offcanvas Content</a></li>
     </ul>
   </nav>
 
@@ -87,7 +85,7 @@ slug: modules
     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
   </section>
 
-  <p class="more"><a href="#header">To top</a></p>
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
 </section>
 
 <section class="row" id="drawers">
@@ -106,7 +104,7 @@ slug: modules
       &lt;!-- Contents of drawer --&gt;
     &lt;/div&gt;</code></pre>
   </div>
-  <p class="more"><a href="#header">To top</a></p>
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
 </section>
 
 <section class="drawer reverse" id="drawer">
@@ -148,6 +146,6 @@ slug: modules
       &lt;/main&gt;
     &lt;/body&gt;</code></pre>
     </div>
-    <p class="more"><a href="#header">To top</a></p>
+    <p class="more"><a href="#header" class="js-scroll">To top</a></p>
 </section>
 

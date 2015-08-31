@@ -45,6 +45,7 @@
   img {
     width:100%;
     max-width: 240px;
+    display:block;
   }
   span {
     display: block;
@@ -64,9 +65,6 @@
       max-height: 2000px;
     }
   }
-  a {
-    @include font-size(14, 14);
-  }
 }
 
 // current states in primary nav.
@@ -85,6 +83,16 @@
 
 .main .horizontal-nav--guide {
   margin:rem($line) 0;
+}
+
+.secondary-nav {
+  background:$text;
+  padding-bottom:rem($line);
+  padding-left:0;
+
+  li a {
+    padding-left:rem($line*2);
+  }
 }
 
 .header {
@@ -111,6 +119,13 @@ figure p,
     @include font-size(24, 36);
     margin-bottom: rem($line*1.5);
     letter-spacing: 0.1em;
+  }
+  .med {
+    @include font-size(48, 60);
+  }
+  .large {
+    @include font-size(96, 100);
+    letter-spacing:0;
   }
 }
 

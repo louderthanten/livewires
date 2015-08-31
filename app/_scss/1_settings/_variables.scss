@@ -17,7 +17,9 @@ $line: 24; // Set the baseline grid (in px) Also determines gutter width.
 $rule: 1px solid $light-text;
 $hairline: 1px solid $dark-background;
 $accentline: 1px solid $accent;
-$whiteline: 1px solid $background;
+$lightline: 1px solid $background;
+$whiteline: 1px solid white;
+$blackline: 1px solid black;
 
 // Default border radius
 $radius: 3px;
