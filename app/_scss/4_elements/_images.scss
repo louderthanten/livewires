@@ -27,5 +27,23 @@ figure {
 }
 figcaption {
 
+}
 
+//Fix SVG proportions in IE
+img[src*=svg],
+svg {
+  max-height: 100%;
+  max-width:100%;
+  width:100%;
+}
+img[src*=svg] { width/*\**/: 100%\9;}
+
+@media screen and (min-width:0\0) {
+  img[src*=".svg"] {
+    width: 100% !important;
+  }
+  svg,
+  svg path {
+    width:100% !important;
+  }
 }

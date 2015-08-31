@@ -85,6 +85,7 @@ $offcanvas-height: rem($line*4);
 // Vertical menu that slides from the left or right: ;
 .offcanvas--left {
   left: 0px;
+  border-right:$blackline;
 
   &.offcanvas--open {
     left: $offcanvas-width * -1;
