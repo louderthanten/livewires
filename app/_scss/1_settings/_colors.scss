@@ -2,12 +2,22 @@
 //   Default Colours
 //   ========================================================================== */
 
-$background: #FFFFFF;
-$dark-background: #DDDDDD;
-$text: #333333;
-$mid-text: #666666;
-$light-text: #AAAAAA;
-$red: #d13731;
-$blue: #44b3e1;
+// Primary colours
+$red: #cb2c30;
+$blue: #4cb4e7;
 
-$accent: $red; //Primary accent color
+// Shades
+$white: white;
+$off-white: #dad9d6;
+$light-grey: #adaeb0;
+$grey: #686869;
+$dark-grey:#4c4845;
+$black: #222223;
+
+// Colour variables - Useful for changing the entire colour scheme
+$background: $white;
+$dark-background: $off-white;
+$text: $black;
+$mid-text: $grey;
+$light-text: $light-grey;
+$accent: $red;
