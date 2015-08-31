@@ -136,6 +136,10 @@ figure p,
 
 //Colour swatches
 .swatch {
+  display:flex;
+  flex-direction:column;
+  padding:rem($line/2);
+  
   .colour {
     margin-bottom:rem($line/2);
     height:rem($line*8);
@@ -145,6 +149,8 @@ figure p,
     padding:rem($line/2);
     background:white;
     color:$text;
+    flex:1 0 auto;
+    height:100%;
 
     h3 {
       border-bottom:$hairline;
@@ -267,7 +273,7 @@ figure p,
 .key {
   font-weight: $bold;
 }
-@for $i from 10 through 100 {
+@for $i from 10 through 200 {
   .sz-#{$i}{
     font-size: rem($i);
   }
@@ -295,9 +301,14 @@ figure p,
       max-height: none;
     }
   }
+  .swatches {
+    display:flex;
+    align-items:stretch;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+  }
   .swatch {
-    width:$c4*2;
-    float:left;
+    flex: 0 1 50%;
   }
   .paragraphs {
     width:$c4*3;
@@ -311,9 +322,6 @@ figure p,
     @include gutter;
     float:left;
     width:$c5;
-  }
-  .primary-content {
-    width:$c5*4;
   }
   .grid {
     padding:0 !important;
@@ -384,7 +392,7 @@ figure p,
 }
 @media only screen and (min-width: $screenLarge) {
   .swatch {
-    width:$c3;
+    flex: 0 1 33%;
   }
   .type-sample {
     .med {
@@ -405,7 +413,7 @@ figure p,
 
 @media only screen and (min-width: $screenXlarge) {
   .swatch {
-    width:$c4;
+    flex: 0 1 25%;
   }
   .grid {
     &.grid--2-4-8 {
