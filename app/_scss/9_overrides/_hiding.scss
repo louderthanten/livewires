@@ -48,3 +48,31 @@
 .invisible {
   visibility: hidden;
 }
+
+.sm-show, .md-show, .lg-show {
+  display: none !important
+}
+
+@media #{$small} { 
+  .sm-show { display: block !important }
+}
+
+@media #{$medium} { 
+  .md-show { display: block !important }
+}
+
+@media #{$large} { 
+  .lg-show { display: block !important }
+}
+
+@media #{$small} {
+  .sm-hide { display: none !important }
+}
+
+@media #{$medium} {
+  .md-hide { display: none !important }
+}
+
+@media #{$large} {
+  .lg-hide { display: none !important }
+}

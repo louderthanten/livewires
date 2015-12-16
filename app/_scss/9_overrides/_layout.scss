@@ -1,0 +1,123 @@
+// Floating
+.right{
+  float:right;
+}
+.left{
+  float:left;
+}
+.clear {
+  clear:both;
+}
+
+//Display 
+.inline {
+  display: inline;
+}
+.inline-block {
+  display:inline-block;
+}
+.block {
+  display: block;
+}
+.table {
+  display:table;
+}
+.table-cell {
+  display: table-cell;
+}
+
+//Overflow
+.overflow-hidden { 
+  overflow: hidden;
+}
+.overflow-scroll { 
+  overflow: scroll;
+}
+.overflow-auto   { 
+  overflow: auto;
+}
+
+//Vertical alignment
+.align-baseline { vertical-align: baseline }
+.align-top      { vertical-align: top }
+.align-middle   { vertical-align: middle }
+.align-bottom   { vertical-align: bottom }
+
+//Spacing
+
+.m0  { margin:        0 }
+.mt0 { margin-top:    0 }
+.mr0 { margin-right:  0 }
+.mb0 { margin-bottom: 0 }
+.ml0 { margin-left:   0 }
+.p0  { padding:       0 }
+.pt0 { padding-top:   0 }
+.pr0 { padding-right: 0 }
+.pb0 { padding-bottom:0 }
+.pl0 { padding-left:  0 }
+
+// Eg) .m1 { margin: rem($line) }
+//     .pt2 { padding-top: rem($line) }
+
+@for $i from 1 through 10 {
+  .m#{$i}  { margin:         #{rem($line) * $i}; }
+  .mt#{$i} { margin-top:     #{rem($line) * $i}; }
+  .mr#{$i} { margin-right:   #{rem($line) * $i}; }
+  .mb#{$i} { margin-bottom:  #{rem($line) * $i}; }
+  .ml#{$i} { margin-left:    #{rem($line) * $i}; }
+  .my#{$i} { margin-top:     #{rem($line) * $i}; margin-bottom: #{rem($line) * $i}; }
+  .mx#{$i} { margin-left:    #{rem($line) * $i}; margin-right:  #{rem($line) * $i}; }
+  .p#{$i}  { padding:        #{rem($line) * $i}; }
+  .pt#{$i} { padding-top:    #{rem($line) * $i}; }
+  .pr#{$i} { padding-right:  #{rem($line) * $i}; }
+  .pb#{$i} { padding-bottom: #{rem($line) * $i}; }
+  .pl#{$i} { padding-left:   #{rem($line) * $i}; }
+  .py#{$i} { padding-top:    #{rem($line) * $i}; padding-bottom: #{rem($line) * $i}; }
+  .px#{$i} { padding-left:   #{rem($line) * $i}; padding-right:  #{rem($line) * $i}; }
+  .z#{$i}  { z-index: #{$i} }
+}
+
+//Positioning
+.relative { position: relative }
+.absolute { position: absolute }
+.fixed    { position: fixed }
+
+.top-0    { top: 0 }
+.right-0  { right: 0 }
+.bottom-0 { bottom: 0 }
+.left-0   { left: 0 }
+
+//Flex
+.flex { display: flex }
+
+.flex-column  { flex-direction: column }
+.flex-wrap    { flex-wrap: wrap }
+
+.flex-center   { align-items: center }
+.flex-baseline { align-items: baseline }
+.flex-stretch  { align-items: stretch }
+.flex-start    { align-items: flex-start }
+.flex-end      { align-items: flex-end }
+
+.flex-justify  { justify-content: space-between }
+
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+.flex-grow { flex: 1 0 auto }
+.flex-none { flex: none }
+
+.flex-first { order: -1 }
+.flex-last  { order: 99999 }
+
+@media #{$small} { 
+  .sm-flex { display: flex }
+}
+@media #{$medium} { 
+  .md-flex { display: flex }
+}
+@media #{$large} { 
+  .lg-flex { display: flex }
+}

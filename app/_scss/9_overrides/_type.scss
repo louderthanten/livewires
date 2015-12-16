@@ -1,0 +1,47 @@
+// Text alignment
+.left-align   {
+  text-align: left;
+}
+.right-align  {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.justify {
+  text-align:justify;
+}
+.nowrap {
+  white-space: nowrap;
+}
+
+Font style
+.italic {
+  font-style:italic;
+}
+
+//Font weights
+.thin {
+  font-weight:$thin;
+}
+.light {
+  font-weight:$light;
+}
+.regular {
+  font-weight:$regular;
+}
+.medium {
+  font-weight:$medium;
+}
+.semibold {
+  font-weight:$semibold;
+}
+.bold {
+  font-weight:$bold;
+}
+.extrabold {
+  font-weight:$extrabold;
+}
+.heavy {
+  font-weight: $heavy;
+}
