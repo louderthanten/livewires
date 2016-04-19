@@ -33,8 +33,7 @@ Thumbs.db
 *.zip
 
 # Ignore for Yeoman-Jekyll projects #
-app/_bower_components
-dist
+bower_components
 node_modules
 .tmp
 
