@@ -1,0 +1,460 @@
+{% extends "_layouts/guide.html" %}
+{% block page %}
+  <nav class="horizontal-nav horizontal-nav--guide row" id="header">
+    <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
+    <ul class="collapse" id="sections">
+      <li><a href="#media" class="js-scroll">Media</a></li>
+      <li><a href="#tables" class="js-scroll">Tables</a></li>
+      <li><a href="#code" class="js-scroll">Code</a></li>
+      <li><a href="#nav" class="js-scroll">Navigation</a></li>
+      <li><a href="#callouts" class="js-scroll">Callouts</a></li>
+    </ul>
+  </nav>
+
+
+<header class="row">
+  <h1>Components</h1>
+  <p class="lead">Components combine basic HTML elements into small reusable pieces that act as the building blocks of our modules and layouts.</p>
+</header>
+
+<section class="row" id="media">
+  <h2>Media</h2>
+  <hr>
+
+  <p>We can make our images responsive by wrapping them in<code>&lt;figure&gt;</code> elements. Add a <code>video</code> class for responsive videos, or <code>map</code> for maps.</p>
+
+  <aside class="callout callout--clear">
+    <div class="content subtle">
+      <h3>Tip: Automatically wrap that media</h3>
+      <p>Uncomment the first script inside of <code>/source/coffee/components/_media.coffee</code> to automatically add appropriate figure tags to images, videos, and maps inside of elements with a <code>content</code> class. Nice for those pesky CMS-powered content blocks.</p>
+    </div>
+  </aside>
+
+
+  <h3>Responsive image</h3>
+  <figure>
+    <img src="http://placehold.it/2000x800" alt="">
+    <figcaption><p>Explanatory caption to compliment image. <small class="source">Photographer: First Last</small></p></figcaption>
+  </figure>
+
+  <div class="split-content">
+    <h3>Responsive embedded video</h3>
+    <figure class="video">
+      <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </figure>
+  </div>
+
+  <div class="split-content">
+    <h3>Responsive map</h3>
+    <figure class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20821.939822233115!2d-123.12433310318293!3d49.28127672734369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2sVancouver%2C+BC!5e0!3m2!1sen!2s!4v1392173356350" width="800" height="600" frameborder="0" style="border:0"></iframe>
+    </figure>
+  </div>
+
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+</section>
+
+<section class="row" id="tables">
+  <h2>Tables</h2>
+  <hr>
+
+  <p>Sometimes we need to show tabular data. Here are some different ways to show it and make it responsive.</p>
+
+  <h3>Invisible</h3>
+  <p>The default table style.</p>
+
+  <section class="tables">
+    <table id="demo1">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th class="numerical">Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Bordered</h3>
+    <p>Add <code>class="table--bordered"</code> to <code>&lt;table&gt;</code> element.</p>
+
+    <table class="table--bordered" id="demo2">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th class="numerical">Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Striped</h3>
+    <p>Add <code>class="table--striped"</code> to <code>&lt;table&gt;</code> element.</p>
+
+    <table class="table--striped" id="demo3">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th class="numerical">Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Lined</h3>
+    <p>Add <code>class="table--lined"</code> to <code>&lt;table&gt;</code> element.</p>
+
+    <table class="table--lined" id="demo4">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th class="numerical">Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th>Sit</th>
+          <td>Dolor</td>
+          <td class="numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+</section>
+
+<section class="row" id="code">
+  <h2>Code</h2>
+  <hr>
+
+  <p>Prism.js adds syntax highlighting and line numbers. Visit <a href="http://prismjs.com/">Prism.js</a> to configure the languages and plugins you require. You can adjust the code colors in <code>/source/scss/theme/_code.scss</code>.</p>
+
+  <div class="code">
+   <pre class="language-css"><code>/* Code comment */
+.nav {
+  list-style:none;
+  margin-left:0;
+
+  > li,
+  > li > a {
+    display:inline-block;
+     *display:inline-block;
+    zoom:1;
+  }
+}</code></pre>
+
+    <h3>Markup example:</h3>
+
+    <pre class="line-numbers language-markup"><code>    &lt;pre class="language-css line-numbers"&gt;&lt;code&gt;/* Code comment */
+    .nav {
+      list-style:none;
+      margin-left:0;
+
+      > li,
+      > li > a {
+        display:inline-block;
+         *display:inline-block;
+        zoom:1;
+      }
+    }&lt;/code&gt;&lt;/pre&gt;</code></pre>
+    </div>
+
+    <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+</section>
+
+<section class="row" id="nav">
+  <h2>Navigation</h2>
+  <hr>
+
+  <div class="split-content">
+    <h3>Breadcrumbs</h3>
+    <nav class="breadcrumbs">
+      <p><a href="/">Home</a> / <a href="">Parent page</a> / <span class="active">Current page</span></p>
+    </nav>
+  </div>
+
+  <div class="split-content">
+    <h3>Pagination</h3>
+
+    <h4>Standard</h4>
+    <nav class="pagination">
+      <ul>
+        <li><a href="#">&laquo;</a></li>
+        <li class="current"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+    </nav>
+
+    <h4>Mini</h4>
+    <nav class="pagination pagination--mini">
+      <p><a href="" class="prev">&laquo;&nbsp;Prev</a>&nbsp;<a href="" class="next">Next&nbsp;&raquo;</a></p>
+    </nav>
+  </div>
+
+  <div class="split-content">
+    <h3>Vertical navigation</h3>
+    <nav class="vertical-nav">
+      <ul>
+       <li><a href="/page">Nav Item 1</a></li>
+       <li><a href="/page">Nav Item 2</a></li>
+       <li><a href="/page">Nav Item 3</a></li>
+      </ul>
+    </nav>
+
+    <h4>Markup example</h4>
+    <pre class="line-numbers language-markup"><code>    &lt;nav class="vertical-nav"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/page"&gt;Page name&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/page"&gt;Page name&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/page"&gt;Page name&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;</code></pre>
+  </div>
+
+  <div class="split-content">
+    <h3>Horizontal navigation</h3>
+    <nav class="horizontal-nav">
+      <ul>
+       <li><a href="/page">Nav Item 1</a></li>
+       <li><a href="/page">Nav Item 2</a></li>
+       <li><a href="/page">Nav Item 3</a></li>
+      </ul>
+    </nav>
+
+    <h4>Markup example</h4>
+    <pre class="line-numbers language-markup"><code>    &lt;nav class="horizontal-nav"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/page"&gt;Page name&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/page"&gt;Page name&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/page"&gt;Page name&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;</code></pre>
+  </div>
+
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+</section>
+
+<section class="row" id="callouts">
+  <h2>Callouts</h2>
+  <hr>
+
+  <p>These patterns are great for making wells and callouts inside of sidebars and primary content areas. Add images, videos, and forms to make them even more powerful.</p>
+
+  <div class="code">
+    <h3>Markup example</h3>
+    <pre class="line-numbers language-markup"><code>    &lt;!-- Basic callout structure --&gt;
+    &lt;aside class="callout"&gt;
+      &lt;figure&gt;
+        &lt;!-- Image or other content that should go edge-to-edge --&gt;
+      &lt;figure&gt;
+      &lt;div class="content"&gt;
+        &lt;!-- Inner content with background and padding --&gt;
+      &lt;/div&gt;
+    &lt;/aside&gt;</code></pre>
+  </div>
+</section>
+
+<section class="row callouts">
+  <aside class="callout">
+    <div class="content subtle">
+      <h2>Callout</h2>
+      <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also be used to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+    </div>
+  </aside>
+
+  <aside class="callout">
+    <div class="content reverse">
+      <h2>Dark Callout</h2>
+      <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also be used to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+    </div>
+  </aside>
+
+  <aside class="callout">
+    <figure>
+      <img src="http://placehold.it/800x400" alt="">
+    </figure>
+    <div class="content subtle">
+      <h2>Image Callout</h2>
+      <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also be used to highlight important sections.</p>
+    </div>
+  </aside>
+
+  <aside class="callout">
+    <figure class="video">
+      <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </figure>
+    <div class="content subtle">
+      <h2>Video Callout</h2>
+      <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also be used to highlight important sections.</p>
+    </div>
+  </aside>
+
+  <aside class="callout">
+    <div class="content reverse">
+      <h2>Form Callout</h2>
+      <p>Callout content is a related aside that doesn't fit directly inside normal page content.</p>
+      <form action="#">
+        <div class="field">
+          <input type="text" class="text-input" placeholder="Name" />
+        </div>
+        <div class="field">
+          <input type="email" class="text-input" placeholder="Email" />
+        </div>
+
+        <button type="submit" class="button--red button--small">Submit</button>
+      </form>
+    </div>
+  </aside>
+
+  <aside class="callout">
+    <div class="content reverse">
+      <h2>Callout with drawer</h2>
+      <p>Callout content is a related aside that doesn't fit directly inside normal page content.</p>
+      <p><a href="#callout-drawer-1" class="js-reveal button button--red">Open drawer</a></p>
+
+      <form action="#" id="callout-drawer-1" class="drawer">
+        <div class="field">
+          <input type="text" class="text-input" placeholder="Name" />
+        </div>
+        <div class="field">
+          <input type="email" class="text-input" placeholder="Email" />
+        </div>
+         <button type="submit" class="button--red button--small">Submit</button>
+      </form>
+    </div>
+  </aside>
+
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+</section>
+{% endblock %}

@@ -1,0 +1,547 @@
+{% extends "_layouts/guide.html" %}
+{% block page %}
+  <nav class="horizontal-nav horizontal-nav--guide row" id="header">
+    <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
+    <ul class="collapse" id="sections">
+      <li><a href="#headings" class="js-scroll">Headings</a></li>
+      <li><a href="#paragraphs" class="js-scroll">Paragraphs</a></li>
+      <li><a href="#quotes" class="js-scroll">Quotes</a></li>
+      <li><a href="#reverse" class="js-scroll">Reverse text</a></li>
+      <li><a href="#lists" class="js-scroll">Lists</a></li>
+      <li><a href="#borders" class="js-scroll">Borders</a></li>
+      <li><a href="#misc" class="js-scroll">Misc</a></li>
+      <li><a href="#fields" class="js-scroll">Form fields</a></li>
+      <li><a href="#controls" class="js-scroll">Controls</a></li>
+      <li><a href="#buttons" class="js-scroll">Buttons</a></li>
+    </ul>
+  </nav>
+
+<header class="row">
+  <h1>Elements</h1>
+  <p class="lead">All the independent design elements that are used to build our components and modules.</p>
+</header>
+
+<section class="row" id="headings">
+  <h2>Headings</h2>
+  <hr>
+
+  <div class="split-content">
+    <h3>Default headings</h3>
+    <h1>Primary page heading</h1>
+    <h2>Secondary heading</h2>
+    <h3>Third heading</h3>
+    <h4>Fourth heading</h4>
+    <h5>Fifth heading</h5>
+    <h6>Sixth heading</h6>
+  </div>
+
+  <div class="split-content">
+    <h3>Linked headings</h3>
+    <h1><a href="">Primary page heading</a></h1>
+    <h2><a href="">Secondary heading</a></h2>
+    <h3><a href="">Third heading</a></h3>
+    <h4><a href="">Fourth heading</a></h4>
+    <h5><a href="">Fifth heading</a></h5>
+    <h6><a href="">Sixth heading</a></h6>
+  </div>
+
+  <div class="split-content">
+    <h3>Dual Headings</h3>
+    <h1>Primary page heading <span>Sub heading</span></h1>
+    <h2>Secondary heading <span>Sub heading</span></h2>
+
+    <h3>Markup example:</h3>
+    <pre class="language-markup"><code>&lt;h1&gt;Primary page heading &lt;span&gt;Sub heading&lt;/span&gt;&lt;/h1&gt;</code></pre>
+  </div>
+
+  <div class="split-content">
+    <h3>Heading groups</h3>
+    <div class="hgroup">
+      <h2>Mini heading</h2>
+      <h1>Main heading</h1>
+    </div>
+
+    <div class="hgroup">
+      <h3>Mini heading</h3>
+      <h2>Main heading</h2>
+    </div>
+
+    <h3>Markup example:</h3>
+    <pre class="language-markup"><code>&lt;div class="hgroup"&gt;
+  &lt;h2&gt;Primary page heading&lt;/h2&gt;
+  &lt;h1&gt;Primary page heading&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+</section>
+
+<section class="row" id="paragraphs">
+  <h2>Paragraphs</h2>
+  <hr>
+  <div class="content paragraphs">
+    <p class="lead">This is a lead paragraph. It is emphasised to bring readers into an article. Let&rsquo;s add a sexy <i class="amp">&amp;</i> character. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.</p>
+
+    <p>Here are some paragraphs. This is the meat of our content and where we most of our typographic decisions live. Look inside the following paragraphs for examples of <a href="">links</a>, <strong>bold text</strong>, and <em>italics</em>. Here is a foonote reference<sup><a href="#fn1">*</a></sup></p>
+
+    <p>Donec id elit <abbr title="Hypertext Markup Language" class="acr">HTML</abbr> non mi porta <em>gravida at eget</em> metus. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et <strong>magnis dis parturient</strong> montes, nascetur ridiculus mus.</p>
+
+    <p>Integer posuere erat a ante <a href="">venenatis dapibus</a> posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+    <p>Duis mollis, est non <a href="">commodo luctus</a>, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur <em>adipiscing elit</em>. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. <strong>Vivamus sagittis</strong> lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+    <p id="fn1"><small><sup>*</sup> Here is some fine print. It can be used for the little stuff, like this footnote.</small></p>
+
+    <h1>Primary page heading</h1>
+
+    <p>Donec id elit <abbr title="Hypertext Markup Language" class="acr">HTML</abbr> non mi porta <em>gravida at eget</em> metus. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et <strong>magnis dis parturient</strong> montes, nascetur ridiculus mus.</p>
+
+    <h2>Secondary heading</h2>
+
+    <p>Duis mollis, est non <a href="">commodo luctus</a>, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+    <h3>Third heading</h3>
+
+    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur <em>adipiscing elit</em>. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. <strong>Vivamus sagittis</strong> lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+    <h4>Fourth heading</h4>
+
+    <p>Integer posuere erat a ante <a href="">venenatis dapibus</a> posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+    <h5>Fifth heading</h5>
+
+    <p>Donec id elit <abbr title="Hypertext Markup Language" class="acr">HTML</abbr> non mi porta <em>gravida at eget</em> metus. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et <strong>magnis dis parturient</strong> montes, nascetur ridiculus mus.</p>
+
+
+    <h6>Sixth heading</h6>
+
+    <p>Integer posuere erat a ante <a href="">venenatis dapibus</a> posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+  </div>
+
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+</section>
+
+<section class="row" id="quotes">
+  <h2>Quotes</h2>
+  <hr>
+  <p>This is some text with an <q>inline quote</q> inside of it.</p>
+
+  <blockquote>
+    <p>This is a blockquote. We use this when quoting others or displaying testimonials.</p>
+    <small class="source"><a href="">Source Name</a> in <cite title="Publication"><a href="">Publication</a></cite></small>
+  </blockquote>
+
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+</section>
+
+<section class="row" id="reverse">
+  <h2>Reverse text</h2>
+  <hr>
+  <p>Add a <code>reverse</code> class to any element to invert the colours of the text and its background.</p>
+
+  <aside class="callout">
+    <div class="content reverse">
+      <p>Callout content is a related aside that doesn&rsquo;t fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+    </div>
+  </aside>
+
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+</section>
+
+<section class="row" id="lists">
+  <h2>Lists</h2>
+  <hr>
+
+  <div class="split-content">
+    <ul>
+      <li>Unordered list item</li>
+      <li>Unordered list item</li>
+      <li>Unordered list item</li>
+      <li>Unordered list item
+        <ul>
+          <li>Unordered list item</li>
+          <li>Unordered list item</li>
+          <li>Unordered list item</li>
+        </ul>
+      </li>
+      <li>Unordered list item</li>
+      <li>Unordered list item</li>
+      <li>Unordered list item</li>
+    </ul>
+
+    <ol>
+      <li>Ordered list item</li>
+      <li>Ordered list item</li>
+      <li>Ordered list item</li>
+      <li>Ordered list item</li>
+      <li>Ordered list item</li>
+      <li>Ordered list item</li>
+      <li>Ordered list item</li>
+    </ol>
+  </div>
+
+  <div class="split-content">
+    <dl>
+      <dt>Definition title</dt>
+      <dd>Definition description. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.</dd>
+      <dt>Definition title</dt>
+      <dd>Definition description. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.</dd>
+      <dt>Definition title</dt>
+      <dd>Definition description. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.</dd>
+    </dl>
+  </div>
+
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+</section>
+
+<section class="row" id="borders">
+  <h2>Borders &amp; rules</h2>
+  <hr>
+
+  <div class="split-content">
+    <h3>Dark rule</h3>
+    <hr />
+    <h3>Light rule</h3>
+    <hr class="rule--light" />
+  </div>
+
+  <div class="split-content">
+    <h3>Red rule</h3>
+    <hr class="rule--red" />
+    <h3>White rule</h3>
+    <div class="reverse"><hr class="rule--white" /></div>
+  </div>
+
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+</section>
+
+<section class="row" id="misc">
+  <h2>Misc</h2>
+  <hr>
+
+  <div class="split-content">
+    <h3>Time stamp</h3>
+    <time datetime="2011-01-12">January 12<sup>th</sup>, 2011</time>
+    <hr>
+
+    <h3>Price</h3>
+    <p class="price">$100.00</p>
+    <hr>
+
+    <h3>More links</h3>
+    <p class="more"><a href="">Read more &gt;</a></p>
+  </div>
+
+  <div class="split-content">
+    <h3>VCard</h3>
+    <div class="vcard">
+      <p class="adr">
+        <strong class="org">Company name</strong>
+        <span class="street-address">123 West Chester Street</span>
+        <span class="locality">Vancouver</span>, <span class="region">BC</span> <span class="postal-code">V7B 0B4</span>
+        <span class="country-name">Canada</span>
+      </p>
+      <p class="tel">
+        <span class="type">Phone</span>
+        <a href="tel:+18885555555" class="value" title="+18885555555">1 (888) 555-5555</a>
+      </p>
+      <p class="email">
+        <span class="type">Email</span>
+        <a href="mailto:name@example.com" class="value" title="name@example.com">name@example.com</a>
+      </p>
+    </div>
+  </div>
+
+  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+</section>
+
+<form action="#" method="post">
+  <section class="row" id="fields">
+    <fieldset class="split-content">
+      <h2>Text Inputs</h2>
+      <hr>
+
+      <div class="field">
+        <label for="text">Text input</label>
+        <input type="text" name="text" id="text" value="" placeholder="Text" class="text-input"  />
+      </div>
+
+      <div class="field">
+        <label for="email">Email input</label>
+        <input type="email" name="email" id="email" value="" placeholder="name@example.com" class="text-input"  />
+      </div>
+
+      <div class="field">
+        <label for="url">URL input</label>
+        <input type="url" name="url" id="url" value="" placeholder="http://example.com" class="text-input"  />
+      </div>
+
+      <div class="field">
+        <label for="tel">Telephone input</label>
+        <input type="tel" name="tel" id="tel" value="" placeholder="555-555-5555" class="text-input"  />
+      </div>
+
+      <div class="field">
+        <label for="search">Search input</label>
+        <input type="search" name="search" id="search" value="" placeholder="Search" class="search-input"  />
+      </div>
+
+      <div class="field">
+        <label for="textarea">Text area</label>
+        <textarea name="textarea" id="textarea"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="error">Invalid input</label>
+        <input type="text" name="error" id="error" value="Bad input" placeholder="" class="error text-input"  />
+        <label class="error label--error">Error message for invalid field.</label>
+      </div>
+
+    </fieldset>
+    <fieldset class="split-content">
+      <h2>HTML5 Special fields</h2>
+      <hr>
+
+      <div class="field">
+        <label for="number">Number input</label>
+        <input type="number" name="number" id="number" value="" placeholder="" class="text-input"  />
+      </div>
+
+      <div class="field">
+        <label for="datetime">Datetime input</label>
+        <input type="datetime" name="datetime" id="datetime" value="" class="text-input" />
+      </div>
+
+      <div class="field">
+        <label for="datetime-local">Datetime-local input</label>
+        <input type="datetime-local" name="datetime-local" id="datetime-local" value="" class="text-input" />
+      </div>
+
+      <div class="field">
+        <label for="month">Month input</label>
+        <input type="month" name="month" value="" id="month" class="text-input" />
+      </div>
+
+      <div class="field">
+        <label for="week">Week input</label>
+        <input type="week" name="week" value="" id="week" class="text-input" />
+      </div>
+
+      <div class="field">
+        <label for="time">Time input</label>
+        <input type="time" name="time" value="" id="time" class="text-input" />
+      </div>
+
+      <div class="field">
+        <label for="range">Range input</label>
+        <input type="range" name="range" id="range" value="0" />
+      </div>
+
+      <div class="field">
+        <label for="color">Colour input</label>
+        <input type="color" name="color" id="color" value="" />
+      </div>
+
+    </fieldset>
+  </section>
+
+  <section class="row">
+    <fieldset class="split-content">
+      <h2>Checks &amp; Radios</h2>
+      <hr>
+
+      <div class="field">
+        <h3>Checkboxes</h3>
+        <ul class="check-list">
+          <li><label><input type="checkbox" name="checkbox" value="checkbox" /> Checkbox option</label></li>
+          <li><label><input type="checkbox" name="checkbox" value="checkbox" /> Checkbox option</label></li>
+          <li><label><input type="checkbox" name="checkbox" value="checkbox" /> Checkbox option</label></li>
+          <li><label><input type="checkbox" name="checkbox" value="checkbox" /> Checkbox option</label></li>
+          <li><label><input type="checkbox" name="checkbox" value="checkbox" /> Checkbox option</label></li>
+          <li><label><input type="checkbox" name="checkbox" value="checkbox" /> Checkbox option</label></li>
+          <li><label><input type="checkbox" name="checkbox" value="checkbox" /> Checkbox option</label></li>
+        </ul>
+      </div>
+
+      <div class="field">
+        <h3>Radios</h3>
+        <ul class="check-list">
+          <li><label><input type="radio" name="radio" value="radio" /> Radio option</label></li>
+          <li><label><input type="radio" name="radio" value="radio" /> Radio option</label></li>
+          <li><label><input type="radio" name="radio" value="radio" /> Radio option</label></li>
+          <li><label><input type="radio" name="radio" value="radio" /> Radio option</label></li>
+          <li><label><input type="radio" name="radio" value="radio" /> Radio option</label></li>
+          <li><label><input type="radio" name="radio" value="radio" /> Radio option</label></li>
+          <li><label><input type="radio" name="radio" value="radio" /> Radio option</label></li>
+        </ul>
+      </div>
+
+    </fieldset>
+    <fieldset class="split-content">
+      <h2>Selects</h2>
+      <hr>
+
+      <div class="field">
+        <label for="select">Select Dropdown</label>
+        <select name="select" id="select" class="ss-navigatedown">
+          <option value="selection">Select option</option>
+          <option value="selection">Select option</option>
+          <option value="selection">Select option</option>
+          <option value="selection">Select option</option>
+          <option value="selection">Select option</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="multi-select">Multi-select</label>
+        <select name="multi-select" id="multi-select" multiple>
+          <option value="selection">Select option</option>
+          <option value="selection">Select option</option>
+          <option value="selection">Select option</option>
+          <option value="selection">Select option</option>
+          <option value="selection">Select option</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <fieldset class="split-content">
+      <h2>File uploads</h2>
+      <hr>
+      <div class="field">
+        <label for="file">File upload</label>
+        <input type="file" name="file" id="file" />
+      </div>
+    </fieldset>
+
+  </section>
+  <section class="row" id="controls">
+    <fieldset class="split-content">
+      <h2>Controls</h2>
+      <hr>
+
+      <h3>Checkbox option buttons</h3>
+      <div class="field option-buttons js-options">
+        <label for="cb1"><input type="checkbox" name="check-button" value="1" id="cb1" />Item 1</label>
+        <label for="cb2"><input type="checkbox" name="check-button" value="2" id="cb2" />Item 2</label>
+        <label for="cb3"><input type="checkbox" name="check-button" value="3" id="cb3" />Item 3</label>
+      </div>
+
+        <h4>Markup example:</h4>
+        <pre class="language-markup line-numbers"><code>    &lt;div class="field option-buttons js-options"&gt;
+      &lt;label for="cb1"&gt;&lt;input type="checkbox" name="check-button" value="1" id="cb1" /&gt;Item 1&lt;/label&gt;
+      &lt;label for="cb2"&gt;&lt;input type="checkbox" name="check-button" value="2" id="cb2" /&gt;Item 2&lt;/label&gt;
+      &lt;label for="cb3"&gt;&lt;input type="checkbox" name="check-button" value="3" id="cb3" /&gt;Item 3&lt;/label&gt;
+    &lt;/div&gt;</code></pre>
+        <h3>Radio option buttons</h3>
+        <div class="field option-buttons js-options">
+          <label for="rb1"><input type="radio" name="radio-button" value="1" id="rb1" />Item 1</label>
+          <label for="rb2"><input type="radio" name="radio-button" value="2" id="rb2" />Item 2</label>
+          <label for="rb3"><input type="radio" name="radio-button" value="3" id="rb3" />Item 3</label>
+        </div>
+
+
+        <h4>Markup example:</h4>
+        <pre class="language-markup line-numbers"><code>    &lt;div class="field option-buttons js-options"&gt;
+      &lt;label for="rb1"&gt;&lt;input type="radio" name="radio-button" value="1" id="rb1" /&gt;Item 1&lt;/label&gt;
+      &lt;label for="rb2"&gt;&lt;input type="radio" name="radio-button" value="2" id="rb2" /&gt;Item 2&lt;/label&gt;
+      &lt;label for="rb3"&gt;&lt;input type="radio" name="radio-button" value="3" id="rb3" /&gt;Item 3&lt;/label&gt;
+    &lt;/div&gt;</code></pre>
+
+          <h3>Checkbox pill buttons</h3>
+        <div class="field pill-buttons js-options">
+          <label for="cp1"><input type="checkbox" name="check-pill" value="1" id="cp1" />Item 1</label>
+          <label for="cp2"><input type="checkbox" name="check-pill" value="2" id="cp2" />Item 2</label>
+          <label for="cp3"><input type="checkbox" name="check-pill" value="3" id="cp3" />Item 3</label>
+        </div>
+
+        <h4>Markup example:</h4>
+        <pre class="language-markup line-numbers"><code>    &lt;div class="field pill-buttons js-options"&gt;
+      &lt;label for="cp1"&gt;&lt;input type="checkbox" name="check-button" value="1" id="cp1" /&gt;Item 1&lt;/label&gt;
+      &lt;label for="cp2"&gt;&lt;input type="checkbox" name="check-button" value="2" id="cp2" /&gt;Item 2&lt;/label&gt;
+      &lt;label for="cp3"&gt;&lt;input type="checkbox" name="check-button" value="3" id="cp3" /&gt;Item 3&lt;/label&gt;
+    &lt;/div&gt;</code></pre>
+
+        <h3>Radio pill buttons</h3>
+        <div class="field pill-buttons js-options">
+          <label for="rp1"><input type="radio" name="radio-pill" value="1" id="rp1" />Item 1</label>
+          <label for="rp2"><input type="radio" name="radio-pill" value="2" id="rp2" />Item 2</label>
+          <label for="rp3"><input type="radio" name="radio-pill" value="3" id="rp3" />Item 3</label>
+        </div>
+
+        <h4>Markup example:</h4>
+        <pre class="language-markup line-numbers"><code>    &lt;div class="field pill-buttons js-options"&gt;
+      &lt;label for="rp1"&gt;&lt;input type="radio" name="radio-button" value="1" id="rp1" /&gt;Item 1&lt;/label&gt;
+      &lt;label for="rp2"&gt;&lt;input type="radio" name="radio-button" value="2" id="rp2" /&gt;Item 2&lt;/label&gt;
+      &lt;label for="rp3"&gt;&lt;input type="radio" name="radio-button" value="3" id="rp3" /&gt;Item 3&lt;/label&gt;
+    &lt;/div&gt;</code></pre>
+
+
+    <h3>Switch</h3>
+    <div class="field switch">
+      <input id="x" name="switch-x" type="radio" checked>
+      <label for="x" onclick="">Off</label>
+      <input id="y" name="switch-x" type="radio">
+      <label for="y" onclick="">On</label>
+      <span></span>
+    </div>
+
+        <h4>Markup example:</h4>
+        <pre class="language-markup line-numbers"><code>    &lt;div class="field switch"&gt;
+      &lt;input id="x" name="switch-x" type="radio" checked /&gt;
+      &lt;label for="x"&gt;Off&lt;/label&gt;
+      &lt;input id="y" name="switch-x" type="radio" /&gt;
+      &lt;label for="y"&gt;On&lt;/label&gt;
+    &lt;/div&gt;</code></pre>
+
+    </fieldset>
+    <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+    <fieldset id="buttons">
+      <h2>Buttons</h2>
+      <hr>
+
+      <div class="field">
+        <button type="submit">Button input</button>
+      </div>
+
+      <div class="field">
+        <input type="submit" value="Submit input" />
+      </div>
+
+      <div class="field">
+        <a href="#" class="button">Button link</a>
+      </div>
+
+      <div class="field">
+        <a href="#" class="button button--red">Red button</a>
+      </div>
+
+      <div class="field">
+        <a href="#" class="button button--blue">Blue button</a>
+      </div>
+
+      <div class="field">
+        <a href="#" class="button button--disabled">Disabled button</a>
+      </div>
+
+      <div class="field">
+        <a href="#" class="button button--small">Small button link</a>
+      </div>
+
+      <div class="field">
+        <a href="#" class="button button--large">Large button link</a>
+      </div>
+
+      <div class="field button-group">
+        <a href="#" class="button">Button group</a>
+        <a href="#" class="button">Button group</a>
+        <a href="#" class="button">Button group</a>
+      </div>
+    </fieldset>
+
+    <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+  </section>
+</form>
+{% endblock %}

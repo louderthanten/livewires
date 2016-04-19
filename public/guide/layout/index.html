@@ -1,9 +1,80 @@
----
-layout: guide
-slug: layout
----
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <!-- Include meta tags -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="initial-scale=1.0">
 
-  <nav class="horizontal-nav horizontal-nav--guide row" id="header">
+  <!-- Title block allowing child pages to override -->
+<title></title>
+
+<meta name="description" content="">
+
+<link rel="canonical" href="">
+<link rel="alternate" type="application/rss+xml" title="" href="" />
+<link rel="shortcut icon" href="/img/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png" />
+
+<!-- Fontawesome icons. Remove if not using -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+<link href="/css/app.css" rel="stylesheet" media="all" />
+
+
+<meta name="description" content="">
+
+<!-- global Open Graph tags -->
+<meta property="og:title" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="" />
+<meta property="og:site_name" content="" />
+
+<!-- Twitter social tags -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="" />
+<meta name="twitter:site" content="">
+
+  <!-- build:css({app,.tmp}) /css/guide.css -->
+  <link href="/css/guide.css" rel="stylesheet" media="all" />
+  <!-- endbuild -->
+
+  </head>
+  <body class="pg-">
+
+    <!-- Header section -->
+    <div class="trigger--guide js-open-canvas reverse active"><a href="#offcanvas"><i class="fa fa-bars"></i><strong>Menu</strong></a></div>
+
+<header class="offcanvas--left offcanvas--open reverse" id="offcanvas">
+  <a href="/guide/" class="logo"><img src="/img/logo-reverse.svg" alt="Live Wires logo" /></a>
+
+  <nav class="clear">
+    <ul>
+      <li class="primary__welcome"><a href="/guide/">Usage</a>
+      </li>
+      <li class="primary__brand"><a href="/guide/identity/">Identity</a>
+      </li>
+      <li class="primary__grid"><a href="/guide/layout/">Layout</a>
+      </li>
+      <li class="primary__elements"><a href="/guide/elements/">Elements</a>
+      </li>
+      <li class="primary__components"><a href="/guide/components/">Components</a>
+      </li>
+      <li class="primary__modules"><a href="/guide/modules/">Modules</a>
+      </li>
+      <li class="primary__templates"><a href="/guide/templates/">Templates</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+    <!-- Content block, child page inject content -->
+    <main class="main offcanvas--squish offcanvas--squish-left" id="main" role="main">
+        <nav class="horizontal-nav horizontal-nav--guide row" id="header">
     <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
     <ul class="collapse" id="sections">
       <li><a href="#howto" class="js-scroll">How to use</a></li>
@@ -334,3 +405,31 @@ html {
   </div>
   <p class="more"><a href="#header" class="js-scroll">To top</a></p>
 </section>
+      <!-- Footer section -->
+      <footer class="footer row subtle">
+  <p><small><a href="/">Home</a> | <a href="/guide/">Guide</a> | <a href="/example/">Example</a></small></p>
+  <p><small>&copy; . Rapidly built with <a href="http://www.livewires.io">Live Wires</a>.</small></p>
+</footer>
+    </main>
+
+
+
+    <!-- JS Includes -->
+    
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
+
+
+<script src="/_bower_components/fitvids/jquery.fitvids.js"></script>
+
+
+<script src="/js/drawers.js"></script>
+<script src="/js/forms.js"></script>
+<script src="/js/media.js"></script>
+<script src="/js/offcanvas.js"></script>
+<script src="/js/scroll.js"></script>
+<script src="/js/tabs.js"></script>
+<script src="/js/typography.js"></script>
+
+  </body>
+</html>

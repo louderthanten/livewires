@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <!-- Include meta tags -->
+    {% include '_includes/head.html' %}
+  </head>
+  <body>
+
+    <!-- Header section -->
+    {% include '_includes/header.html' %}
+
+    <!-- Content block, child page inject content -->
+    <main class="main" id="main" role="main">
+    {% block page %}{% endblock %}
+    </main>
+
+    <!-- Footer section -->
+    {% include '_includes/footer.html' %}
+
+    <!-- JS Includes -->
+    {% include '_includes/foot.html' %}
+  </body>
+</html>

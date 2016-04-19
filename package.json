@@ -2,7 +2,7 @@
   "name": "livewires",
   "version": "3.0.0",
   "description": "Live Wires",
-  "main": "index.html",
+  "main": "index.twig",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,23 +16,23 @@
   },
   "homepage": "https://github.com/louderthanten/livewires#readme",
   "devDependencies": {
-    "autoprefixer": "^6.2.1",
+    "autoprefixer": "^6.3.6",
     "bower": "^1.7.2",
     "browser-sync": "^2.10.1",
     "cssnano": "^3.4.0",
     "gulp": "^3.9.0",
     "gulp-concat-util": "^0.5.4",
-    "gulp-modernizr": "0.0.0",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",
-    "postcss-assets": "^3.0.3",
+    "postcss-assets": "^4.0.1",
     "postcss-cssnext": "^2.4.0"
   },
   "dependencies": {
-    "bricks.js": "^1.0.1"
+    "bricks.js": "^1.0.1",
+    "gulp-twig": "^0.5.0"
   }
 }

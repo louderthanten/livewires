@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <!-- Include meta tags -->
+    {% include '_includes/head.html' %}
+
+  <!-- build:css({app,.tmp}) /css/guide.css -->
+  <link href="/css/guide.css" rel="stylesheet" media="all" />
+  <!-- endbuild -->
+
+  </head>
+  <body class="pg-{{ page.slug }}">
+
+    <!-- Header section -->
+    {% include '_includes/header-guide.html' %}
+
+    <!-- Content block, child page inject content -->
+    <main class="main offcanvas--squish offcanvas--squish-left" id="main" role="main">
+      {% block page %}{% endblock %}
+      <!-- Footer section -->
+      {% include '_includes/footer.html' %}
+    </main>
+
+
+
+    <!-- JS Includes -->
+    {% include '_includes/foot.html' %}
+
+  </body>
+</html>
