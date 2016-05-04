@@ -1,380 +1,371 @@
 {% extends "_layouts/guide.html" %}
 {% block page %}
-  <nav class="horizontal-nav horizontal-nav--guide row" id="header">
-    <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
-    <ul class="collapse" id="sections">
-      <li><a href="#howto" class="js-scroll">How to use</a></li>
-      <li><a href="#setup" class="js-scroll">Setup</a></li>
-      <li><a href="#structure" class="js-scroll">Project structure</a></li>
-      <li><a href="#markup" class="js-scroll">Markup</a></li>
-      <li><a href="#css" class="js-scroll">CSS</a></li>
-      <li><a href="#helpers" class="js-scroll">Helpers</a></li>
-      <li><a href="#js" class="js-scroll">Javascript</a></li>
-      <li><a href="#compatibility" class="js-scroll">Compatibility</a></li>
-      <li><a href="#support" class="js-scroll">Support</a></li>
-    </ul>
-  </nav>
+<nav class="horizontal-nav horizontal-nav--guide row" id="header">
+<p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
+<ul class="collapse" id="sections">
+  <li><a href="#howto" class="js-scroll">How to use</a></li>
+  <li><a href="#setup" class="js-scroll">Setup</a></li>
+  <li><a href="#structure" class="js-scroll">Project structure</a></li>
+  <li><a href="#markup" class="js-scroll">Markup</a></li>
+  <li><a href="#css" class="js-scroll">CSS</a></li>
+  <li><a href="#helpers" class="js-scroll">Helpers</a></li>
+  <li><a href="#js" class="js-scroll">Javascript</a></li>
+  <li><a href="#compatibility" class="js-scroll">Compatibility</a></li>
+  <li><a href="#support" class="js-scroll">Support</a></li>
+</ul>
+</nav>
 
 <header class="row">
-  <h1>Usage</h1>
+<h1>Usage</h1>
 
-  <p class="lead">Hey! Welcome to our living style guide, created by Live Wires. Live Wires is a simple design framework that allows you to create grey-box wireframes and responsive prototypes in <abbr>HTML</abbr>, Sass, &amp; CoffeeScript. Make this guide your own and rewrite the content here so it fits your project.</p>
+<p class="lead">Hey! Welcome to our living style guide, created by Live Wires. Live Wires is a simple design framework that allows you to create grey-box wireframes and responsive prototypes in <abbr>HTML</abbr>, Sass, &amp; CoffeeScript. Make this guide your own and rewrite the content here so it fits your project.</p>
 
-  <p>Today we stop making trash and start building a living, breathing idea that will look and act the way it was imagined.</p>
+<p>Today we stop making trash and start building a living, breathing idea that will look and act the way it was imagined.</p>
 </header>
 
 <section class="row" id="howto">
-  <h2>How do I use this guide?</h2>
-  <hr>
-  <p>The guide breaks down the setup, configuration, and application of Live Wire. Use it as a reference for building your wireframes, creating a prototype, and then building upon your site or app&rsquo;s design.</p>
+<h2>How do I use this guide?</h2>
+<hr>
+<p>The guide breaks down the setup, configuration, and application of Live Wire. Use it as a reference for building your wireframes, creating a prototype, and then building upon your site or app&rsquo;s design.</p>
 </section>
 
 <section class="row" id="setup">
-  <h2>Setup</h2>
-  <hr>
-  <p>We&rsquo;ve used <a href="https://github.com/robwierzbowski/">Rob Wierzbowski</a>&rsquo;s <a href="https://github.com/robwierzbowski/generator-jekyllrb">Jekyll generator</a> for Yeoman to create the basic Live Wires install. It includes a robust Grunt install including (but not limited to) the following:</p>
+<h2>Setup</h2>
+<hr>
+<p>We&rsquo;re using Gulp to do the following:</p>
 
-  <ul>
-    <li><a href="http://jekyllrb.com/">Jekyll</a> compilation</li>
-    <li><a href="http://sass-lang.com/">Sass</a> compilation</li>
-    <li><a href="http://CoffeeScript.org">CoffeeScript</a> compilation</li>
-    <li><a href="https://github.com/mishoo/UglifyJS">Uglify</a> (compresses JavaScript)</li>
-    <li><a href="https://github.com/ai/autoprefixer">Autoprefixer</a> (automatically adds vendor prefixes to your <abbr>CSS</abbr>)</li>
-    <li><a href="http://livereload.com/">LiveReload</a> (auto-reloads your browser on each save. You&rsquo;ll also need an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">browser extension</a>)</li>
-  </ul>
+<ul>
+<li><a href="http://twig.sensiolabs.org/">Twig</a>-based templating</li>
+<li><a href="http://sass-lang.com/">Sass</a> compilation</li>
+<li>Javascript compilation</li>
+<li><a href="https://github.com/ai/autoprefixer">Autoprefixer</a> (automatically adds vendor prefixes to your <abbr>CSS</abbr>)</li>
+<li><a href="http://livereload.com/">LiveReload</a> (auto-reloads your browser on each save. You&rsquo;ll also need an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">browser extension</a>)</li>
+</ul>
 
-      <p>To get started, you&rsquo;ll need to:</p>
-      <dl>
-        <dt>Step 1</dt>
-        <dd>Install <a href="http://nodejs.org/">Node.js</a>.</dd>
-        <dt>Step 2</dt>
-        <dd>Install <a href="http://gruntjs.com">Grunt</a> by typing <code>npm install -g grunt-cli</code> in Terminal.</dd>
-        <dt>Step 3</dt>
-        <dd>Create a folder for your project.</dd>
-        <dt>Step 4</dt>
-        <dd><a href="https://github.com/louderthanten/livewires/archive/master.zip">Download</a> or clone Live Wires from the <a href="https://github.com/louderthanten/livewires">GitHub repository</a> and save the contents in your project folder.</dd>
-        <dt>Step 5</dt>
-        <dd>Navigate to your project folder in Terminal and run <code>npm install</code>.</dd>
-        <dt>Step 6</dt>
-        <dd>Start the prepocessors by running <code>grunt serve</code> in the Terminal.</dd>
-      </dl>
+  <p>To get started, you&rsquo;ll need to:</p>
+  <dl>
+    <dt>Step 1</dt>
+    <dd>Install <a href="http://nodejs.org/">Node.js</a> (we recommend installing through <a href="https://changelog.com/install-node-js-with-homebrew-on-os-x/">Homebrew</a>).</dd>
+    <dt>Step 2</dt>
+    <dd><a href="https://github.com/louderthanten/livewires/archive/master.zip">Download</a> or clone Live Wires from the <a href="https://github.com/louderthanten/livewires">GitHub repository</a> and save the contents in your project folder.</dd>
+    <dt>Step 3</dt>
+    <dd>Navigate to your project folder in Terminal and run <code>npm install</code>.</dd>
+    <dt>Step 4</dt>
+    <dd>Run <code>bower install</code> to install any third-party javascript libraries.</dd>
+    <dt>Step 5</dt>
+    <dd>Start the prepocessors by running <code>gulp start</code> in the Terminal.</dd>
+  </dl>
 
+<aside class="callout callout--clear">
+<div class="content subtle">
+  <p><strong>Note:</strong> You&rsquo;ll need to run <code>gulp start</code> each time you work on the project.</p>
+  <p>You can learn more about running and configuring Gulp, and find additional plugins and documentation on the <a href="hhttp://gulpjs.com/">Gulp site</a>.</p>
+</div>
+</aside>
 
-
-  <aside class="callout callout--clear">
-    <div class="content subtle">
-      <p><strong>Note:</strong> You&rsquo;ll need to run <code>grunt serve</code> each time you work on the project.</p>
-      <p>You can learn more about running and configuring this Grunt install on the <a href="https://github.com/robwierzbowski/generator-jekyllrb">Generator repo</a> and find additional plugins and documentation on the <a href="http://gruntjs.com">Grunt site</a>.</p>
-    </div>
-  </aside>
-
-  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+<p class="more"><a href="#header" class="js-scroll">To top</a></p>
 </section>
 
 <section class="row" id="structure">
-  <h2>Project structure</h2>
-  <hr>
+<h2>Project structure</h2>
+<hr>
 
-  <p>One of the core philosophies behind Live Wires is stay out of the way as much as we can. We don&rsquo;t want to impose any code standards or force you into a little box. Saying that, here are some guidelines that that will help you get started with Live Wires more easily.</p>
+<p>One of the core philosophies behind Live Wires is stay out of the way as much as we can. We don&rsquo;t want to impose any code standards or force you into a little box. Saying that, here are some guidelines that that will help you get started with Live Wires more easily.</p>
 
-  <p>Here&rsquo;s how a Live Wires project is organized:</p>
+<p>Here&rsquo;s how a Live Wires project is organized:</p>
 
-  <dl>
-    <dt><code>/app/</code></dt>
-    <dd>This is where all working templates and assets live. You can create <a href="http://jekyllrb.com/docs/pages/">jekyll templates and folders</a> in here as you would in any <a href="http://jekyllrb.com">Jekyll</a> project.</dd>
+<dl>
+<dt><code>/source/templates/</code></dt>
+<dd>This is where all working <a href="http://twig.sensiolabs.org/">Twig</a> templates live.</dd>
 
-    <dt><code>/app/_includes</code></dt>
-    <dd>Put your Jekyll <a href="http://jekyllrb.com/docs/pages/">template includes</a> in here.</dd>
+<dt><code>/source/templates/_includes/</code></dt>
+<dd>Put your Twig template includes in here.</dd>
 
-    <dt><code>/app/_layouts</code></dt>
-    <dd>Put your Jekyll <a href="http://jekyllrb.com/docs/pages/">template layouts</a> in here.</dd>
+<dt><code>/source/templates/_layouts/</code></dt>
+<dd>Put your Twig templates layouts in here.</dd>
 
-    <dt><code>/app/_plugins</code></dt>
-    <dd>Put your Jekyll <a href="http://jekyllrb.com/docs/plugins/">plugins</a> in here.</dd>
+<dt><code>/source/templates/example/</code></dt>
+<dd>A set of example Live Wires prototype templates.</dd>
 
-    <dt><code>/app/_posts</code></dt>
-    <dd>You can put repeatable Jekyll content like blog posts in here. Helpfull if you want to use real example content using Jekyll&rsquo;s <a href="http://jekyllrb.com/docs/posts/">blogging system</a>.</dd>
+<dt><code>/app/guide/</code></dt>
+<dd>The project style guide templates. This begins as a Live Wires reference, but becomes your project&rsquo;s style guide as you begin writing <abbr>CSS</abbr>. Hint: Use the guide as a tool to design your elements and components.</dd>
 
-    <dt><code>/app/_scss/</code></dt>
-    <dd>This contains all of the pre-compiled Sass. This is where you will write your <abbr>CSS</abbr>.</dd>
+<dt><code>/source/_scss/</code></dt>
+<dd>This contains all of the pre-compiled Sass. This is where you will write your <abbr>CSS</abbr>.</dd>
 
-    <dt><code>/app/css/</code></dt>
-    <dd>This contains your main Sass files. This is where your <abbr>SCSS</abbr> will be compiled from and served in Jekyll.</dd>
+<dt><code>/source/js/</code></dt>
+<dd>This contains your pre-compiles javascript. This is where you will write your javascript.</dd>
 
-    <dt><code>/app/_src/</code></dt>
-    <dd>This contains all of the pre-compiled CoffeeScript. This is where you will write your <abbr>JS</abbr>.</dd>
+<dt><code>/data/</code></dt>
+<dd>You can put json or front matter content like dummy blog and data posts in here. It&rsquo;s helpfull if you want to use real example content. Uses <a href="https://www.npmjs.com/package/gulp-data">gulp-data</a>.</dd>
 
-    <dt><code>/app/_bower_components/</code></dt>
-    <dd>This is where your third party scripts get installed when you management using <a href="http://bower.io/">Bower</a>. Install packages by navigating to your project folder in Terminal and typing <code>$ bower install &lt;package&gt;</code>. Find packages on Bower&rsquo;s <a href="http://bower.io/search/">Package search</a>.</dd>
+<dt><code>/public/</code></dt>
+<dd>Where your compiled project lives. What the browser reads. You can push this folder to any server as a static site.</dd>
 
-    <dt><code>/app/example/</code></dt>
-    <dd>A set of example Live Wires prototype templates.</dd>
+<dt><code>/public/fonts/</code></dt>
+<dd>Place any font files in here.</dd>
 
-    <dt><code>/app/guide/</code></dt>
-    <dd>The project style guide templates. This begins as a Live Wires reference, but becomes your project&rsquo;s style guide as you begin writing <abbr>CSS</abbr>. Hint: Use the guide as a tool to design your elements and components.</dd>
+<dt><code>/public/img/</code></dt>
+<dd>Place your images in here.</dd>
 
-  </dl>
+</dl>
 
-  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+<p class="more"><a href="#header" class="js-scroll">To top</a></p>
 </section>
 
 
 
 <section class="row" id="markup">
-  <h2 id="markup">Markup</h2>
-  <hr>
-  <p>We use standard <abbr>HTML5</abbr> for markup. We try not to impose any markup styles or conventions, but do recommend <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This sets an easy standard for others to adopt and keeps the library tight, modular, and free of specificity issues.</p>
+<h2 id="markup">Markup</h2>
+<hr>
+<p>We use standard <abbr>HTML5</abbr> for markup. We try not to impose any markup styles or conventions, but do recommend <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This sets an easy standard for others to adopt and keeps the library tight, modular, and free of specificity issues.</p>
 
-  <p>Here&rsquo;s the basic syntax:</p>
+<p>Here&rsquo;s the basic syntax:</p>
 
-  <div class="code">
-    <pre class="language-scss"><code>.block {} /* A component or module */
+<div class="code">
+<pre class="language-scss"><code>.block {} /* A component or module */
 .block__element {} /* A descendent of that module */
 .block--modifier {} /* A modified or alternate version of the module */</code></pre>
-  </div>
+</div>
 
-  <p>Read more about <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">BEM syntax</a>.</p>
+<p>Read more about <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">BEM syntax</a>.</p>
 
-  <h3>&lsquo;Blanking out&rsquo; text</h3>
-  <p>One of our favourite Live Wires features involves the ability to blank out text. This lets us design around actual content. However, if we want our team or client to focus on the layout or hierarchy of our wireframes and prototypes, we can hide the text so they won&rsquo;t get distracted. To blank out paragraphs and list items, simply add a <code>.content</code> class to its parent element.</p>
+<h3>&lsquo;Blanking out&rsquo; text</h3>
+<p>One of our favourite Live Wires features involves the ability to blank out text. This lets us design around actual content. However, if we want our team or client to focus on the layout or hierarchy of our wireframes and prototypes, we can hide the text so they won&rsquo;t get distracted. To blank out paragraphs and list items, simply add a <code>.content</code> class to its parent element.</p>
 
-  <p>Note: <code>/app/_scss/settings/_livewires.scss</code> must be included in the <code>/app/_scss/app.scss</code> file for this to work.</p>
+<p>Note: <code>/source/scss/settings/_livewires.scss</code> must be included in the <code>/source/scss/app.scss</code> file for this to work.</p>
 
-  <div class="code">
-    <h4>Markup example</h4>
-    <pre class="language-markup line-numbers"><code>    &lt;div class="content"&gt;
-      &lt;p&gt;This text would be blanked out.&lt;/p&gt;
-    &lt;/div&gt;</code></pre>
-  </div>
+<div class="code">
+<h4>Markup example</h4>
+<pre class="language-markup line-numbers"><code>    &lt;div class="content"&gt;
+  &lt;p&gt;This text would be blanked out.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
 
-  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+<p class="more"><a href="#header" class="js-scroll">To top</a></p>
 </section>
 
 <section class="row" id="css">
 
-  <h2>CSS</h2>
-  <hr>
+<h2>CSS</h2>
+<hr>
 
-  <p>All of the styles are written using <a href="http://sass-lang.com/">Sass</a>. All source files can be found in <code>/app/_scss/</code>. We&rsquo;ve set up a few basic starter styles to get you going, but encourage you to go through each file and customize it. Using this style guide as your own is a fine way to flesh out a UI system for every project.</p>
+<p>All of the styles are written using <a href="http://sass-lang.com/">Sass</a>. All source files can be found in <code>/source/scss/</code>. We&rsquo;ve set up a few basic starter styles to get you going, but encourage you to go through each file and customize it. Using this style guide as your own is a fine way to flesh out a UI system for every project.</p>
 
-  <h3><abbr>SCSS</abbr> file structure</h3>
+<h3><abbr>SCSS</abbr> file structure</h3>
 
-  <h4>/app/_scss/</h4>
-  <p>This file contains all of the SCSS styles in the project. The guide and your own templates both share the same <abbr>CSS</abbr>. What this means is that whenever you make changes to your styles, they will be reflected on your style guide and on your wireframe. This, here, guide becomes your own as you shape your templates. We normally use the guide to style each element, component, and module in our projects.</p>
+<h4>/source/scss/</h4>
+<p>This file contains all of the SCSS styles in the project. The guide and your own templates both share the same <abbr>CSS</abbr>. What this means is that whenever you make changes to your styles, they will be reflected on your style guide and on your wireframe. This, here, guide becomes your own as you shape your templates. We normally use the guide to style each element, component, and module in our projects.</p>
 
-  <p>We&rsquo;ve structured our SCSS folder based on Harry Robert&rsquo;s <a href="http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731">ITCSS methodology</a>.</p>
+<p>We&rsquo;ve structured our SCSS folder based on Harry Robert&rsquo;s <a href="http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731">ITCSS methodology</a>.</p>
 
-  <dl>
-    <dt><code>app.scss</code></dt>
-    <dd>This generates your projects main <abbr>CSS</abbr> file. It has four includes:</dd>
+<dl>
+<dt><code>app.scss</code></dt>
+<dd>This generates your projects main <abbr>CSS</abbr> file. It has four includes:</dd>
 
-    <dt><code>_includes--base.scss</code></dt>
-    <dd>Imports the base scss variables and utilites that every SCSS file requires.</dd>
+<dt><code>_includes--base.scss</code></dt>
+<dd>Imports the base scss variables and utilites that every SCSS file requires.</dd>
 
-    <dt><code>@import "1_settings/_includes--critical";</code></dt>
-    <dd>Pulls in the critical elements, components, and modules you want to include in your projects. We separate this from the following include so you can choose asyncronously load CSS that appears outside the viewport for quicker loading. More info on the technique at <a href="https://www.filamentgroup.com/lab/performance-rwd.html">Filament Group</a>.</dd>
+<dt><code>@import "1_settings/_includes--critical";</code></dt>
+<dd>Pulls in the critical elements, components, and modules you want to include in your projects. We separate this from the following include so you can choose asyncronously load CSS that appears outside the viewport for quicker loading. More info on the technique at <a href="https://www.filamentgroup.com/lab/performance-rwd.html">Filament Group</a>.</dd>
 
-    <dt><code>@import "1_settings/_includes--secondary";</code></dt>
-    <dd>Pulls in the non-critical elements, components, and modules you want to include in your projects. We separate this from the above include so you can choose asyncronously load CSS that appears outside the viewport for quicker loading. More info on the technique at <a href="https://www.filamentgroup.com/lab/performance-rwd.html">Filament Group</a>.</dd>
+<dt><code>@import "1_settings/_includes--secondary";</code></dt>
+<dd>Pulls in the non-critical elements, components, and modules you want to include in your projects. We separate this from the above include so you can choose asyncronously load CSS that appears outside the viewport for quicker loading. More info on the technique at <a href="https://www.filamentgroup.com/lab/performance-rwd.html">Filament Group</a>.</dd>
 
-    <dt><code>@import "1_settings/_livewires";</code></dt>
-    <dd>Pulls in Live Wires styles which blank out the text inside of any element with a <code>.content</code> class in your <abbr>HTML</abbr>. Remove it to get rid of the blank text feature.</dd>
-  </dl>
+<dt><code>@import "1_settings/_livewires";</code></dt>
+<dd>Pulls in Live Wires styles which blank out the text inside of any element with a <code>.content</code> class in your <abbr>HTML</abbr>. Remove it to get rid of the blank text feature.</dd>
+</dl>
 
-  <h4>/app/_scss/1_settings/</h4>
-  <p>Contains the project variables, font includes and a few other things that set the stage.</p>
+<h4>/source/scss/1_settings/</h4>
+<p>Contains the project variables, font includes and a few other things that set the stage.</p>
 
-  <dl>
-    <dt><code>_variables.scss</code></dt>
-    <dd>Set most global variables in here. You can set things like base typographic settings, default corner radius, breakpoint widths, and grid units.</dd>
+<dl>
+<dt><code>_variables.scss</code></dt>
+<dd>Set most global variables in here. You can set things like base typographic settings, default corner radius, breakpoint widths, and grid units.</dd>
 
-    <dt><code>_colors.scss</code></dt>
-    <dd>We keep our colour variables separate so we can easily experiement with multiple colour schemes.</dd>
+<dt><code>_colors.scss</code></dt>
+<dd>We keep our colour variables separate so we can easily experiement with multiple colour schemes.</dd>
 
-    <dt><code>_includes--base.scss</code></dt>
-    <dd>Imports the base scss variables and utilites that every SCSS file requires.</dd>
+<dt><code>_includes--base.scss</code></dt>
+<dd>Imports the base scss variables and utilites that every SCSS file requires.</dd>
 
-    <dt><code>_includes.scss</code></dt>
-    <dd>Use this to include or exclude the sections you want in your project. We made everything modular, so you can use as much or as little as you like.</dd>
+<dt><code>_includes.scss</code></dt>
+<dd>Use this to include or exclude the sections you want in your project. We made everything modular, so you can use as much or as little as you like.</dd>
 
-    <dt><code>_livewires.scss</code></dt>
-    <dd>Blanks out text inside of any element with a <code>.content</code> class in your <abbr>HTML</abbr>. Include this when presenting wireframes to clients or your team to focus their attention on layout and flow, rather than textual content. But hark the broken record: get your content in before you get into design.</dd>
+<dt><code>_font-faces.scss</code></dt>
+<dd>Add any font or icon @font-face includes to this file.</dd>
 
-    <dt><code>_font-faces.scss</code></dt>
-    <dd>Add any font or icon @font-face includes to this file.</dd>
+</dl>
 
-  </dl>
+<h4>/source/scss/2_tools/</h4>
+<p>Contains our handy logic-based SCSS tools like Mixins and Functions.</p>
+<dl>
+<dt><code>_mixins.scss</code> &amp; <code>_functions.scss</code></dt>
+<dd>These include powerful enhacements to help save time. Have a browse to see what&rsquo;s available and how they work.</dd>
+</dl>
 
-  <h4>/app/_scss/2_tools/</h4>
-  <p>Contains our handy logic-based SCSS tools like Mixins and Functions.</p>
-  <dl>
-    <dt><code>_mixins.scss</code> &amp; <code>_functions.scss</code></dt>
-    <dd>These include powerful enhacements to help save time. Have a browse to see what&rsquo;s available and how they work.</dd>
-  </dl>
+<h4>/source/scss/3_generic/</h4>
+<p>Contains third party styles like normalize as well as any plugin css that needs to be overridden.</p>
 
-  <h4>/app/_scss/3_generic/</h4>
-  <p>Contains third party styles like normalize as well as any plugin css that needs to be overridden.</p>
+<h4>/source/scss/4_elements/</h4>
+<p>Naked default HTML elements are styled here. Avoid styling with classes. <em>e.g. paragraphs, headings, form fields</em></p>
 
-  <h4>/app/_scss/4_elements/</h4>
-  <p>Naked default HTML elements are styled here. Avoid styling with clases. <em>e.g. paragraphs, headings, form fields</em></p>
+<h4>/source/scss/5_components/</h4>
+<p>The reusable pieces that consist of groups of elements. Start styling with classes here. <em>e.g. callouts, pagination, code blocks</em></p>
 
-  <h4>/app/_scss/5_components/</h4>
-  <p>The reusable pieces that consist of groups of elements. Start styling with classes here. <em>e.g. callouts, pagination, code blocks</em></p>
+<h4>/source/scss/6_modules/</h4>
+<p>Major chunks that make up the main sections of a template. They often contain components and global elements, and are often used once per page. <em>e.g. headers, footers, layout modules</em></p>
 
-  <h4>/app/_scss/6_modules/</h4>
-  <p>Major chunks that make up the main sections of a template. They often contain components and global elements, and are often used once per page. <em>e.g. headers, footers, layout modules</em></p>
+<h4>/source/scss/7_theme/</h4>
+<p>This contains all colour-related styles. We&rsquo;ve kept all the color assignments separate from structural styles to make theming easier, faster, and less prone to errors. Optional.</p>
 
-  <h4>/app/_scss/7_theme/</h4>
-  <p>This contains all colour-related styles. We&rsquo;ve kept all the color assignments separate from structural styles to make theming easier, faster, and less prone to errors. Optional.</p>
+<h4>/source/scss/8_pages/</h4>
+<p>Page-specific styles. We recommend keeping larger files in this section out of the main stylesheet and only calling them on their respective pages.</p>
 
-  <h4>/app/_scss/8_pages/</h4>
-  <p>Page-specific styles. We recommend keeping larger files in this section out of the main stylesheet and only calling them on their respective pages.</p>
+<h4>/source/scss/9_overrides/</h4>
+<p>Anything that needs to sit at the bottom of the CSS. Put your important overrides in here.</p>
+<dl>
+<dt><code>_livewires.scss</code></dt>
+<dd>Blanks out text inside of any element with a <code>.content</code> class in your <abbr>HTML</abbr>. Include this when presenting wireframes to clients or your team to focus their attention on layout and flow, rather than textual content. But hark the broken record: get your content in before you get into design.</dd>
+</dl>
 
-  <h4>/app/_scss/9_overrides/</h4>
-  <p>Anything that needs to sit at the bottom of the CSS. Put your important overrides in here.</p>
-
-  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+<p class="more"><a href="#header" class="js-scroll">To top</a></p>
 </section>
 
 <section class="row" id="helpers">
-  <h2>Helpers</h2>
-  <hr>
-  <p>We have some handy little helpers to make your life a little easer. Check out the <code>/app/_scss/9_overrides</code> folder for more examples.</p>
+<h2>Helpers</h2>
+<hr>
+<p>We have some handy little helpers to make your life a little easer. Check out the <code>/source/scss/9_overrides</code> folder for more examples.</p>
 
-  <dl>
-    <dt><code>.hidden</code></dt>
-    <dd>Hide stuff from screenreaders and browsers.</dd>
+<dl>
+<dt><code>.hidden</code></dt>
+<dd>Hide stuff from screenreaders and browsers.</dd>
 
-    <dt><code>.visuallyhidden</code></dt>
-    <dd>Hide stuff from browsers only.</dd>
+<dt><code>.visuallyhidden</code></dt>
+<dd>Hide stuff from browsers only.</dd>
 
-    <dt><code>.invisible</code></dt>
-    <dd>Hide but maintain layout.</dd>
+<dt><code>.invisible</code></dt>
+<dd>Hide but maintain layout.</dd>
 
-    <dt><code>.pull-right</code></dt>
-    <dd>Float object to the right.</dd>
+<dt><code>.pull-right</code></dt>
+<dd>Float object to the right.</dd>
 
-    <dt><code>.pull-left</code></dt>
-    <dd>Float object to the left.</dd>
+<dt><code>.pull-left</code></dt>
+<dd>Float object to the left.</dd>
 
-    <dt><code>.text-right</code></dt>
-    <dd>Right-aligned text.</dd>
+<dt><code>.text-right</code></dt>
+<dd>Right-aligned text.</dd>
 
-    <dt><code>.text-left</code></dt>
-    <dd>Left-aligned text.</dd>
+<dt><code>.text-left</code></dt>
+<dd>Left-aligned text.</dd>
 
-    <dt><code>.text-center</code></dt>
-    <dd>Centred text.</dd>
-  </dl>
-
-
-  <p>Use the <abbr>SCSS</abbr> <code>@extend</code> method on these, like:</p>
-
-  <dl>
-    <dt><code>@extend %group;</code></dt>
-    <dd>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element (adding a class of <code>clearfix</code> or <code>group</code> to your <abbr>HTML</abbr> element also works but isn&rsquo;t as cool).</dd>
-  </dl>
-
-
-
-  <h3>Open type features<small>(from <a href="http://kennethormandy.com/">Kenneth Ormandy&rsquo;s</a> <a href="http://utility-opentype.kennethormandy.com/">Utility OpenType</a>)</small></h3>
-
-  <dl>
-  <dt><code>.liga</code></dt>
-  <dd>Common Ligatures</dd>
-  <dt><code>.dlig</code></dt>
-  <dd>Discretionary Ligatures</dd>
-  <dt><code>.smcp</code></dt>
-  <dd>Proper Small Caps</dd>
-  <dt><code>.c2sc</code></dt>
-  <dd>Caps to Small Caps</dd>
-  <dt><code>.caps</code></dt>
-  <dd>Small Caps and Caps to Small Caps</dd>
-  <dt><code>.case</code></dt>
-  <dd>Case Sensitive Forms</dd>
-  <dt><code>.titl</code></dt>
-  <dd>Titling alternates</dd>
-  <dt><code>.calt </code></dt>
-  <dd>Contextual alternates</dd>
-  <dt><code>.hist </code></dt>
-  <dd>Historical forms</dd>
-  <dt><code>.swsh</code></dt>
-  <dd>Swashes, 1–3</dd>
-  <dt><code>.salt</code></dt>
- <dd>Stylistic Alternates, 1–3</dd>
- <dt><code>.ss01</code></dt>
- <dd>Stylistic Sets, 1–20</dd>
-  <dt><code>.frac </code></dt>
-  <dd>Diagonal Fractions</dd>
-  <dt><code>.afrc</code></dt>
-  <dd>Alternate Fractions</dd>
-  <dt><code>.ordn</code></dt>
- <dd>Ordinals</dd>
- <dt><code>.sups</code></dt>
- <dd>Superscripts</dd>
-  <dt><code>.subs</code></dt>
-  <dd>Subscripts</dd>
-  <dt><code>.sinf </code></dt>
-  <dd>Scientific Inferiors</dd>
-  <dt><code>.lnum</code></dt>
-  <dd>Lining numbers</dd>
-  <dt><code>.onum</code></dt>
-  <dd>Oldstyle numbers</dd>
-  <dt><code>.pnum</code></dt>
-  <dd>Proportinal numbers</dd>
-  <dt><code>.tnum</code></dt>
-  <dd>Tabular numbers</dd>
-  <dt><code>.zero</code></dt>
-  <dd>Slashes Zero</dd>
+<dt><code>.text-center</code></dt>
+<dd>Centred text.</dd>
 </dl>
 
 
-  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+<p>Use the <abbr>SCSS</abbr> <code>@extend</code> method on these, like:</p>
+
+<dl>
+<dt><code>@extend %group;</code></dt>
+<dd>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element (adding a class of <code>clearfix</code> or <code>group</code> to your <abbr>HTML</abbr> element also works but isn&rsquo;t as cool).</dd>
+</dl>
+
+
+
+<h3>Open type features<small>(from <a href="http://kennethormandy.com/">Kenneth Ormandy&rsquo;s</a> <a href="http://utility-opentype.kennethormandy.com/">Utility OpenType</a>)</small></h3>
+
+<dl>
+<dt><code>.liga</code></dt>
+<dd>Common Ligatures</dd>
+<dt><code>.dlig</code></dt>
+<dd>Discretionary Ligatures</dd>
+<dt><code>.smcp</code></dt>
+<dd>Proper Small Caps</dd>
+<dt><code>.c2sc</code></dt>
+<dd>Caps to Small Caps</dd>
+<dt><code>.caps</code></dt>
+<dd>Small Caps and Caps to Small Caps</dd>
+<dt><code>.case</code></dt>
+<dd>Case Sensitive Forms</dd>
+<dt><code>.titl</code></dt>
+<dd>Titling alternates</dd>
+<dt><code>.calt </code></dt>
+<dd>Contextual alternates</dd>
+<dt><code>.hist </code></dt>
+<dd>Historical forms</dd>
+<dt><code>.swsh</code></dt>
+<dd>Swashes, 1–3</dd>
+<dt><code>.salt</code></dt>
+<dd>Stylistic Alternates, 1–3</dd>
+<dt><code>.ss01</code></dt>
+<dd>Stylistic Sets, 1–20</dd>
+<dt><code>.frac </code></dt>
+<dd>Diagonal Fractions</dd>
+<dt><code>.afrc</code></dt>
+<dd>Alternate Fractions</dd>
+<dt><code>.ordn</code></dt>
+<dd>Ordinals</dd>
+<dt><code>.sups</code></dt>
+<dd>Superscripts</dd>
+<dt><code>.subs</code></dt>
+<dd>Subscripts</dd>
+<dt><code>.sinf </code></dt>
+<dd>Scientific Inferiors</dd>
+<dt><code>.lnum</code></dt>
+<dd>Lining numbers</dd>
+<dt><code>.onum</code></dt>
+<dd>Oldstyle numbers</dd>
+<dt><code>.pnum</code></dt>
+<dd>Proportinal numbers</dd>
+<dt><code>.tnum</code></dt>
+<dd>Tabular numbers</dd>
+<dt><code>.zero</code></dt>
+<dd>Slashes Zero</dd>
+</dl>
+
+
+<p class="more"><a href="#header" class="js-scroll">To top</a></p>
 </section>
 
 <section class="row" id="js">
-  <h2>Javascript</h2>
-  <hr>
-  <p>We use <a href="http://CoffeeScript.org/">CoffeScript</a> to write our scripts. Its a powerful and easy-to-learn JavaScript pre-processor to help make scripting more efficient and less error-prone.</p>
+<h2>Javascript</h2>
+<hr>
 
-  <p>If you prefer vanilla JavaScript, you can replace the files in <code>/app/_src</code> with the compiled .js files in <code>/.tmp/js/</code>.</p>
+<p>Like our <abbr>CSS</abbr> and <abbr>HTML</abbr>, we try to keep our JavaScript modular so you can use only what you need. All javascript components are in <code>/source/js</code> and will compile automatically.</p>
 
-  <p>Like our <abbr>CSS</abbr> and <abbr>HTML</abbr>, we try to keep our JavaScript modular so you can use only what you need. All the CoffeeScript components are in <code>/app/_src</code> and will compile automatically.</p>
+<h3>Third-party scripts</h3>
+<p>We use <a href="http://bower.io/">Bower</a> to manage third-party scripts like jQuery plugins from the <code>bower_components</code> folder.</p>
 
-  <p>Wrap any js references in <code>/app/_includes/foot.html</code> with <a href="https://github.com/yeoman/grunt-usemin#blocks">usemin blocks</a>. The asset target paths you enter in usemin blocks should look like <code>&lt;script src="/js/SCRIPT.js"&gt;&lt;/script&gt;</code>.</p>
-
-  <h3>Third-party scripts</h3>
-  <p>We use <a href="http://bower.io/">Bower</a> to manage third-party scripts like jQuery plugins from the <code>/app/_bower_components</code> folder.</p>
-
-  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+<p class="more"><a href="#header" class="js-scroll">To top</a></p>
 </section>
 
 <section class="row" id="compatibility">
 
-  <h2>Compatibility</h2>
-  <hr>
-  <p>We support all modern browsers including Internet Explorer 9 and up. If you need to support IE8 or anything earlier, you can solve most incompatilibilites by switching to jQuery 1.x and including the following polyfills:</p>
+<h2>Compatibility</h2>
+<hr>
+<p>We support all modern browsers including Internet Explorer 10 and up. If you need to support IE8 or anything earlier, you can solve most incompatilibilites by switching to jQuery 1.x and including the following polyfills:</p>
 
-  <ul>
-    <li><a href="https://code.google.com/p/html5shiv/">html5shiv</a></li>
-    <li><a href="https://github.com/scottjehl/Respond">Respond.js</a></li>
-    <li><a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM-unit-polyfill</a></li>
-    <li><a href="http://selectivizr.com/">Selectivizr</a></li>
-  </ul>
+<ul>
+<li><a href="https://code.google.com/p/html5shiv/">html5shiv</a></li>
+<li><a href="https://github.com/scottjehl/Respond">Respond.js</a></li>
+<li><a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM-unit-polyfill</a></li>
+<li><a href="http://selectivizr.com/">Selectivizr</a></li>
+</ul>
 
-  <p>We also use Auto-prefixer to write any necessary vendor prefixes for us. You&rsquo;ll want to adjust the settings in mixture.json or Gruntfile.js for other browsers.</p>
+<p>We also use Auto-prefixer to write any necessary vendor prefixes for us. You&rsquo;ll want to adjust the settings in mixture.json or Gruntfile.js for other browsers.</p>
 
-  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+<p class="more"><a href="#header" class="js-scroll">To top</a></p>
 
 </section>
 
 <section class="row" id="support">
-  <h2>Support</h2>
-  <hr>
+<h2>Support</h2>
+<hr>
 
-  <p>Submit your bug reports, pull requests, and questions to <a href="https://github.com/louderthanten/livewires/issues">GitHub</a>.</p>
-  <p>Other questions? Visit <a href="http://livewires.io">Live Wires</a> for more info.</p>
+<p>Submit your bug reports, pull requests, and questions to <a href="https://github.com/louderthanten/livewires/issues">GitHub</a>.</p>
+<p>Other questions? Visit <a href="http://livewires.io">Live Wires</a> for more info.</p>
 
-  <p class="more"><a href="#header" class="js-scroll">To top</a></p>
+<p class="more"><a href="#header" class="js-scroll">To top</a></p>
 </section>
 {% endblock %}
