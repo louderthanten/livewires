@@ -36,16 +36,18 @@ textarea {
 input[type=checkbox],
 input[type=radio] {
   margin-right: 0.5em;
+  color: $text;
 }
 
 select {
-
+  color: $text;
 }
 
 input[type=search],
 .search-input {
   overflow:hidden;
   box-sizing:border-box;
+  color: $text;
 
   &:focus,
   &:active {
