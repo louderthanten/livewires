@@ -31,12 +31,20 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+.row--top {
+  padding-bottom: 0;
+}
+.row--bottom {
+  padding-top: 0;
+}
 
 // Edge to edge containers on mobile
-.row--mobile-full {
+.row--m-full {
   padding-left: 0;
   padding-right: 0;
 }
+
+
 
 @media only screen and (min-width: $screenSmall) {
   .row,
@@ -52,6 +60,20 @@
   .row--tight {
     padding-top: 0;
     padding-bottom: 0;
+  }
+  .row--top {
+    padding-bottom: 0;
+  }
+  .row--bottom {
+    padding-top: 0;
+  }
+  .row--snug {
+    padding-top: rem($line);
+    padding-bottom: rem($line);
+  }
+  .row--loose {
+    padding-top: rem($line*4);
+    padding-bottom: rem($line*4);
   }
 }
 

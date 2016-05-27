@@ -1,11 +1,16 @@
 // KEYLINES, RULES, & DIVIDERS
-
-.rule--light {
+.rule--hairline {
   border-top:$hairline;
 }
-.rule--red {
+.rule--light {
+  border-top:$lightline;
+}
+.rule--accent {
   border-top:$accentline;
 }
 .rule--white {
   border-top:$whiteline;
+}
+.rule--black {
+  border-top:$blackline;
 }

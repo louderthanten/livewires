@@ -13,6 +13,12 @@ kbd {
   hyphens: none;
 }
 
+code,
+pre {
+  background:$text;
+  color: $background;
+}
+
 // Code blocks
 pre {
   padding:rem($line);
@@ -28,4 +34,6 @@ pre {
 kbd {
   padding:rem(3px 4px 1px 4px);
   font-size: 1em;
+  background: $dark-background;
+	color:$text;
 }

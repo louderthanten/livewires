@@ -16,6 +16,7 @@
 @import "../4_elements/code";
 
 // Components. Little pieces
+@import "../5_components/animation--globals";
 @import "../5_components/text--quotes";
 @import "../5_components/text--addresses";
 @import "../5_components/text--links";
@@ -27,22 +28,21 @@
 @import "../5_components/forms--labels";
 @import "../5_components/media--maps";
 @import "../5_components/media--videos";
-@import "../5_components/tables";
+@import "../5_components/tables--default";
+@import "../5_components/tables--bordered";
+@import "../5_components/tables--lined";
+@import "../5_components/tables--striped";
 @import "../5_components/nav--vertical";
 @import "../5_components/nav--pagination";
+@import "../5_components/nav--tabs";
 @import "../5_components/layout--rules";
+@import "../5_components/layout--grid";
+@import "../5_components/layout--drawers";
 
 
 // Modules. Big chunks of elements and components.
-@import "../6_modules/animation";
-@import "../6_modules/content";
-@import "../6_modules/tabs";
 @import "../6_modules/footer";
 
-// Themes. Remove if you don't need separate themeing styles
-@import "../7_theme/code";
-@import "../7_theme/forms";
-@import "../7_theme/special-fields";
-@import "../7_theme/tables";
+// Themes. Here if you need 'em
 
 // Pages. Add page-specific styles here

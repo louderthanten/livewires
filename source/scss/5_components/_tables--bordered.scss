@@ -1,0 +1,12 @@
+//  Bordered tables
+.table--bordered{
+
+  th,
+  td{
+    border:$rule;
+
+    &:empty{
+      border:none;
+    }
+  }
+}

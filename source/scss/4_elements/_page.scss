@@ -6,7 +6,7 @@ body {
 html {
   min-height: 100%;
   overflow-y: scroll;
-  font-family: $serif;
+  font-family: $sans;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -15,8 +15,15 @@ html {
 }
 
 body {
-  @include font-size; 
+  @include font-size;
+  background:$background;
+  color:$text;
 }
+
+* {
+  @include selected($background, $accent);
+}
+
 
 @media only screen and (min-width: $screenMedium) {
   html {

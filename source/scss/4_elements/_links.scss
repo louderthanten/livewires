@@ -4,12 +4,12 @@ a {
 
   &:link,
   &:visited {
-
+    color:$blue;
   }
   &:hover,
   &:active,
   &:focus {
-
+    color:$red;
   }
 }
 

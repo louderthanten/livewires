@@ -45,3 +45,11 @@ Font style
 .heavy {
   font-weight: $heavy;
 }
+
+// Text colors
+.highlight  {
+  background: $accent;
+}
+.error {
+  color:$accent;
+}

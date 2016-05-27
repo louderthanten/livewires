@@ -31,10 +31,15 @@
   }
   a {
     @extend .button;
+    @extend .button--grey;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     display:block;
     text-decoration: none;
+  }
+
+  .active {
+    background-color: $text;
   }
 }
 .tab-content {

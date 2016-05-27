@@ -23,6 +23,8 @@
 // Components. Little pieces
 @import "../5_components/text--paragraphs";
 @import "../5_components/text--headlines";
+@import "../5_components/layout--rows";
+@import "../5_components/layout--colors";
 @import "../5_components/layout--callouts";
 @import "../5_components/forms--buttons";
 @import "../5_components/nav--horizontal";
@@ -31,16 +33,11 @@
 @import "../5_components/media--images";
 
 // Modules. Big chunks of elements and components.
-@import "../6_modules/page";
 @import "../6_modules/layout";
 @import "../6_modules/header";
-@import "../6_modules/drawers";
 
-// Themes. Remove if you don't need separate theming styles
-@import "../7_theme/layout";
-@import "../7_theme/text";
-@import "../7_theme/buttons";
-@import "../7_theme/navigation";
+// Themes. Here if you need 'em
+
 
 // Overrides. Trumps everything
 @import "../9_overrides/layout";

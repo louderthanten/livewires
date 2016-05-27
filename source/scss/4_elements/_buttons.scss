@@ -23,6 +23,9 @@ a.button {
   text-decoration: none;
   cursor:pointer;
   font-family: $sans;
+  background:$text;
+  color:$background;
+
 
   &:link,
   &:visited {
@@ -35,6 +38,7 @@ a.button {
 
   &:active,
   &:focus {
-
+    background-color: $accent;
+    color:$background;
   }
 }
