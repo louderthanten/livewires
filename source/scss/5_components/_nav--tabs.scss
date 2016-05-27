@@ -31,13 +31,18 @@
   }
   a {
     @extend .button;
-    @extend .button--grey;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     display:block;
     text-decoration: none;
-  }
+    background:$mid-text;
+    color: $background;
 
+    &:active,
+    &:focus {
+      background-color: $text;
+    }
+  }
   .active {
     background-color: $text;
   }
