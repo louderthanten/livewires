@@ -1,0 +1,25 @@
+// Subtly highlighted section
+.subtle {
+  background:$dark-background;
+  color:$text;
+}
+
+.reverse,
+.blue,
+.red {
+  @include font-smoothing(on);
+  color:$background;
+}
+
+// Reverse the colours
+.reverse {
+  background:$text;
+}
+
+.blue {
+  background:$blue;
+}
+
+.red {
+  background:$red;
+}
