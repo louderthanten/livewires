@@ -53,15 +53,15 @@
   display: none !important
 }
 
-@media #{$small} { 
+@media #{$small} {
   .sm-show { display: block !important }
 }
 
-@media #{$medium} { 
+@media #{$med} {
   .md-show { display: block !important }
 }
 
-@media #{$large} { 
+@media #{$large} {
   .lg-show { display: block !important }
 }
 
@@ -69,7 +69,7 @@
   .sm-hide { display: none !important }
 }
 
-@media #{$medium} {
+@media #{$med} {
   .md-hide { display: none !important }
 }
 

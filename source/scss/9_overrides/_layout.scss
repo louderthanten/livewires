@@ -9,7 +9,7 @@
   clear:both;
 }
 
-//Display 
+//Display
 .inline {
   display: inline;
 }
@@ -27,13 +27,13 @@
 }
 
 //Overflow
-.overflow-hidden { 
+.overflow-hidden {
   overflow: hidden;
 }
-.overflow-scroll { 
+.overflow-scroll {
   overflow: scroll;
 }
-.overflow-auto   { 
+.overflow-auto   {
   overflow: auto;
 }
 
@@ -112,12 +112,12 @@
 .flex-first { order: -1 }
 .flex-last  { order: 99999 }
 
-@media #{$small} { 
+@media #{$small} {
   .sm-flex { display: flex }
 }
-@media #{$medium} { 
+@media #{$med} { 
   .md-flex { display: flex }
 }
-@media #{$large} { 
+@media #{$large} {
   .lg-flex { display: flex }
 }
