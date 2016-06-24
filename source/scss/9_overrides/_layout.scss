@@ -115,9 +115,154 @@
 @media #{$small} {
   .sm-flex { display: flex }
 }
-@media #{$med} { 
+@media #{$med} {
   .md-flex { display: flex }
 }
 @media #{$large} {
   .lg-flex { display: flex }
+}
+
+//VH units
+.vh100 {
+  min-height:100vh;
+}
+.vh75 {
+  min-height:75vh;
+}
+.vh66 {
+  min-height:66vh;
+}
+.vh50 {
+  min-height:50vh;
+}
+.vh33 {
+  min-height:33vh;
+}
+.vh25 {
+  min-height:25vh;
+}
+
+/* fix iOS bug not displaying 100vh correctly */
+/* ipad */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+	.vh100 {
+		min-height: 768px;
+	}
+  .vh75 {
+    min-height:576px;
+  }
+  .vh66 {
+    min-height:507px;
+  }
+  .vh50 {
+    min-height:384px;
+  }
+  .vh33 {
+    min-height:253px;
+  }
+  .vh25 {
+    min-height:192px;
+  }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .vh100 {
+		min-height: 1024px;
+	}
+  .vh75 {
+    min-height:768px;
+  }
+  .vh66 {
+    min-height:676px;
+  }
+  .vh50 {
+    min-height:512px;
+  }
+  .vh33 {
+    min-height:338px;
+  }
+  .vh25 {
+    min-height:256px;
+  }
+}
+/* iphone5 */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+  .vh100 {
+		min-height: 320px;
+	}
+  .vh75 {
+    min-height:240px;
+  }
+  .vh66 {
+    min-height:212px;
+  }
+  .vh50 {
+    min-height:160px;
+  }
+  .vh33 {
+    min-height:106px;
+  }
+  .vh25 {
+    min-height:80px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
+  .vh100 {
+		min-height: 568px;
+	}
+  .vh75 {
+    min-height:426px;
+  }
+  .vh66 {
+    min-height:375px;
+  }
+  .vh50 {
+    min-height:284px;
+  }
+  .vh33 {
+    min-height:193px;
+  }
+  .vh25 {
+    min-height:142px;
+  }
+}
+/* iPhone 4 */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+  .vh100 {
+		min-height: 320px;
+	}
+  .vh75 {
+    min-height:240px;
+  }
+  .vh66 {
+    min-height:212px;
+  }
+  .vh50 {
+    min-height:160px;
+  }
+  .vh33 {
+    min-height:106px;
+  }
+  .vh25 {
+    min-height:80px;
+  }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+  .vh100 {
+		min-height: 480px;
+	}
+  .vh75 {
+    min-height:360px;
+  }
+  .vh66 {
+    min-height:317px;
+  }
+  .vh50 {
+    min-height:240px;
+  }
+  .vh33 {
+    min-height:158px;
+  }
+  .vh25 {
+    min-height:120px;
+  }
 }
