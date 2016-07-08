@@ -17,7 +17,7 @@
   "homepage": "https://github.com/louderthanten/livewires#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
-    "bower": "^1.7.2",
+    "bower": "^1.7.9",
     "browser-sync": "^2.10.1",
     "cssnano": "^3.4.0",
     "gulp": "^3.9.0",
