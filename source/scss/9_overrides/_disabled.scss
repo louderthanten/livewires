@@ -10,5 +10,6 @@ a.button--disabled:focus,
 .button--disabled:focus {
   cursor: default;
   pointer-events: none;
+  background-color:$light-text !important;
   color:$mid-text !important;
 }

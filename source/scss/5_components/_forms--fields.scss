@@ -48,14 +48,23 @@
 // We're kicking these in at a wider screen, but you can make some for mobile.
 // If you dare.
 @media only screen and (min-width: $screenSmall) {
+  .field--quarter,
   .field--half,
+  .field--three-quarter,
   .field--third,
   .field--two-third {
     float:left;
-    padding:0;
+    padding-left:0;
+    padding-right:0;
+  }
+  .field--quarter {
+    width:$c4;
   }
   .field--half {
     width:$c4*2;
+  }
+  .field--three-quarter {
+    width:$c4*3;
   }
   .field--third {
     width:$c3;

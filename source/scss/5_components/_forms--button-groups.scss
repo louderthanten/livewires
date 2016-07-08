@@ -1,0 +1,52 @@
+//Button groups
+.button-group {
+  @extend %group;
+
+  // Organize button groups for mobile screens first (we like to stack 'em).
+  .button,
+  a.button,
+  button {
+    display:block;
+    margin:0;
+    border-radius: 0;
+  }
+
+  .button:first-child,
+  a.button:first-child,
+  button:first-child {
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+  }
+
+  .button:last-child,
+  a.button:last-child,
+  button:last-child {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }
+
+  // Reorganize for wider canvases (like a fancy pill-style nav).
+  @media only screen and (min-width: $screenSmall) {
+    .button,
+    a.button,
+    button {
+      float:left;
+    }
+
+    .button:first-child,
+    a.button:first-child,
+    button:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: $radius;
+      border-bottom-left-radius: $radius;
+    }
+
+    .button:last-child,
+    a.button:last-child,
+    button:last-child {
+      border-bottom-right-radius: $radius;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: $radius;
+    }
+  }
+}

@@ -52,6 +52,7 @@
     padding: rem($line*2) $margin; // Increase vertical padding for more space
 
     // Add gutters to a row's immediate children unless they have a .collapse class.
+    .gutters,
     > *:not(.collapse) {
       @include gutter;
     }

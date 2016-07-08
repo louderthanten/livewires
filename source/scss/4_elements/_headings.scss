@@ -39,3 +39,35 @@ h5,
 h6,
 .h6 {
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  > span,
+  > small,
+  > strong {
+    color:$light-text;
+  }
+  a {
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: $accent;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color:$mid-text;
+    }
+  }
+}

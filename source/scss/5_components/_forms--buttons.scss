@@ -21,55 +21,57 @@ a.button--small,
   font-size:0.75em;
 }
 
-//Button groups
-.button-group {
-  @extend %group;
+// Button color variations
+.button--red,
+a.button--red {
+  background:$red;
+  color: $background;
 
-  // Organize button groups for mobile screens first (we like to stack 'em).
-  .button,
-  a.button,
-  button {
-    display:block;
-    margin:0;
-    border-radius: 0;
+  &:link,
+  &:visited {
+    background:$red;
+    color: $background;
   }
 
-  .button:first-child,
-  a.button:first-child,
-  button:first-child {
-    border-top-right-radius: $radius;
-    border-top-left-radius: $radius;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $text;
+  }
+}
+
+.button--blue,
+a.button--blue {
+  background:$blue;
+  color: $background;
+
+  &:link,
+  &:visited {
+    background:$blue;
+    color: $background;
   }
 
-  .button:last-child,
-  a.button:last-child,
-  button:last-child {
-    border-bottom-right-radius: $radius;
-    border-bottom-left-radius: $radius;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $text;
+  }
+}
+
+.button--grey,
+a.button--grey {
+  background:$mid-text;
+  color: $background;
+
+  &:link,
+  &:visited {
+    background:$mid-text;
+    color: $background;
   }
 
-  // Reorganize for wider canvases (like a fancy pill-style nav).
-  @media only screen and (min-width: $screenSmall) {
-    .button,
-    a.button,
-    button {
-      float:left;
-    }
-
-    .button:first-child,
-    a.button:first-child,
-    button:first-child {
-      border-top-right-radius: 0;
-      border-top-left-radius: $radius;
-      border-bottom-left-radius: $radius;
-    }
-
-    .button:last-child,
-    a.button:last-child,
-    button:last-child {
-      border-bottom-right-radius: $radius;
-      border-bottom-left-radius: 0;
-      border-top-right-radius: $radius;
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $text;
   }
 }

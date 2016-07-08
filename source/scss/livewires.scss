@@ -1,3 +1,6 @@
+// Includes foundational settings
+@import "1_settings/includes--base";
+
 // LIVE WIRES
 //
 // By default, these styles simply block out any text inside of a content l* element.
@@ -46,5 +49,3 @@
   .l#{$i} { height:$line* $i * 1px; background: url('../img/livewires/text.png'); }
   .l#{$i} > p { visibility: hidden; }
 }
-
-

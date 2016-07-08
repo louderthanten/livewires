@@ -118,27 +118,3 @@
     text-align: left;
   }
 }
-
-
-//  Bordered tables
-.table--bordered{
-
-  th,
-  td{
-    border:$rule;
-
-    &:empty{
-      border:none;
-    }
-  }
-}
-
-// Lined tables
-.table--lined {
-  thead tr {
-    border-bottom: $rule;
-  }
-  tbody tr {
-    border-bottom: $hairline;
-  }
-}

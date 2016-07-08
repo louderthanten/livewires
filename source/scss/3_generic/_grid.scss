@@ -1,0 +1,88 @@
+/*
+
+Grid syntax:
+
+Column width
+.c{column unit size}x{number of column units}-{screen modifyer}
+
+Push left
+.pushl{column unit size}x{number of column units}-{screen modifyer}
+
+Push right
+.pushr{column unit size}x{number of column units}-{screen modifyer}
+
+EGs
+
+.c4x3 = 3 columns of a 4 column grid
+.c5x2-mb = 2 columns of a 5 column grid at mobile sizes
+.pushl3x2 = pushing 2 columns of a 3 column grid left
+.pushr6-lg = pushing 1 columns of a 6 column grid right at large sizes
+
+*/
+
+@for $i from 2 through 6 {
+  $width: (100 / $i)/100;
+
+  .c#{$i}-mb {
+    width: percentage($width);
+  }
+  .pushr#{$i}-mb {
+    margin-right: percentage($width);
+  }
+  .pushl#{$i}-mb {
+    margin-left: percentage($width);
+  }
+
+  @media #{$small} {
+    .c#{$i} {
+      width: percentage($width);
+    }
+    .pushr#{$i} {
+      margin-right: percentage($width);
+    }
+    .pushl#{$i} {
+      margin-left: percentage($width);
+    }
+  }
+
+  @media #{$large} {
+    .c#{$i}-lg {
+      width: percentage($width);
+    }
+    .pushr#{$i}-lg {
+      margin-right: percentage($width);
+    }
+    .pushl#{$i}-lg {
+      margin-left: percentage($width);
+    }
+  }
+
+  @for $j from 1 through $i {
+    .c#{$i}x#{$j}-mb {
+      float: left;
+      width: percentage($width * $j);
+    }
+    @media #{$small} {
+      .c#{$i}x#{$j} {
+        width: percentage($width * $j);
+      }
+      .pushr#{$i}x#{$j} {
+        margin-right: percentage($width * $j);
+      }
+      .pushl#{$i}x#{$j} {
+        margin-left: percentage($width * $j);
+      }
+    }
+    @media #{$large} {
+      .c#{$i}x#{$j}-lg {
+        width: percentage($width * $j);
+      }
+      .pushr#{$i}x#{$j}-lg {
+        margin-right: percentage($width * $j);
+      }
+      .pushl#{$i}x#{$j}-lg {
+        margin-left: percentage($width * $j);
+      }
+    }
+  }
+}
