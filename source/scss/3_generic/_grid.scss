@@ -22,14 +22,14 @@ EGs
 @for $i from 2 through 6 {
   $width: (100 / $i)/100;
 
-  .c#{$i}-mb {
+  .mb-c#{$i} {
     width: percentage($width);
     float: left;
   }
-  .pushr#{$i}-mb {
+  .mb-pushr#{$i} {
     margin-right: percentage($width);
   }
-  .pushl#{$i}-mb {
+  .mb-pushl#{$i} {
     margin-left: percentage($width);
   }
 
@@ -47,20 +47,20 @@ EGs
   }
 
   @media #{$large} {
-    .c#{$i}-lg {
+    .lg-c#{$i} {
       width: percentage($width);
       float: left;
     }
-    .pushr#{$i}-lg {
+    .lg-pushr#{$i} {
       margin-right: percentage($width);
     }
-    .pushl#{$i}-lg {
+    .lg-pushl#{$i} {
       margin-left: percentage($width);
     }
   }
 
   @for $j from 1 through $i {
-    .c#{$i}x#{$j}-mb {
+    .mb-c#{$i}x#{$j} {
       width: percentage($width * $j);
       float: left;
     }
@@ -77,15 +77,15 @@ EGs
       }
     }
     @media #{$large} {
-      .c#{$i}x#{$j}-lg {
-        width: percentage($width * $j);
+      .lg-c#{$i}x#{$j} {
+        width: percentage($width * $j) !important;
         float:left;
       }
-      .pushr#{$i}x#{$j}-lg {
-        margin-right: percentage($width * $j);
+      .lg-pushr#{$i}x#{$j} {
+        margin-right: percentage($width * $j) !important;
       }
-      .pushl#{$i}x#{$j}-lg {
-        margin-left: percentage($width * $j);
+      .lg-pushl#{$i}x#{$j} {
+        margin-left: percentage($width * $j) !important;
       }
     }
   }
